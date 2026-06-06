@@ -18,6 +18,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
@@ -28,7 +29,7 @@
 <body>
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="/pdf/" class="active">PDF</a>
     <a href="/image/">Image</a>
     <a href="/qr/">QR Code</a>
@@ -37,6 +38,9 @@
     <a href="/colors/">Colors</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Images to PDF</span></div>
@@ -119,4 +123,5 @@ async function doImg2Pdf(){if(!imgFiles.length)return showStatus('status-img2pdf
     showNextStep("/pdf/compress.html","Compress your new PDF","📦");}catch(e){showStatus('status-img2pdf','error','Error: '+e.message);}}
 function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
+<script src="../js/consent.js"></script>
 </body></html>

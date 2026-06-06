@@ -3,29 +3,183 @@
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Privacy Policy – OneConvert</title>
-  <meta name="description" content="Privacy Policy for OneConvert. Your files never leave your device — all processing happens in your browser."/>
-  <link rel="canonical" href="https://oneconvert.net/privacy.html"/>
+  <meta name="description" content="Privacy Policy for OneConvert. GDPR compliant. Your files never leave your device."/>
   <meta name="robots" content="noindex, follow"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
 </head>
 <body>
-<nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
-  <div class="nav-links"><a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a></div>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
+  </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div style="max-width:700px;margin:5rem auto 3rem;padding:0 1.5rem;">
-  <h1 style="font-family:Syne,sans-serif;font-size:2rem;font-weight:800;margin-bottom:0.5rem;">Privacy Policy</h1>
-  <p style="color:var(--muted);margin-bottom:2rem;">Last updated: June 2026</p>
-  <div style="line-height:1.75;color:var(--muted);display:flex;flex-direction:column;gap:1.5rem;">
-    <div><h2 style="font-family:Syne,sans-serif;color:var(--text);font-size:1.1rem;margin-bottom:0.4rem;">1. File Processing</h2><p>All file processing on OneConvert happens locally in your browser using JavaScript. Your files — PDFs, images and other documents — are never uploaded to any server. They never leave your device.</p></div>
-    <div><h2 style="font-family:Syne,sans-serif;color:var(--text);font-size:1.1rem;margin-bottom:0.4rem;">2. Analytics</h2><p>We use Google Analytics to collect anonymised usage data (page views, device type, country). This data does not include any file contents or personal identifiers.</p></div>
-    <div><h2 style="font-family:Syne,sans-serif;color:var(--text);font-size:1.1rem;margin-bottom:0.4rem;">3. Advertising</h2><p>We use Google AdSense to display advertisements. Google may use cookies to show personalised ads based on your browsing history. You can opt out via Google's Ad Settings.</p></div>
-    <div><h2 style="font-family:Syne,sans-serif;color:var(--text);font-size:1.1rem;margin-bottom:0.4rem;">4. Cookies</h2><p>We use cookies only for analytics (Google Analytics) and advertising (Google AdSense). No cookies are used to track file contents or personal data.</p></div>
-    <div><h2 style="font-family:Syne,sans-serif;color:var(--text);font-size:1.1rem;margin-bottom:0.4rem;">5. Contact</h2><p>For privacy questions: <a href="mailto:hello@oneconvert.net" style="color:var(--accent2);">hello@oneconvert.net</a></p></div>
+
+<div style="max-width:780px;margin:5rem auto 4rem;padding:0 1.5rem;">
+  <div class="breadcrumb" style="margin-bottom:1.5rem;"><a href="/">Home</a><span>›</span><span>Privacy Policy</span></div>
+  <h1 style="font-family:Syne,sans-serif;font-size:2rem;font-weight:800;margin-bottom:0.4rem;">Privacy Policy</h1>
+  <p style="color:var(--muted);margin-bottom:3rem;font-size:0.9rem;">Last updated: June 2026 · Applies to: oneconvert.net</p>
+
+  <div style="display:flex;flex-direction:column;gap:2.5rem;line-height:1.75;font-size:0.92rem;">
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">1. At a Glance</h2>
+      <p style="color:var(--muted);"><strong style="color:var(--text);">Your files never leave your device.</strong> All file processing on OneConvert (PDF operations, image conversions, QR generation) runs entirely in your browser using JavaScript. No file data is ever transmitted to any server.</p>
+      <p style="color:var(--muted);margin-top:0.75rem;">We collect anonymised usage data via Google Analytics (with your consent) and display advertisements via Google AdSense to keep the service free.</p>
+    </section>
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">2. Controller (Responsible Party)</h2>
+      <p style="color:var(--muted);">The controller responsible for data processing on this website within the meaning of the GDPR is:</p>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-top:0.75rem;">
+        <p><strong>OneConvert</strong><br/>
+        oneconvert.net<br/>
+        Contact: <a href="mailto:hello@oneconvert.net" style="color:var(--accent2);">hello@oneconvert.net</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">3. Data We Collect</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.4rem;">📄 File Data — Not Collected</p>
+          <p style="color:var(--muted);font-size:0.88rem;">Files you upload or process are handled exclusively in your browser memory (RAM). They are never sent to our servers. We have no technical ability to access your files.</p>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.4rem;">📊 Usage Analytics (with consent)</p>
+          <p style="color:var(--muted);font-size:0.88rem;">We use Google Analytics 4 to collect anonymised statistics: pages visited, country, device type, session duration. This data does not identify you personally. Legal basis: consent (Art. 6(1)(a) GDPR). You can withdraw consent at any time via the cookie settings below.</p>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.4rem;">📢 Advertising (with consent)</p>
+          <p style="color:var(--muted);font-size:0.88rem;">We display advertisements via Google AdSense. With your consent, Google may use cookies to personalise ads based on your browsing history. Without consent, only non-personalised ads are shown. Legal basis: consent (Art. 6(1)(a) GDPR).</p>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.4rem;">🔧 Technical Data (automatically)</p>
+          <p style="color:var(--muted);font-size:0.88rem;">Standard web server and CDN logs may include your IP address, browser type and access timestamp. These are required for technical operation and security. Legal basis: legitimate interest (Art. 6(1)(f) GDPR). Logs are retained for up to 30 days.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">4. Cookies</h2>
+      <p style="color:var(--muted);">We use cookies only for the following purposes:</p>
+      <table style="width:100%;border-collapse:collapse;margin-top:0.75rem;font-size:0.85rem;">
+        <thead><tr style="border-bottom:1px solid var(--border);">
+          <th style="text-align:left;padding:0.5rem;color:var(--muted);font-weight:600;">Cookie</th>
+          <th style="text-align:left;padding:0.5rem;color:var(--muted);font-weight:600;">Purpose</th>
+          <th style="text-align:left;padding:0.5rem;color:var(--muted);font-weight:600;">Duration</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(30,45,69,0.4);">
+            <td style="padding:0.6rem 0.5rem;">oc-consent</td>
+            <td style="padding:0.6rem 0.5rem;color:var(--muted);">Stores your cookie consent choice</td>
+            <td style="padding:0.6rem 0.5rem;color:var(--muted);">1 year (localStorage)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(30,45,69,0.4);">
+            <td style="padding:0.6rem 0.5rem;">_ga, _ga_*</td>
+            <td style="padding:0.6rem 0.5rem;color:var(--muted);">Google Analytics — only set with consent</td>
+            <td style="padding:0.6rem 0.5rem;color:var(--muted);">2 years</td>
+          </tr>
+          <tr>
+            <td style="padding:0.6rem 0.5rem;">NID, IDE, others</td>
+            <td style="padding:0.6rem 0.5rem;color:var(--muted);">Google AdSense — only set with consent</td>
+            <td style="padding:0.6rem 0.5rem;color:var(--muted);">6 months – 2 years</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:1.25rem;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+        <p style="font-weight:600;margin-bottom:0.4rem;">Manage Cookie Settings</p>
+        <p style="color:var(--muted);font-size:0.88rem;margin-bottom:0.75rem;">You can withdraw or change your cookie consent at any time:</p>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <button onclick="acceptCookies()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:0.5rem 1.1rem;cursor:pointer;font-size:0.85rem;font-weight:600;">✓ Accept all cookies</button>
+          <button onclick="declineCookies()" style="background:var(--bg3);color:var(--muted);border:1px solid var(--border);border-radius:8px;padding:0.5rem 1rem;cursor:pointer;font-size:0.85rem;">✗ Decline optional cookies</button>
+        </div>
+        <p id="consent-status" style="font-size:0.8rem;color:var(--accent2);margin-top:0.5rem;"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">5. Third-Party Processors</h2>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.3rem;">Google Analytics (Google Ireland Ltd.)</p>
+          <p style="color:var(--muted);font-size:0.88rem;">Anonymised usage statistics. Data may be transferred to US servers under EU-US Data Privacy Framework. <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">Google Privacy Policy ↗</a></p>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.3rem;">Google AdSense (Google Ireland Ltd.)</p>
+          <p style="color:var(--muted);font-size:0.88rem;">Advertisement delivery. Google may use cookies to personalise ads. <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--accent2);">Google Privacy Policy ↗</a> · <a href="https://adssettings.google.com" target="_blank" style="color:var(--accent2);">Opt out of personalised ads ↗</a></p>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.3rem;">Cloudflare (Cloudflare, Inc.)</p>
+          <p style="color:var(--muted);font-size:0.88rem;">CDN and DNS provider. Standard security logs including IP addresses. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" style="color:var(--accent2);">Cloudflare Privacy Policy ↗</a></p>
+        </div>
+        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+          <p style="font-weight:600;margin-bottom:0.3rem;">GitHub Pages (GitHub, Inc.)</p>
+          <p style="color:var(--muted);font-size:0.88rem;">Website hosting. GitHub may log access requests. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" style="color:var(--accent2);">GitHub Privacy Statement ↗</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">6. Your Rights (GDPR Art. 15–21)</h2>
+      <p style="color:var(--muted);margin-bottom:0.75rem;">Under the GDPR, you have the following rights regarding your personal data:</p>
+      <ul style="color:var(--muted);padding-left:1.25rem;display:flex;flex-direction:column;gap:0.4rem;">
+        <li><strong style="color:var(--text);">Right of access</strong> — You can request information about what data we hold about you (Art. 15)</li>
+        <li><strong style="color:var(--text);">Right to rectification</strong> — You can request correction of inaccurate data (Art. 16)</li>
+        <li><strong style="color:var(--text);">Right to erasure</strong> — You can request deletion of your data (Art. 17)</li>
+        <li><strong style="color:var(--text);">Right to restriction</strong> — You can request limited processing of your data (Art. 18)</li>
+        <li><strong style="color:var(--text);">Right to object</strong> — You can object to processing based on legitimate interest (Art. 21)</li>
+        <li><strong style="color:var(--text);">Right to withdraw consent</strong> — Where processing is based on consent, you can withdraw it at any time</li>
+        <li><strong style="color:var(--text);">Right to lodge a complaint</strong> — You can complain to your national supervisory authority (in Switzerland: <a href="https://www.edoeb.admin.ch" target="_blank" style="color:var(--accent2);">EDÖB ↗</a>; in the EU: your local DPA)</li>
+      </ul>
+      <p style="color:var(--muted);margin-top:0.75rem;">To exercise your rights, contact: <a href="mailto:hello@oneconvert.net" style="color:var(--accent2);">hello@oneconvert.net</a></p>
+    </section>
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">7. Data Security</h2>
+      <p style="color:var(--muted);">This website is served exclusively over HTTPS (TLS encryption). All file processing is local to your browser — no file data transits any network. The website is hosted on GitHub Pages with Cloudflare CDN, both of which maintain enterprise-grade security infrastructure.</p>
+    </section>
+
+    <section>
+      <h2 style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">8. Changes to This Policy</h2>
+      <p style="color:var(--muted);">We may update this privacy policy from time to time. The current version is always available at <a href="/privacy.html" style="color:var(--accent2);">oneconvert.net/privacy.html</a>. The date at the top indicates when it was last updated.</p>
+    </section>
+
   </div>
 </div>
-<footer><p>© 2026 OneConvert.</p><div class="footer-links"><a href="/">Home</a><a href="/terms.html">Terms</a></div></footer>
+
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/terms.html">Terms</a>
+  </div>
+</footer>
+
 <script src="js/common.js"></script>
-</body></html>
+<script src="js/consent.js"></script>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+// Update consent status display
+(function(){
+  const s=localStorage.getItem('oc-consent');
+  const el=document.getElementById('consent-status');
+  if(el&&s)el.textContent='Current status: '+s.charAt(0).toUpperCase()+s.slice(1);
+})();
+// Override removeBanner to also update status
+const _orig=window.acceptCookies;
+const _origD=window.declineCookies;
+</script>
+</body>
+</html>

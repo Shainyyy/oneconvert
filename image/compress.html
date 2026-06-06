@@ -18,6 +18,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image Compressor","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no file size limits and no account required."}},{"@type":"Question","name":"Does image compression affect quality?","acceptedAnswer":{"@type":"Answer","text":"At 80-90% quality setting, the difference is virtually invisible to the human eye while file size reduces significantly."}},{"@type":"Question","name":"What is the ideal quality setting?","acceptedAnswer":{"@type":"Answer","text":"80% quality is the sweet spot — it typically reduces file size by 60-70% while maintaining excellent visual quality."}}]}</script>
@@ -25,7 +26,7 @@
 <body>
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="/pdf/">PDF</a>
     <a href="/image/" class="active">Image</a>
     <a href="/qr/">QR Code</a>
@@ -34,6 +35,9 @@
     <a href="/colors/">Colors</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 
@@ -207,5 +211,6 @@
   }
 function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
+<script src="../js/consent.js"></script>
 </body>
 </html>

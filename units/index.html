@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Unit Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many kilometers in a mile?","acceptedAnswer":{"@type":"Answer","text":"1 mile = 1.60934 kilometers. Conversely, 1 kilometer = 0.62137 miles."}},{"@type":"Question","name":"How do I convert Celsius to Fahrenheit?","acceptedAnswer":{"@type":"Answer","text":"Multiply by 9/5 then add 32. Formula: °F = (°C × 9/5) + 32. Example: 20°C = (20 × 1.8) + 32 = 68°F."}},{"@type":"Question","name":"How many pounds in a kilogram?","acceptedAnswer":{"@type":"Answer","text":"1 kilogram = 2.20462 pounds. 1 pound = 0.453592 kilograms."}}]}</script>
@@ -23,7 +24,7 @@
 <body>
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="/pdf/">PDF</a>
     <a href="/image/">Image</a>
     <a href="/qr/">QR Code</a>
@@ -32,6 +33,9 @@
     <a href="/colors/">Colors</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="tool-page" style="max-width:1000px;">
@@ -231,4 +235,5 @@ function updateRefTable(val, fromKey) {
 populateSelects();
 convert();
 </script>
+<script src="../js/consent.js"></script>
 </body></html>

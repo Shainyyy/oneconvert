@@ -16,12 +16,13 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
 </head>
 <body>
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="/pdf/">PDF</a>
     <a href="/image/">Image</a>
     <a href="/qr/">QR Code</a>
@@ -30,6 +31,9 @@
     <a href="/colors/">Colors</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="tool-page" style="max-width:1000px;">
@@ -153,4 +157,5 @@
   function copyText(id){const el=document.getElementById(id);el.select();document.execCommand('copy');alert('Copied to clipboard!');}
   genLorem();
 </script>
+<script src="../js/consent.js"></script>
 </body></html>

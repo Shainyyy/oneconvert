@@ -19,6 +19,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"PDF Tools","item":"https://oneconvert.net/pdf/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are these PDF tools free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No account, no file size limits, no subscriptions."}},{"@type":"Question","name":"Are my PDF files uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens in your browser. Your files never leave your device."}},{"@type":"Question","name":"Is there a file size limit?","acceptedAnswer":{"@type":"Answer","text":"No imposed limit. The only constraint is your browser available memory."}}]}</script>
@@ -26,7 +27,7 @@
 <body>
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="/pdf/" class="active">PDF</a>
     <a href="/image/">Image</a>
     <a href="/qr/">QR Code</a>
@@ -35,6 +36,9 @@
     <a href="/colors/">Colors</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="tool-page" style="max-width:1000px;">
@@ -95,5 +99,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';
 });
 </script>
+<script src="../js/consent.js"></script>
 </body>
 </html>

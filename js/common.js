@@ -68,6 +68,7 @@ function formatBytes(bytes) {
 // ── Init on load ──
 document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
   // Set theme toggle icon based on saved preference
   const themeBtn = document.getElementById('theme-toggle');
   if (themeBtn && localStorage.getItem('oc-theme') === 'light') themeBtn.textContent = '☀️';
@@ -86,6 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('active'); });
   }
 });
+
+
+// ── Hamburger Nav ──
+function toggleNav(){
+  const links=document.getElementById('nav-links');
+  const btn=document.getElementById('nav-hamburger');
+  if(!links||!btn)return;
+  const isOpen=links.classList.contains('open');
+  links.classList.toggle('open');
+  btn.classList.toggle('open');
+  btn.setAttribute('aria-expanded',String(!isOpen));
+}
 
 // ── DARK / LIGHT MODE ──
 function toggleTheme() {
