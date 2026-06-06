@@ -17,6 +17,7 @@
 <body>
 <nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
   <div class="nav-links"><a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/" class="active">Colors</a></div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
 </nav>
 
 <div class="tool-page" style="max-width:1000px;">
@@ -62,14 +63,14 @@
       <div>
         <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;">Foreground (Text)</label>
         <div style="display:flex;gap:0.75rem;align-items:center;">
-          <input type="color" id="fg-color" value="#ffffff" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
+          <input type="color" id="fg-color" value="#ffffff" oninput="checkContrast()" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
           <input type="text" id="fg-hex" value="#ffffff" style="flex:1;" oninput="fgFromText()"/>
         </div>
       </div>
       <div>
         <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;">Background</label>
         <div style="display:flex;gap:0.75rem;align-items:center;">
-          <input type="color" id="bg-picker" value="#2563eb" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
+          <input type="color" id="bg-picker" value="#2563eb" oninput="checkContrast()" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
           <input type="text" id="bg-hex" value="#2563eb" style="flex:1;" oninput="bgFromText()"/>
         </div>
       </div>
@@ -128,7 +129,10 @@
   // Contrast
   function getLum(hex){const{r,g,b}=hexToRgb(hex);const[rs,gs,bs]=[r,g,b].map(v=>{v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);});return 0.2126*rs+0.7152*gs+0.0722*bs;}
   function getContrastRatio(h1,h2){const l1=getLum(h1),l2=getLum(h2);const bright=Math.max(l1,l2),dark=Math.min(l1,l2);return(bright+0.05)/(dark+0.05);}
-  function checkContrast(){const fg=document.getElementById('fg-color').value,bg=document.getElementById('bg-picker').value;document.getElementById('contrast-preview').style.background=bg;document.getElementById('preview-lg').style.color=fg;document.getElementById('preview-sm').style.color=fg;const ratio=getContrastRatio(fg,bg);const r=ratio.toFixed(2);document.getElementById('ratio-val').textContent=r+':1';const aa=ratio>=4.5,aaa=ratio>=7;document.getElementById('aa-val').textContent=aa?'✅ Pass':'❌ Fail';document.getElementById('aa-val').style.color=aa?'var(--success)':'#f87171';document.getElementById('aaa-val').textContent=aaa?'✅ Pass':'❌ Fail';document.getElementById('aaa-val').style.color=aaa?'var(--success)':'#f87171';}
+  function checkContrast(){
+  // Sync text inputs with pickers
+  document.getElementById('fg-hex').value = document.getElementById('fg-color').value;
+  document.getElementById('bg-hex').value = document.getElementById('bg-picker').value;const fg=document.getElementById('fg-color').value,bg=document.getElementById('bg-picker').value;document.getElementById('contrast-preview').style.background=bg;document.getElementById('preview-lg').style.color=fg;document.getElementById('preview-sm').style.color=fg;const ratio=getContrastRatio(fg,bg);const r=ratio.toFixed(2);document.getElementById('ratio-val').textContent=r+':1';const aa=ratio>=4.5,aaa=ratio>=7;document.getElementById('aa-val').textContent=aa?'✅ Pass':'❌ Fail';document.getElementById('aa-val').style.color=aa?'var(--success)':'#f87171';document.getElementById('aaa-val').textContent=aaa?'✅ Pass':'❌ Fail';document.getElementById('aaa-val').style.color=aaa?'var(--success)':'#f87171';}
   function fgFromText(){try{document.getElementById('fg-color').value=document.getElementById('fg-hex').value;checkContrast();}catch(e){}}
   function bgFromText(){try{document.getElementById('bg-picker').value=document.getElementById('bg-hex').value;checkContrast();}catch(e){}}
   // Palette

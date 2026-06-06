@@ -34,66 +34,20 @@ function setupDropzone(zoneId, inputId, onFiles) {
   zone.addEventListener('drop', e => { e.preventDefault(); e.stopPropagation(); zone.classList.remove('drag-over'); if (e.dataTransfer.files.length) onFiles(e.dataTransfer.files); });
 }
 
-// ── Ad Overlay ──
-let pendingDownload = null;
-let pendingBlobs = null;
-let countdownTimer = null;
-
+// ── Direct Download (AdSense-compliant — no overlay) ──
 function showAdAndDownload(bytes, filename, mime) {
-  pendingDownload = { bytes, filename, mime: mime || 'application/pdf' };
-  pendingBlobs = null;
-  startAdCountdown();
+  directDownload(bytes, filename, mime || 'application/pdf');
 }
 
 function showAdAndDownloadBlobs(blobs) {
-  pendingBlobs = blobs;
-  pendingDownload = null;
-  startAdCountdown();
-}
-
-function startAdCountdown() {
-  const overlay = document.getElementById('ad-overlay');
-  if (!overlay) { triggerDownload(); return; }
-  overlay.classList.add('active');
-  const cdEl = document.getElementById('countdown');
-  const skipBtn = document.getElementById('skip-btn');
-  let secs = 5;
-  cdEl.textContent = secs;
-  cdEl.style.display = 'block';
-  if (skipBtn) skipBtn.style.display = 'none';
-  clearInterval(countdownTimer);
-  countdownTimer = setInterval(() => {
-    secs--;
-    cdEl.textContent = secs;
-    if (secs <= 0) {
-      clearInterval(countdownTimer);
-      cdEl.style.display = 'none';
-      if (skipBtn) skipBtn.style.display = 'inline-flex';
-    }
-  }, 1000);
-}
-
-function triggerDownload() {
-  if (pendingDownload) {
-    const { bytes, filename, mime } = pendingDownload;
-    const blob = new Blob([bytes], { type: mime });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a'); a.href = url; a.download = filename; a.click();
-    URL.revokeObjectURL(url);
-  } else if (pendingBlobs) {
-    pendingBlobs.forEach(({ blob, name }, i) => {
-      setTimeout(() => {
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a'); a.href = url; a.download = name; a.click();
-        URL.revokeObjectURL(url);
-      }, i * 300);
-    });
-  }
-  const overlay = document.getElementById('ad-overlay');
-  if (overlay) { overlay.classList.remove('active'); }
-  const cdEl = document.getElementById('countdown');
-  if (cdEl) cdEl.style.display = 'block';
-  pendingDownload = null; pendingBlobs = null;
+  if (!blobs) return;
+  blobs.forEach(({ blob, name }, i) => {
+    setTimeout(() => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = name; a.click();
+      URL.revokeObjectURL(url);
+    }, i * 300);
+  });
 }
 
 // ── Direct download (no ad, single page) ──
@@ -114,6 +68,9 @@ function formatBytes(bytes) {
 // ── Init on load ──
 document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
+  // Set theme toggle icon based on saved preference
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn && localStorage.getItem('oc-theme') === 'light') themeBtn.textContent = '☀️';
 
   // Active nav link
   const path = window.location.pathname;
@@ -129,3 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('active'); });
   }
 });
+
+// ── DARK / LIGHT MODE ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const btn = document.getElementById('theme-toggle');
+  if (html.getAttribute('data-theme') === 'light') {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('oc-theme', 'dark');
+    if (btn) btn.textContent = '🌙';
+  } else {
+    html.setAttribute('data-theme', 'light');
+    localStorage.setItem('oc-theme', 'light');
+    if (btn) btn.textContent = '☀️';
+  }
+}
+// Apply saved theme immediately (before render to prevent flash)
+(function() {
+  if (localStorage.getItem('oc-theme') === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();

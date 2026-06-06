@@ -20,6 +20,7 @@
 <body>
 <nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
   <div class="nav-links"><a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/" class="active">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a></div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
 </nav>
 
 <div class="tool-page" style="max-width:1000px;">
@@ -58,7 +59,7 @@
     </div>
     <div class="tool-box" style="margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
       <div class="qr-preview">
-        <canvas id="qr-canvas" style="border-radius:8px;display:none;"></canvas>
+        <img id="qr-img" style="border-radius:8px;display:none;max-width:300px;" alt="QR Code"/>
         <p id="qr-placeholder" style="color:var(--muted);font-size:0.9rem;padding:2rem;">Enter content to generate QR code</p>
       </div>
       <div style="display:flex;gap:0.75rem;width:100%;">
@@ -95,8 +96,29 @@
   let currentType='url';
   function setType(t,btn){currentType=t;document.querySelectorAll('.unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['url','text','wifi','email','phone'].forEach(id=>document.getElementById('type-'+id).style.display=id===t?'block':'none');generateQR();}
   function getContent(){switch(currentType){case 'url':return document.getElementById('url-input').value.trim();case 'text':return document.getElementById('text-input').value.trim();case 'wifi':{const s=document.getElementById('wifi-ssid').value,p=document.getElementById('wifi-pass').value,e=document.getElementById('wifi-sec').value;return s?`WIFI:T:${e};S:${s};P:${p};;`:'';}case 'email':{const a=document.getElementById('email-addr').value,sub=document.getElementById('email-sub').value;return a?`mailto:${a}${sub?'?subject='+encodeURIComponent(sub):''}`:'';}case 'phone':return document.getElementById('phone-input').value.trim()?'tel:'+document.getElementById('phone-input').value.trim():'';}return '';}
-  function generateQR(){const content=getContent();const canvas=document.getElementById('qr-canvas');const ph=document.getElementById('qr-placeholder');if(!content){canvas.style.display='none';ph.style.display='block';document.getElementById('dl-png').disabled=true;document.getElementById('dl-svg').disabled=true;return;}const size=parseInt(document.getElementById('qr-size').value)||300;const color=document.getElementById('qr-color').value;const bg=document.getElementById('bg-color').value;const ecl=document.getElementById('qr-ecl').value;QRCode.toCanvas(canvas,content,{width:size,color:{dark:color,light:bg},errorCorrectionLevel:ecl},err=>{if(err){showStatus('status','error','Error generating QR');return;}canvas.style.display='block';ph.style.display='none';document.getElementById('dl-png').disabled=false;document.getElementById('dl-svg').disabled=false;});}
-  function downloadQR(fmt){const content=getContent();if(!content)return;if(fmt==='png'){document.getElementById('qr-canvas').toBlob(async b=>{directDownload(await b.arrayBuffer(),'qrcode.png','image/png');},'image/png');}else{const size=parseInt(document.getElementById('qr-size').value)||300;const color=document.getElementById('qr-color').value;const bg=document.getElementById('bg-color').value;QRCode.toString(content,{type:'svg',width:size,color:{dark:color,light:bg}},(err,svg)=>{if(err)return;const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));const a=document.createElement('a');a.href=url;a.download='qrcode.svg';a.click();URL.revokeObjectURL(url);});}showStatus('status','success','Downloaded!');}
+  let currentQrDataUrl = '';
+  function generateQR(){
+    const content=getContent();
+    const img=document.getElementById('qr-img');
+    const ph=document.getElementById('qr-placeholder');
+    if(!content){img.style.display='none';ph.style.display='block';document.getElementById('dl-png').disabled=true;document.getElementById('dl-svg').disabled=true;currentQrDataUrl='';return;}
+    const size=parseInt(document.getElementById('qr-size').value)||300;
+    const color=document.getElementById('qr-color').value;
+    const bg=document.getElementById('bg-color').value;
+    const ecl=document.getElementById('qr-ecl').value;
+    try{
+      QRCode.toDataURL(content,{width:size,margin:2,color:{dark:color,light:bg},errorCorrectionLevel:ecl},function(err,url){
+        if(err){showStatus('status','error','Error: '+err.message);return;}
+        currentQrDataUrl=url;
+        img.src=url;img.style.display='block';ph.style.display='none';
+        document.getElementById('dl-png').disabled=false;document.getElementById('dl-svg').disabled=false;
+      });
+    }catch(e){showStatus('status','error','QR library not loaded yet, please wait...');}
+  }
+  function downloadQR(fmt){const content=getContent();if(!content)return;if(fmt==='png'){
+    if(!currentQrDataUrl)return;
+    const a=document.createElement('a');a.href=currentQrDataUrl;a.download='qrcode.png';a.click();
+  }else{const size=parseInt(document.getElementById('qr-size').value)||300;const color=document.getElementById('qr-color').value;const bg=document.getElementById('bg-color').value;QRCode.toString(content,{type:'svg',width:size,color:{dark:color,light:bg}},(err,svg)=>{if(err)return;const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));const a=document.createElement('a');a.href=url;a.download='qrcode.svg';a.click();URL.revokeObjectURL(url);});}showStatus('status','success','Downloaded!');}
   generateQR();
 </script>
 </body></html>
