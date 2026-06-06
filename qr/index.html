@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free QR Code Generator – URL, WiFi, Text | OneConvert</title>
+  <meta name="description" content="Free QR code generator. Create QR codes for URLs, WiFi, text and more. Customize colors. Download PNG or SVG. No account required."/>
+  <meta name="keywords" content="qr code generator free, qr code maker online, wifi qr code, url qr code, custom qr code, free qr generator no signup"/>
+  <link rel="canonical" href="https://oneconvert.net/qr/"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QR Code Generator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this QR code generator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No account, no watermarks, no expiry on your QR codes."}},{"@type":"Question","name":"Do QR codes expire?","acceptedAnswer":{"@type":"Answer","text":"Static QR codes never expire. They encode data directly and work forever."}},{"@type":"Question","name":"Can I customize QR code colors?","acceptedAnswer":{"@type":"Answer","text":"Yes — choose any color for the pattern and background. Ensure good contrast for reliable scanning."}}]}</script>
+</head>
+<body>
+<nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links"><a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/" class="active">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a></div>
+</nav>
+
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>QR Code Generator</span></div>
+  <div class="tool-page-header"><h1>📱 Free QR Code Generator</h1><p>Create QR codes for URLs, WiFi, text, email and phone. Customize colors. Download as PNG or SVG — free, no account.</p></div>
+
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+    <div class="tool-box" style="margin:0;">
+      <div class="unit-tabs" style="margin-bottom:1.25rem;">
+        <button class="unit-tab active" onclick="setType('url',this)">URL</button>
+        <button class="unit-tab" onclick="setType('text',this)">Text</button>
+        <button class="unit-tab" onclick="setType('wifi',this)">WiFi</button>
+        <button class="unit-tab" onclick="setType('email',this)">Email</button>
+        <button class="unit-tab" onclick="setType('phone',this)">Phone</button>
+      </div>
+      <div id="type-url"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Website URL</label><input type="text" id="url-input" placeholder="https://example.com" oninput="generateQR()"/></div></div>
+      <div id="type-text" style="display:none;"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Text or message</label><textarea id="text-input" placeholder="Enter any text…" style="min-height:80px;" oninput="generateQR()"></textarea></div></div>
+      <div id="type-wifi" style="display:none;">
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="MyWiFiNetwork" oninput="generateQR()"/></div>
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Password</label><input type="text" id="wifi-pass" placeholder="Password" oninput="generateQR()"/></div>
+        <div class="unit-input-group" style="margin-bottom:1rem;"><label>Security</label><select id="wifi-sec" onchange="generateQR()"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">None</option></select></div>
+      </div>
+      <div id="type-email" style="display:none;">
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Email address</label><input type="text" id="email-addr" placeholder="hello@example.com" oninput="generateQR()"/></div>
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Subject (optional)</label><input type="text" id="email-sub" placeholder="Subject" oninput="generateQR()"/></div>
+      </div>
+      <div id="type-phone" style="display:none;"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Phone number</label><input type="text" id="phone-input" placeholder="+1234567890" oninput="generateQR()"/></div></div>
+      <div class="qr-options">
+        <div class="option-group"><label>QR Color</label><div class="color-input"><input type="color" id="qr-color" value="#07090f" onchange="generateQR()"/></div></div>
+        <div class="option-group"><label>Background</label><div class="color-input"><input type="color" id="bg-color" value="#ffffff" onchange="generateQR()"/></div></div>
+        <div class="option-group"><label>Size (px)</label><input type="number" id="qr-size" value="300" min="100" max="1000" step="50" onchange="generateQR()"/></div>
+        <div class="option-group"><label>Error Correction</label><select id="qr-ecl" onchange="generateQR()"><option value="M">Medium</option><option value="L">Low</option><option value="Q">Quartile</option><option value="H">High</option></select></div>
+      </div>
+    </div>
+    <div class="tool-box" style="margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
+      <div class="qr-preview">
+        <canvas id="qr-canvas" style="border-radius:8px;display:none;"></canvas>
+        <p id="qr-placeholder" style="color:var(--muted);font-size:0.9rem;padding:2rem;">Enter content to generate QR code</p>
+      </div>
+      <div style="display:flex;gap:0.75rem;width:100%;">
+        <button class="btn" onclick="downloadQR('png')" id="dl-png" disabled>⬇️ PNG</button>
+        <button class="btn btn-outline" onclick="downloadQR('svg')" id="dl-svg" disabled>SVG</button>
+      </div>
+      <div class="status" id="status" style="width:100%;"></div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
+    <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress Image</h4><p>Reduce image size</p></div></a>
+    <a class="related-card" href="/pdf/"><span class="icon">📄</span><div class="info"><h4>PDF Tools</h4><p>Split, merge, compress</p></div></a>
+    <a class="related-card" href="/units/"><span class="icon">📐</span><div class="info"><h4>Unit Converter</h4><p>Length, weight, temp</p></div></a>
+  </div></div>
+
+  <div class="info-section"><h2>What Are QR Codes Used For in 2025?</h2><p>QR codes are everywhere — restaurants use them for menus, businesses for contactless payments, events for ticketing, and marketers for directing users to URLs. WiFi QR codes let guests join your network by scanning instead of typing a password. Static QR codes generated here encode data directly and never expire.</p></div>
+
+  <div class="faq-section"><h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Is this QR code generator free?<span class="arrow">▼</span></button><div class="faq-a">Yes, completely free. No account required, no watermarks, no expiry on your QR codes.</div></div>
+    <div class="faq-item"><button class="faq-q">Do QR codes expire?<span class="arrow">▼</span></button><div class="faq-a">Static QR codes never expire. They encode the data directly into the pattern and work indefinitely.</div></div>
+    <div class="faq-item"><button class="faq-q">How do I make a WiFi QR code?<span class="arrow">▼</span></button><div class="faq-a">Click WiFi tab, enter your network name and password, choose security type. The QR code is generated instantly. Print it and place it where guests can scan to join.</div></div>
+    <div class="faq-item"><button class="faq-q">What is error correction level?<span class="arrow">▼</span></button><div class="faq-a">Error correction lets a QR code be scanned even if partially damaged or covered. Medium (M) works well for most cases. High (H) makes codes scannable even if 30% is obstructed.</div></div>
+  </div>
+</div>
+
+<footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/units/">Units</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
+<script src="../js/common.js"></script>
+<script>
+  let currentType='url';
+  function setType(t,btn){currentType=t;document.querySelectorAll('.unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['url','text','wifi','email','phone'].forEach(id=>document.getElementById('type-'+id).style.display=id===t?'block':'none');generateQR();}
+  function getContent(){switch(currentType){case 'url':return document.getElementById('url-input').value.trim();case 'text':return document.getElementById('text-input').value.trim();case 'wifi':{const s=document.getElementById('wifi-ssid').value,p=document.getElementById('wifi-pass').value,e=document.getElementById('wifi-sec').value;return s?`WIFI:T:${e};S:${s};P:${p};;`:'';}case 'email':{const a=document.getElementById('email-addr').value,sub=document.getElementById('email-sub').value;return a?`mailto:${a}${sub?'?subject='+encodeURIComponent(sub):''}`:'';}case 'phone':return document.getElementById('phone-input').value.trim()?'tel:'+document.getElementById('phone-input').value.trim():'';}return '';}
+  function generateQR(){const content=getContent();const canvas=document.getElementById('qr-canvas');const ph=document.getElementById('qr-placeholder');if(!content){canvas.style.display='none';ph.style.display='block';document.getElementById('dl-png').disabled=true;document.getElementById('dl-svg').disabled=true;return;}const size=parseInt(document.getElementById('qr-size').value)||300;const color=document.getElementById('qr-color').value;const bg=document.getElementById('bg-color').value;const ecl=document.getElementById('qr-ecl').value;QRCode.toCanvas(canvas,content,{width:size,color:{dark:color,light:bg},errorCorrectionLevel:ecl},err=>{if(err){showStatus('status','error','Error generating QR');return;}canvas.style.display='block';ph.style.display='none';document.getElementById('dl-png').disabled=false;document.getElementById('dl-svg').disabled=false;});}
+  function downloadQR(fmt){const content=getContent();if(!content)return;if(fmt==='png'){document.getElementById('qr-canvas').toBlob(async b=>{directDownload(await b.arrayBuffer(),'qrcode.png','image/png');},'image/png');}else{const size=parseInt(document.getElementById('qr-size').value)||300;const color=document.getElementById('qr-color').value;const bg=document.getElementById('bg-color').value;QRCode.toString(content,{type:'svg',width:size,color:{dark:color,light:bg}},(err,svg)=>{if(err)return;const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));const a=document.createElement('a');a.href=url;a.download='qrcode.svg';a.click();URL.revokeObjectURL(url);});}showStatus('status','success','Downloaded!');}
+  generateQR();
+</script>
+</body></html>

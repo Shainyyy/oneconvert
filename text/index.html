@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Text Tools – Word Count, Case Converter, Base64 | OneConvert</title>
+  <meta name="description" content="Free online text tools. Count words and characters, convert case, generate Lorem Ipsum, encode Base64, remove duplicate lines and more."/>
+  <meta name="keywords" content="word counter online, case converter, lorem ipsum generator, base64 encoder decoder, remove duplicate lines, text tools free"/>
+  <link rel="canonical" href="https://oneconvert.net/text/"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+</head>
+<body>
+<nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links"><a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/" class="active">Text</a><a href="/colors/">Colors</a></div>
+</nav>
+
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>Text Tools</span></div>
+  <div class="tool-page-header"><h1>✏️ Free Text Tools</h1><p>Word counter, case converter, Lorem Ipsum generator, Base64 encoder and more — all free, all in your browser.</p></div>
+
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="unit-tabs" style="margin-bottom:1.5rem;flex-wrap:wrap;">
+    <button class="unit-tab active" onclick="setTool('wordcount',this)">📊 Word Count</button>
+    <button class="unit-tab" onclick="setTool('case',this)">Aa Case</button>
+    <button class="unit-tab" onclick="setTool('lorem',this)">📝 Lorem Ipsum</button>
+    <button class="unit-tab" onclick="setTool('base64',this)">🔐 Base64</button>
+    <button class="unit-tab" onclick="setTool('dedup',this)">🗑️ Remove Dupes</button>
+    <button class="unit-tab" onclick="setTool('url',this)">🔗 URL Encode</button>
+  </div>
+
+  <div class="tool-box">
+    <!-- Word Count -->
+    <div id="tool-wordcount">
+      <textarea id="wc-input" placeholder="Paste or type your text here…" style="width:100%;min-height:200px;" oninput="updateWordCount()"></textarea>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin-top:1rem;">
+        <div class="preview-stat" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center;"><div class="val" id="wc-words" style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent2);">0</div><div class="lbl" style="color:var(--muted);font-size:0.78rem;">Words</div></div>
+        <div class="preview-stat" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center;"><div class="val" id="wc-chars" style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent2);">0</div><div class="lbl" style="color:var(--muted);font-size:0.78rem;">Characters</div></div>
+        <div class="preview-stat" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center;"><div class="val" id="wc-lines" style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent2);">0</div><div class="lbl" style="color:var(--muted);font-size:0.78rem;">Lines</div></div>
+        <div class="preview-stat" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center;"><div class="val" id="wc-read" style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent2);">0</div><div class="lbl" style="color:var(--muted);font-size:0.78rem;">Min read</div></div>
+      </div>
+    </div>
+
+    <!-- Case -->
+    <div id="tool-case" style="display:none;">
+      <textarea id="case-input" placeholder="Enter text to convert…" style="width:100%;min-height:150px;" oninput="updateCase()"></textarea>
+      <div class="unit-tabs" style="margin:0.75rem 0;flex-wrap:wrap;">
+        <button class="unit-tab active" onclick="setCaseMode('lower',this)">lowercase</button>
+        <button class="unit-tab" onclick="setCaseMode('upper',this)">UPPERCASE</button>
+        <button class="unit-tab" onclick="setCaseMode('title',this)">Title Case</button>
+        <button class="unit-tab" onclick="setCaseMode('sentence',this)">Sentence case</button>
+        <button class="unit-tab" onclick="setCaseMode('camel',this)">camelCase</button>
+        <button class="unit-tab" onclick="setCaseMode('snake',this)">snake_case</button>
+        <button class="unit-tab" onclick="setCaseMode('kebab',this)">kebab-case</button>
+      </div>
+      <textarea id="case-output" placeholder="Result will appear here…" style="width:100%;min-height:120px;" readonly></textarea>
+      <button class="btn" style="margin-top:0.75rem;" onclick="copyText('case-output')">📋 Copy Result</button>
+    </div>
+
+    <!-- Lorem Ipsum -->
+    <div id="tool-lorem" style="display:none;">
+      <div style="display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap;align-items:center;">
+        <div class="unit-input-group"><label>Amount</label><input type="number" id="lorem-count" value="3" min="1" max="20"/></div>
+        <div class="unit-input-group"><label>Type</label><select id="lorem-type"><option value="paragraphs">Paragraphs</option><option value="sentences">Sentences</option><option value="words">Words</option></select></div>
+        <button class="btn btn-sm" onclick="genLorem()" style="align-self:flex-end;">Generate</button>
+      </div>
+      <textarea id="lorem-output" style="width:100%;min-height:200px;" readonly></textarea>
+      <button class="btn" style="margin-top:0.75rem;" onclick="copyText('lorem-output')">📋 Copy</button>
+    </div>
+
+    <!-- Base64 -->
+    <div id="tool-base64" style="display:none;">
+      <div class="unit-tabs" style="margin-bottom:1rem;">
+        <button class="unit-tab active" onclick="setB64Mode('encode',this)">Encode</button>
+        <button class="unit-tab" onclick="setB64Mode('decode',this)">Decode</button>
+      </div>
+      <textarea id="b64-input" placeholder="Enter text to encode…" style="width:100%;min-height:120px;" oninput="processB64()"></textarea>
+      <div style="margin:0.5rem 0;text-align:center;color:var(--muted);font-size:0.8rem;">↓ Result ↓</div>
+      <textarea id="b64-output" style="width:100%;min-height:120px;" readonly></textarea>
+      <button class="btn" style="margin-top:0.75rem;" onclick="copyText('b64-output')">📋 Copy Result</button>
+    </div>
+
+    <!-- Remove Duplicates -->
+    <div id="tool-dedup" style="display:none;">
+      <textarea id="dedup-input" placeholder="Paste lines here — duplicates will be removed…" style="width:100%;min-height:150px;"></textarea>
+      <button class="btn" style="margin:0.75rem 0;" onclick="removeDupes()">🗑️ Remove Duplicates</button>
+      <textarea id="dedup-output" style="width:100%;min-height:120px;" readonly></textarea>
+      <div id="dedup-info" style="font-size:0.82rem;color:var(--muted);margin-top:0.4rem;"></div>
+      <button class="btn btn-outline" style="margin-top:0.5rem;" onclick="copyText('dedup-output')">📋 Copy Result</button>
+    </div>
+
+    <!-- URL Encode -->
+    <div id="tool-url" style="display:none;">
+      <div class="unit-tabs" style="margin-bottom:1rem;">
+        <button class="unit-tab active" onclick="setUrlMode('encode',this)">Encode</button>
+        <button class="unit-tab" onclick="setUrlMode('decode',this)">Decode</button>
+      </div>
+      <textarea id="url-input" placeholder="Enter text or URL to encode…" style="width:100%;min-height:120px;" oninput="processUrl()"></textarea>
+      <div style="margin:0.5rem 0;text-align:center;color:var(--muted);font-size:0.8rem;">↓ Result ↓</div>
+      <textarea id="url-output" style="width:100%;min-height:120px;" readonly></textarea>
+      <button class="btn" style="margin-top:0.75rem;" onclick="copyText('url-output')">📋 Copy Result</button>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
+    <a class="related-card" href="/units/"><span class="icon">📐</span><div class="info"><h4>Unit Converter</h4><p>Length, weight, temp</p></div></a>
+    <a class="related-card" href="/colors/"><span class="icon">🎨</span><div class="info"><h4>Color Tools</h4><p>HEX, RGB, HSL</p></div></a>
+    <a class="related-card" href="/pdf/"><span class="icon">📄</span><div class="info"><h4>PDF Tools</h4><p>Split, merge, compress</p></div></a>
+  </div></div>
+</div>
+
+<footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/qr/">QR</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
+<script src="../js/common.js"></script>
+<script>
+  let currentTool='wordcount', caseMode='lower', b64Mode='encode', urlMode='encode';
+  function setTool(t,btn){currentTool=t;document.querySelectorAll('.unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['wordcount','case','lorem','base64','dedup','url'].forEach(id=>document.getElementById('tool-'+id).style.display=id===t?'block':'none');}
+  function updateWordCount(){const t=document.getElementById('wc-input').value;const words=t.trim()?t.trim().split(/\s+/).length:0;document.getElementById('wc-words').textContent=words;document.getElementById('wc-chars').textContent=t.length;document.getElementById('wc-lines').textContent=t?t.split('\n').length:0;document.getElementById('wc-read').textContent=Math.ceil(words/200)||0;}
+  let caseModeActive='lower';
+  function setCaseMode(m,btn){caseModeActive=m;document.querySelectorAll('#tool-case .unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');updateCase();}
+  function updateCase(){const t=document.getElementById('case-input').value;let r;switch(caseModeActive){case 'lower':r=t.toLowerCase();break;case 'upper':r=t.toUpperCase();break;case 'title':r=t.replace(/\b\w/g,c=>c.toUpperCase());break;case 'sentence':r=t.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g,c=>c.toUpperCase());break;case 'camel':r=t.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g,(_,c)=>c.toUpperCase());break;case 'snake':r=t.trim().toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');break;case 'kebab':r=t.trim().toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');break;}document.getElementById('case-output').value=r;}
+  const LOREM_W=['lorem','ipsum','dolor','sit','amet','consectetur','adipiscing','elit','sed','do','eiusmod','tempor','incididunt','ut','labore','et','dolore','magna','aliqua','enim','ad','minim','veniam','quis','nostrud','exercitation','ullamco','laboris','nisi','aliquip','ex','ea','commodo','consequat','duis','aute','irure','in','reprehenderit','voluptate','velit','esse','cillum','fugiat','nulla','pariatur','excepteur','sint','occaecat','cupidatat','non','proident','sunt','culpa','qui','officia','deserunt','mollit','anim','id','est','laborum'];
+  function randWord(){return LOREM_W[Math.floor(Math.random()*LOREM_W.length)];}
+  function randSentence(){const len=8+Math.floor(Math.random()*10);const words=Array.from({length:len},randWord);words[0]=words[0].charAt(0).toUpperCase()+words[0].slice(1);return words.join(' ')+'.';}
+  function randPara(){return Array.from({length:4+Math.floor(Math.random()*4)},randSentence).join(' ');}
+  function genLorem(){const count=parseInt(document.getElementById('lorem-count').value)||3;const type=document.getElementById('lorem-type').value;let r;if(type==='words'){r=Array.from({length:count},randWord).join(' ');}else if(type==='sentences'){r=Array.from({length:count},randSentence).join(' ');}else{r=Array.from({length:count},randPara).join('\n\n');}document.getElementById('lorem-output').value=r;}
+  function setB64Mode(m,btn){b64Mode=m;document.querySelectorAll('#tool-base64 .unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('b64-input').placeholder=m==='encode'?'Enter text to encode…':'Enter Base64 to decode…';processB64();}
+  function processB64(){const t=document.getElementById('b64-input').value;try{document.getElementById('b64-output').value=b64Mode==='encode'?btoa(unescape(encodeURIComponent(t))):decodeURIComponent(escape(atob(t)));}catch(e){document.getElementById('b64-output').value='Error: invalid input';}}
+  function removeDupes(){const lines=document.getElementById('dedup-input').value.split('\n');const unique=[...new Set(lines)];document.getElementById('dedup-output').value=unique.join('\n');document.getElementById('dedup-info').textContent=`Removed ${lines.length-unique.length} duplicate(s). ${unique.length} unique lines remaining.`;}
+  function setUrlMode(m,btn){urlMode=m;document.querySelectorAll('#tool-url .unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');processUrl();}
+  function processUrl(){const t=document.getElementById('url-input').value;try{document.getElementById('url-output').value=urlMode==='encode'?encodeURIComponent(t):decodeURIComponent(t);}catch(e){document.getElementById('url-output').value='Error: invalid input';}}
+  function copyText(id){const el=document.getElementById(id);el.select();document.execCommand('copy');alert('Copied to clipboard!');}
+  genLorem();
+</script>
+</body></html>

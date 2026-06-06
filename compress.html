@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Image Compressor Online – Reduce File Size | OneConvert</title>
+  <meta name="description" content="Compress JPG, PNG and WebP images online for free. Reduce file size without visible quality loss. No upload, no account, runs in your browser."/>
+  <meta name="keywords" content="compress image online free, reduce image file size, image compressor, jpg compressor, png compressor, optimize image for web"/>
+  <link rel="canonical" href="https://oneconvert.net/image/compress.html"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image Compressor","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no file size limits and no account required."}},{"@type":"Question","name":"Does image compression affect quality?","acceptedAnswer":{"@type":"Answer","text":"At 80-90% quality setting, the difference is virtually invisible to the human eye while file size reduces significantly."}},{"@type":"Question","name":"What is the ideal quality setting?","acceptedAnswer":{"@type":"Answer","text":"80% quality is the sweet spot — it typically reduces file size by 60-70% while maintaining excellent visual quality."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links">
+    <a href="/pdf/">PDF</a><a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/text/">Text</a><a href="/colors/">Colors</a>
+  </div>
+</nav>
+
+<div class="ad-overlay" id="ad-overlay">
+  <div class="ad-overlay-box">
+    <h3>⚡ Your file is ready!</h3>
+    <p>Please wait while we prepare your download.</p>
+    <div class="ad-overlay-inner"><ins class="adsbygoogle" style="display:block;width:300px;height:120px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+    <div class="countdown" id="countdown">5</div>
+    <button class="btn" id="skip-btn" onclick="triggerDownload()" style="display:none;">⬇️ Download</button>
+    <p class="ad-note">Ads keep OneConvert free 🙏</p>
+  </div>
+</div>
+
+<div class="tool-page">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image Tools</a><span>›</span><span>Compress Image</span></div>
+  <div class="tool-page-header">
+    <h1>Free Image Compressor</h1>
+    <p>Reduce image file size while keeping great quality. Adjust compression level and see results instantly.</p>
+  </div>
+
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
+    <div class="ad-label">Advertisement</div>
+    <ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone">
+      <div class="dropzone-icon">🖼️</div>
+      <p><strong>Click to select</strong> or drag & drop your image here</p>
+      <small>JPG, PNG, WebP supported · No file size limit</small>
+    </div>
+    <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" style="display:none;"/>
+
+    <div id="options-area" style="display:none;">
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.85rem;color:var(--muted);display:flex;justify-content:space-between;margin-bottom:0.4rem;">
+          <span>Quality</span><span id="quality-label" style="color:var(--accent2);font-weight:700;">80%</span>
+        </label>
+        <input type="range" id="quality-slider" min="10" max="100" value="80" step="5" style="width:100%;"/>
+      </div>
+
+      <div id="preview-area">
+        <div class="preview-box">
+          <img id="preview-img" src="" alt="Preview" style="max-height:200px;"/>
+          <div class="preview-info">
+            <div class="preview-stat"><div class="val" id="orig-size">—</div><div class="lbl">Original</div></div>
+            <div class="preview-stat"><div class="val" id="new-size">—</div><div class="lbl">Compressed</div></div>
+            <div class="preview-stat"><div class="val" id="savings">—</div><div class="lbl">Saved</div></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn" onclick="compressAndDownload()">📦 Compress & Download</button>
+      <div class="status" id="status"></div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+    <div class="ad-banner ad-rectangle">
+      <div class="ad-label">Advertisement</div>
+      <ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h3>Related Tools</h3>
+    <div class="related-grid">
+      <a class="related-card" href="/image/jpg-to-png.html"><span class="icon">🔄</span><div class="info"><h4>JPG to PNG</h4><p>Convert format</p></div></a>
+      <a class="related-card" href="/image/resize.html"><span class="icon">↔️</span><div class="info"><h4>Resize Image</h4><p>Change dimensions</p></div></a>
+      <a class="related-card" href="/pdf/"><span class="icon">📄</span><div class="info"><h4>Compress PDF</h4><p>Reduce PDF size</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What Is the Best Quality Setting for Web Images?</h2>
+    <p>For web use, 75-85% quality is the sweet spot. At 80%, most images look virtually identical to the original while file size drops by 50-70%. This makes pages load faster and saves bandwidth. For print or professional use, stick to 90-95%.</p>
+    <p>PNG images are compressed losslessly — quality settings apply only to the output format. When compressing PNGs, the tool converts them to WebP or JPEG for maximum size reduction while maintaining visual quality.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Is this image compressor free?<span class="arrow">▼</span></button><div class="faq-a">Yes — completely free, no account, no file size limits, no usage restrictions.</div></div>
+    <div class="faq-item"><button class="faq-q">What quality setting should I use?<span class="arrow">▼</span></button><div class="faq-a">80% is the recommended setting for web images. It significantly reduces file size while maintaining excellent visual quality. For printing, use 90-95%.</div></div>
+    <div class="faq-item"><button class="faq-q">Does my image get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. All compression happens locally in your browser. Your images never leave your device.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I compress PNG images?<span class="arrow">▼</span></button><div class="faq-a">Yes. PNG images are compressed using the selected quality level. Depending on the image, you can typically achieve 30-60% size reduction.</div></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links"><a href="/">Home</a><a href="/image/">Image Tools</a><a href="/pdf/">PDF</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+</footer>
+
+<script src="../js/common.js"></script>
+<script>
+  let currentFile = null;
+  let currentType = 'image/jpeg';
+
+  const slider = document.getElementById('quality-slider');
+  const label = document.getElementById('quality-label');
+  slider.addEventListener('input', () => {
+    label.textContent = slider.value + '%';
+    if (currentFile) updatePreview();
+  });
+
+  setupDropzone('drop-zone', 'file-input', files => {
+    currentFile = files[0];
+    if (!currentFile) return;
+    currentType = currentFile.type === 'image/png' ? 'image/jpeg' : currentFile.type;
+    document.getElementById('orig-size').textContent = formatBytes(currentFile.size);
+    const url = URL.createObjectURL(currentFile);
+    document.getElementById('preview-img').src = url;
+    document.getElementById('options-area').style.display = 'block';
+    updatePreview();
+  });
+
+  function updatePreview() {
+    if (!currentFile) return;
+    const url = URL.createObjectURL(currentFile);
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(blob => {
+        const newSize = blob.size;
+        document.getElementById('new-size').textContent = formatBytes(newSize);
+        const saved = ((currentFile.size - newSize) / currentFile.size * 100).toFixed(0);
+        document.getElementById('savings').textContent = saved + '%';
+      }, 'image/jpeg', parseInt(slider.value) / 100);
+    };
+    img.src = url;
+  }
+
+  function compressAndDownload() {
+    if (!currentFile) return;
+    showStatus('status', 'info', 'Compressing…');
+    const url = URL.createObjectURL(currentFile);
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(async blob => {
+        const ext = currentType === 'image/png' ? 'jpg' : currentFile.name.split('.').pop();
+        const outName = currentFile.name.replace(/\.[^.]+$/, '') + '_compressed.' + ext;
+        showAdAndDownload(await blob.arrayBuffer(), outName, 'image/jpeg');
+        showStatus('status', 'success', 'Compressed! Download starting…');
+      }, 'image/jpeg', parseInt(slider.value) / 100);
+    };
+    img.src = url;
+  }
+</script>
+</body>
+</html>

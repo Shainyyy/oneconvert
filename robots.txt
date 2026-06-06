@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oneconvert.net/sitemap.xml
