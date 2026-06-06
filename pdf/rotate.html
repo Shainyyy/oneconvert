@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Rotate PDF Online – Rotate PDF Pages | OneConvert</title>
+  <meta name="description" content="Rotate PDF pages online for free. Rotate all pages or specific page ranges by 90, 180 or 270 degrees. No upload, no account required."/>
+  <meta name="keywords" content="rotate pdf online free, rotate pdf pages, flip pdf pages, rotate pdf 90 degrees, rotate specific pages pdf"/>
+  <link rel="canonical" href="https://oneconvert.net/pdf/rotate.html"/>
+  <meta property="og:title" content="Free Rotate PDF Online – Rotate PDF Pages | OneConvert"/><meta property="og:description" content="Rotate PDF pages online for free. Rotate all pages or specific page ranges by 90, 180 or 270 degrees. No upload, no account required."/><meta property="og:type" content="website"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Rotate PDF Online","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"PDF Tools","item":"https://oneconvert.net/pdf/"},{"@type":"ListItem","position":3,"name":"Rotate PDF","item":"https://oneconvert.net/pdf/rotate.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I rotate only specific pages?","acceptedAnswer":{"@type":"Answer","text":"Yes — enter individual page numbers (e.g. 1,3,5) or ranges (e.g. 2-4) in the pages field."}},{"@type":"Question","name":"Is rotation free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no account, no limits."}},{"@type":"Question","name":"Does the file get uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Rotation runs entirely in your browser using pdf-lib."}},{"@type":"Question","name":"Can I rotate by custom angles?","acceptedAnswer":{"@type":"Answer","text":"The tool supports 90°, 180° and 270°. Arbitrary angles are not supported in the browser-based version."}},{"@type":"Question","name":"Will rotating affect image quality?","acceptedAnswer":{"@type":"Answer","text":"No — rotation is a metadata change in PDF, not a pixel operation. Image quality is unchanged."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links">
+    <a href="/pdf/" class="active">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+</nav>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Rotate PDF</span></div>
+  <div class="tool-page-header"><h1>Free Rotate PDF Pages Online</h1><p>Rotate all pages or specific pages of your PDF. Choose 90°, 180° or 270° — instant, no upload.</p></div>
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-rotate">
+      <div class="dropzone-icon">🔄</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <div id="rotate-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
+    </div>
+    <input type="file" id="file-input-rotate" accept=".pdf" style="display:none;"/>
+    <div class="input-row" style="margin-top:1rem;gap:1rem;flex-wrap:wrap;">
+      <div style="display:flex;flex-direction:column;gap:0.3rem;">
+        <label style="color:var(--muted);font-size:0.82rem;">Pages (e.g. 1,3,5-7 or "all")</label>
+        <input type="text" id="rotate-pages" placeholder="all" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.75rem;width:200px;"/>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.3rem;">
+        <label style="color:var(--muted);font-size:0.82rem;">Angle</label>
+        <select id="rotate-angle" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"><option value="90">90° clockwise</option><option value="180">180°</option><option value="270">90° counter-clockwise</option></select>
+      </div>
+    </div>
+    <button class="btn" id="rotate-btn" onclick="doRotate()" disabled style="margin-top:1rem;">🔄 Rotate & Download</button>
+    <div class="status" id="status-rotate"></div>
+  </div>
+  <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h4>Split PDF</h4><p>Extract pages</p></div></a>
+      <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine PDFs</p></div></a>
+      <a class="related-card" href="/pdf/delete-pages.html"><span class="icon">🗑️</span><div class="info"><h4>Delete Pages</h4><p>Remove pages</p></div></a>
+      <a class="related-card" href="/pdf/reorder.html"><span class="icon">↕️</span><div class="info"><h4>Reorder Pages</h4><p>Rearrange pages</p></div></a></div></div>
+  <div class="info-section"><h2>When Do You Need to Rotate PDF Pages?</h2><p>Scanned documents often come out sideways or upside-down depending on how they were fed into a scanner. Rotating specific pages fixes orientation without affecting the rest of the document. You can also rotate entire PDFs when a document was saved in landscape but should be portrait, or vice versa.</p><p>Enter the pages you want to rotate using a comma-separated list (e.g. "1,3,5") or a range (e.g. "2-4"), or type "all" to rotate every page. Then select your rotation angle and click Rotate.</p></div>
+  <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Can I rotate only specific pages?<span class="arrow">▼</span></button><div class="faq-a">Yes — enter individual page numbers (e.g. 1,3,5) or ranges (e.g. 2-4) in the pages field.</div></div>
+    <div class="faq-item"><button class="faq-q">Is rotation free?<span class="arrow">▼</span></button><div class="faq-a">Yes — completely free, no account, no limits.</div></div>
+    <div class="faq-item"><button class="faq-q">Does the file get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Rotation runs entirely in your browser using pdf-lib.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I rotate by custom angles?<span class="arrow">▼</span></button><div class="faq-a">The tool supports 90°, 180° and 270°. Arbitrary angles are not supported in the browser-based version.</div></div>
+    <div class="faq-item"><button class="faq-q">Will rotating affect image quality?<span class="arrow">▼</span></button><div class="faq-a">No — rotation is a metadata change in PDF, not a pixel operation. Image quality is unchanged.</div></div></div>
+</div>
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function directDownload(bytes,filename,mime){const blob=new Blob([bytes],{type:mime||'application/pdf'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+const HANDLE_SVG=`<svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.5"/><circle cx="10" cy="3" r="1.5"/><circle cx="4" cy="9" r="1.5"/><circle cx="10" cy="9" r="1.5"/><circle cx="4" cy="15" r="1.5"/><circle cx="10" cy="15" r="1.5"/></svg>`;
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';
+});
+</script>
+<script>
+let rotateFile=null;
+document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-rotate','file-input-rotate',f=>{rotateFile=f[0];document.getElementById('rotate-info').textContent='📎 '+f[0].name;document.getElementById('rotate-btn').disabled=false;}));
+async function doRotate(){if(!rotateFile)return showStatus('status-rotate','error','Please select a PDF first.');const pagesInput=document.getElementById('rotate-pages').value.trim()||'all';const angle=parseInt(document.getElementById('rotate-angle').value);showStatus('status-rotate','info','Rotating…');try{const buf=await rotateFile.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const total=pdf.getPageCount();let indices=[];if(pagesInput.toLowerCase()==='all'){indices=Array.from({length:total},(_,i)=>i);}else{pagesInput.split(',').forEach(p=>{const r=p.trim().split('-');if(r.length===2){const a=parseInt(r[0])-1,b=parseInt(r[1])-1;for(let i=a;i<=b;i++)if(i>=0&&i<total)indices.push(i);}else{const n=parseInt(r[0])-1;if(!isNaN(n)&&n>=0&&n<total)indices.push(n);}});}if(!indices.length)return showStatus('status-rotate','error','No valid pages found.');indices.forEach(i=>{const p=pdf.getPage(i);const cur=p.getRotation().angle;p.setRotation(PDFLib.degrees((cur+angle)%360));});const bytes=await pdf.save();directDownload(bytes,rotateFile.name.replace(/\.pdf$/i,'')+'_rotated.pdf','application/pdf');showStatus('status-rotate','success',`Rotated ${indices.length} page(s). Done!`);}catch(e){showStatus('status-rotate','error','Error: '+e.message);}}
+</script>
+</body></html>

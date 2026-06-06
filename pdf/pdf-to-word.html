@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free PDF to Word Converter Online – PDF to DOCX | OneConvert</title>
+  <meta name="description" content="Convert PDF to Word (DOCX) online for free. Extract text from PDFs and create editable Word documents. No upload, no account, runs in your browser."/>
+  <meta name="keywords" content="pdf to word converter free, convert pdf to docx online, pdf to word no upload, pdf to word free online, pdf docx converter"/>
+  <link rel="canonical" href="https://oneconvert.net/pdf/pdf-to-word.html"/>
+  <meta property="og:title" content="Free PDF to Word Converter Online – PDF to DOCX | OneConvert"/><meta property="og:description" content="Convert PDF to Word (DOCX) online for free. Extract text from PDFs and create editable Word documents. No upload, no account, runs in your browser."/><meta property="og:type" content="website"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free PDF to Word Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"PDF Tools","item":"https://oneconvert.net/pdf/"},{"@type":"ListItem","position":3,"name":"PDF to Word","item":"https://oneconvert.net/pdf/pdf-to-word.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is PDF to Word conversion free?","acceptedAnswer":{"@type":"Answer","text":"Yes — free, no account, no file size limits."}},{"@type":"Question","name":"Does my PDF get uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Conversion runs entirely in your browser using pdf.js and docx.js."}},{"@type":"Question","name":"Will my formatting be preserved?","acceptedAnswer":{"@type":"Answer","text":"Text content, paragraph structure and heading sizes are preserved. Complex layouts, tables, columns and images are not carried over."}},{"@type":"Question","name":"Why does my converted Word file look different?","acceptedAnswer":{"@type":"Answer","text":"PDF is a fixed-layout format — it does not store semantic structure like Word does. The converter reconstructs paragraphs from raw text positions, which works well for simple documents."}},{"@type":"Question","name":"Can it convert scanned PDFs?","acceptedAnswer":{"@type":"Answer","text":"No. Scanned PDFs are images of text. Converting them requires OCR (optical character recognition), which is not available in a browser-based tool."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links">
+    <a href="/pdf/" class="active">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+</nav>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>PDF to Word</span></div>
+  <div class="tool-page-header"><h1>Free PDF to Word Converter</h1><p>Convert text-based PDFs to editable DOCX files — detect headings, paragraphs and font sizes. No upload, no account.</p></div>
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-p2w">
+      <div class="dropzone-icon">📝</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <div id="p2w-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
+    </div>
+    <input type="file" id="file-input-p2w" accept=".pdf" style="display:none;"/>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;">⚠️ Works best with text-based PDFs where you can select text. Scanned documents (image-only PDFs) are not supported.</p>
+    <button class="btn" id="p2w-btn" onclick="doP2W()" disabled style="margin-top:1rem;">📝 Convert to DOCX & Download</button>
+    <div class="status" id="status-p2w"></div>
+  </div>
+  <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h4>Split PDF</h4><p>Extract pages</p></div></a>
+      <a class="related-card" href="/pdf/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress PDF</h4><p>Reduce size</p></div></a>
+      <a class="related-card" href="/pdf/pdf-to-images.html"><span class="icon">📷</span><div class="info"><h4>PDF to Images</h4><p>Export as PNG</p></div></a>
+      <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine PDFs</p></div></a></div></div>
+  <div class="info-section"><h2>How Does PDF to Word Conversion Work?</h2><p>PDF to Word conversion extracts text content from text-based PDFs using pdf.js, analyses font sizes to detect headings and body text, then reconstructs the document structure in DOCX format using docx.js. All processing happens in your browser — your document never reaches any server.</p><p>For best results, use PDFs where you can select and copy text. Scanned documents contain only images of text and require OCR (optical character recognition), which is not available in browser-based tools. Complex multi-column layouts and tables may not convert perfectly — the tool focuses on accurate text extraction with basic structure preservation.</p></div>
+  <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is PDF to Word conversion free?<span class="arrow">▼</span></button><div class="faq-a">Yes — free, no account, no file size limits.</div></div>
+    <div class="faq-item"><button class="faq-q">Does my PDF get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Conversion runs entirely in your browser using pdf.js and docx.js.</div></div>
+    <div class="faq-item"><button class="faq-q">Will my formatting be preserved?<span class="arrow">▼</span></button><div class="faq-a">Text content, paragraph structure and heading sizes are preserved. Complex layouts, tables, columns and images are not carried over.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does my converted Word file look different?<span class="arrow">▼</span></button><div class="faq-a">PDF is a fixed-layout format — it does not store semantic structure like Word does. The converter reconstructs paragraphs from raw text positions, which works well for simple documents.</div></div>
+    <div class="faq-item"><button class="faq-q">Can it convert scanned PDFs?<span class="arrow">▼</span></button><div class="faq-a">No. Scanned PDFs are images of text. Converting them requires OCR (optical character recognition), which is not available in a browser-based tool.</div></div></div>
+</div>
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function directDownload(bytes,filename,mime){const blob=new Blob([bytes],{type:mime||'application/pdf'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);}
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';});
+</script>
+<script>
+let p2wFile=null;
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-p2w','file-input-p2w',f=>{p2wFile=f[0];document.getElementById('p2w-info').textContent='📎 '+f[0].name;document.getElementById('p2w-btn').disabled=false;}));
+async function doP2W(){if(!p2wFile)return showStatus('status-p2w','error','Please select a PDF first.');showStatus('status-p2w','info','Extracting text…');try{const buf=await p2wFile.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;const n=pdf.numPages;const allChildren=[];for(let i=1;i<=n;i++){showStatus('status-p2w','info',`Processing page ${i} of ${n}…`);const page=await pdf.getPage(i);const content=await page.getTextContent();const lineMap={};content.items.forEach(item=>{if(!item.str||!item.str.trim())return;const y=Math.round(item.transform[5]);if(!lineMap[y])lineMap[y]=[];lineMap[y].push({text:item.str,fontSize:Math.abs(Math.round(item.transform[3])),x:item.transform[4]});});if(Object.keys(lineMap).length===0)continue;const sortedYs=Object.keys(lineMap).map(Number).sort((a,b)=>b-a);const allSizes=Object.values(lineMap).flat().map(it=>it.fontSize).filter(s=>s>0);const sizeCount={};allSizes.forEach(s=>{sizeCount[s]=(sizeCount[s]||0)+1;});const bodySize=allSizes.length>0?parseInt(Object.entries(sizeCount).sort((a,b)=>b[1]-a[1])[0][0]):12;let prevY=null;sortedYs.forEach(y=>{const items=lineMap[y].sort((a,b)=>a.x-b.x);const lineText=items.map(it=>it.text).join(' ').trim();if(!lineText)return;const avgSize=items.reduce((s,it)=>s+it.fontSize,0)/items.length||bodySize;const isLarge=avgSize>=bodySize*1.4;const yGap=prevY!==null?prevY-y:0;if(yGap>avgSize*2&&allChildren.length>0)allChildren.push(new docx.Paragraph({children:[new docx.TextRun({text:''})],spacing:{after:80}}));prevY=y;const sz=Math.max(16,Math.round(isLarge?avgSize*2.2:bodySize*2));allChildren.push(new docx.Paragraph({children:[new docx.TextRun({text:lineText,bold:isLarge,size:Math.min(sz,72),font:{name:'Calibri'}})],spacing:{after:isLarge?160:80,line:276,lineRule:docx.LineRuleType.AUTO}}));});if(i<n)allChildren.push(new docx.Paragraph({pageBreakBefore:true,children:[new docx.TextRun({text:' '})]}));}if(!allChildren.length)return showStatus('status-p2w','error','No text found. PDF may be scanned or image-based.');showStatus('status-p2w','info','Building DOCX…');const doc=new docx.Document({sections:[{properties:{page:{margin:{top:1134,right:1134,bottom:1134,left:1134}}},children:allChildren}]});const blob=await docx.Packer.toBlob(doc);const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=p2wFile.name.replace(/\.pdf$/i,'')+'.docx';a.click();URL.revokeObjectURL(url);showStatus('status-p2w','success','Done! Your DOCX is downloading.');}catch(e){showStatus('status-p2w','error','Error: '+e.message);}}
+</script>
+</body></html>
