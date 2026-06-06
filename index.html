@@ -3,347 +3,211 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free PDF Tools Online – Split, Merge, Compress, Convert | OneConvert</title>
-  <meta name="description" content="Free online PDF tools — split, merge, compress, rotate, reorder pages, delete pages, PDF to Word, images to PDF. No upload, no account, 100% private browser-based."/>
-  <meta name="keywords" content="split PDF online free, merge PDF files, compress PDF, rotate PDF, PDF to Word converter, images to PDF, delete PDF pages, free PDF editor no upload"/>
-  <link rel="canonical" href="https://oneconvert.net/pdf/"/>
-  <meta property="og:title" content="Free PDF Tools – Split, Merge, Compress | OneConvert"/>
-  <meta property="og:description" content="9 free PDF tools — no upload, no account. Everything runs in your browser."/>
+  <title>OneConvert – Free Online Converter Tools | PDF, Image, QR, Units & More</title>
+  <meta name="description" content="Free browser-based converter tools — convert PDF, images, QR codes, units, text and colors. No upload, no account, no limits. Everything runs locally in your browser."/>
+  <meta name="keywords" content="free online converter, PDF converter, image converter, QR code generator, unit converter, text tools, color converter, browser based tools, no upload converter"/>
+  <link rel="canonical" href="https://oneconvert.net/"/>
+  <meta property="og:title" content="OneConvert – Free Online Converter Tools"/>
+  <meta property="og:description" content="PDF, Image, QR, Unit and Text tools — free, instant, private. No upload to any server."/>
+  <meta property="og:url" content="https://oneconvert.net/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <meta name="robots" content="index, follow"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/style.css"/>
-  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
-  <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PDF Tools","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free browser-based PDF toolkit — split, merge, compress, rotate, reorder, delete pages, PDF to Word and more."}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"PDF Tools","item":"https://oneconvert.net/pdf/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are these PDF tools free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No account, no file size limits, no subscriptions."}},{"@type":"Question","name":"Are my PDF files uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens in your browser. Your files never leave your device."}},{"@type":"Question","name":"Is there a file size limit?","acceptedAnswer":{"@type":"Answer","text":"There is no imposed limit. The only constraint is your browser's available memory."}},{"@type":"Question","name":"Can I convert PDF to Word?","acceptedAnswer":{"@type":"Answer","text":"Yes. The PDF to Word tool extracts text and styling from text-based PDFs and creates an editable DOCX file."}}]}</script>
-  <style>
-    /* Panel styles */
-    .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .panel-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:200;align-items:center;justify-content:center;padding:1rem}
-    .panel-overlay.active{display:flex}
-    .panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;position:relative;animation:fadeUp 0.25s ease}
-    .panel-close{position:absolute;top:1rem;right:1rem;background:var(--bg3);border:1px solid var(--border);color:var(--muted);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}
-    .panel-close:hover{color:var(--text);border-color:var(--accent)}
-    .panel h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:0.4rem}
-    .panel-sub{color:var(--muted);font-size:0.85rem;margin-bottom:1.5rem;line-height:1.6}
-    .range-row{display:flex;gap:0.75rem;align-items:center;margin-bottom:1rem}
-    .range-row label{color:var(--muted);font-size:0.85rem;min-width:55px}
-    .range-row input[type=number]{width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.45rem 0.65rem;font-size:0.9rem}
-    @media(max-width:900px){.tools-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:600px){.tools-grid{grid-template-columns:1fr}}
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "OneConvert",
+    "url": "https://oneconvert.net",
+    "description": "Free browser-based converter tools for PDF, images, QR codes, units and text.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://oneconvert.net/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
+
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
   <div class="nav-links">
-    <a href="/pdf/" class="active">PDF</a>
+    <a href="/pdf/">PDF</a>
     <a href="/image/">Image</a>
     <a href="/qr/">QR Code</a>
     <a href="/units/">Units</a>
     <a href="/text/">Text</a>
     <a href="/colors/">Colors</a>
   </div>
-  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">☰</button>
 </nav>
 
-<!-- AD OVERLAY -->
-
-<!-- SPLIT PANEL -->
-<div class="panel-overlay" id="panel-split">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('split')">✕</button>
-    <h2>✂️ Split PDF</h2>
-    <p class="panel-sub">Extract a range of pages into a new PDF file.</p>
-    <div class="dropzone" id="drop-split"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDF</p><p id="split-filename" style="margin-top:0.4rem;color:var(--accent2);font-size:0.85rem;"></p></div>
-    <input type="file" id="file-input-split" accept=".pdf" style="display:none;"/>
-    <div class="range-row"><label>From page</label><input type="number" id="split-from" value="1" min="1"/></div>
-    <div class="range-row"><label>To page</label><input type="number" id="split-to" value="1" min="1"/></div>
-    <p style="font-size:0.78rem;color:var(--muted);margin-bottom:1rem;" id="split-total"></p>
-    <button class="btn" onclick="doSplit()" id="split-btn">✂️ Split & Download</button>
-    <div class="status" id="status-split"></div>
-  </div>
-</div>
-
-<!-- MERGE PANEL -->
-<div class="panel-overlay" id="panel-merge">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('merge')">✕</button>
-    <h2>🔗 Merge PDFs</h2>
-    <p class="panel-sub">Combine multiple PDF files into one. Drag to reorder.</p>
-    <div class="dropzone" id="drop-merge"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDFs</p><small>Multiple files supported</small></div>
-    <input type="file" id="file-input-merge" accept=".pdf" multiple style="display:none;"/>
-    <div class="file-list" id="merge-file-list"></div>
-    <button class="btn" onclick="doMerge()" id="merge-btn" disabled>🔗 Merge & Download</button>
-    <div class="status" id="status-merge"></div>
-  </div>
-</div>
-
-<!-- REORDER PANEL -->
-<div class="panel-overlay" id="panel-reorder">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('reorder')">✕</button>
-    <h2>↕️ Reorder Pages</h2>
-    <p class="panel-sub">Drag pages into your desired order.</p>
-    <div class="dropzone" id="drop-reorder"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDF</p><p id="reorder-filename" style="margin-top:0.4rem;color:var(--accent2);font-size:0.85rem;"></p></div>
-    <input type="file" id="file-input-reorder" accept=".pdf" style="display:none;"/>
-    <div class="pages-grid" id="reorder-pages-grid" style="min-height:60px;"></div>
-    <button class="btn" onclick="doReorder()" id="reorder-btn" disabled>↕️ Save Reordered PDF</button>
-    <div class="status" id="status-reorder"></div>
-  </div>
-</div>
-
-<!-- ROTATE PANEL -->
-<div class="panel-overlay" id="panel-rotate">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('rotate')">✕</button>
-    <h2>🔄 Rotate PDF</h2>
-    <p class="panel-sub">Rotate specific pages or the whole document.</p>
-    <div class="dropzone" id="drop-rotate"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDF</p><p id="rotate-filename" style="margin-top:0.4rem;color:var(--accent2);font-size:0.85rem;"></p></div>
-    <input type="file" id="file-input-rotate" accept=".pdf" style="display:none;"/>
-    <div class="input-row" style="margin-top:1rem;">
-      <label style="color:var(--muted);font-size:0.85rem;">Pages (e.g. 1,3,5-7 or "all")</label>
-      <input type="text" id="rotate-pages" placeholder="all" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.75rem;"/>
-    </div>
-    <div class="input-row" style="margin-top:0.75rem;">
-      <label style="color:var(--muted);font-size:0.85rem;">Angle</label>
-      <select id="rotate-angle" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
-        <option value="90">90° clockwise</option>
-        <option value="180">180°</option>
-        <option value="270">90° counter-clockwise</option>
-      </select>
-    </div>
-    <button class="btn" onclick="doRotate()" id="rotate-btn" style="margin-top:1rem;" disabled>🔄 Rotate & Download</button>
-    <div class="status" id="status-rotate"></div>
-  </div>
-</div>
-
-<!-- COMPRESS PANEL -->
-<div class="panel-overlay" id="panel-compress">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('compress')">✕</button>
-    <h2>📦 Compress PDF</h2>
-    <p class="panel-sub">Reduce PDF file size by stripping metadata. Works best on PDFs with embedded metadata.</p>
-    <div class="dropzone" id="drop-compress"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDF</p><p id="compress-filename" style="margin-top:0.4rem;color:var(--accent2);font-size:0.85rem;"></p></div>
-    <input type="file" id="file-input-compress" accept=".pdf" style="display:none;"/>
-    <button class="btn" onclick="doCompress()" id="compress-btn" disabled style="margin-top:1rem;">📦 Compress & Download</button>
-    <div class="status" id="status-compress"></div>
-  </div>
-</div>
-
-<!-- DELETE PAGES PANEL -->
-<div class="panel-overlay" id="panel-delete">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('delete')">✕</button>
-    <h2>🗑️ Delete Pages</h2>
-    <p class="panel-sub">Remove specific pages from a PDF.</p>
-    <div class="dropzone" id="drop-delete"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDF</p><p id="delete-filename" style="margin-top:0.4rem;color:var(--accent2);font-size:0.85rem;"></p></div>
-    <input type="file" id="file-input-delete" accept=".pdf" style="display:none;"/>
-    <p style="font-size:0.78rem;color:var(--muted);margin:0.75rem 0 0.25rem;" id="delete-total"></p>
-    <div class="input-row">
-      <label style="color:var(--muted);font-size:0.85rem;">Pages to delete (e.g. 1,3,5-7)</label>
-      <input type="text" id="delete-pages" placeholder="e.g. 2,4,6-8" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.75rem;"/>
-    </div>
-    <button class="btn" onclick="doDelete()" id="delete-btn" disabled>🗑️ Delete & Download</button>
-    <div class="status" id="status-delete"></div>
-  </div>
-</div>
-
-<!-- IMAGES TO PDF PANEL -->
-<div class="panel-overlay" id="panel-img2pdf">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('img2pdf')">✕</button>
-    <h2>🖼️ Images to PDF</h2>
-    <p class="panel-sub">Combine JPG, PNG, WebP or HEIC images into a single PDF. Drag to reorder.</p>
-    <div class="dropzone" id="drop-img2pdf"><div class="dropzone-icon">🖼️</div><p><strong>Click to select</strong> or drag & drop images</p><small>JPG, PNG, WebP, GIF, HEIC supported</small></div>
-    <input type="file" id="file-input-img2pdf" accept="image/*,.heic,.heif" multiple style="display:none;"/>
-    <div class="file-list" id="img2pdf-file-list"></div>
-    <button class="btn" onclick="doImg2Pdf()" id="img2pdf-btn" disabled>🖼️ Create PDF & Download</button>
-    <div class="status" id="status-img2pdf"></div>
-  </div>
-</div>
-
-<!-- PDF TO IMAGES PANEL -->
-<div class="panel-overlay" id="panel-pdf2img">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('pdf2img')">✕</button>
-    <h2>📷 PDF to Images</h2>
-    <p class="panel-sub">Export PDF pages as high-quality PNG images.</p>
-    <div class="dropzone" id="drop-pdf2img"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDF</p><p id="pdf2img-filename" style="margin-top:0.4rem;color:var(--accent2);font-size:0.85rem;"></p></div>
-    <input type="file" id="file-input-pdf2img" accept=".pdf" style="display:none;"/>
-    <p style="font-size:0.78rem;color:var(--muted);margin:0.75rem 0 0.25rem;" id="pdf2img-total"></p>
-    <div class="range-row"><label>From page</label><input type="number" id="pdf2img-from" value="1" min="1"/></div>
-    <div class="range-row"><label>To page</label><input type="number" id="pdf2img-to" value="1" min="1"/></div>
-    <button class="btn" onclick="doPdf2Img()" id="pdf2img-btn" disabled>📷 Export Images</button>
-    <div class="status" id="status-pdf2img"></div>
-  </div>
-</div>
-
-<!-- PDF TO WORD PANEL -->
-<div class="panel-overlay" id="panel-pdf2word">
-  <div class="panel">
-    <button class="panel-close" onclick="closePanel('pdf2word')">✕</button>
-    <h2>📝 PDF to Word</h2>
-    <p class="panel-sub">Convert text-based PDFs to editable DOCX files. Detects headings, bold text and font sizes.<br/><span style="color:var(--muted);font-size:0.8rem;">⚠️ Best for text-heavy PDFs. Complex layouts, tables and scanned documents may not convert perfectly.</span></p>
-    <div class="dropzone" id="drop-pdf2word"><div class="dropzone-icon">📄</div><p><strong>Click to select</strong> or drag & drop PDF</p><p id="pdf2word-filename" style="margin-top:0.4rem;color:var(--accent2);font-size:0.85rem;"></p></div>
-    <input type="file" id="file-input-pdf2word" accept=".pdf" style="display:none;"/>
-    <button class="btn" onclick="doPdf2Word()" id="pdf2word-btn" disabled>📝 Convert & Download DOCX</button>
-    <div class="status" id="status-pdf2word"></div>
-  </div>
-</div>
-
-<!-- MAIN PAGE -->
-<div class="tool-page" style="max-width:1200px;">
-  <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>PDF Tools</span></div>
-  <div class="tool-page-header">
-    <h1>📄 Free PDF Tools</h1>
-    <p>Split, merge, compress, rotate, reorder, delete pages and convert PDFs — all free, all in your browser. No upload, no account.</p>
-  </div>
-
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
+<!-- Leaderboard Ad – above fold -->
+<div style="max-width:740px;margin:4rem auto 0;padding:0 1.5rem;">
+  <div class="ad-banner ad-leaderboard">
     <div class="ad-label">Advertisement</div>
     <ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
     <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
+</div>
 
-  <div class="tools-grid" style="margin-bottom:2rem;">
-    <div class="tool-card" onclick="openPanel('split')"><div class="tool-icon">✂️</div><h3>Split PDF</h3><p>Extract any page range into a new file.</p></div>
-    <div class="tool-card" onclick="openPanel('merge')"><div class="tool-icon">🔗</div><h3>Merge PDF</h3><p>Combine multiple PDFs — drag to reorder.</p></div>
-    <div class="tool-card" onclick="openPanel('reorder')"><div class="tool-icon">↕️</div><h3>Reorder Pages</h3><p>Drag & drop pages into any order.</p></div>
-    <div class="tool-card" onclick="openPanel('rotate')"><div class="tool-icon">🔄</div><h3>Rotate PDF</h3><p>Rotate specific pages or the whole document.</p></div>
-    <div class="tool-card" onclick="openPanel('compress')"><div class="tool-icon">📦</div><h3>Compress PDF</h3><p>Reduce file size by stripping metadata.</p></div>
-    <div class="tool-card" onclick="openPanel('delete')"><div class="tool-icon">🗑️</div><h3>Delete Pages</h3><p>Remove pages by number or range.</p></div>
-    <div class="tool-card" onclick="openPanel('img2pdf')"><div class="tool-icon">🖼️</div><h3>Images to PDF</h3><p>Convert JPG, PNG, WebP & HEIC to PDF.</p></div>
-    <div class="tool-card" onclick="openPanel('pdf2img')"><div class="tool-icon">📷</div><h3>PDF to Images</h3><p>Export pages as high-quality PNG files.</p></div>
-    <div class="tool-card" onclick="openPanel('pdf2word')"><div class="tool-icon">📝</div><h3>PDF to Word</h3><p>Convert text-based PDFs to editable DOCX.</p></div>
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="badge">⚡ Free · No Upload · No Account · Browser-Based</div>
+  <h1>One place for all your<br/><em>converter tools</em></h1>
+  <p>PDF, images, QR codes, units, text and colors — convert anything instantly. Everything runs in your browser. Your files never leave your device.</p>
+</section>
+
+<!-- Category Cards -->
+<div class="categories">
+  <a class="category-card" href="/pdf/">
+    <div class="category-icon">📄</div>
+    <h2>PDF Tools</h2>
+    <p>Split, merge, compress, rotate, reorder, delete pages, convert images to PDF and more.</p>
+    <div class="category-tools">
+      <span class="tool-tag">Split</span>
+      <span class="tool-tag">Merge</span>
+      <span class="tool-tag">Compress</span>
+      <span class="tool-tag">Rotate</span>
+      <span class="tool-tag">PDF to Word</span>
+      <span class="tool-tag">+5 more</span>
+    </div>
+  </a>
+  <a class="category-card" href="/image/">
+    <div class="category-icon">🖼️</div>
+    <h2>Image Tools</h2>
+    <p>Convert between JPG, PNG, WEBP, GIF and HEIC. Compress, resize and optimize images.</p>
+    <div class="category-tools">
+      <span class="tool-tag">JPG to PNG</span>
+      <span class="tool-tag">Compress</span>
+      <span class="tool-tag">Resize</span>
+      <span class="tool-tag">WebP to JPG</span>
+      <span class="tool-tag">HEIC</span>
+    </div>
+  </a>
+  <a class="category-card" href="/qr/">
+    <div class="category-icon">📱</div>
+    <h2>QR Code Tools</h2>
+    <p>Generate QR codes for URLs, text, WiFi and more. Customize colors and download as PNG or SVG.</p>
+    <div class="category-tools">
+      <span class="tool-tag">URL QR</span>
+      <span class="tool-tag">WiFi QR</span>
+      <span class="tool-tag">Custom Colors</span>
+      <span class="tool-tag">SVG Export</span>
+    </div>
+  </a>
+  <a class="category-card" href="/units/">
+    <div class="category-icon">📐</div>
+    <h2>Unit Converter</h2>
+    <p>Convert length, weight, temperature, speed, area, volume and data storage units instantly.</p>
+    <div class="category-tools">
+      <span class="tool-tag">Length</span>
+      <span class="tool-tag">Weight</span>
+      <span class="tool-tag">Temperature</span>
+      <span class="tool-tag">Speed</span>
+      <span class="tool-tag">Volume</span>
+    </div>
+  </a>
+  <a class="category-card" href="/text/">
+    <div class="category-icon">✏️</div>
+    <h2>Text Tools</h2>
+    <p>Word counter, case converter, Lorem Ipsum generator, remove duplicates, Base64 encode and more.</p>
+    <div class="category-tools">
+      <span class="tool-tag">Word Count</span>
+      <span class="tool-tag">Case Convert</span>
+      <span class="tool-tag">Base64</span>
+      <span class="tool-tag">Lorem Ipsum</span>
+    </div>
+  </a>
+  <a class="category-card" href="/colors/">
+    <div class="category-icon">🎨</div>
+    <h2>Color Tools</h2>
+    <p>Convert HEX, RGB, HSL colors. Generate palettes, check contrast ratios and create gradients.</p>
+    <div class="category-tools">
+      <span class="tool-tag">HEX ↔ RGB</span>
+      <span class="tool-tag">HSL</span>
+      <span class="tool-tag">Palette</span>
+      <span class="tool-tag">Contrast</span>
+    </div>
+  </a>
+</div>
+
+<!-- Features Strip -->
+<div class="features-strip">
+  <div class="feature-item"><div class="feature-icon">🔒</div><h4>100% Private</h4><p>Files stay on your device</p></div>
+  <div class="feature-item"><div class="feature-icon">⚡</div><h4>Instant</h4><p>No server processing</p></div>
+  <div class="feature-item"><div class="feature-icon">🆓</div><h4>Always Free</h4><p>No subscriptions ever</p></div>
+  <div class="feature-item"><div class="feature-icon">📵</div><h4>No Account</h4><p>Open and use immediately</p></div>
+  <div class="feature-item"><div class="feature-icon">🌐</div><h4>Any Device</h4><p>Desktop, tablet, mobile</p></div>
+</div>
+
+<!-- Mid-page Ad -->
+<div style="max-width:740px;margin:0 auto 2rem;padding:0 1.5rem;">
+  <div class="ad-banner ad-leaderboard">
+    <div class="ad-label">Advertisement</div>
+    <ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
   </div>
+</div>
 
-  <div style="display:flex;justify-content:center;margin-bottom:2rem;">
-    <div class="ad-banner ad-rectangle">
-      <div class="ad-label">Advertisement</div>
-      <ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
-      <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<!-- SEO Section -->
+<div class="seo-section">
+  <div class="seo-row">
+    <div class="seo-icon-box">🔒</div>
+    <div>
+      <h2>100% Private — Files Never Leave Your Device</h2>
+      <p>Unlike most online converter tools, OneConvert processes everything locally in your browser using JavaScript. Your files are never uploaded to any server. What you work with stays with you — completely private by design.</p>
     </div>
   </div>
-
-  <div class="related-tools">
-    <h3>Related Tools</h3>
-    <div class="related-grid">
-      <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress Image</h4><p>Reduce image file size</p></div></a>
-      <a class="related-card" href="/image/jpg-to-png.html"><span class="icon">🔄</span><div class="info"><h4>JPG to PNG</h4><p>Convert image formats</p></div></a>
-      <a class="related-card" href="/qr/"><span class="icon">📱</span><div class="info"><h4>QR Generator</h4><p>Create custom QR codes</p></div></a>
-      <a class="related-card" href="/units/"><span class="icon">📐</span><div class="info"><h4>Unit Converter</h4><p>Length, weight, temp</p></div></a>
+  <div class="seo-row">
+    <div class="seo-icon-box">📄</div>
+    <div>
+      <h2>Complete PDF Toolkit — Free Online</h2>
+      <p>Split PDFs into individual pages, merge multiple files, compress for email, rotate pages, reorder, delete and convert between formats. All 9 PDF tools run instantly in your browser with no file size limits and no registration required.</p>
     </div>
   </div>
-
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item"><button class="faq-q">Are these PDF tools free?<span class="arrow">▼</span></button><div class="faq-a">Yes, completely free. No account, no file size limits, no subscriptions — ever.</div></div>
-    <div class="faq-item"><button class="faq-q">Are my PDF files uploaded to a server?<span class="arrow">▼</span></button><div class="faq-a">No. All processing happens locally in your browser using JavaScript. Your files never leave your device.</div></div>
-    <div class="faq-item"><button class="faq-q">Is there a file size limit?<span class="arrow">▼</span></button><div class="faq-a">There is no imposed limit. The only constraint is your browser's available memory, which is typically several gigabytes.</div></div>
-    <div class="faq-item"><button class="faq-q">Can I merge more than 2 PDFs?<span class="arrow">▼</span></button><div class="faq-a">Yes — you can add as many PDFs as you need and drag them to set the order before merging.</div></div>
-    <div class="faq-item"><button class="faq-q">Does PDF to Word work with scanned documents?<span class="arrow">▼</span></button><div class="faq-a">No — the tool extracts text from text-based PDFs. Scanned documents are image-based and require OCR (optical character recognition) which is not available in browser-based tools.</div></div>
+  <div class="seo-row">
+    <div class="seo-icon-box">🖼️</div>
+    <div>
+      <h2>Image Converter Supporting All Major Formats</h2>
+      <p>Convert JPG to PNG, PNG to WebP, HEIC to JPG and more — instantly. Compress images to reduce file size, resize by pixel or percentage, and batch process multiple files at once. iPhone HEIC photos are converted on-the-fly.</p>
+    </div>
+  </div>
+  <div class="seo-row">
+    <div class="seo-icon-box">📐</div>
+    <div>
+      <h2>Unit Converter for Length, Weight, Temperature & More</h2>
+      <p>Convert between metric and imperial units instantly. Length, weight, temperature, speed, area, volume and data storage — all in one clean interface with a full reference table showing all values simultaneously.</p>
+    </div>
   </div>
 </div>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">
-    <a href="/">Home</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a>
-    <a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
-    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="/pdf/">PDF Tools</a>
+    <a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Unit Converter</a>
+    <a href="/text/">Text Tools</a>
+    <a href="/colors/">Color Tools</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
     <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </footer>
 
-<script src="../js/common.js"></script>
-<script>
-pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-let splitFile=null,compressFile=null,rotateFile=null,deleteFile=null,reorderFile=null,pdf2imgFile=null,pdf2wordFile=null;
-let pendingBlobs=null;
-let mergeFiles=[],imgFiles=[];
-let reorderPageOrder=[];
-let dragMergeSrc=null,dragImgSrc=null,dragPageSrc=null;
-
-const HANDLE_SVG=`<svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.5"/><circle cx="10" cy="3" r="1.5"/><circle cx="4" cy="9" r="1.5"/><circle cx="10" cy="9" r="1.5"/><circle cx="4" cy="15" r="1.5"/><circle cx="10" cy="15" r="1.5"/></svg>`;
-
-function openPanel(n){const el=document.getElementById('panel-'+n);if(el){el.style.display='flex';el.style.alignItems='center';el.style.justifyContent='center';document.body.style.overflow='hidden';}}
-function closePanel(n){const el=document.getElementById('panel-'+n);if(el){el.style.display='none';document.body.style.overflow='';}}
-document.querySelectorAll('.panel-overlay').forEach(el=>{el.addEventListener('click',e=>{if(e.target===el){el.style.display='none';document.body.style.overflow='';}});});
-
-function setupDZ(zoneId,inputId,onFiles){
-  const zone=document.getElementById(zoneId),input=document.getElementById(inputId);
-  zone.addEventListener('click',()=>input.click());
-  input.addEventListener('change',()=>{if(input.files.length)onFiles(input.files);input.value='';});
-  zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag-over');});
-  zone.addEventListener('dragleave',()=>zone.classList.remove('drag-over'));
-  zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});
-}
-setupDZ('drop-split','file-input-split',f=>processSplitFile(f[0]));
-setupDZ('drop-merge','file-input-merge',f=>processMergeFiles(f));
-setupDZ('drop-img2pdf','file-input-img2pdf',f=>processImgFiles(f));
-setupDZ('drop-compress','file-input-compress',f=>processCompressFile(f[0]));
-setupDZ('drop-rotate','file-input-rotate',f=>processRotateFile(f[0]));
-setupDZ('drop-delete','file-input-delete',f=>processDeleteFile(f[0]));
-setupDZ('drop-reorder','file-input-reorder',f=>processReorderFile(f[0]));
-setupDZ('drop-pdf2img','file-input-pdf2img',f=>processPdf2ImgFile(f[0]));
-setupDZ('drop-pdf2word','file-input-pdf2word',f=>processPdf2WordFile(f[0]));
-
-// SPLIT
-async function processSplitFile(file){splitFile=file;document.getElementById('split-filename').textContent='📎 '+file.name;try{const buf=await file.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const n=pdf.getPageCount();document.getElementById('split-to').value=n;document.getElementById('split-from').value=1;document.getElementById('split-total').textContent=n+' pages';}catch(e){}}
-async function doSplit(){if(!splitFile)return showStatus('split','error','Please select a PDF first.');const from=parseInt(document.getElementById('split-from').value)-1;const to=parseInt(document.getElementById('split-to').value)-1;if(isNaN(from)||isNaN(to)||from>to||from<0)return showStatus('split','error','Invalid page range.');showStatus('split','info','Processing…');try{const buf=await splitFile.arrayBuffer();const src=await PDFLib.PDFDocument.load(buf);const out=await PDFLib.PDFDocument.create();const pages=await out.copyPages(src,Array.from({length:to-from+1},(_,i)=>from+i));pages.forEach(p=>out.addPage(p));const bytes=await out.save();showAdAndDownload(bytes,splitFile.name.replace(/\.pdf$/i,'')+`_pages${from+1}-${to+1}.pdf`);showStatus('split','success','Done!');}catch(e){showStatus('split','error','Error: '+e.message);}}
-
-// MERGE
-function processMergeFiles(files){for(const f of files)mergeFiles.push(f);renderMergeList();}
-function renderMergeList(){const list=document.getElementById('merge-file-list');list.innerHTML='';mergeFiles.forEach((f,i)=>{const item=document.createElement('div');item.className='file-item';item.draggable=true;item.dataset.idx=i;item.innerHTML=`<span class="order-num">${i+1}</span><span class="drag-handle">${HANDLE_SVG}</span><span class="file-name">📄 ${f.name}</span><span class="file-size">${(f.size/1024).toFixed(0)} KB</span><button class="remove-btn" onclick="mergeFiles.splice(${i},1);renderMergeList()">✕</button>`;item.addEventListener('dragstart',e=>{dragMergeSrc=i;setTimeout(()=>item.classList.add('dragging'),0);e.dataTransfer.effectAllowed='move';});item.addEventListener('dragend',()=>item.classList.remove('dragging'));item.addEventListener('dragover',e=>{e.preventDefault();item.classList.add('drag-target');});item.addEventListener('dragleave',()=>item.classList.remove('drag-target'));item.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation();item.classList.remove('drag-target');if(dragMergeSrc!==null&&dragMergeSrc!==i){const m=mergeFiles.splice(dragMergeSrc,1)[0];mergeFiles.splice(i,0,m);renderMergeList();}dragMergeSrc=null;});list.appendChild(item);});document.getElementById('merge-btn').disabled=mergeFiles.length<2;}
-async function doMerge(){if(mergeFiles.length<2)return showStatus('merge','error','Add at least 2 PDFs.');showStatus('merge','info','Merging…');try{const merged=await PDFLib.PDFDocument.create();for(const f of mergeFiles){const buf=await f.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const pages=await merged.copyPages(pdf,pdf.getPageIndices());pages.forEach(p=>merged.addPage(p));}showAdAndDownload(await merged.save(),'merged.pdf');showStatus('merge','success','Done!');}catch(e){showStatus('merge','error','Error: '+e.message);}}
-
-// IMG2PDF
-function processImgFiles(files){for(const f of files){const isHeic=f.name.toLowerCase().endsWith('.heic')||f.name.toLowerCase().endsWith('.heif');if(isHeic||f.type.startsWith('image/'))imgFiles.push(f);}renderImgList();}
-function renderImgList(){const list=document.getElementById('img2pdf-file-list');list.innerHTML='';imgFiles.forEach((f,i)=>{const item=document.createElement('div');item.className='file-item';item.draggable=true;item.dataset.idx=i;item.innerHTML=`<span class="order-num">${i+1}</span><span class="drag-handle">${HANDLE_SVG}</span><span class="file-name">🖼️ ${f.name}</span><span class="file-size">${(f.size/1024).toFixed(0)} KB</span><button class="remove-btn" onclick="imgFiles.splice(${i},1);renderImgList()">✕</button>`;item.addEventListener('dragstart',e=>{dragImgSrc=i;setTimeout(()=>item.classList.add('dragging'),0);});item.addEventListener('dragend',()=>item.classList.remove('dragging'));item.addEventListener('dragover',e=>{e.preventDefault();item.classList.add('drag-target');});item.addEventListener('dragleave',()=>item.classList.remove('drag-target'));item.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation();item.classList.remove('drag-target');if(dragImgSrc!==null&&dragImgSrc!==i){const m=imgFiles.splice(dragImgSrc,1)[0];imgFiles.splice(i,0,m);renderImgList();}dragImgSrc=null;});list.appendChild(item);});document.getElementById('img2pdf-btn').disabled=imgFiles.length<1;}
-async function doImg2Pdf(){if(!imgFiles.length)return showStatus('img2pdf','error','Please add at least one image.');showStatus('img2pdf','info','Converting…');try{const pdf=await PDFLib.PDFDocument.create();for(const f of imgFiles){const isHeic=f.name.toLowerCase().endsWith('.heic')||f.name.toLowerCase().endsWith('.heif')||f.type==='image/heic';let pf=f;if(isHeic){showStatus('img2pdf','info',`Converting HEIC: ${f.name}…`);const conv=await heic2any({blob:f,toType:'image/jpeg',quality:0.92});pf=new File([conv],f.name.replace(/\.heic$/i,'.jpg'),{type:'image/jpeg'});}const buf=await pf.arrayBuffer();let img;if(pf.type==='image/jpeg'||pf.type==='image/jpg'){img=await pdf.embedJpg(buf);}else{img=await embedViaCanvas(pdf,pf);}const page=pdf.addPage([img.width,img.height]);page.drawImage(img,{x:0,y:0,width:img.width,height:img.height});}showAdAndDownload(await pdf.save(),'images.pdf');showStatus('img2pdf','success','Done!');}catch(e){showStatus('img2pdf','error','Error: '+e.message);}}
-async function embedViaCanvas(pdf,file){return new Promise((res,rej)=>{const url=URL.createObjectURL(file),img=new Image();img.onload=async()=>{const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.getContext('2d').drawImage(img,0,0);c.toBlob(async b=>{res(await pdf.embedPng(await b.arrayBuffer()));},'image/png');URL.revokeObjectURL(url);};img.onerror=rej;img.src=url;});}
-
-// COMPRESS
-function processCompressFile(file){compressFile=file;document.getElementById('compress-filename').textContent='📎 '+file.name;document.getElementById('compress-btn').disabled=false;}
-async function doCompress(){if(!compressFile)return showStatus('compress','error','Please select a PDF first.');showStatus('compress','info','Compressing…');try{const buf=await compressFile.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf,{updateMetadata:false});pdf.setTitle('');pdf.setAuthor('');pdf.setSubject('');pdf.setKeywords([]);pdf.setProducer('');pdf.setCreator('');const bytes=await pdf.save({useObjectStreams:true,addDefaultPage:false});const pct=(((buf.byteLength-bytes.byteLength)/buf.byteLength)*100).toFixed(1);showAdAndDownload(bytes,compressFile.name.replace(/\.pdf$/i,'')+'_compressed.pdf');showStatus('compress','success',`Reduced by ~${pct}%. Done!`);}catch(e){showStatus('compress','error','Error: '+e.message);}}
-
-// ROTATE
-function processRotateFile(file){rotateFile=file;document.getElementById('rotate-filename').textContent='📎 '+file.name;document.getElementById('rotate-btn').disabled=false;}
-async function doRotate(){if(!rotateFile)return showStatus('rotate','error','Please select a PDF first.');const pagesInput=document.getElementById('rotate-pages').value.trim();const angle=parseInt(document.getElementById('rotate-angle').value);if(!pagesInput)return showStatus('rotate','error','Please enter pages to rotate.');showStatus('rotate','info','Rotating…');try{const buf=await rotateFile.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const total=pdf.getPageCount();let indices=[];if(pagesInput.toLowerCase()==='all'){indices=Array.from({length:total},(_,i)=>i);}else{pagesInput.split(',').forEach(p=>{const rng=p.trim().split('-');if(rng.length===2){const a=parseInt(rng[0])-1,b=parseInt(rng[1])-1;for(let i=a;i<=b;i++)if(i>=0&&i<total)indices.push(i);}else{const n=parseInt(rng[0])-1;if(!isNaN(n)&&n>=0&&n<total)indices.push(n);}});}if(!indices.length)return showStatus('rotate','error','No valid pages found.');indices.forEach(i=>{const page=pdf.getPage(i);const cur=page.getRotation().angle;page.setRotation(PDFLib.degrees((cur+angle)%360));});showAdAndDownload(await pdf.save(),rotateFile.name.replace(/\.pdf$/i,'')+'_rotated.pdf');showStatus('rotate','success',`Rotated ${indices.length} page(s). Done!`);}catch(e){showStatus('rotate','error','Error: '+e.message);}}
-
-// DELETE
-function processDeleteFile(file){deleteFile=file;document.getElementById('delete-filename').textContent='📎 '+file.name;document.getElementById('delete-btn').disabled=false;try{file.arrayBuffer().then(b=>PDFLib.PDFDocument.load(b)).then(p=>{document.getElementById('delete-total').textContent=p.getPageCount()+' pages';});}catch(e){}}
-async function doDelete(){if(!deleteFile)return showStatus('delete','error','Please select a PDF first.');const val=document.getElementById('delete-pages').value.trim();if(!val)return showStatus('delete','error','Please enter pages to delete.');showStatus('delete','info','Processing…');try{const buf=await deleteFile.arrayBuffer();const src=await PDFLib.PDFDocument.load(buf);const total=src.getPageCount();const toDelete=new Set();val.split(',').forEach(part=>{const rng=part.trim().split('-');if(rng.length===2){const a=parseInt(rng[0])-1,b=parseInt(rng[1])-1;for(let i=a;i<=b;i++)if(i>=0&&i<total)toDelete.add(i);}else{const n=parseInt(rng[0])-1;if(!isNaN(n)&&n>=0&&n<total)toDelete.add(n);}});const keep=Array.from({length:total},(_,i)=>i).filter(i=>!toDelete.has(i));if(!keep.length)return showStatus('delete','error','Cannot delete all pages.');const out=await PDFLib.PDFDocument.create();const pages=await out.copyPages(src,keep);pages.forEach(p=>out.addPage(p));showAdAndDownload(await out.save(),deleteFile.name.replace(/\.pdf$/i,'')+'_edited.pdf');showStatus('delete','success',`Removed ${toDelete.size} page(s). Done!`);}catch(e){showStatus('delete','error','Error: '+e.message);}}
-
-// REORDER
-async function processReorderFile(file){reorderFile=file;document.getElementById('reorder-filename').textContent='📎 '+file.name;showStatus('reorder','info','Loading pages…');try{const buf=await file.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const n=pdf.getPageCount();reorderPageOrder=Array.from({length:n},(_,i)=>i);renderPagesGrid(n);document.getElementById('reorder-btn').disabled=false;showStatus('reorder','success',`${n} pages loaded. Drag to reorder.`);}catch(e){showStatus('reorder','error','Error: '+e.message);}}
-function renderPagesGrid(n){const grid=document.getElementById('reorder-pages-grid');grid.innerHTML='';reorderPageOrder.forEach((origIdx,pos)=>{const item=document.createElement('div');item.className='page-thumb';item.draggable=true;item.dataset.pos=pos;item.innerHTML=`<div class="page-num">${origIdx+1}</div><div style="font-size:0.7rem;color:var(--muted)">pos ${pos+1}</div>`;item.addEventListener('dragstart',e=>{dragPageSrc=pos;setTimeout(()=>item.classList.add('dragging'),0);});item.addEventListener('dragend',()=>item.classList.remove('dragging'));item.addEventListener('dragover',e=>{e.preventDefault();item.classList.add('drag-target');});item.addEventListener('dragleave',()=>item.classList.remove('drag-target'));item.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation();item.classList.remove('drag-target');const targetPos=parseInt(item.dataset.pos);if(dragPageSrc!==null&&dragPageSrc!==targetPos){const m=reorderPageOrder.splice(dragPageSrc,1)[0];reorderPageOrder.splice(targetPos,0,m);renderPagesGrid(reorderPageOrder.length);}dragPageSrc=null;});grid.appendChild(item);});}
-async function doReorder(){if(!reorderFile)return;showStatus('reorder','info','Saving…');try{const buf=await reorderFile.arrayBuffer();const src=await PDFLib.PDFDocument.load(buf);const out=await PDFLib.PDFDocument.create();const pages=await out.copyPages(src,reorderPageOrder);pages.forEach(p=>out.addPage(p));showAdAndDownload(await out.save(),reorderFile.name.replace(/\.pdf$/i,'')+'_reordered.pdf');showStatus('reorder','success','Done!');}catch(e){showStatus('reorder','error','Error: '+e.message);}}
-
-// PDF2IMG
-async function processPdf2ImgFile(file){pdf2imgFile=file;document.getElementById('pdf2img-filename').textContent='📎 '+file.name;try{const buf=await file.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;const n=pdf.numPages;document.getElementById('pdf2img-from').value=1;document.getElementById('pdf2img-to').value=n;document.getElementById('pdf2img-total').textContent=n+' pages';document.getElementById('pdf2img-btn').disabled=false;}catch(e){}}
-async function doPdf2Img(){if(!pdf2imgFile)return showStatus('pdf2img','error','Please select a PDF first.');const from=parseInt(document.getElementById('pdf2img-from').value);const to=parseInt(document.getElementById('pdf2img-to').value);if(isNaN(from)||isNaN(to)||from>to||from<1)return showStatus('pdf2img','error','Invalid range.');showStatus('pdf2img','info','Rendering pages…');try{const buf=await pdf2imgFile.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;const blobs=[];for(let p=from;p<=to;p++){showStatus('pdf2img','info',`Rendering page ${p} of ${to}…`);const page=await pdf.getPage(p);const vp=page.getViewport({scale:2});const canvas=document.createElement('canvas');canvas.width=vp.width;canvas.height=vp.height;await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;const blob=await new Promise(res=>canvas.toBlob(res,'image/png'));blobs.push({blob,name:`page_${p}.png`});}if(blobs.length===1){const url=URL.createObjectURL(blobs[0].blob);const a=document.createElement('a');a.href=url;a.download=blobs[0].name;a.click();URL.revokeObjectURL(url);showStatus('pdf2img','success','Downloaded!');}else{showAdAndDownloadBlobs(blobs);showStatus('pdf2img','success',`${blobs.length} pages ready!`);}}catch(e){showStatus('pdf2img','error','Error: '+e.message);}}
-
-// PDF2WORD
-function processPdf2WordFile(file){pdf2wordFile=file;document.getElementById('pdf2word-filename').textContent='📎 '+file.name;document.getElementById('pdf2word-btn').disabled=false;}
-async function doPdf2Word(){if(!pdf2wordFile)return showStatus('pdf2word','error','Please select a PDF first.');showStatus('pdf2word','info','Extracting text…');try{const buf=await pdf2wordFile.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;const n=pdf.numPages;const allChildren=[];for(let i=1;i<=n;i++){showStatus('pdf2word','info',`Processing page ${i} of ${n}…`);const page=await pdf.getPage(i);const content=await page.getTextContent();const lineMap={};content.items.forEach(item=>{if(!item.str||!item.str.trim())return;const y=Math.round(item.transform[5]);if(!lineMap[y])lineMap[y]=[];lineMap[y].push({text:item.str,fontSize:Math.abs(Math.round(item.transform[3])),x:item.transform[4]});});if(Object.keys(lineMap).length===0)continue;const sortedYs=Object.keys(lineMap).map(Number).sort((a,b)=>b-a);const allSizes=Object.values(lineMap).flat().map(it=>it.fontSize).filter(s=>s>0);const sizeCount={};allSizes.forEach(s=>{sizeCount[s]=(sizeCount[s]||0)+1;});const bodySize=allSizes.length>0?parseInt(Object.entries(sizeCount).sort((a,b)=>b[1]-a[1])[0][0]):12;let prevY=null;sortedYs.forEach(y=>{const items=lineMap[y].sort((a,b)=>a.x-b.x);const lineText=items.map(it=>it.text).join(' ').trim();if(!lineText)return;const avgSize=items.reduce((s,it)=>s+it.fontSize,0)/items.length||bodySize;const isLarge=avgSize>=bodySize*1.4;const yGap=prevY!==null?prevY-y:0;if(yGap>avgSize*2&&allChildren.length>0)allChildren.push(new docx.Paragraph({children:[new docx.TextRun({text:''})],spacing:{after:80}}));prevY=y;const docxSize=Math.max(16,Math.round(isLarge?avgSize*2.2:bodySize*2));allChildren.push(new docx.Paragraph({children:[new docx.TextRun({text:lineText,bold:isLarge,size:Math.min(docxSize,72),font:{name:'Calibri'}})],spacing:{after:isLarge?160:80,line:276,lineRule:docx.LineRuleType.AUTO}}));});if(i<n)allChildren.push(new docx.Paragraph({pageBreakBefore:true,children:[new docx.TextRun({text:' '})]}));}if(!allChildren.length)return showStatus('pdf2word','error','No text found. PDF may be scanned or image-based.');showStatus('pdf2word','info','Building DOCX…');const doc=new docx.Document({sections:[{properties:{page:{margin:{top:1134,right:1134,bottom:1134,left:1134}}},children:allChildren}]});const blob=await docx.Packer.toBlob(doc);const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=pdf2wordFile.name.replace(/\.pdf$/i,'')+'.docx';a.click();URL.revokeObjectURL(url);showStatus('pdf2word','success','Done!');}catch(e){showStatus('pdf2word','error','Error: '+e.message);}}
-
-// DIRECT DOWNLOAD (AdSense-compliant)
-function showAdAndDownload(bytes,filename,mime){const type=mime||'application/pdf';const blob=new Blob([bytes],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);}
-function showStatus(tool,type,msg){const el=document.getElementById('status-'+tool);el.className='status '+type;el.textContent=msg;}
-
-// FAQ init
-document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});if(!isOpen){btn.classList.add('open');a.classList.add('open');}});});});
-</script>
+<script src="js/common.js"></script>
 </body>
 </html>
