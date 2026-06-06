@@ -2,4 +2,4 @@
 # Authorized Digital Sellers — IAB Tech Lab standard
 
 # Google AdSense
-google.com, pub-XXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, ca-pub-2108686124406108, DIRECT, f08c47fec0942fa0
