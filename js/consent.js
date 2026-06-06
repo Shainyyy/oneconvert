@@ -42,11 +42,22 @@ function acceptCookies() {
     gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' });
   }
   removeBanner();
+  updateConsentStatus('Accepted ✓');
 }
 
 function declineCookies() {
   localStorage.setItem('oc-consent', 'declined');
+  // Revoke analytics if previously granted
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied' });
+  }
   removeBanner();
+  updateConsentStatus('Declined ✗');
+}
+
+function updateConsentStatus(text) {
+  const el = document.getElementById('consent-status');
+  if (el) { el.textContent = 'Status updated: ' + text; el.style.color = 'var(--success)'; }
 }
 
 function removeBanner() {
