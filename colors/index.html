@@ -35,7 +35,7 @@
   <!-- Color Converter -->
   <div id="color-convert" class="tool-box">
     <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-      <input type="color" id="color-picker" value="#2563eb" onchange="onPickerChange()" style="width:60px;height:60px;border-radius:12px;padding:2px;cursor:pointer;border:1px solid var(--border);background:var(--bg3);"/>
+      <input type="color" id="color-picker" value="#2563eb" oninput="onPickerChange()" onchange="onPickerChange()" style="width:60px;height:60px;border-radius:12px;padding:2px;cursor:pointer;border:1px solid var(--border);background:var(--bg3);"/>
       <div>
         <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;" id="color-name">Pick or enter a color</div>
         <div style="font-size:0.82rem;color:var(--muted);">Click the swatch or type in any field below</div>
@@ -98,7 +98,7 @@
   <!-- Palette Generator -->
   <div id="color-palette" class="tool-box" style="display:none;">
     <div style="display:flex;gap:1rem;align-items:flex-end;margin-bottom:1.5rem;flex-wrap:wrap;">
-      <div class="unit-input-group"><label>Base Color</label><div class="color-input"><input type="color" id="base-color" value="#2563eb" onchange="genPalette()"/><input type="text" id="base-hex" value="#2563eb" style="width:100px;" oninput="palFromText()"/></div></div>
+      <div class="unit-input-group"><label>Base Color</label><div class="color-input"><input type="color" id="base-color" value="#2563eb" oninput="genPalette()" onchange="genPalette()"/><input type="text" id="base-hex" value="#2563eb" style="width:100px;" oninput="palFromText()"/></div></div>
       <div class="unit-input-group"><label>Mode</label><select id="pal-mode" onchange="genPalette()"><option value="shades">Shades</option><option value="complementary">Complementary</option><option value="triadic">Triadic</option><option value="analogous">Analogous</option></select></div>
       <button class="btn btn-sm" onclick="genPalette()">Generate</button>
     </div>

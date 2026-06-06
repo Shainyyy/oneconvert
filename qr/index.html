@@ -13,7 +13,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QR Code Generator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this QR code generator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No account, no watermarks, no expiry on your QR codes."}},{"@type":"Question","name":"Do QR codes expire?","acceptedAnswer":{"@type":"Answer","text":"Static QR codes never expire. They encode data directly and work forever."}},{"@type":"Question","name":"Can I customize QR code colors?","acceptedAnswer":{"@type":"Answer","text":"Yes — choose any color for the pattern and background. Ensure good contrast for reliable scanning."}}]}</script>
 </head>
@@ -59,7 +59,7 @@
     </div>
     <div class="tool-box" style="margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
       <div class="qr-preview">
-        <img id="qr-img" style="border-radius:8px;display:none;max-width:300px;" alt="QR Code"/>
+        <div id="qr-container" style="display:none;background:#fff;padding:12px;border-radius:12px;display:inline-block;min-width:100px;min-height:100px;"></div>
         <p id="qr-placeholder" style="color:var(--muted);font-size:0.9rem;padding:2rem;">Enter content to generate QR code</p>
       </div>
       <div style="display:flex;gap:0.75rem;width:100%;">
@@ -96,28 +96,36 @@
   let currentType='url';
   function setType(t,btn){currentType=t;document.querySelectorAll('.unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['url','text','wifi','email','phone'].forEach(id=>document.getElementById('type-'+id).style.display=id===t?'block':'none');generateQR();}
   function getContent(){switch(currentType){case 'url':return document.getElementById('url-input').value.trim();case 'text':return document.getElementById('text-input').value.trim();case 'wifi':{const s=document.getElementById('wifi-ssid').value,p=document.getElementById('wifi-pass').value,e=document.getElementById('wifi-sec').value;return s?`WIFI:T:${e};S:${s};P:${p};;`:'';}case 'email':{const a=document.getElementById('email-addr').value,sub=document.getElementById('email-sub').value;return a?`mailto:${a}${sub?'?subject='+encodeURIComponent(sub):''}`:'';}case 'phone':return document.getElementById('phone-input').value.trim()?'tel:'+document.getElementById('phone-input').value.trim():'';}return '';}
-  let currentQrDataUrl = '';
+  let qrInstance = null;
+  let currentQrContainer = null;
   function generateQR(){
     const content=getContent();
-    const img=document.getElementById('qr-img');
+    const container=document.getElementById('qr-container');
     const ph=document.getElementById('qr-placeholder');
-    if(!content){img.style.display='none';ph.style.display='block';document.getElementById('dl-png').disabled=true;document.getElementById('dl-svg').disabled=true;currentQrDataUrl='';return;}
+    if(!content){container.style.display='none';ph.style.display='block';document.getElementById('dl-png').disabled=true;document.getElementById('dl-svg').disabled=true;return;}
     const size=parseInt(document.getElementById('qr-size').value)||300;
     const color=document.getElementById('qr-color').value;
     const bg=document.getElementById('bg-color').value;
+    const eclMap={L:QRCode.CorrectLevel.L,M:QRCode.CorrectLevel.M,Q:QRCode.CorrectLevel.Q,H:QRCode.CorrectLevel.H};
     const ecl=document.getElementById('qr-ecl').value;
+    container.innerHTML='';
+    container.style.background=bg;
     try{
-      QRCode.toDataURL(content,{width:size,margin:2,color:{dark:color,light:bg},errorCorrectionLevel:ecl},function(err,url){
-        if(err){showStatus('status','error','Error: '+err.message);return;}
-        currentQrDataUrl=url;
-        img.src=url;img.style.display='block';ph.style.display='none';
-        document.getElementById('dl-png').disabled=false;document.getElementById('dl-svg').disabled=false;
+      qrInstance=new QRCode(container,{
+        text:content,width:size,height:size,
+        colorDark:color,colorLight:bg,
+        correctLevel:eclMap[ecl]||QRCode.CorrectLevel.M
       });
-    }catch(e){showStatus('status','error','QR library not loaded yet, please wait...');}
+      container.style.display='inline-block';
+      ph.style.display='none';
+      document.getElementById('dl-png').disabled=false;
+      document.getElementById('dl-svg').disabled=false;
+    }catch(e){showStatus('status','error','Error: '+e.message);}
   }
   function downloadQR(fmt){const content=getContent();if(!content)return;if(fmt==='png'){
-    if(!currentQrDataUrl)return;
-    const a=document.createElement('a');a.href=currentQrDataUrl;a.download='qrcode.png';a.click();
+    const canvas=document.getElementById('qr-container').querySelector('canvas');
+    if(!canvas)return;
+    const a=document.createElement('a');a.href=canvas.toDataURL('image/png');a.download='qrcode.png';a.click();
   }else{const size=parseInt(document.getElementById('qr-size').value)||300;const color=document.getElementById('qr-color').value;const bg=document.getElementById('bg-color').value;QRCode.toString(content,{type:'svg',width:size,color:{dark:color,light:bg}},(err,svg)=>{if(err)return;const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));const a=document.createElement('a');a.href=url;a.download='qrcode.svg';a.click();URL.revokeObjectURL(url);});}showStatus('status','success','Downloaded!');}
   generateQR();
 </script>
