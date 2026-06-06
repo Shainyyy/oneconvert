@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free PNG to WebP Converter Online – Smaller Files | OneConvert</title>
+  <meta name="description" content="Convert PNG to WebP online for free. Dramatically reduce PNG file size while keeping quality. No upload, no account, instant browser-based conversion."/>
+  <meta name="keywords" content="png to webp converter, convert png to webp free, png webp online no upload, reduce png file size webp"/>
+  <link rel="canonical" href="https://oneconvert.net/image/png-to-webp.html"/>
+  <meta property="og:title" content="Free PNG to WebP Converter Online – Smaller Files | OneConvert"/><meta property="og:description" content="Convert PNG to WebP online for free. Dramatically reduce PNG file size while keeping quality. No upload, no account, instant browser-based conversion."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free PNG to WebP Converter","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"https://oneconvert.net/image/"},{"@type":"ListItem","position":3,"name":"Free PNG to WebP Converter","item":"https://oneconvert.net/image/png-to-webp.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is PNG to WebP conversion free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no account, no limits."}},{"@type":"Question","name":"Does WebP support transparency like PNG?","acceptedAnswer":{"@type":"Answer","text":"Yes — WebP supports transparency (alpha channel), making it a direct PNG replacement for the web."}},{"@type":"Question","name":"Does my file get uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs locally in your browser."}},{"@type":"Question","name":"How much smaller will the WebP be?","acceptedAnswer":{"@type":"Answer","text":"Lossless WebP is typically 26% smaller than PNG. Lossy WebP can be 60-80% smaller for photos."}},{"@type":"Question","name":"Can I convert multiple PNGs at once?","acceptedAnswer":{"@type":"Answer","text":"Yes — select or drop multiple PNG files and all will be converted and downloaded."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+</nav>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image Tools</a><span>›</span><span>Free PNG to WebP Converter</span></div>
+  <div class="tool-page-header"><h1>Free PNG to WebP Converter</h1><p>Convert PNG images to WebP — dramatically smaller files, supports transparency. No upload required.</p></div>
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone">
+      <div class="dropzone-icon">🖼️</div>
+      <p><strong>Click to select</strong> or drag & drop PNG files here</p>
+      <small>PNG supported · Multiple files · No size limit</small>
+    </div>
+    <input type="file" id="file-input" accept="image/png,.png" multiple style="display:none;"/>
+    <div id="preview-area" style="display:none;">
+      <div class="preview-box">
+        <img id="preview-img" src="" alt="Preview" style="max-height:180px;"/>
+        <div class="preview-info">
+          <div class="preview-stat"><div class="val" id="orig-size">—</div><div class="lbl">Original size</div></div>
+          <div class="preview-stat"><div class="val" id="orig-dims">—</div><div class="lbl">Dimensions</div></div>
+          <div class="preview-stat"><div class="val" id="file-count">—</div><div class="lbl">Files</div></div>
+        </div>
+      </div>
+      <button class="btn" id="convert-btn" onclick="convertAll()">🔄 Convert to WEBP & Download</button>
+      <div class="status" id="status"></div>
+  <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+    <span style="font-size:1.3rem;">💡</span>
+    <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+    <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+  </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;">
+      <div style="width:40px;height:40px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1rem;margin:0 auto 0.65rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;">Select file</h3>
+      <p style="color:var(--muted);font-size:0.78rem;line-height:1.5;">Click or drag & drop. Your file stays on your device.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;">
+      <div style="width:40px;height:40px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1rem;margin:0 auto 0.65rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;">Convert instantly</h3>
+      <p style="color:var(--muted);font-size:0.78rem;line-height:1.5;">Browser converts locally using Canvas API — no upload.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;">
+      <div style="width:40px;height:40px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1rem;margin:0 auto 0.65rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;">Download result</h3>
+      <p style="color:var(--muted);font-size:0.78rem;line-height:1.5;">Instant download. Free, no account needed.</p>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/image/jpg-to-webp.html"><span class="icon">🔄</span><div class="info"><h4>JPG to WebP</h4><p>Convert JPG to WebP</p></div></a>
+      <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress Image</h4><p>Reduce size further</p></div></a>
+      <a class="related-card" href="/image/png-to-jpg.html"><span class="icon">🔄</span><div class="info"><h4>PNG to JPG</h4><p>Convert to JPEG</p></div></a>
+      <a class="related-card" href="/pdf/images-to-pdf.html"><span class="icon">📄</span><div class="info"><h4>Images to PDF</h4><p>Create a PDF</p></div></a></div></div>
+
+  <div class="info-section">
+    <h2>Why Convert PNG to WebP?</h2>
+    <p>PNG files are often large because of their lossless compression. WebP supports both lossless and lossy compression — converting a PNG to WebP lossless typically reduces size by 26%, and lossy WebP can reduce PNG file sizes by 60-80% for photographic content while preserving transparency (alpha channel).</p>
+  </div>
+
+  <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is PNG to WebP conversion free?<span class="arrow">▼</span></button><div class="faq-a">Yes — completely free, no account, no limits.</div></div>
+    <div class="faq-item"><button class="faq-q">Does WebP support transparency like PNG?<span class="arrow">▼</span></button><div class="faq-a">Yes — WebP supports transparency (alpha channel), making it a direct PNG replacement for the web.</div></div>
+    <div class="faq-item"><button class="faq-q">Does my file get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Everything runs locally in your browser.</div></div>
+    <div class="faq-item"><button class="faq-q">How much smaller will the WebP be?<span class="arrow">▼</span></button><div class="faq-a">Lossless WebP is typically 26% smaller than PNG. Lossy WebP can be 60-80% smaller for photos.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I convert multiple PNGs at once?<span class="arrow">▼</span></button><div class="faq-a">Yes — select or drop multiple PNG files and all will be converted and downloaded.</div></div></div>
+</div>
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function setupDropzone(zid,iid,cb){const z=document.getElementById(zid),i=document.getElementById(iid);if(!z||!i)return;z.addEventListener('click',()=>i.click());i.addEventListener('change',()=>{if(i.files.length)cb(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)cb(e.dataTransfer.files);});}
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function directDownload(bytes,filename,mime){const blob=new Blob([bytes],{type:mime});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'→';el.style.display='flex';}
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';});
+</script>
+<script>
+let selectedFiles=[];
+document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-zone','file-input',f=>{
+  selectedFiles=Array.from(f).filter(x=>x.type.startsWith('image/')||x.name.toLowerCase().match(/\.(jpg|jpeg|png|gif|bmp|webp)$/));
+  if(!selectedFiles.length)return showStatus('status','error','No valid image files found.');
+  const url=URL.createObjectURL(selectedFiles[0]);
+  const img=document.getElementById('preview-img');
+  img.onload=()=>{document.getElementById('orig-dims').textContent=img.naturalWidth+'×'+img.naturalHeight;URL.revokeObjectURL(url);};
+  img.src=url;
+  document.getElementById('orig-size').textContent=formatBytes(selectedFiles[0].size);
+  document.getElementById('file-count').textContent=selectedFiles.length+(selectedFiles.length===1?' file':' files');
+  document.getElementById('preview-area').style.display='block';
+}));
+async function convertAll(){
+  if(!selectedFiles.length)return;
+  document.getElementById('convert-btn').disabled=true;
+  showStatus('status','info','Converting…');
+  try{
+    for(let idx=0;idx<selectedFiles.length;idx++){
+      const file=selectedFiles[idx];
+      if(selectedFiles.length>1)showStatus('status','info',`Converting ${idx+1} of ${selectedFiles.length}…`);
+      const blob=await convertFile(file);
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');a.href=url;
+      a.download=file.name.replace(/\.[^.]+$/,'.webp');
+      a.click();URL.revokeObjectURL(url);
+      if(idx<selectedFiles.length-1)await new Promise(r=>setTimeout(r,300));
+    }
+    showStatus('status','success','Done! ${selectedFiles.length} file(s) converted.');
+    showNextStep('/image/jpg-to-webp.html','JPG to WebP');
+  }catch(e){showStatus('status','error','Error: '+e.message);}
+  document.getElementById('convert-btn').disabled=false;
+}
+function convertFile(file){
+  return new Promise((res,rej)=>{
+    const url=URL.createObjectURL(file);
+    const img=new Image();
+    img.onload=()=>{
+      const c=document.createElement('canvas');
+      c.width=img.naturalWidth;c.height=img.naturalHeight;
+      c.getContext("2d").drawImage(img,0,0);
+      URL.revokeObjectURL(url);
+      c.toBlob(res,'image/webp',0.92);
+    };
+    img.onerror=()=>rej(new Error('Failed to load image'));
+    img.src=url;
+  });
+}
+</script>
+</body></html>

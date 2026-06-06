@@ -60,6 +60,11 @@
     <div class="file-list" id="merge-file-list" style="margin-top:1rem;"></div>
     <button class="btn" id="merge-btn" onclick="doMerge()" disabled style="margin-top:0.5rem;">🔗 Merge & Download</button>
     <div class="status" id="status-merge"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
   </div>
 
 
@@ -137,7 +142,9 @@ let mergeFiles=[],dragMergeSrc=null;
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-merge','file-input-merge',f=>processMergeFiles(f)));
 function processMergeFiles(files){for(const f of files)mergeFiles.push(f);renderMergeList();}
 function renderMergeList(){const list=document.getElementById('merge-file-list');list.innerHTML='';mergeFiles.forEach((f,i)=>{const item=document.createElement('div');item.className='file-item';item.draggable=true;item.dataset.idx=i;item.innerHTML=`<span class="order-num">${i+1}</span><span class="drag-handle">${HANDLE_SVG}</span><span class="file-name">📄 ${f.name}</span><span class="file-size">${formatBytes(f.size)}</span><button class="remove-btn" onclick="mergeFiles.splice(${i},1);renderMergeList()">✕</button>`;item.addEventListener('dragstart',e=>{dragMergeSrc=i;setTimeout(()=>item.classList.add('dragging'),0);});item.addEventListener('dragend',()=>item.classList.remove('dragging'));item.addEventListener('dragover',e=>{e.preventDefault();item.classList.add('drag-target');});item.addEventListener('dragleave',()=>item.classList.remove('drag-target'));item.addEventListener('drop',e=>{e.preventDefault();item.classList.remove('drag-target');if(dragMergeSrc!==null&&dragMergeSrc!==i){const m=mergeFiles.splice(dragMergeSrc,1)[0];mergeFiles.splice(i,0,m);renderMergeList();}dragMergeSrc=null;});list.appendChild(item);});document.getElementById('merge-btn').disabled=mergeFiles.length<2;}
-async function doMerge(){if(mergeFiles.length<2)return showStatus('status-merge','error','Add at least 2 PDFs.');showStatus('status-merge','info','Merging…');try{const merged=await PDFLib.PDFDocument.create();for(const f of mergeFiles){const buf=await f.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const pages=await merged.copyPages(pdf,pdf.getPageIndices());pages.forEach(p=>merged.addPage(p));}const bytes=await merged.save();directDownload(bytes,'merged.pdf','application/pdf');showStatus('status-merge','success','Done! Download started.');}catch(e){showStatus('status-merge','error','Error: '+e.message);}}
+async function doMerge(){if(mergeFiles.length<2)return showStatus('status-merge','error','Add at least 2 PDFs.');showStatus('status-merge','info','Merging…');try{const merged=await PDFLib.PDFDocument.create();for(const f of mergeFiles){const buf=await f.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const pages=await merged.copyPages(pdf,pdf.getPageIndices());pages.forEach(p=>merged.addPage(p));}const bytes=await merged.save();directDownload(bytes,'merged.pdf','application/pdf');showStatus('status-merge','success','Done! Download started.');
+    showNextStep("/pdf/compress.html","Compress the merged PDF","📦");}catch(e){showStatus('status-merge','error','Error: '+e.message);}}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
 </body>
 </html>

@@ -54,6 +54,11 @@
     </div>
     <button class="btn" id="reorder-btn" onclick="doReorder()" disabled style="margin-top:1rem;">↕️ Save Reordered PDF</button>
     <div class="status" id="status-reorder"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem;">
@@ -109,8 +114,10 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.fa
 <script>
 let reorderFile=null,reorderPageOrder=[],dragPageSrc=null;
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-reorder','file-input-reorder',f=>processReorderFile(f[0])));
-async function processReorderFile(file){reorderFile=file;document.getElementById('reorder-info').textContent='📎 '+file.name;showStatus('status-reorder','info','Loading pages…');try{const buf=await file.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const n=pdf.getPageCount();reorderPageOrder=Array.from({length:n},(_,i)=>i);renderPagesGrid(n);document.getElementById('reorder-grid-wrap').style.display='block';document.getElementById('reorder-btn').disabled=false;showStatus('status-reorder','success',n+' pages loaded. Drag to reorder.');}catch(e){showStatus('status-reorder','error','Error: '+e.message);}}
+async function processReorderFile(file){reorderFile=file;document.getElementById('reorder-info').textContent='📎 '+file.name;showStatus('status-reorder','info','Loading pages…');try{const buf=await file.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const n=pdf.getPageCount();reorderPageOrder=Array.from({length:n},(_,i)=>i);renderPagesGrid(n);document.getElementById('reorder-grid-wrap').style.display='block';document.getElementById('reorder-btn').disabled=false;showStatus('status-reorder','success',n+' pages loaded. Drag to reorder.');
+    showNextStep("/pdf/compress.html","Compress the reordered PDF","📦");}catch(e){showStatus('status-reorder','error','Error: '+e.message);}}
 function renderPagesGrid(n){const grid=document.getElementById('reorder-pages-grid');grid.innerHTML='';reorderPageOrder.forEach((origIdx,pos)=>{const item=document.createElement('div');item.className='page-thumb';item.draggable=true;item.dataset.pos=pos;item.innerHTML=`<div class="page-num">${origIdx+1}</div><div style="font-size:0.65rem;color:var(--muted)">→ pos ${pos+1}</div>`;item.addEventListener('dragstart',e=>{dragPageSrc=pos;setTimeout(()=>item.classList.add('dragging'),0);});item.addEventListener('dragend',()=>item.classList.remove('dragging'));item.addEventListener('dragover',e=>{e.preventDefault();item.classList.add('drag-target');});item.addEventListener('dragleave',()=>item.classList.remove('drag-target'));item.addEventListener('drop',e=>{e.preventDefault();item.classList.remove('drag-target');const t=parseInt(item.dataset.pos);if(dragPageSrc!==null&&dragPageSrc!==t){const m=reorderPageOrder.splice(dragPageSrc,1)[0];reorderPageOrder.splice(t,0,m);renderPagesGrid(reorderPageOrder.length);}dragPageSrc=null;});grid.appendChild(item);});}
 async function doReorder(){if(!reorderFile)return;showStatus('status-reorder','info','Saving…');try{const buf=await reorderFile.arrayBuffer();const src=await PDFLib.PDFDocument.load(buf);const out=await PDFLib.PDFDocument.create();const pages=await out.copyPages(src,reorderPageOrder);pages.forEach(p=>out.addPage(p));const bytes=await out.save();directDownload(bytes,reorderFile.name.replace(/\.pdf$/i,'')+'_reordered.pdf','application/pdf');showStatus('status-reorder','success','Done! Download started.');}catch(e){showStatus('status-reorder','error','Error: '+e.message);}}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
 </body></html>

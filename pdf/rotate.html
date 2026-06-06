@@ -60,6 +60,11 @@
     </div>
     <button class="btn" id="rotate-btn" onclick="doRotate()" disabled style="margin-top:1rem;">🔄 Rotate & Download</button>
     <div class="status" id="status-rotate"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem;">
@@ -118,6 +123,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 <script>
 let rotateFile=null;
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-rotate','file-input-rotate',f=>{rotateFile=f[0];document.getElementById('rotate-info').textContent='📎 '+f[0].name;document.getElementById('rotate-btn').disabled=false;}));
-async function doRotate(){if(!rotateFile)return showStatus('status-rotate','error','Please select a PDF first.');const pagesInput=document.getElementById('rotate-pages').value.trim()||'all';const angle=parseInt(document.getElementById('rotate-angle').value);showStatus('status-rotate','info','Rotating…');try{const buf=await rotateFile.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const total=pdf.getPageCount();let indices=[];if(pagesInput.toLowerCase()==='all'){indices=Array.from({length:total},(_,i)=>i);}else{pagesInput.split(',').forEach(p=>{const r=p.trim().split('-');if(r.length===2){const a=parseInt(r[0])-1,b=parseInt(r[1])-1;for(let i=a;i<=b;i++)if(i>=0&&i<total)indices.push(i);}else{const n=parseInt(r[0])-1;if(!isNaN(n)&&n>=0&&n<total)indices.push(n);}});}if(!indices.length)return showStatus('status-rotate','error','No valid pages found.');indices.forEach(i=>{const p=pdf.getPage(i);const cur=p.getRotation().angle;p.setRotation(PDFLib.degrees((cur+angle)%360));});const bytes=await pdf.save();directDownload(bytes,rotateFile.name.replace(/\.pdf$/i,'')+'_rotated.pdf','application/pdf');showStatus('status-rotate','success',`Rotated ${indices.length} page(s). Done!`);}catch(e){showStatus('status-rotate','error','Error: '+e.message);}}
+async function doRotate(){if(!rotateFile)return showStatus('status-rotate','error','Please select a PDF first.');const pagesInput=document.getElementById('rotate-pages').value.trim()||'all';const angle=parseInt(document.getElementById('rotate-angle').value);showStatus('status-rotate','info','Rotating…');try{const buf=await rotateFile.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const total=pdf.getPageCount();let indices=[];if(pagesInput.toLowerCase()==='all'){indices=Array.from({length:total},(_,i)=>i);}else{pagesInput.split(',').forEach(p=>{const r=p.trim().split('-');if(r.length===2){const a=parseInt(r[0])-1,b=parseInt(r[1])-1;for(let i=a;i<=b;i++)if(i>=0&&i<total)indices.push(i);}else{const n=parseInt(r[0])-1;if(!isNaN(n)&&n>=0&&n<total)indices.push(n);}});}if(!indices.length)return showStatus('status-rotate','error','No valid pages found.');indices.forEach(i=>{const p=pdf.getPage(i);const cur=p.getRotation().angle;p.setRotation(PDFLib.degrees((cur+angle)%360));});const bytes=await pdf.save();directDownload(bytes,rotateFile.name.replace(/\.pdf$/i,'')+'_rotated.pdf','application/pdf');showStatus('status-rotate','success',`Rotated ${indices.length} page(s). Done!`);
+    showNextStep("/pdf/compress.html","Compress PDF to reduce size","📦");}catch(e){showStatus('status-rotate','error','Error: '+e.message);}}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
 </body></html>

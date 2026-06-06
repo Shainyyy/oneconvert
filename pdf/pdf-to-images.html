@@ -20,6 +20,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free PDF to Image Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"PDF Tools","item":"https://oneconvert.net/pdf/"},{"@type":"ListItem","position":3,"name":"PDF to Images","item":"https://oneconvert.net/pdf/pdf-to-images.html"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is PDF to image conversion free?","acceptedAnswer":{"@type":"Answer","text":"Yes — free, no account, no limits."}},{"@type":"Question","name":"What image format is output?","acceptedAnswer":{"@type":"Answer","text":"Pages are exported as PNG which is lossless and universally compatible."}},{"@type":"Question","name":"Does my PDF get uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Conversion runs locally in your browser using pdf.js."}},{"@type":"Question","name":"Why download separate files instead of a ZIP?","acceptedAnswer":{"@type":"Answer","text":"Browser-based ZIP creation requires additional libraries. Each page downloads individually. For large batches, a file manager makes it easy to collect them."}},{"@type":"Question","name":"Can I convert only specific pages?","acceptedAnswer":{"@type":"Answer","text":"Yes — set the From and To page numbers to export any page range."}}]}</script>
@@ -59,8 +60,16 @@
       </div>
       <span id="p2i-total" style="color:var(--muted);font-size:0.8rem;align-self:flex-end;padding-bottom:0.5rem;"></span>
     </div>
-    <button class="btn" id="p2i-btn" onclick="doPdf2Img()" disabled style="margin-top:1rem;">📷 Export as PNG Images</button>
+    <div style="display:flex;gap:0.75rem;margin-top:1rem;flex-wrap:wrap;">
+      <button class="btn" id="p2i-btn" onclick="doPdf2Img('zip')" disabled>📦 Download as ZIP</button>
+      <button class="btn btn-outline" id="p2i-btn-single" onclick="doPdf2Img('single')" disabled style="width:auto;">Individual files</button>
+    </div>
     <div class="status" id="status-p2i"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem;">
@@ -118,6 +127,55 @@ let p2iFile=null;
 pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-pdf2img','file-input-pdf2img',f=>loadPdf2Img(f[0])));
 async function loadPdf2Img(file){p2iFile=file;try{const buf=await file.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;const n=pdf.numPages;document.getElementById('p2i-from').value=1;document.getElementById('p2i-to').value=n;document.getElementById('p2i-total').textContent=n+' pages';document.getElementById('p2i-btn').disabled=false;document.getElementById('pdf2img-info').textContent='📎 '+file.name;}catch(e){showStatus('status-p2i','error','Error: '+e.message);}}
-async function doPdf2Img(){if(!p2iFile)return showStatus('status-p2i','error','Please select a PDF first.');const from=parseInt(document.getElementById('p2i-from').value);const to=parseInt(document.getElementById('p2i-to').value);if(isNaN(from)||isNaN(to)||from>to||from<1)return showStatus('status-p2i','error','Invalid page range.');showStatus('status-p2i','info','Rendering pages…');try{const buf=await p2iFile.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;for(let p=from;p<=to;p++){showStatus('status-p2i','info',`Rendering page ${p} of ${to}…`);const page=await pdf.getPage(p);const vp=page.getViewport({scale:2});const canvas=document.createElement('canvas');canvas.width=vp.width;canvas.height=vp.height;await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;const blob=await new Promise(res=>canvas.toBlob(res,'image/png'));const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`page_${p}.png`;a.click();URL.revokeObjectURL(url);if(p<to)await new Promise(r=>setTimeout(r,300));}showStatus('status-p2i','success',`Done! ${to-from+1} page(s) downloaded.`);}catch(e){showStatus('status-p2i','error','Error: '+e.message);}}
+async function doPdf2Img(mode){
+  if(!p2iFile)return showStatus('status-p2i','error','Please select a PDF first.');
+  const from=parseInt(document.getElementById('p2i-from').value);
+  const to=parseInt(document.getElementById('p2i-to').value);
+  if(isNaN(from)||isNaN(to)||from>to||from<1)return showStatus('status-p2i','error','Invalid page range.');
+  document.getElementById('p2i-btn').disabled=true;
+  document.getElementById('p2i-btn-single').disabled=true;
+  showStatus('status-p2i','info','Rendering pages…');
+  try{
+    const buf=await p2iFile.arrayBuffer();
+    const pdf=await pdfjsLib.getDocument({data:buf}).promise;
+    const blobs=[];
+    for(let p=from;p<=to;p++){
+      showStatus('status-p2i','info',`Rendering page ${p} of ${to}…`);
+      const page=await pdf.getPage(p);
+      const vp=page.getViewport({scale:2});
+      const canvas=document.createElement('canvas');
+      canvas.width=vp.width;canvas.height=vp.height;
+      await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;
+      const blob=await new Promise(res=>canvas.toBlob(res,'image/png'));
+      blobs.push({blob,name:`page_${p}.png`});
+    }
+    if(mode==='zip'){
+      showStatus('status-p2i','info','Creating ZIP…');
+      const zip=new JSZip();
+      for(const{blob,name}of blobs){
+        const arr=await blob.arrayBuffer();
+        zip.file(name,arr);
+      }
+      const zipBlob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:6}});
+      const baseName=p2iFile.name.replace(/\.pdf$/i,'');
+      const url=URL.createObjectURL(zipBlob);
+      const a=document.createElement('a');a.href=url;a.download=baseName+'_pages.zip';a.click();
+      URL.revokeObjectURL(url);
+      showStatus('status-p2i','success',`Done! ${blobs.length} pages in ZIP.`);
+    } else {
+      for(let i=0;i<blobs.length;i++){
+        const url=URL.createObjectURL(blobs[i].blob);
+        const a=document.createElement('a');a.href=url;a.download=blobs[i].name;a.click();
+        URL.revokeObjectURL(url);
+        if(i<blobs.length-1)await new Promise(r=>setTimeout(r,350));
+      }
+      showStatus('status-p2i','success',`Done! ${blobs.length} file(s) downloaded.`);
+    }
+    showNextStep('/pdf/compress.html','Compress PDF to reduce size','📦');
+  }catch(e){showStatus('status-p2i','error','Error: '+e.message);}
+  document.getElementById('p2i-btn').disabled=false;
+  document.getElementById('p2i-btn-single').disabled=false;
+}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'→';el.style.display='flex';}
 </script>
 </body></html>

@@ -59,6 +59,11 @@
       </div>
       <button class="btn" onclick="resizeAndDownload()">↔️ Resize & Download</button>
       <div class="status" id="status"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
     </div>
   </div>
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
@@ -78,6 +83,8 @@
   setupDropzone('drop-zone','file-input',f=>{currentFile=f[0];if(!currentFile)return;const u=URL.createObjectURL(currentFile);const i=new Image();i.onload=()=>{origW=i.naturalWidth;origH=i.naturalHeight;document.getElementById('ow').textContent=origW+'px';document.getElementById('oh').textContent=origH+'px';document.getElementById('nw').value=origW;document.getElementById('nh').value=origH;document.getElementById('pi').src=u;document.getElementById('options-area').style.display='block';};i.src=u;});
   function syncH(){if(!document.getElementById('lock').checked||!origW)return;const w=parseInt(document.getElementById('nw').value);document.getElementById('nh').value=Math.round(w*origH/origW);}
   function syncW(){if(!document.getElementById('lock').checked||!origH)return;const h=parseInt(document.getElementById('nh').value);document.getElementById('nw').value=Math.round(h*origW/origH);}
-  function resizeAndDownload(){if(!currentFile)return;showStatus('status','info','Resizing…');let tw,th;if(mode==='px'){tw=parseInt(document.getElementById('nw').value);th=parseInt(document.getElementById('nh').value);}else{const s=parseInt(document.getElementById('scale').value)/100;tw=Math.round(origW*s);th=Math.round(origH*s);}const u=URL.createObjectURL(currentFile);const i=new Image();i.onload=async()=>{const c=document.createElement('canvas');c.width=tw;c.height=th;c.getContext('2d').drawImage(i,0,0,tw,th);URL.revokeObjectURL(u);c.toBlob(async b=>{const ext=currentFile.name.split('.').pop();const name=currentFile.name.replace(/\.[^.]+$/,'')+'_'+tw+'x'+th+'.'+ext;showAdAndDownload(await b.arrayBuffer(),name,currentFile.type);showStatus('status','success','Done!');},currentFile.type,0.92);};i.src=u;}
+  function resizeAndDownload(){if(!currentFile)return;showStatus('status','info','Resizing…');let tw,th;if(mode==='px'){tw=parseInt(document.getElementById('nw').value);th=parseInt(document.getElementById('nh').value);}else{const s=parseInt(document.getElementById('scale').value)/100;tw=Math.round(origW*s);th=Math.round(origH*s);}const u=URL.createObjectURL(currentFile);const i=new Image();i.onload=async()=>{const c=document.createElement('canvas');c.width=tw;c.height=th;c.getContext('2d').drawImage(i,0,0,tw,th);URL.revokeObjectURL(u);c.toBlob(async b=>{const ext=currentFile.name.split('.').pop();const name=currentFile.name.replace(/\.[^.]+$/,'')+'_'+tw+'x'+th+'.'+ext;showAdAndDownload(await b.arrayBuffer(),name,currentFile.type);showStatus('status','success','Done!');
+    showNextStep("/image/compress.html","Compress to reduce file size further","📦");},currentFile.type,0.92);};i.src=u;}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
 </body></html>

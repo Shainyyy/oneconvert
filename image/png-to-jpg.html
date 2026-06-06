@@ -53,6 +53,11 @@
       </div>
       <button class="btn" onclick="convertAll()">🔄 Convert to JPG & Download</button>
       <div class="status" id="status"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
     </div>
   </div>
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
@@ -73,6 +78,8 @@
   let files=[];
   document.getElementById('qs').addEventListener('input',()=>document.getElementById('ql').textContent=document.getElementById('qs').value+'%');
   setupDropzone('drop-zone','file-input',f=>{files=Array.from(f).filter(x=>x.type==='image/png');if(!files.length)return;document.getElementById('os').textContent=formatBytes(files[0].size);document.getElementById('fc').textContent=files.length+' file(s)';document.getElementById('pi').src=URL.createObjectURL(files[0]);document.getElementById('options-area').style.display='block';});
-  async function convertAll(){if(!files.length)return;showStatus('status','info','Converting…');const q=parseInt(document.getElementById('qs').value)/100;const blobs=[];for(const f of files){const b=await new Promise((res)=>{const u=URL.createObjectURL(f);const i=new Image();i.onload=()=>{const c=document.createElement('canvas');c.width=i.naturalWidth;c.height=i.naturalHeight;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(i,0,0);URL.revokeObjectURL(u);c.toBlob(res,'image/jpeg',q);};i.src=u;});blobs.push({blob:b,name:f.name.replace(/\.png$/i,'.jpg')});}if(blobs.length===1){showAdAndDownload(await blobs[0].blob.arrayBuffer(),blobs[0].name,'image/jpeg');}else{showAdAndDownloadBlobs(blobs);}showStatus('status','success','Done! Download starting…');}
+  async function convertAll(){if(!files.length)return;showStatus('status','info','Converting…');const q=parseInt(document.getElementById('qs').value)/100;const blobs=[];for(const f of files){const b=await new Promise((res)=>{const u=URL.createObjectURL(f);const i=new Image();i.onload=()=>{const c=document.createElement('canvas');c.width=i.naturalWidth;c.height=i.naturalHeight;const ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(i,0,0);URL.revokeObjectURL(u);c.toBlob(res,'image/jpeg',q);};i.src=u;});blobs.push({blob:b,name:f.name.replace(/\.png$/i,'.jpg')});}if(blobs.length===1){showAdAndDownload(await blobs[0].blob.arrayBuffer(),blobs[0].name,'image/jpeg');}else{showAdAndDownloadBlobs(blobs);}showStatus('status','success','Done! Download starting…');
+    showNextStep("/image/compress.html","Compress the JPG further","📦");}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
 </body></html>

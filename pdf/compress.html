@@ -50,6 +50,11 @@
     <input type="file" id="file-input-compress" accept=".pdf" style="display:none;"/>
     <button class="btn" id="compress-btn" onclick="doCompress()" disabled style="margin-top:1rem;">📦 Compress & Download</button>
     <div class="status" id="status-compress"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem;">
@@ -108,6 +113,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 <script>
 let compressFile=null;
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-compress','file-input-compress',f=>{compressFile=f[0];document.getElementById('compress-info').textContent='📎 '+f[0].name+' ('+formatBytes(f[0].size)+')';document.getElementById('compress-btn').disabled=false;}));
-async function doCompress(){if(!compressFile)return showStatus('status-compress','error','Please select a PDF first.');showStatus('status-compress','info','Compressing…');try{const buf=await compressFile.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf,{updateMetadata:false});pdf.setTitle('');pdf.setAuthor('');pdf.setSubject('');pdf.setKeywords([]);pdf.setProducer('');pdf.setCreator('');const bytes=await pdf.save({useObjectStreams:true,addDefaultPage:false});const saved=((buf.byteLength-bytes.byteLength)/buf.byteLength*100).toFixed(1);directDownload(bytes,compressFile.name.replace(/\.pdf$/i,'')+'_compressed.pdf','application/pdf');showStatus('status-compress','success',`Reduced by ~${saved}%. Download started.`);}catch(e){showStatus('status-compress','error','Error: '+e.message);}}
+async function doCompress(){if(!compressFile)return showStatus('status-compress','error','Please select a PDF first.');showStatus('status-compress','info','Compressing…');try{const buf=await compressFile.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf,{updateMetadata:false});pdf.setTitle('');pdf.setAuthor('');pdf.setSubject('');pdf.setKeywords([]);pdf.setProducer('');pdf.setCreator('');const bytes=await pdf.save({useObjectStreams:true,addDefaultPage:false});const saved=((buf.byteLength-bytes.byteLength)/buf.byteLength*100).toFixed(1);directDownload(bytes,compressFile.name.replace(/\.pdf$/i,'')+'_compressed.pdf','application/pdf');showStatus('status-compress','success',`Reduced by ~${saved}%. Download started.`);
+    showNextStep("/pdf/pdf-to-word.html","Convert PDF to Word","📝");}catch(e){showStatus('status-compress','error','Error: '+e.message);}}
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
 </body></html>
