@@ -276,9 +276,9 @@ let dragMergeSrc=null,dragImgSrc=null,dragPageSrc=null;
 
 const HANDLE_SVG=`<svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.5"/><circle cx="10" cy="3" r="1.5"/><circle cx="4" cy="9" r="1.5"/><circle cx="10" cy="9" r="1.5"/><circle cx="4" cy="15" r="1.5"/><circle cx="10" cy="15" r="1.5"/></svg>`;
 
-function openPanel(n){document.getElementById('panel-'+n).classList.add('active');document.body.style.overflow='hidden';}
-function closePanel(n){document.getElementById('panel-'+n).classList.remove('active');document.body.style.overflow='';}
-document.querySelectorAll('.panel-overlay').forEach(el=>{el.addEventListener('click',e=>{if(e.target===el){el.classList.remove('active');document.body.style.overflow='';}});});
+function openPanel(n){const el=document.getElementById('panel-'+n);if(el){el.style.display='flex';el.style.alignItems='center';el.style.justifyContent='center';document.body.style.overflow='hidden';}}
+function closePanel(n){const el=document.getElementById('panel-'+n);if(el){el.style.display='none';document.body.style.overflow='';}}
+document.querySelectorAll('.panel-overlay').forEach(el=>{el.addEventListener('click',e=>{if(e.target===el){el.style.display='none';document.body.style.overflow='';}});});
 
 function setupDZ(zoneId,inputId,onFiles){
   const zone=document.getElementById(zoneId),input=document.getElementById(inputId);

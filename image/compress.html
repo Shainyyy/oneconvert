@@ -22,22 +22,16 @@
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
   <div class="nav-links">
-    <a href="/pdf/">PDF</a><a href="/image/" class="active">Image</a>
-    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
-    <a href="/text/">Text</a><a href="/colors/">Colors</a>
+    <a href="/pdf/">PDF</a>
+    <a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
   </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
 </nav>
 
-<div class="ad-overlay" id="ad-overlay">
-  <div class="ad-overlay-box">
-    <h3>⚡ Your file is ready!</h3>
-    <p>Please wait while we prepare your download.</p>
-    <div class="ad-overlay-inner"><ins class="adsbygoogle" style="display:block;width:300px;height:120px;" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-    <div class="countdown" id="countdown">5</div>
-    <button class="btn" id="skip-btn" onclick="triggerDownload()" style="display:none;">⬇️ Download</button>
-    <p class="ad-note">Ads keep OneConvert free 🙏</p>
-  </div>
-</div>
 
 <div class="tool-page">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image Tools</a><span>›</span><span>Compress Image</span></div>
@@ -118,7 +112,8 @@
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
-  <div class="footer-links"><a href="/">Home</a><a href="/image/">Image Tools</a><a href="/pdf/">PDF</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+  <div class="footer-links"><a href="/">Home</a><a href="/image/">Image Tools</a><a href="/pdf/">PDF</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>  <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
 </footer>
 
 <script src="../js/common.js"></script>
