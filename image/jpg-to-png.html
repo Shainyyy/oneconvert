@@ -191,6 +191,7 @@
         showAdAndDownloadBlobs(blobs);
       }
       showStatus('status', 'success', `Converted ${blobs.length} file(s)! Download starting…`);
+      showNextStep("/image/compress.html","Compress image to reduce size","📦");
     } catch(e) {
       showStatus('status', 'error', 'Error: ' + e.message);
     }

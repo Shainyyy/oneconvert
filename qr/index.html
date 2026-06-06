@@ -126,11 +126,30 @@
       document.getElementById('dl-svg').disabled=false;
     }catch(e){showStatus('status','error','Error: '+e.message);}
   }
-  function downloadQR(fmt){const content=getContent();if(!content)return;if(fmt==='png'){
-    const canvas=document.getElementById('qr-container').querySelector('canvas');
-    if(!canvas)return;
-    const a=document.createElement('a');a.href=canvas.toDataURL('image/png');a.download='qrcode.png';a.click();
-  }else{const size=parseInt(document.getElementById('qr-size').value)||300;const color=document.getElementById('qr-color').value;const bg=document.getElementById('bg-color').value;QRCode.toString(content,{type:'svg',width:size,color:{dark:color,light:bg}},(err,svg)=>{if(err)return;const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));const a=document.createElement('a');a.href=url;a.download='qrcode.svg';a.click();URL.revokeObjectURL(url);});}showStatus('status','success','Downloaded!');}
+  function downloadQR(fmt){
+  const content=getContent();
+  if(!content)return;
+  const canvas=document.getElementById('qr-container').querySelector('canvas');
+  if(!canvas){showStatus('status','error','Generate a QR code first');return;}
+  if(fmt==='png'){
+    const a=document.createElement('a');
+    a.href=canvas.toDataURL('image/png');
+    a.download='qrcode.png';
+    a.click();
+  } else {
+    // SVG: embed the canvas PNG inside a proper SVG wrapper
+    const size=canvas.width||300;
+    const bg=document.getElementById('bg-color').value;
+    const pngData=canvas.toDataURL('image/png');
+    const svgStr=`<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}"><rect width="${size}" height="${size}" fill="${bg}"/><image xlink:href="${pngData}" width="${size}" height="${size}"/></svg>`;
+    const blob=new Blob([svgStr],{type:'image/svg+xml;charset=utf-8'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url;a.download='qrcode.svg';a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  showStatus('status','success','Downloaded!');
+}
   generateQR();
 </script>
 </body></html>

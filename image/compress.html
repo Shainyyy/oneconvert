@@ -200,6 +200,7 @@
         const outName = currentFile.name.replace(/\.[^.]+$/, '') + '_compressed.' + ext;
         showAdAndDownload(await blob.arrayBuffer(), outName, 'image/jpeg');
         showStatus('status', 'success', 'Compressed! Download starting…');
+      showNextStep("/image/jpg-to-png.html","Need lossless? Convert to PNG","🔄");
       }, 'image/jpeg', parseInt(slider.value) / 100);
     };
     img.src = url;

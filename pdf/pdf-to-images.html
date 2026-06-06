@@ -126,7 +126,8 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.fa
 let p2iFile=null;
 pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-pdf2img','file-input-pdf2img',f=>loadPdf2Img(f[0])));
-async function loadPdf2Img(file){p2iFile=file;try{const buf=await file.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;const n=pdf.numPages;document.getElementById('p2i-from').value=1;document.getElementById('p2i-to').value=n;document.getElementById('p2i-total').textContent=n+' pages';document.getElementById('p2i-btn').disabled=false;document.getElementById('pdf2img-info').textContent='📎 '+file.name;}catch(e){showStatus('status-p2i','error','Error: '+e.message);}}
+async function loadPdf2Img(file){p2iFile=file;try{const buf=await file.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:buf}).promise;const n=pdf.numPages;document.getElementById('p2i-from').value=1;document.getElementById('p2i-to').value=n;document.getElementById('p2i-total').textContent=n+' pages';document.getElementById('p2i-btn').disabled=false;
+  document.getElementById('p2i-btn-single').disabled=false;document.getElementById('pdf2img-info').textContent='📎 '+file.name;}catch(e){showStatus('status-p2i','error','Error: '+e.message);}}
 async function doPdf2Img(mode){
   if(!p2iFile)return showStatus('status-p2i','error','Please select a PDF first.');
   const from=parseInt(document.getElementById('p2i-from').value);
@@ -162,6 +163,7 @@ async function doPdf2Img(mode){
       const a=document.createElement('a');a.href=url;a.download=baseName+'_pages.zip';a.click();
       URL.revokeObjectURL(url);
       showStatus('status-p2i','success',`Done! ${blobs.length} pages in ZIP.`);
+    showNextStep("/image/compress.html","Compress the exported images","📦");
     } else {
       for(let i=0;i<blobs.length;i++){
         const url=URL.createObjectURL(blobs[i].blob);
@@ -174,6 +176,7 @@ async function doPdf2Img(mode){
     showNextStep('/pdf/compress.html','Compress PDF to reduce size','📦');
   }catch(e){showStatus('status-p2i','error','Error: '+e.message);}
   document.getElementById('p2i-btn').disabled=false;
+  document.getElementById('p2i-btn-single').disabled=false;
   document.getElementById('p2i-btn-single').disabled=false;
 }
 function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'→';el.style.display='flex';}

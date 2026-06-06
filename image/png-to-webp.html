@@ -153,6 +153,7 @@ async function convertAll(){
       if(idx<selectedFiles.length-1)await new Promise(r=>setTimeout(r,300));
     }
     showStatus('status','success','Done! ${selectedFiles.length} file(s) converted.');
+      showNextStep("/image/resize.html","Resize the image if needed","↔️");
     showNextStep('/image/jpg-to-webp.html','JPG to WebP');
   }catch(e){showStatus('status','error','Error: '+e.message);}
   document.getElementById('convert-btn').disabled=false;
