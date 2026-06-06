@@ -29,8 +29,6 @@ All processing runs **locally in your browser**. Files never leave your device â
 - **Images:** Canvas API native + heic2any
 - **QR:** qrcode.js
 - **Units/Text/Colors:** Pure JS
-- **Hosting:** GitHub Pages + Cloudflare CDN
-- **Cost:** ~$10/year (domain only)
 
 ---
 
