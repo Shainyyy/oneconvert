@@ -72,6 +72,11 @@
     </div>
     <button class="btn" id="pn-btn" onclick="doPageNumbers()" disabled style="margin-top:1.25rem;">🔢 Add Page Numbers & Download</button>
     <div class="status" id="status-pn"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
   </div>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem;">
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;"><div style="width:40px;height:40px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1rem;margin:0 auto 0.65rem;">1</div><h3 style="font-family:Syne,sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;">Select PDF</h3><p style="color:var(--muted);font-size:0.78rem;line-height:1.5;">Click or drag & drop. Stays on your device.</p></div>
@@ -138,9 +143,11 @@ async function doPageNumbers(){
     const bytes=await pdf.save();
     directDownload(bytes,pnFile.name.replace(/\.pdf$/i,'')+'_numbered.pdf','application/pdf');
     showStatus('status-pn','success','Page numbers added! Download started.');
+    showNextStep("/pdf/compress.html","Compress your numbered PDF","📦");
   }catch(e){showStatus('status-pn','error','Error: '+e.message);}
 }
 </script>
 <script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
-trackRecentTool();</script>
+trackRecentTool();function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
+</script>
 </body></html>

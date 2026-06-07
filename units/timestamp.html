@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Unix Timestamp Converter – Epoch to Date | OneConvert</title>
+  <meta name="description" content="Convert Unix timestamp to date and time online free. Convert epoch to human readable date or date to Unix timestamp instantly. No account required."/>
+  <meta name="keywords" content="unix timestamp converter, epoch to date, timestamp to date, convert epoch time, unix time converter, epoch converter free online"/>
+  <link rel="canonical" href="https://oneconvert.net/units/timestamp.html"/>
+  <meta property="og:title" content="Unix Timestamp Converter – Epoch to Date | OneConvert"/>
+  <meta property="og:description" content="Convert Unix timestamp to date/time or date to epoch instantly. Shows local time and UTC."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Unix Timestamp Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"Unit Converter","item":"https://oneconvert.net/units/"},{"@type":"ListItem","position":3,"name":"Timestamp Converter","item":"https://oneconvert.net/units/timestamp.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a Unix timestamp?","acceptedAnswer":{"@type":"Answer","text":"A Unix timestamp (also called epoch time) is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC. It is used universally in programming and databases to represent points in time."}},{"@type":"Question","name":"What is the current Unix timestamp?","acceptedAnswer":{"@type":"Answer","text":"The current Unix timestamp changes every second. Use the 'Now' button in this converter to get the current epoch time."}},{"@type":"Question","name":"How do I convert a Unix timestamp to a date?","acceptedAnswer":{"@type":"Answer","text":"Enter the Unix timestamp in the field above and the corresponding date and time appear instantly in both local time and UTC."}},{"@type":"Question","name":"What is epoch time?","acceptedAnswer":{"@type":"Answer","text":"Epoch time and Unix timestamp are the same thing — the number of seconds since January 1, 1970 00:00:00 UTC (the Unix epoch)."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a>
+    <a href="/units/" class="active">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/units/">Units</a><span>›</span><span>Timestamp Converter</span></div>
+  <div class="tool-page-header">
+    <h1>Free Unix Timestamp Converter</h1>
+    <p>Convert Unix epoch to human-readable date/time, or date to Unix timestamp. Shows local time and UTC. Updates live.</p>
+  </div>
+
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="tool-box">
+    <!-- Live clock -->
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 1.1rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.2rem;">Current Unix timestamp</div>
+        <div id="live-ts" style="font-family:Syne,sans-serif;font-weight:800;font-size:1.4rem;color:var(--accent2);cursor:pointer;" title="Click to copy" onclick="copyText(this.textContent)">—</div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.2rem;">Current UTC</div>
+        <div id="live-utc" style="font-size:0.9rem;font-weight:500;">—</div>
+      </div>
+      <button onclick="useNow()" style="background:var(--accent);color:#fff;border:none;border-radius:8px;padding:0.5rem 1rem;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">Use Now ↓</button>
+    </div>
+
+    <!-- Section 1: Timestamp → Date -->
+    <div style="margin-bottom:1.5rem;">
+      <h3 style="font-family:Syne,sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.75rem;">⏱ Timestamp → Date</h3>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:flex-end;">
+        <div style="flex:1;min-width:180px;">
+          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">Unix timestamp (seconds)</label>
+          <input type="number" id="ts-input" placeholder="e.g. 1717718400" oninput="tsToDate()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.75rem;font-family:monospace;font-size:1rem;font-weight:600;"/>
+        </div>
+        <button onclick="useNow()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--muted);padding:0.6rem 1rem;cursor:pointer;font-size:0.82rem;white-space:nowrap;height:40px;">Now</button>
+      </div>
+      <div id="ts-results" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+        <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Local time</div>
+          <div id="ts-local" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">UTC</div>
+          <div id="ts-utc" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">ISO 8601</div>
+          <div id="ts-iso" style="font-weight:600;font-size:0.92rem;cursor:pointer;font-family:monospace;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Relative</div>
+          <div id="ts-relative" style="font-weight:600;font-size:0.92rem;color:var(--accent2);">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Date → Timestamp -->
+    <div style="border-top:1px solid var(--border);padding-top:1.25rem;">
+      <h3 style="font-family:Syne,sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.75rem;">📅 Date → Timestamp</h3>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:flex-end;">
+        <div style="flex:1;min-width:200px;">
+          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">Date & time (local)</label>
+          <input type="datetime-local" id="date-input" oninput="dateToTs()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.75rem;font-size:0.95rem;"/>
+        </div>
+      </div>
+      <div id="date-result" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+        <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Unix timestamp</div>
+          <div id="date-ts" style="font-family:Syne,sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent2);cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+        </div>
+        <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
+          <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">UTC equivalent</div>
+          <div id="date-utc" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reference table -->
+  <div class="tool-box" style="margin-top:1.5rem;">
+    <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Notable timestamps</h3>
+    <div style="overflow-x:auto;">
+      <table class="unit-table">
+        <thead><tr><th>Date</th><th>Unix Timestamp</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>1970-01-01 00:00:00</td><td class="val-col">0</td><td style="color:var(--muted);font-size:0.82rem;">The Unix epoch (origin)</td></tr>
+          <tr><td>2001-09-09 01:46:40</td><td class="val-col">1,000,000,000</td><td style="color:var(--muted);font-size:0.82rem;">1 billion seconds</td></tr>
+          <tr><td>2009-01-03 18:15:05</td><td class="val-col">1,231,006,505</td><td style="color:var(--muted);font-size:0.82rem;">Bitcoin genesis block</td></tr>
+          <tr><td>2033-05-18 03:33:20</td><td class="val-col">2,000,000,000</td><td style="color:var(--muted);font-size:0.82rem;">2 billion seconds</td></tr>
+          <tr><td>2038-01-19 03:14:07</td><td class="val-col">2,147,483,647</td><td style="color:var(--muted);font-size:0.82rem;">32-bit integer max (Y2K38)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin:1.5rem 0;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
+    <a class="related-card" href="/units/css-units.html"><span class="icon">🖥️</span><div class="info"><h4>CSS Unit Converter</h4><p>px to rem, em, vh</p></div></a>
+    <a class="related-card" href="/units/number-base.html"><span class="icon">🔢</span><div class="info"><h4>Number Base</h4><p>Binary, hex, decimal</p></div></a>
+    <a class="related-card" href="/units/"><span class="icon">📐</span><div class="info"><h4>Unit Converter</h4><p>Length, weight, temp</p></div></a>
+    <a class="related-card" href="/text/"><span class="icon">✏️</span><div class="info"><h4>Text Tools</h4><p>Base64 encode/decode</p></div></a>
+  </div></div>
+
+  <div class="info-section">
+    <h2>What Is a Unix Timestamp?</h2>
+    <p>A Unix timestamp (also called epoch time or POSIX time) is the number of seconds elapsed since <strong>January 1, 1970, 00:00:00 UTC</strong> — a moment known as the Unix epoch. It is the standard way computers and programming languages represent moments in time: databases, APIs, log files and server systems almost universally use Unix timestamps for time storage and comparison.</p>
+    <p>Because it is a simple integer, Unix time is easy to calculate with: subtracting two timestamps gives the duration between them in seconds. Converting to milliseconds (multiply by 1000) is common in JavaScript. The current 10-digit Unix timestamp will reach 2,147,483,647 on January 19, 2038 — the so-called Y2K38 problem for systems using 32-bit integers.</p>
+  </div>
+
+  <div class="faq-section"><h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What is a Unix timestamp?<span class="arrow">▼</span></button><div class="faq-a">A Unix timestamp is the number of seconds since January 1, 1970, 00:00:00 UTC. It is the standard way to represent time in programming, databases and APIs.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the current Unix timestamp?<span class="arrow">▼</span></button><div class="faq-a">The current timestamp is shown live at the top of this page and updates every second. Click "Now" to use it as a conversion input.</div></div>
+    <div class="faq-item"><button class="faq-q">How do I convert epoch to date?<span class="arrow">▼</span></button><div class="faq-a">Enter the Unix timestamp in the "Timestamp → Date" field and the date appears instantly in local time, UTC and ISO 8601 format.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between seconds and milliseconds timestamps?<span class="arrow">▼</span></button><div class="faq-a">Standard Unix timestamps are in seconds (10 digits). JavaScript and many APIs use milliseconds (13 digits). To convert: divide milliseconds by 1000 to get seconds.</div></div>
+    <div class="faq-item"><button class="faq-q">What is Y2K38?<span class="arrow">▼</span></button><div class="faq-a">Y2K38 refers to the moment on January 19, 2038 when 32-bit Unix timestamps overflow their maximum value (2,147,483,647). Systems still using signed 32-bit integers for time storage may break at that point. Modern 64-bit systems are not affected.</div></div>
+    <div class="faq-item"><button class="faq-q">What is ISO 8601 format?<span class="arrow">▼</span></button><div class="faq-a">ISO 8601 is an international standard for representing dates and times, e.g. 2024-06-01T12:00:00Z. The Z at the end means UTC. It is widely used in APIs and data exchange formats.</div></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/units/">Units</a><a href="/pdf/">PDF</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));updateLiveClock();setInterval(updateLiveClock,1000);});
+
+function updateLiveClock(){
+  const now=Math.floor(Date.now()/1000);
+  const el=document.getElementById('live-ts');
+  const utcEl=document.getElementById('live-utc');
+  if(el)el.textContent=now;
+  if(utcEl)utcEl.textContent=new Date().toUTCString().replace(' GMT','') + ' UTC';
+}
+
+function useNow(){
+  const ts=Math.floor(Date.now()/1000);
+  document.getElementById('ts-input').value=ts;
+  tsToDate();
+}
+
+function copyText(t){navigator.clipboard.writeText(t.trim()).catch(()=>{});}
+
+function relativeTime(ts){
+  const diff=Math.floor(Date.now()/1000)-ts;
+  const abs=Math.abs(diff);
+  const future=diff<0;
+  if(abs<60)return 'just now';
+  if(abs<3600)return (future?'in ':'')+Math.floor(abs/60)+' min'+(future?'':' ago');
+  if(abs<86400)return (future?'in ':'')+Math.floor(abs/3600)+' hr'+(future?'':' ago');
+  if(abs<604800)return (future?'in ':'')+Math.floor(abs/86400)+' day'+(abs/86400>=2?'s':'')+(future?'':' ago');
+  if(abs<2592000)return (future?'in ':'')+Math.floor(abs/604800)+' week'+(abs/604800>=2?'s':'')+(future?'':' ago');
+  return new Date(ts*1000).toLocaleDateString();
+}
+
+function tsToDate(){
+  const val=document.getElementById('ts-input').value.trim();
+  if(!val)return;
+  const ts=parseInt(val);
+  if(isNaN(ts))return;
+  const d=new Date(ts*1000);
+  document.getElementById('ts-local').textContent=d.toLocaleString();
+  document.getElementById('ts-utc').textContent=d.toUTCString().replace(' GMT',' UTC');
+  document.getElementById('ts-iso').textContent=d.toISOString();
+  document.getElementById('ts-relative').textContent=relativeTime(ts);
+  document.getElementById('ts-results').style.display='grid';
+}
+
+function dateToTs(){
+  const val=document.getElementById('date-input').value;
+  if(!val)return;
+  const d=new Date(val);
+  const ts=Math.floor(d.getTime()/1000);
+  document.getElementById('date-ts').textContent=ts;
+  document.getElementById('date-utc').textContent=d.toUTCString().replace(' GMT',' UTC');
+  document.getElementById('date-result').style.display='grid';
+}
+</script>
+<script src="../js/consent.js"></script>
+</body>
+</html>

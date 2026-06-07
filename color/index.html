@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Color Converter – HEX, RGB, HSL | OneConvert</title>
+  <meta name="description" content="Free online color converter. Convert HEX to RGB, RGB to HSL and more. Check contrast ratios, generate palettes and create gradients instantly."/>
+  <meta name="keywords" content="hex to rgb converter, rgb to hsl, color converter online, color palette generator, contrast checker, css color tools"/>
+  <link rel="canonical" href="https://oneconvert.net/colors/"/>
+    <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+</head>
+<body>
+<nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links"><a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/" class="active">Colors</a></div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>Color Tools</span></div>
+  <div class="tool-page-header"><h1>🎨 Free Color Tools</h1><p>Convert HEX, RGB, HSL colors. Check contrast ratios and generate color palettes — instantly in your browser.</p></div>
+
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="unit-tabs" style="margin-bottom:1.5rem;">
+    <button class="unit-tab active" onclick="setColorTool('convert',this)">🔄 Color Converter</button>
+    <button class="unit-tab" onclick="setColorTool('contrast',this)">⚡ Contrast Checker</button>
+    <button class="unit-tab" onclick="setColorTool('palette',this)">🎨 Palette Generator</button>
+  </div>
+
+  <!-- Color Converter -->
+  <div id="color-convert" class="tool-box">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+      <input type="color" id="color-picker" value="#2563eb" oninput="onPickerChange()" onchange="onPickerChange()" style="width:60px;height:60px;border-radius:12px;padding:2px;cursor:pointer;border:1px solid var(--border);background:var(--bg3);"/>
+      <div>
+        <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;" id="color-name">Pick or enter a color</div>
+        <div style="font-size:0.82rem;color:var(--muted);">Click the swatch or type in any field below</div>
+      </div>
+    </div>
+    <div class="color-display" id="color-display" style="background:#2563eb;"></div>
+    <div class="color-values">
+      <div class="color-val-box" onclick="copyVal('hex-val')"><div class="format">HEX</div><div class="value" id="hex-val">#2563eb</div></div>
+      <div class="color-val-box" onclick="copyVal('rgb-val')"><div class="format">RGB</div><div class="value" id="rgb-val">37, 99, 235</div></div>
+      <div class="color-val-box" onclick="copyVal('hsl-val')"><div class="format">HSL</div><div class="value" id="hsl-val">224°, 83%, 53%</div></div>
+    </div>
+    <div style="margin-top:1rem;">
+      <label style="font-size:0.82rem;color:var(--muted);">Enter HEX, RGB or HSL value:</label>
+      <div style="display:flex;gap:0.75rem;margin-top:0.4rem;">
+        <input type="text" id="hex-input" placeholder="#2563eb" style="flex:1;" oninput="parseHexInput()"/>
+        <button class="btn btn-outline btn-sm" onclick="parseHexInput()">Apply</button>
+      </div>
+    </div>
+    <p style="font-size:0.75rem;color:var(--muted);margin-top:0.5rem;">Click any color value to copy to clipboard.</p>
+  </div>
+
+  <!-- Contrast Checker -->
+  <div id="color-contrast" class="tool-box" style="display:none;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+      <div>
+        <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;">Foreground (Text)</label>
+        <div style="display:flex;gap:0.75rem;align-items:center;">
+          <input type="color" id="fg-color" value="#ffffff" oninput="checkContrast()" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
+          <input type="text" id="fg-hex" value="#ffffff" style="flex:1;" oninput="fgFromText()"/>
+        </div>
+      </div>
+      <div>
+        <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;">Background</label>
+        <div style="display:flex;gap:0.75rem;align-items:center;">
+          <input type="color" id="bg-picker" value="#2563eb" oninput="checkContrast()" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
+          <input type="text" id="bg-hex" value="#2563eb" style="flex:1;" oninput="bgFromText()"/>
+        </div>
+      </div>
+    </div>
+    <div id="contrast-preview" style="padding:2rem;border-radius:12px;text-align:center;background:#2563eb;margin-bottom:1rem;transition:background 0.2s;">
+      <div style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:#fff;" id="preview-lg">Large Text Sample (18pt+)</div>
+      <div style="font-size:0.9rem;color:#fff;margin-top:0.5rem;" id="preview-sm">Normal text sample for readability testing.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center;">
+        <div style="font-family:Syne,sans-serif;font-size:1.8rem;font-weight:800;" id="ratio-val">—</div>
+        <div style="font-size:0.78rem;color:var(--muted);">Contrast Ratio</div>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center;">
+        <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:800;" id="aa-val">—</div>
+        <div style="font-size:0.78rem;color:var(--muted);">WCAG AA</div>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center;">
+        <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:800;" id="aaa-val">—</div>
+        <div style="font-size:0.78rem;color:var(--muted);">WCAG AAA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Palette Generator -->
+  <div id="color-palette" class="tool-box" style="display:none;">
+    <div style="display:flex;gap:1rem;align-items:flex-end;margin-bottom:1.5rem;flex-wrap:wrap;">
+      <div class="unit-input-group"><label>Base Color</label><div class="color-input"><input type="color" id="base-color" value="#2563eb" oninput="genPalette()" onchange="genPalette()"/><input type="text" id="base-hex" value="#2563eb" style="width:100px;" oninput="palFromText()"/></div></div>
+      <div class="unit-input-group"><label>Mode</label><select id="pal-mode" onchange="genPalette()"><option value="shades">Shades</option><option value="complementary">Complementary</option><option value="triadic">Triadic</option><option value="analogous">Analogous</option></select></div>
+      <button class="btn btn-sm" onclick="genPalette()">Generate</button>
+    </div>
+    <div id="palette-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:0.5rem;"></div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin:1.5rem 0;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
+      <a class="related-card" href="/units/css-units.html"><span class="icon">🖥️</span><div class="info"><h4>CSS Unit Converter</h4><p>px to rem, em, vh, vw</p></div></a>
+    <a class="related-card" href="/text/"><span class="icon">✏️</span><div class="info"><h4>Text Tools</h4><p>Word count, case convert</p></div></a>
+    <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress Image</h4><p>Reduce file size</p></div></a>
+    <a class="related-card" href="/qr/"><span class="icon">📱</span><div class="info"><h4>QR Generator</h4><p>Create QR codes</p></div></a>
+  </div></div>
+</div>
+  <div class="info-section">
+    <h2>Free Online Colour Tools for Designers and Developers</h2>
+    <p>The colour converter instantly translates between HEX (used in CSS and HTML), RGB (red, green, blue values 0–255), and HSL (hue, saturation, lightness) — all three formats widely used in web design and development. Type in any format and all others update live. The contrast checker calculates the contrast ratio between two colours and tells you whether they meet WCAG 2.1 accessibility standards (AA requires 4.5:1 for normal text, AAA requires 7:1). The palette generator creates harmonious colour sets from a base colour using colour theory rules (complementary, analogous, triadic).</p>
+    <p>All tools run entirely in your browser — no upload, no account. Use them for web design, graphic design, accessibility audits or any project where you need accurate colour values. Click any result to copy it to your clipboard.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How do I convert HEX to RGB?<span class="arrow">▼</span></button><div class="faq-a">Enter a HEX code (e.g. #FF5733) in the HEX field and the RGB and HSL values appear instantly. You can also paste without the # symbol.</div></div>
+    <div class="faq-item"><button class="faq-q">What is a WCAG contrast ratio?<span class="arrow">▼</span></button><div class="faq-a">WCAG (Web Content Accessibility Guidelines) defines minimum contrast ratios between text and background colours to ensure readability. AA level requires 4.5:1 for normal text, AAA requires 7:1. The contrast checker shows your ratio and whether it passes each level.</div></div>
+    <div class="faq-item"><button class="faq-q">What does HSL stand for?<span class="arrow">▼</span></button><div class="faq-a">HSL stands for Hue, Saturation, Lightness. Hue is the colour angle (0–360°), Saturation is how vivid the colour is (0–100%), and Lightness controls how light or dark it is (0–100%). HSL is often more intuitive for designers than RGB.</div></div>
+    <div class="faq-item"><button class="faq-q">What is a complementary colour?<span class="arrow">▼</span></button><div class="faq-a">A complementary colour sits directly opposite on the colour wheel (180° away). Complementary pairs create high contrast and visual energy. The palette generator also offers analogous (adjacent colours) and triadic (120° apart) schemes.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I copy the colour values?<span class="arrow">▼</span></button><div class="faq-a">Yes — click any colour value or palette swatch to copy it to your clipboard immediately.</div></div>
+  </div>
+
+
+<footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/units/">Units</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
+<script src="../js/common.js"></script>
+<script>
+  function setColorTool(t,btn){document.querySelectorAll('.unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['convert','contrast','palette'].forEach(id=>document.getElementById('color-'+id).style.display=id===t?'block':'none');}
+  function hexToRgb(hex){const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return{r,g,b};}
+  function rgbToHsl(r,g,b){r/=255;g/=255;b/=255;const max=Math.max(r,g,b),min=Math.min(r,g,b);let h,s,l=(max+min)/2;if(max===min){h=s=0;}else{const d=max-min;s=l>0.5?d/(2-max-min):d/(max+min);switch(max){case r:h=((g-b)/d+(g<b?6:0))/6;break;case g:h=((b-r)/d+2)/6;break;case b:h=((r-g)/d+4)/6;break;}}return{h:Math.round(h*360),s:Math.round(s*100),l:Math.round(l*100)};}
+  function updateColorDisplay(hex){document.getElementById('color-display').style.background=hex;document.getElementById('color-picker').value=hex;document.getElementById('hex-val').textContent=hex;const{r,g,b}=hexToRgb(hex);document.getElementById('rgb-val').textContent=`${r}, ${g}, ${b}`;const{h,s,l}=rgbToHsl(r,g,b);document.getElementById('hsl-val').textContent=`${h}°, ${s}%, ${l}%`;}
+  function onPickerChange(){updateColorDisplay(document.getElementById('color-picker').value);}
+  function parseHexInput(){let v=document.getElementById('hex-input').value.trim();if(!v.startsWith('#'))v='#'+v;if(/^#[0-9a-fA-F]{6}$/.test(v))updateColorDisplay(v);}
+  function copyVal(id){const t=document.getElementById(id).textContent;navigator.clipboard.writeText(t).then(()=>{const el=document.getElementById(id);const orig=el.textContent;el.textContent='Copied!';setTimeout(()=>el.textContent=orig,1200);});}
+  // Contrast
+  function getLum(hex){const{r,g,b}=hexToRgb(hex);const[rs,gs,bs]=[r,g,b].map(v=>{v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);});return 0.2126*rs+0.7152*gs+0.0722*bs;}
+  function getContrastRatio(h1,h2){const l1=getLum(h1),l2=getLum(h2);const bright=Math.max(l1,l2),dark=Math.min(l1,l2);return(bright+0.05)/(dark+0.05);}
+  function checkContrast(){
+  // Sync text inputs with pickers
+  document.getElementById('fg-hex').value = document.getElementById('fg-color').value;
+  document.getElementById('bg-hex').value = document.getElementById('bg-picker').value;const fg=document.getElementById('fg-color').value,bg=document.getElementById('bg-picker').value;document.getElementById('contrast-preview').style.background=bg;document.getElementById('preview-lg').style.color=fg;document.getElementById('preview-sm').style.color=fg;const ratio=getContrastRatio(fg,bg);const r=ratio.toFixed(2);document.getElementById('ratio-val').textContent=r+':1';const aa=ratio>=4.5,aaa=ratio>=7;document.getElementById('aa-val').textContent=aa?'✅ Pass':'❌ Fail';document.getElementById('aa-val').style.color=aa?'var(--success)':'#f87171';document.getElementById('aaa-val').textContent=aaa?'✅ Pass':'❌ Fail';document.getElementById('aaa-val').style.color=aaa?'var(--success)':'#f87171';}
+  function fgFromText(){try{document.getElementById('fg-color').value=document.getElementById('fg-hex').value;checkContrast();}catch(e){}}
+  function bgFromText(){try{document.getElementById('bg-picker').value=document.getElementById('bg-hex').value;checkContrast();}catch(e){}}
+  // Palette
+  function hslToHex(h,s,l){s/=100;l/=100;const a=s*Math.min(l,1-l);const f=n=>{const k=(n+h/30)%12;const color=l-a*Math.max(Math.min(k-3,9-k,1),-1);return Math.round(255*color).toString(16).padStart(2,'0');};return`#${f(0)}${f(8)}${f(4)}`;}
+  function genPalette(){const hex=document.getElementById('base-color').value;const{r,g,b}=hexToRgb(hex);const{h,s,l}=rgbToHsl(r,g,b);const mode=document.getElementById('pal-mode').value;let colors=[];if(mode==='shades'){for(let i=0;i<10;i++)colors.push(hslToHex(h,s,10+i*8));}else if(mode==='complementary'){colors=[hex,hslToHex((h+180)%360,s,l),...[20,40,60,70,80].map(ll=>hslToHex(h,s,ll)),...[20,40].map(ll=>hslToHex((h+180)%360,s,ll))];}else if(mode==='triadic'){colors=[hex,hslToHex((h+120)%360,s,l),hslToHex((h+240)%360,s,l),...[30,50,70].map(ll=>hslToHex(h,s,ll)),...[30,50].map(ll=>hslToHex((h+120)%360,s,ll))];}else{for(let i=-2;i<=2;i++)for(let j=0;j<2;j++)colors.push(hslToHex((h+i*20+360)%360,s,30+j*30));}colors=colors.slice(0,10);const grid=document.getElementById('palette-grid');grid.innerHTML=colors.map(c=>`<div onclick="navigator.clipboard.writeText('${c}')" style="height:80px;border-radius:10px;background:${c};cursor:pointer;transition:transform 0.15s;display:flex;align-items:flex-end;padding:0.4rem;" title="Click to copy ${c}" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><span style="font-size:0.7rem;font-weight:700;color:${getLum(c)>0.4?'#000':'#fff'};font-family:monospace;">${c}</span></div>`).join('');}
+  function palFromText(){try{document.getElementById('base-color').value=document.getElementById('base-hex').value;genPalette();}catch(e){}}
+  checkContrast();genPalette();
+</script>
+<script src="../js/consent.js"></script>
+</body></html>
