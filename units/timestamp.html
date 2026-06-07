@@ -222,5 +222,6 @@ function dateToTs(){
 }
 </script>
 <script src="../js/consent.js"></script>
+<script>function trackRecentTool(){const url=window.location.pathname;const map={'/units/timestamp.html':['⏱','Timestamp Converter']};const entry=map[url];if(!entry)return;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon:entry[0],name:entry[1]});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}trackRecentTool();</script>
 </body>
 </html>
