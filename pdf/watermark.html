@@ -160,7 +160,6 @@ async function doWatermark(){
       const {width,height}=page.getSize();
       const tw=font.widthOfTextAtSize(text,fontSize);
       
-      page.save();
       let x,y,rotate=0;
       if(pos==='center'){x=width/2-tw/2;y=height/2;rotate=PDFLib.degrees(35);}
       else if(pos==='top'){x=width/2-tw/2;y=height-60;rotate=PDFLib.degrees(0);}
