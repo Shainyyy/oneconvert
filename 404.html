@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found – OneConvert</title>
+  <meta name="robots" content="noindex, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div style="max-width:600px;margin:6rem auto 4rem;padding:0 1.5rem;text-align:center;">
+  <div style="font-size:5rem;margin-bottom:1rem;">🔍</div>
+  <h1 style="font-family:Syne,sans-serif;font-size:2.5rem;font-weight:800;margin-bottom:0.5rem;">404</h1>
+  <p style="font-size:1.1rem;color:var(--muted);margin-bottom:2rem;">This page doesn't exist — but your tools do.</p>
+
+  <div style="position:relative;margin-bottom:2rem;">
+    <span style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);font-size:1rem;pointer-events:none;">🔍</span>
+    <input type="text" id="search-404" placeholder="Search tools…"
+      oninput="filter404(this.value)"
+      style="width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:12px;color:var(--text);padding:0.75rem 1rem 0.75rem 2.75rem;font-size:0.95rem;font-family:DM Sans,sans-serif;"/>
+  </div>
+
+  <div id="tool-grid-404" style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;text-align:left;">
+    <a class="tool-404" href="/pdf/split.html" data-name="split pdf extract pages">✂️ Split PDF</a>
+    <a class="tool-404" href="/pdf/merge.html" data-name="merge combine pdfs">🔗 Merge PDF</a>
+    <a class="tool-404" href="/pdf/compress.html" data-name="compress reduce pdf size">📦 Compress PDF</a>
+    <a class="tool-404" href="/pdf/watermark.html" data-name="watermark confidential draft pdf">💧 Add Watermark</a>
+    <a class="tool-404" href="/pdf/page-numbers.html" data-name="page numbers add number pdf">🔢 Page Numbers</a>
+    <a class="tool-404" href="/pdf/pdf-to-word.html" data-name="pdf to word docx convert">📝 PDF to Word</a>
+    <a class="tool-404" href="/image/jpg-to-png.html" data-name="jpg jpeg to png convert image">🔄 JPG to PNG</a>
+    <a class="tool-404" href="/image/jpg-to-webp.html" data-name="jpg to webp convert image smaller">⚡ JPG to WebP</a>
+    <a class="tool-404" href="/image/compress.html" data-name="compress image reduce size">📦 Compress Image</a>
+    <a class="tool-404" href="/image/heic-to-jpg.html" data-name="heic to jpg iphone photo convert">🍎 HEIC to JPG</a>
+    <a class="tool-404" href="/qr/" data-name="qr code generator url wifi">📱 QR Generator</a>
+    <a class="tool-404" href="/units/css-units.html" data-name="px to rem em css unit converter">🖥️ CSS Units</a>
+    <a class="tool-404" href="/units/number-base.html" data-name="binary decimal hex octal converter">🔢 Binary / Hex</a>
+    <a class="tool-404" href="/units/timestamp.html" data-name="unix timestamp epoch date converter">⏱ Timestamp</a>
+    <a class="tool-404" href="/text/" data-name="word count case convert base64 text tools">✏️ Text Tools</a>
+    <a class="tool-404" href="/colors/" data-name="hex rgb hsl color converter contrast">🎨 Color Tools</a>
+  </div>
+
+  <a href="/" style="display:inline-block;margin-top:2rem;color:var(--accent2);font-size:0.9rem;">← Back to homepage</a>
+</div>
+
+<footer>
+  <p>© 2026 OneConvert.</p>
+  <div class="footer-links"><a href="/">Home</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+</footer>
+
+<style>
+.tool-404 {
+  display:flex;align-items:center;gap:0.5rem;
+  background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  padding:0.6rem 0.9rem;text-decoration:none;color:var(--text);
+  font-size:0.88rem;font-weight:500;transition:border-color 0.15s;
+}
+.tool-404:hover{border-color:var(--accent2);color:var(--accent2);}
+.tool-404.hidden{display:none;}
+</style>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function filter404(q){q=q.toLowerCase();document.querySelectorAll('.tool-404').forEach(a=>{a.classList.toggle('hidden',!a.dataset.name.includes(q)&&!a.textContent.toLowerCase().includes(q));});}
+</script>
+</body>
+</html>
