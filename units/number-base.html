@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Number Base Converter – Binary, Hex, Decimal, Octal | OneConvert</title>
+  <meta name="description" content="Convert between binary, decimal, hexadecimal and octal online free. Instant bidirectional number base conversion. No account required."/>
+  <meta name="keywords" content="binary to decimal converter, hex to decimal, decimal to binary, number base converter, binary hex octal converter, base conversion free online"/>
+  <link rel="canonical" href="https://oneconvert.net/units/number-base.html"/>
+  <meta property="og:title" content="Number Base Converter – Binary, Hex, Decimal | OneConvert"/>
+  <meta property="og:type" content="website"/><meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/><meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Number Base Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to convert binary to decimal?","acceptedAnswer":{"@type":"Answer","text":"Enter the binary number (e.g. 1010) in the Binary field and the decimal value (10) appears instantly."}},{"@type":"Question","name":"What is hexadecimal?","acceptedAnswer":{"@type":"Answer","text":"Hexadecimal (base 16) uses digits 0-9 and letters A-F. It is widely used in programming, colour codes and memory addresses."}},{"@type":"Question","name":"What is 255 in binary?","acceptedAnswer":{"@type":"Answer","text":"255 in binary is 11111111. It represents the maximum value of a single byte."}},{"@type":"Question","name":"What is 0xFF in decimal?","acceptedAnswer":{"@type":"Answer","text":"0xFF in decimal is 255."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a>
+    <a href="/units/" class="active">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/units/">Units</a><span>›</span><span>Number Base Converter</span></div>
+  <div class="tool-page-header">
+    <h1>Free Number Base Converter</h1>
+    <p>Convert between binary, decimal, hexadecimal and octal — type in any field and all others update instantly.</p>
+  </div>
+
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;">Decimal (Base 10)</label>
+        <input type="text" id="dec" placeholder="e.g. 255" oninput="convert('dec',this.value)" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.65rem 0.75rem;font-size:1.05rem;font-family:monospace;font-weight:600;"/>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;">Binary (Base 2)</label>
+        <input type="text" id="bin" placeholder="e.g. 11111111" oninput="convert('bin',this.value)" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.65rem 0.75rem;font-size:1.05rem;font-family:monospace;font-weight:600;"/>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;">Hexadecimal (Base 16)</label>
+        <input type="text" id="hex" placeholder="e.g. FF" oninput="convert('hex',this.value)" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.65rem 0.75rem;font-size:1.05rem;font-family:monospace;font-weight:600;"/>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;">Octal (Base 8)</label>
+        <input type="text" id="oct" placeholder="e.g. 377" oninput="convert('oct',this.value)" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.65rem 0.75rem;font-size:1.05rem;font-family:monospace;font-weight:600;"/>
+      </div>
+    </div>
+    <div id="conv-error" style="display:none;margin-top:0.75rem;" class="status error"></div>
+    <p style="font-size:0.78rem;color:var(--muted);margin-top:0.75rem;">Click any field result to copy to clipboard.</p>
+  </div>
+
+  <!-- Bit breakdown -->
+  <div class="tool-box" style="margin-top:1.5rem;">
+    <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Binary bit breakdown</h3>
+    <div id="bit-display" style="display:flex;gap:0.3rem;flex-wrap:wrap;font-family:monospace;"></div>
+  </div>
+
+  <!-- Quick reference -->
+  <div class="tool-box" style="margin-top:1.5rem;">
+    <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Quick Reference</h3>
+    <div style="overflow-x:auto;">
+      <table class="unit-table">
+        <thead><tr><th>Decimal</th><th>Binary</th><th>Hex</th><th>Octal</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td class="val-col">0000</td><td class="val-col">0</td><td class="val-col">0</td></tr>
+          <tr><td>8</td><td class="val-col">1000</td><td class="val-col">8</td><td class="val-col">10</td></tr>
+          <tr><td>10</td><td class="val-col">1010</td><td class="val-col">A</td><td class="val-col">12</td></tr>
+          <tr><td>15</td><td class="val-col">1111</td><td class="val-col">F</td><td class="val-col">17</td></tr>
+          <tr><td>16</td><td class="val-col">10000</td><td class="val-col">10</td><td class="val-col">20</td></tr>
+          <tr><td>32</td><td class="val-col">100000</td><td class="val-col">20</td><td class="val-col">40</td></tr>
+          <tr><td>64</td><td class="val-col">1000000</td><td class="val-col">40</td><td class="val-col">100</td></tr>
+          <tr><td>128</td><td class="val-col">10000000</td><td class="val-col">80</td><td class="val-col">200</td></tr>
+          <tr><td>255</td><td class="val-col">11111111</td><td class="val-col">FF</td><td class="val-col">377</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin:1.5rem 0;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
+    <a class="related-card" href="/units/css-units.html"><span class="icon">🖥️</span><div class="info"><h4>CSS Unit Converter</h4><p>px to rem, em, vh</p></div></a>
+    <a class="related-card" href="/units/"><span class="icon">📐</span><div class="info"><h4>Unit Converter</h4><p>Length, weight, temp</p></div></a>
+    <a class="related-card" href="/colors/"><span class="icon">🎨</span><div class="info"><h4>Color Tools</h4><p>HEX, RGB, HSL</p></div></a>
+    <a class="related-card" href="/text/"><span class="icon">✏️</span><div class="info"><h4>Text Tools</h4><p>Base64 encode/decode</p></div></a>
+  </div></div>
+
+  <div class="info-section">
+    <h2>Number Bases Explained</h2>
+    <p><strong>Decimal (base 10)</strong> is what we use daily — digits 0-9. <strong>Binary (base 2)</strong> uses only 0 and 1, the language computers operate in. <strong>Hexadecimal (base 16)</strong> uses 0-9 and A-F — widely used in programming, memory addresses and web colour codes (#FF5733). <strong>Octal (base 8)</strong> uses digits 0-7, still used in Unix file permissions.</p>
+    <p>Understanding number bases is essential in computer science, low-level programming, digital electronics and cryptography. A single byte (8 bits) can hold values from 0 (00000000) to 255 (11111111) in binary, or 0x00 to 0xFF in hex.</p>
+  </div>
+
+  <div class="faq-section"><h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How do I convert binary to decimal?<span class="arrow">▼</span></button><div class="faq-a">Type the binary number in the Binary field and the decimal result appears immediately. You can also multiply each bit by its positional power of 2 and sum them: 1010 = 1×8 + 0×4 + 1×2 + 0×1 = 10.</div></div>
+    <div class="faq-item"><button class="faq-q">What is 0xFF in decimal?<span class="arrow">▼</span></button><div class="faq-a">0xFF = 255 in decimal. F in hex = 15. FF = (15 × 16) + 15 = 255.</div></div>
+    <div class="faq-item"><button class="faq-q">What does binary 11111111 equal?<span class="arrow">▼</span></button><div class="faq-a">11111111 in binary = 255 in decimal = FF in hexadecimal = 377 in octal. It is the maximum value of a single byte.</div></div>
+    <div class="faq-item"><button class="faq-q">Why is hexadecimal used in programming?<span class="arrow">▼</span></button><div class="faq-a">Hex is used because it directly maps to binary (1 hex digit = 4 bits), is more compact, and easier for humans to read than long binary strings. Memory addresses, CSS colours and bytecode are typically written in hex.</div></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/units/">Units</a><a href="/pdf/">PDF</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));});
+
+let converting=false;
+function convert(from,val){
+  if(converting)return;
+  converting=true;
+  const errEl=document.getElementById('conv-error');
+  errEl.style.display='none';
+  val=val.trim().toUpperCase().replace(/^0X/,'');
+  if(!val){['dec','bin','hex','oct'].forEach(id=>document.getElementById(id).value='');document.getElementById('bit-display').innerHTML='';converting=false;return;}
+  try{
+    let dec;
+    if(from==='dec'){dec=BigInt(val);if(dec<0n)throw new Error('Negative numbers not supported');}
+    else if(from==='bin'){if(!/^[01]+$/.test(val))throw new Error('Invalid binary');dec=BigInt('0b'+val);}
+    else if(from==='hex'){if(!/^[0-9A-F]+$/.test(val))throw new Error('Invalid hex');dec=BigInt('0x'+val);}
+    else if(from==='oct'){if(!/^[0-7]+$/.test(val))throw new Error('Invalid octal');dec=BigInt('0o'+val);}
+    
+    if(from!=='dec')document.getElementById('dec').value=dec.toString();
+    if(from!=='bin')document.getElementById('bin').value=dec.toString(2);
+    if(from!=='hex')document.getElementById('hex').value=dec.toString(16).toUpperCase();
+    if(from!=='oct')document.getElementById('oct').value=dec.toString(8);
+    
+    // Bit breakdown
+    const binStr=dec.toString(2).padStart(Math.max(8,dec.toString(2).length),0);
+    const bits=document.getElementById('bit-display');
+    bits.innerHTML='';
+    const groups=[];
+    for(let i=binStr.length;i>0;i-=4)groups.unshift(binStr.slice(Math.max(0,i-4),i));
+    groups.forEach((g,gi)=>{
+      if(gi>0){const sep=document.createElement('span');sep.style.cssText='color:var(--border);margin:0 0.1rem;align-self:center;';sep.textContent='·';bits.appendChild(sep);}
+      [...g].forEach((bit,bi)=>{
+        const sp=document.createElement('span');
+        sp.style.cssText=`width:32px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:6px;font-size:1.1rem;font-weight:800;border:1px solid ${bit==='1'?'rgba(37,99,235,0.4)':'var(--border)'};background:${bit==='1'?'rgba(37,99,235,0.12)':'var(--bg3)'};color:${bit==='1'?'var(--accent2)':'var(--muted)'};`;
+        sp.textContent=bit;
+        bits.appendChild(sp);
+      });
+    });
+  }catch(e){errEl.textContent=e.message;errEl.style.display='block';}
+  converting=false;
+}
+
+// Click to copy on result fields
+['dec','bin','hex','oct'].forEach(id=>{
+  document.getElementById(id).addEventListener('click',function(){
+    if(this.value){navigator.clipboard.writeText(this.value).then(()=>{this.style.outline='2px solid var(--accent2)';setTimeout(()=>this.style.outline='',1000);});}
+  });
+});
+</script>
+<script src="../js/consent.js"></script>
+<script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
+trackRecentTool();</script>
+</body>
+</html>

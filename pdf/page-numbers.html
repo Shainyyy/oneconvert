@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Add Page Numbers to PDF Online | OneConvert</title><meta name="description" content="Add page numbers to PDF online for free. Choose position, format and starting number. No upload, no account, runs in your browser."/><meta name="keywords" content="add page numbers to pdf free, number pages in pdf online, pdf page numbering, page numbers pdf no upload"/>
+  <link rel="canonical" href="https://oneconvert.net/pdf/page-numbers.html"/>
+  <meta property="og:title" content="Free Add Page Numbers to PDF Online | OneConvert"/><meta property="og:description" content="Add page numbers to PDF online for free. Choose position, format and starting number. No upload, no account, runs in your browser."/>
+  <meta property="og:type" content="website"/><meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/><meta name="robots" content="index, follow"/><meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Add Page Numbers to PDF","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"PDF Tools","item":"https://oneconvert.net/pdf/"},{"@type":"ListItem","position":3,"name":"Add Page Numbers","item":"https://oneconvert.net/pdf/page-numbers.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is adding page numbers to PDF free?","acceptedAnswer":{"@type":"Answer","text":"Yes — free, no account, no limits."}},{"@type":"Question","name":"Can I start numbering from a page other than 1?","acceptedAnswer":{"@type":"Answer","text":"Yes — set any starting number. Useful when the document is part of a larger series."}},{"@type":"Question","name":"Does my PDF get uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Page numbers are added in your browser using pdf-lib."}},{"@type":"Question","name":"Can I add numbers only to specific pages?","acceptedAnswer":{"@type":"Answer","text":"Currently the tool adds numbers to all pages. For partial numbering, split the PDF first, add numbers to the section, then merge."}},{"@type":"Question","name":"What formats are supported?","acceptedAnswer":{"@type":"Answer","text":"1/12, Page 1, Page 1 of 12, or simple numbers — choose from the format dropdown."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/" class="active">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Add Page Numbers</span></div>
+  <div class="tool-page-header"><h1>Free Add Page Numbers to PDF</h1><p>Add page numbers to any PDF — choose position, format and start number. No upload, instant.</p></div>
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-pn">
+      <div class="dropzone-icon">🔢</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <div id="pn-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
+    </div>
+    <input type="file" id="file-input-pn" accept=".pdf" style="display:none;"/>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem;">
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Format</label>
+        <select id="pn-format" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
+          <option value="n">1, 2, 3 …</option>
+          <option value="page_n">Page 1, Page 2 …</option>
+          <option value="n_of_total">1 / 12, 2 / 12 …</option>
+          <option value="page_n_of_total">Page 1 of 12 …</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Position</label>
+        <select id="pn-pos" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
+          <option value="bottom-center">Bottom Centre</option>
+          <option value="bottom-right">Bottom Right</option>
+          <option value="bottom-left">Bottom Left</option>
+          <option value="top-center">Top Centre</option>
+          <option value="top-right">Top Right</option>
+          <option value="top-left">Top Left</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Start numbering at</label>
+        <input type="number" id="pn-start" value="1" min="0" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Font size</label>
+        <input type="number" id="pn-fontsize" value="11" min="6" max="24" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
+      </div>
+    </div>
+    <button class="btn" id="pn-btn" onclick="doPageNumbers()" disabled style="margin-top:1.25rem;">🔢 Add Page Numbers & Download</button>
+    <div class="status" id="status-pn"></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;"><div style="width:40px;height:40px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1rem;margin:0 auto 0.65rem;">1</div><h3 style="font-family:Syne,sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;">Select PDF</h3><p style="color:var(--muted);font-size:0.78rem;line-height:1.5;">Click or drag & drop. Stays on your device.</p></div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;"><div style="width:40px;height:40px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1rem;margin:0 auto 0.65rem;">2</div><h3 style="font-family:Syne,sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;">Set options</h3><p style="color:var(--muted);font-size:0.78rem;line-height:1.5;">Choose settings — browser processes locally.</p></div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem;text-align:center;"><div style="width:40px;height:40px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1rem;margin:0 auto 0.65rem;">3</div><h3 style="font-family:Syne,sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.3rem;">Download</h3><p style="color:var(--muted);font-size:0.78rem;line-height:1.5;">Instant download. Free, no account.</p></div>
+  </div>
+  <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/pdf/watermark.html"><span class="icon">💧</span><div class="info"><h4>Add Watermark</h4><p>Watermark your PDF</p></div></a>
+      <a class="related-card" href="/pdf/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress PDF</h4><p>Reduce size</p></div></a>
+      <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine PDFs</p></div></a>
+      <a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h4>Split PDF</h4><p>Extract pages</p></div></a></div></div>
+  <div class="info-section"><h2>When Do You Need to Add Page Numbers to a PDF?</h2><p>PDFs created from presentations, exports or scanned documents often have no page numbers. Adding them makes long documents much easier to navigate — particularly useful for reports, contracts, academic papers and instruction manuals. Most PDF tools charge for this feature or require a subscription.</p><p>Choose your numbering format (simple numbers, "Page X", "Page X of Y"), position (bottom centre is most common), and starting number. Click Add Page Numbers and your numbered PDF downloads instantly.</p></div>
+  <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is adding page numbers to PDF free?<span class="arrow">▼</span></button><div class="faq-a">Yes — free, no account, no limits.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I start numbering from a page other than 1?<span class="arrow">▼</span></button><div class="faq-a">Yes — set any starting number. Useful when the document is part of a larger series.</div></div>
+    <div class="faq-item"><button class="faq-q">Does my PDF get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Page numbers are added in your browser using pdf-lib.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I add numbers only to specific pages?<span class="arrow">▼</span></button><div class="faq-a">Currently the tool adds numbers to all pages. For partial numbering, split the PDF first, add numbers to the section, then merge.</div></div>
+    <div class="faq-item"><button class="faq-q">What formats are supported?<span class="arrow">▼</span></button><div class="faq-a">1/12, Page 1, Page 1 of 12, or simple numbers — choose from the format dropdown.</div></div></div>
+</div>
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image</a>
+    <a href="/qr/">QR</a><a href="/units/">Units</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function setupDropzone(z,i,cb){const ze=document.getElementById(z),ie=document.getElementById(i);if(!ze||!ie)return;ze.addEventListener('click',()=>ie.click());ie.addEventListener('change',()=>{if(ie.files.length)cb(ie.files);ie.value='';});ze.addEventListener('dragover',e=>{e.preventDefault();ze.classList.add('drag-over');});ze.addEventListener('dragleave',()=>ze.classList.remove('drag-over'));ze.addEventListener('drop',e=>{e.preventDefault();ze.classList.remove('drag-over');if(e.dataTransfer.files.length)cb(e.dataTransfer.files);});}
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function directDownload(bytes,filename,mime){const blob=new Blob([bytes],{type:mime||'application/pdf'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);}
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));});
+</script>
+<script src="../js/consent.js"></script>
+<script>
+let pnFile=null,pnTotal=0;
+document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-pn','file-input-pn',async f=>{pnFile=f[0];try{const buf=await f[0].arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);pnTotal=pdf.getPageCount();document.getElementById('pn-info').textContent='📎 '+f[0].name+' — '+pnTotal+' pages';}catch(e){}document.getElementById('pn-btn').disabled=false;}));
+function getLabel(fmt,n,total){switch(fmt){case 'n':return String(n);case 'page_n':return 'Page '+n;case 'n_of_total':return n+' / '+total;case 'page_n_of_total':return 'Page '+n+' of '+total;default:return String(n);}}
+function getXY(pos,width,height,tw,fontSize){const margin=30;switch(pos){case 'bottom-center':return{x:width/2-tw/2,y:margin};case 'bottom-right':return{x:width-margin-tw,y:margin};case 'bottom-left':return{x:margin,y:margin};case 'top-center':return{x:width/2-tw/2,y:height-margin-fontSize};case 'top-right':return{x:width-margin-tw,y:height-margin-fontSize};case 'top-left':return{x:margin,y:height-margin-fontSize};default:return{x:width/2-tw/2,y:margin};}}
+async function doPageNumbers(){
+  if(!pnFile)return showStatus('status-pn','error','Please select a PDF first.');
+  const fmt=document.getElementById('pn-format').value;
+  const pos=document.getElementById('pn-pos').value;
+  const start=parseInt(document.getElementById('pn-start').value)||1;
+  const fontSize=parseInt(document.getElementById('pn-fontsize').value)||11;
+  showStatus('status-pn','info','Adding page numbers…');
+  try{
+    const buf=await pnFile.arrayBuffer();
+    const pdf=await PDFLib.PDFDocument.load(buf);
+    const font=await pdf.embedFont(PDFLib.StandardFonts.Helvetica);
+    const pages=pdf.getPages();const total=pages.length;
+    pages.forEach((page,i)=>{
+      const{width,height}=page.getSize();
+      const label=getLabel(fmt,start+i,total);
+      const tw=font.widthOfTextAtSize(label,fontSize);
+      const{x,y}=getXY(pos,width,height,tw,fontSize);
+      page.drawText(label,{x,y,size:fontSize,font,color:PDFLib.rgb(0.2,0.2,0.2),opacity:0.8});
+    });
+    const bytes=await pdf.save();
+    directDownload(bytes,pnFile.name.replace(/\.pdf$/i,'')+'_numbered.pdf','application/pdf');
+    showStatus('status-pn','success','Page numbers added! Download started.');
+  }catch(e){showStatus('status-pn','error','Error: '+e.message);}
+}
+</script>
+<script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
+trackRecentTool();</script>
+</body></html>

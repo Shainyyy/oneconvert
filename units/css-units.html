@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free CSS Unit Converter – px to rem, em, vh, vw, pt | OneConvert</title>
+  <meta name="description" content="Convert CSS units online free. Convert px to rem, em, vh, vw, pt instantly. Set custom base font size. No account needed."/>
+  <meta name="keywords" content="px to rem converter, css unit converter, px to em, pixels to rem, px to vw, css units free online, px rem em converter"/>
+  <link rel="canonical" href="https://oneconvert.net/units/css-units.html"/>
+  <meta property="og:title" content="CSS Unit Converter – px to rem, em, vh | OneConvert"/>
+  <meta property="og:description" content="Convert px to rem, em, vh, vw and pt instantly. Set your base font size."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSS Unit Converter","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"Unit Converter","item":"https://oneconvert.net/units/"},{"@type":"ListItem","position":3,"name":"CSS Units","item":"https://oneconvert.net/units/css-units.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many px is 1rem?","acceptedAnswer":{"@type":"Answer","text":"By default 1rem = 16px (the browser default font size). You can set a custom base size in the converter."}},{"@type":"Question","name":"What is the difference between rem and em?","acceptedAnswer":{"@type":"Answer","text":"rem is relative to the root element font size (usually 16px). em is relative to the parent element font size, which can vary."}},{"@type":"Question","name":"How do I convert px to vh?","acceptedAnswer":{"@type":"Answer","text":"1vh = 1% of the viewport height. Enter your viewport height (e.g. 900px) and the px value to get the equivalent in vh."}},{"@type":"Question","name":"What is 16px in rem?","acceptedAnswer":{"@type":"Answer","text":"16px = 1rem when the base font size is 16px (browser default)."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a>
+    <a href="/units/" class="active">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/units/">Units</a><span>›</span><span>CSS Unit Converter</span></div>
+  <div class="tool-page-header">
+    <h1>Free CSS Unit Converter</h1>
+    <p>Convert px to rem, em, vh, vw, pt and back — instantly. Set your base font size for accurate results.</p>
+  </div>
+
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="tool-box">
+    <!-- Settings row -->
+    <div style="display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 1rem;align-items:center;">
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;">Base font size (rem):</label>
+        <input type="number" id="base-font" value="16" min="8" max="32" step="1" oninput="updateAll()" style="width:70px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
+        <span style="font-size:0.82rem;color:var(--muted);">px</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;">Viewport width:</label>
+        <input type="number" id="vp-w" value="1440" min="320" max="3840" step="1" oninput="updateAll()" style="width:80px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
+        <span style="font-size:0.82rem;color:var(--muted);">px</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;">Viewport height:</label>
+        <input type="number" id="vp-h" value="900" min="200" max="2400" step="1" oninput="updateAll()" style="width:80px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
+        <span style="font-size:0.82rem;color:var(--muted);">px</span>
+      </div>
+    </div>
+
+    <!-- Main input -->
+    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+      <div style="flex:1;min-width:150px;">
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">Input value</label>
+        <input type="number" id="main-input" value="16" step="any" oninput="updateAll()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.75rem;font-size:1.1rem;font-weight:600;"/>
+      </div>
+      <div style="min-width:120px;">
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">From unit</label>
+        <select id="from-unit" onchange="updateAll()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.5rem;font-size:0.95rem;">
+          <option value="px" selected>px</option>
+          <option value="rem">rem</option>
+          <option value="em">em</option>
+          <option value="vw">vw</option>
+          <option value="vh">vh</option>
+          <option value="pt">pt</option>
+          <option value="percent">%</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Results grid -->
+    <div id="results-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.75rem;"></div>
+  </div>
+
+  <!-- Reference table -->
+  <div class="tool-box" style="margin-top:1.5rem;">
+    <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Common px → rem conversions (base: <span id="base-label">16</span>px)</h3>
+    <div style="overflow-x:auto;">
+      <table class="unit-table" id="ref-table">
+        <thead><tr><th>px</th><th>rem</th><th>em</th><th>pt</th><th>vw (1440px)</th></tr></thead>
+        <tbody id="ref-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin:1.5rem 0;">
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+  </div>
+
+  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
+    <a class="related-card" href="/units/"><span class="icon">📐</span><div class="info"><h4>Unit Converter</h4><p>Length, weight, temp</p></div></a>
+    <a class="related-card" href="/units/number-base.html"><span class="icon">🔢</span><div class="info"><h4>Number Base</h4><p>Binary, hex, decimal</p></div></a>
+    <a class="related-card" href="/colors/"><span class="icon">🎨</span><div class="info"><h4>Color Tools</h4><p>HEX, RGB, HSL</p></div></a>
+    <a class="related-card" href="/text/"><span class="icon">✏️</span><div class="info"><h4>Text Tools</h4><p>Dev-friendly tools</p></div></a>
+  </div></div>
+
+  <div class="info-section">
+    <h2>CSS Units Explained for Web Developers</h2>
+    <p><strong>px</strong> (pixels) is the most common CSS unit — fixed size regardless of parent. <strong>rem</strong> (root em) is relative to the root HTML font size (typically 16px by default in browsers). <strong>em</strong> is relative to the parent element's font size. <strong>vw/vh</strong> are percentages of the viewport width and height — 1vw = 1% of viewport width. <strong>pt</strong> (points) is used for print media: 1pt ≈ 1.333px.</p>
+    <p>Using rem instead of px for font sizes and spacing makes layouts more accessible — when a user increases their browser font size, rem-based layouts scale accordingly while px-based ones do not.</p>
+  </div>
+
+  <div class="faq-section"><h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How many px is 1rem?<span class="arrow">▼</span></button><div class="faq-a">By default 1rem = 16px (browser default root font size). You can change the base in the converter settings above.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between rem and em?<span class="arrow">▼</span></button><div class="faq-a">rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements.</div></div>
+    <div class="faq-item"><button class="faq-q">How do I convert px to vh?<span class="arrow">▼</span></button><div class="faq-a">Set your viewport height above, enter your px value, and the vh result shows automatically. Formula: vh = px / viewportHeight × 100.</div></div>
+    <div class="faq-item"><button class="faq-q">What is 16px in rem?<span class="arrow">▼</span></button><div class="faq-a">16px = 1rem at the default browser font size of 16px.</div></div>
+    <div class="faq-item"><button class="faq-q">Should I use px or rem for font sizes?<span class="arrow">▼</span></button><div class="faq-a">rem is recommended for font sizes — it respects the user's browser font size preferences, making your site more accessible. Use px for borders, shadows and decorative elements that should not scale.</div></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/units/">Units</a><a href="/pdf/">PDF</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));updateAll();});
+
+const UNITS = ['px','rem','em','vw','vh','pt','%'];
+const LABELS = {px:'px',rem:'rem',em:'em',vw:'vw',vh:'vh',pt:'pt','%':'%'};
+
+function toPx(val,unit){
+  const base=parseFloat(document.getElementById('base-font').value)||16;
+  const vpw=parseFloat(document.getElementById('vp-w').value)||1440;
+  const vph=parseFloat(document.getElementById('vp-h').value)||900;
+  switch(unit){
+    case 'px': return val;
+    case 'rem': return val*base;
+    case 'em': return val*base; // assumes same as rem for simplicity
+    case 'vw': return val*vpw/100;
+    case 'vh': return val*vph/100;
+    case 'pt': return val*96/72;
+    case '%': return val*base/100;
+    default: return val;
+  }
+}
+function fromPx(px,unit){
+  const base=parseFloat(document.getElementById('base-font').value)||16;
+  const vpw=parseFloat(document.getElementById('vp-w').value)||1440;
+  const vph=parseFloat(document.getElementById('vp-h').value)||900;
+  switch(unit){
+    case 'px': return px;
+    case 'rem': return px/base;
+    case 'em': return px/base;
+    case 'vw': return px/vpw*100;
+    case 'vh': return px/vph*100;
+    case 'pt': return px*72/96;
+    case '%': return px/base*100;
+    default: return px;
+  }
+}
+function fmt(n){return parseFloat(n.toFixed(6)).toString();}
+
+function updateAll(){
+  const val=parseFloat(document.getElementById('main-input').value);
+  const fromUnit=document.getElementById('from-unit').value;
+  const base=parseFloat(document.getElementById('base-font').value)||16;
+  document.getElementById('base-label').textContent=base;
+  if(isNaN(val))return;
+  const px=toPx(val,fromUnit);
+  const grid=document.getElementById('results-grid');
+  grid.innerHTML='';
+  UNITS.forEach(u=>{
+    if(u===fromUnit)return;
+    const res=fromPx(px,u);
+    const card=document.createElement('div');
+    card.style.cssText='background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;cursor:pointer;transition:border-color 0.15s;';
+    card.innerHTML=`<div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">${LABELS[u]}</div><div style="font-family:Syne,sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent2);">${fmt(res)}<span style="font-size:0.75rem;opacity:0.7;"> ${u}</span></div>`;
+    card.title='Click to copy';
+    card.onclick=()=>{navigator.clipboard.writeText(fmt(res)+u).then(()=>{card.style.borderColor='var(--accent2)';setTimeout(()=>card.style.borderColor='',1000);});};
+    grid.appendChild(card);
+  });
+  // Reference table
+  const tbody=document.getElementById('ref-body');
+  tbody.innerHTML='';
+  [4,8,12,14,16,18,20,24,32,48,64,96].forEach(px=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${px}</td><td class="val-col">${fmt(px/base)}</td><td class="val-col">${fmt(px/base)}</td><td class="val-col">${fmt(px*72/96)}</td><td class="val-col">${fmt(px/1440*100)}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+</script>
+<script src="../js/consent.js"></script>
+<script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
+trackRecentTool();</script>
+</body>
+</html>
