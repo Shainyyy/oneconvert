@@ -56,7 +56,6 @@ Hosting: GitHub Pages + Cloudflare CDN
 | CDN + DNS | Cloudflare |
 | Analytics | Google Analytics 4 |
 | Monetisation | Google AdSense + Auto Ads |
-| Domain cost | ~$10/year |
 
 ---
 
