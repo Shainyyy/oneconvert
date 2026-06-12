@@ -69,6 +69,8 @@ nav {
   padding: 6rem 1.5rem 2rem;
   text-align: center;
   overflow: hidden;
+  min-height: 320px;
+  contain: layout style;
 }
 .hero-glow {
   position: absolute; top: 0; left: 50%; transform: translateX(-50%);
@@ -521,3 +523,12 @@ footer {
   }
   .nav-links a:last-child { border-bottom: none; }
 }
+
+
+/* ── Performance optimizations ── */
+/* Reserve space for web fonts to reduce CLS */
+body { font-synthesis: none; }
+/* Cookie banner uses GPU compositing to avoid layout impact */
+#cookie-banner { will-change: transform; }
+/* Prevent layout shift from dynamically inserted sections */
+#recently-used-section { contain: layout; }
