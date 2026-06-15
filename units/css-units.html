@@ -47,6 +47,8 @@
     <p>Convert px to rem, em, vh, vw, pt and back — instantly. Set your base font size for accurate results.</p>
   </div>
 
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">CSS unit conversion is a constant task for web developers — calculating rem values for pixel measurements, converting to viewport-relative units for responsive layouts, or verifying pt values for print stylesheets. Set your base font size and viewport dimensions, enter any value, and get instant conversions to rem, em, vw, vh and pt. Click any result to copy it directly.</p>
   <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 
   <div class="tool-box">
@@ -127,6 +129,10 @@
     <div class="faq-item"><button class="faq-q">How do I convert px to vh?<span class="arrow">▼</span></button><div class="faq-a">Set your viewport height above, enter your px value, and the vh result shows automatically. Formula: vh = px / viewportHeight × 100.</div></div>
     <div class="faq-item"><button class="faq-q">What is 16px in rem?<span class="arrow">▼</span></button><div class="faq-a">16px = 1rem at the default browser font size of 16px.</div></div>
     <div class="faq-item"><button class="faq-q">Should I use px or rem for font sizes?<span class="arrow">▼</span></button><div class="faq-a">rem is recommended for font sizes — it respects the user's browser font size preferences, making your site more accessible. Use px for borders, shadows and decorative elements that should not scale.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">What base font size should I use?<span class="arrow">▼</span></button><div class="faq-a">Most browsers default to 16px. If your project sets a custom root font size (e.g. html { font-size: 62.5% } for 10px base), enter that value in the Base font size field.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">When should I use rem versus em?<span class="arrow">▼</span></button><div class="faq-a">Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you specifically want sizing relative to a parent element, such as in component-level typography scales.</div></div>
   </div>
 </div>
 
@@ -134,7 +140,7 @@
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">
     <a href="/">Home</a><a href="/units/">Units</a><a href="/pdf/">PDF</a>
-    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
     <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </footer>

@@ -45,6 +45,8 @@
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image</a><span>›</span><span>Resize Image</span></div>
   <div class="tool-page-header"><h1>Free Image Resizer</h1><p>Resize images by exact pixels or percentage. Lock aspect ratio to avoid distortion.</p></div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Image resizing changes pixel dimensions to meet specific requirements — a profile picture maximum, a social media template size, a print resolution target, or a web upload limit. Enter target width and height, enable aspect ratio lock to avoid distortion, and download the resized result. Supports JPG, PNG, WebP, GIF and BMP — all processed in your browser with no upload.</p>
   <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
   <div class="tool-box">
     <div class="dropzone" id="drop-zone"><div class="dropzone-icon">↔️</div><p><strong>Click to select</strong> or drag & drop an image</p><small>JPG, PNG, WebP, GIF · No file size limit</small></div>
@@ -96,9 +98,17 @@
   
     <div class="faq-item"><button class="faq-q">What formats are supported?<span class="arrow">▼</span></button><div class="faq-a">JPG, PNG, WebP, GIF and BMP. PNG transparency is preserved.</div></div>
   </div></div>
+  
+    <div class="faq-item"><button class="faq-q">What happens if I do not lock the aspect ratio?<span class="arrow">▼</span></button><div class="faq-a">The image resizes to exactly the width and height you enter, which may stretch or squash the image if the proportions differ from the original.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">Can I upscale an image (make it larger)?<span class="arrow">▼</span></button><div class="faq-a">Yes, but upscaling reduces sharpness because the browser interpolates new pixels. For best results, use original high-resolution images rather than upscaling smaller ones.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">What file formats can I resize?<span class="arrow">▼</span></button><div class="faq-a">JPG, PNG, WebP, GIF and BMP are all supported. PNG transparency is preserved during resizing. The output format matches the input format.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">What common dimensions should I know?<span class="arrow">▼</span></button><div class="faq-a">Instagram square: 1080×1080px. Instagram portrait: 1080×1350px. Twitter header: 1500×500px. YouTube thumbnail: 1280×720px. Facebook cover: 820×312px. LinkedIn banner: 1584×396px.</div></div>
   </div>
 </div>
-<footer><p>© 2026 OneConvert.</p><div class="footer-links"><a href="/">Home</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
+<footer><p>© 2026 OneConvert.</p><div class="footer-links"><a href="/">Home</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
 <script src="../js/common.js"></script>
 <script>
   let origW=0,origH=0,currentFile=null,mode='px';

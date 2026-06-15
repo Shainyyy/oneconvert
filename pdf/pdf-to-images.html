@@ -47,6 +47,8 @@
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>PDF to Images</span></div>
   <div class="tool-page-header"><h1>Free PDF to Image Converter</h1><p>Export PDF pages as high-quality PNG images — select page range, instant download, no upload.</p></div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Exporting PDF pages as images is useful for creating website thumbnails, extracting pages for presentations, sharing content on platforms that do not accept PDFs, or editing page content in image software. Each page is rendered at 2x resolution for sharp output. Download all pages as a ZIP archive or individually as separate PNG files.</p>
   <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
   <div class="tool-box">
     <div class="dropzone" id="drop-pdf2img">
@@ -107,14 +109,20 @@
     <div class="faq-item"><button class="faq-q">What image format is output?<span class="arrow">▼</span></button><div class="faq-a">Pages are exported as PNG which is lossless and universally compatible.</div></div>
     <div class="faq-item"><button class="faq-q">Does my PDF get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Conversion runs locally in your browser using pdf.js.</div></div>
     <div class="faq-item"><button class="faq-q">Why download separate files instead of a ZIP?<span class="arrow">▼</span></button><div class="faq-a">Browser-based ZIP creation requires additional libraries. Each page downloads individually. For large batches, a file manager makes it easy to collect them.</div></div>
-    <div class="faq-item"><button class="faq-q">Can I convert only specific pages?<span class="arrow">▼</span></button><div class="faq-a">Yes — set the From and To page numbers to export any page range.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Can I convert only specific pages?<span class="arrow">▼</span></button><div class="faq-a">Yes — set the From and To page numbers to export any page range.</div></div>
+    <div class="faq-item"><button class="faq-q">What resolution are the exported PNG images?<span class="arrow">▼</span></button><div class="faq-a">Pages are rendered at 2x scale (200% of the PDF native size), which produces sharp images suitable for screen use and most print applications.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">Can I choose which pages to export?<span class="arrow">▼</span></button><div class="faq-a">Yes — set the From and To page numbers to export any range. To export all pages, set From to 1 and To to the total page count.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">What if I only want to export one page?<span class="arrow">▼</span></button><div class="faq-a">Set both the From and To fields to the same page number to export a single page as a PNG.</div></div>
+  </div>
 </div>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">
     <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
     <a href="/qr/">QR Code</a><a href="/units/">Units</a>
-    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
     <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </footer>

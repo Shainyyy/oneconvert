@@ -30,6 +30,7 @@
   <url><loc>https://oneconvert.net/units/timestamp.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/text/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oneconvert.net/colors/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://oneconvert.net/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://oneconvert.net/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://oneconvert.net/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

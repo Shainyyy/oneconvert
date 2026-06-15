@@ -46,6 +46,8 @@
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Compress PDF</span></div>
   <div class="tool-page-header"><h1>Free Compress PDF Online</h1><p>Reduce your PDF file size instantly — no upload, no account, runs entirely in your browser.</p></div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">PDF compression reduces file size by stripping embedded metadata, revision history, creator information and redundant data that accumulates in PDFs from various applications. The result is a leaner file that attaches faster in emails, uploads quicker to cloud services and takes less storage — without any visible change to content, fonts or images. Everything runs in your browser using pdf-lib.</p>
   <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
   <div class="tool-box">
     <div class="dropzone" id="drop-compress">
@@ -92,14 +94,18 @@
     <div class="faq-item"><button class="faq-q">How much will my PDF shrink?<span class="arrow">▼</span></button><div class="faq-a">Depends on the original. Metadata-heavy PDFs can shrink 10-40%. Lean PDFs may see less reduction. The tool shows the percentage saved after processing.</div></div>
     <div class="faq-item"><button class="faq-q">Will compression reduce quality?<span class="arrow">▼</span></button><div class="faq-a">No — this tool strips metadata and uses lossless compression. Page content, images and fonts are not affected.</div></div>
     <div class="faq-item"><button class="faq-q">My PDF got bigger after compression — why?<span class="arrow">▼</span></button><div class="faq-a">If the PDF is already well-optimised, the overhead of re-encoding can occasionally add a few bytes. In that case, keep the original.</div></div>
-    <div class="faq-item"><button class="faq-q">Is my file uploaded to a server?<span class="arrow">▼</span></button><div class="faq-a">No. Everything runs in your browser. Your PDF never leaves your device.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Is my file uploaded to a server?<span class="arrow">▼</span></button><div class="faq-a">No. Everything runs in your browser. Your PDF never leaves your device.</div></div>
+    <div class="faq-item"><button class="faq-q">Why did my PDF not shrink much?<span class="arrow">▼</span></button><div class="faq-a">If the PDF is already optimised or contains mostly images with embedded compression, the metadata removal has less impact. Image-heavy PDFs require resampling images, which is a server-side operation beyond what this browser tool handles.</div></div>
+  
+    <div class="faq-item"><button class="faq-q">Is the compression lossless?<span class="arrow">▼</span></button><div class="faq-a">Yes — this tool removes metadata and re-encodes PDF streams more efficiently. No content, image quality or text is affected.</div></div>
+  </div>
 </div>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">
     <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
     <a href="/qr/">QR Code</a><a href="/units/">Units</a>
-    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
     <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </footer>
