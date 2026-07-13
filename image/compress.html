@@ -1,143 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free Image Compressor Online – Compress JPG, PNG | OneConvert</title>
-  <meta name="description" content="Compress images online for free. Reduce image file size with a live quality preview. JPG, PNG supported. No upload, no account."/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Image Compressor Online – Reduce File Size | OneConvert</title>
+  <meta name="description" content="Compress JPG, PNG and WebP images online for free. Reduce file size without visible quality loss. No upload, no account, runs in your browser."/>
+  <meta name="keywords" content="compress image online free, reduce image file size, image compressor, jpg compressor, png compressor, optimize image for web"/>
   <link rel="canonical" href="https://oneconvert.net/image/compress.html"/>
-  <meta property="og:title" content="Free Image Compressor Online – Compress JPG, PNG | OneConvert"/><meta property="og:description" content="Compress images online for free. Reduce image file size with a live quality preview. JPG, PNG supported. No upload, no account."/>
-  <meta property="og:type" content="website"/><meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+    <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="theme-color" content="#07090f"/><meta name="robots" content="index, follow"/>
+  <meta name="twitter:image" content="https://oneconvert.net/og-image.png"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
+  <link rel="dns-prefetch" href="https://unpkg.com"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
-  <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Image Compressor","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image Compressor","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no file size limits and no account required."}},{"@type":"Question","name":"Does image compression affect quality?","acceptedAnswer":{"@type":"Answer","text":"At 80-90% quality setting, the difference is virtually invisible to the human eye while file size reduces significantly."}},{"@type":"Question","name":"What is the ideal quality setting?","acceptedAnswer":{"@type":"Answer","text":"80% quality is the sweet spot — it typically reduces file size by 60-70% while maintaining excellent visual quality."}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"https://oneconvert.net/image/"},{"@type":"ListItem","position":3,"name":"Compress Image","item":"https://oneconvert.net/image/compress.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is image compression free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no account, no file size limits."}},{"@type":"Question","name":"Does my file get uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. Compression runs entirely in your browser."}},{"@type":"Question","name":"What formats are supported?","acceptedAnswer":{"@type":"Answer","text":"JPG and PNG. For JPG, quality is adjustable. For PNG, the lossless compression level is optimised automatically."}},{"@type":"Question","name":"Will the image dimensions change?","acceptedAnswer":{"@type":"Answer","text":"No — only file size changes. The pixel dimensions remain identical."}},{"@type":"Question","name":"How much can I reduce file size?","acceptedAnswer":{"@type":"Answer","text":"Depends on the original and quality setting. At 80% quality, most photos shrink 40-60% with minimal visible difference."}}]}</script>
 </head>
 <body>
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
   <div class="nav-links" id="nav-links">
-    <a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a>
-    <a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
+    <a href="/pdf/">PDF</a>
+    <a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
-  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image Tools</a><span>›</span><span>Compress Image</span></div>
-  <div class="tool-page-header"><h1>Free Image Compressor</h1><p>Compress images with live quality preview — adjust quality, compare sizes, no upload.</p></div>
-  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Image compression reduces file size by adjusting JPEG quality, making images faster to upload, share and load on web pages. The live preview lets you compare the original and compressed version side by side before downloading. Nothing is uploaded to any server — the entire compression process runs in your browser.</p>
+  <div class="tool-page-header">
+    <h1>Free Image Compressor</h1>
+    <p>Reduce image file size while keeping great quality. Adjust compression level and see results instantly.</p>
+  </div>
+
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Image compression reduces file size by adjusting JPEG quality, making images faster to upload, share and load. The live preview lets you compare original and compressed versions side by side before downloading. Nothing is uploaded to any server — the entire compression process runs in your browser. Useful for email attachments, web uploads and social media images.</p>
   <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
-  <div class="ad-label">Advertisement</div>
-  <div class="ad-desktop"><script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-desktop" style="display:block;">
+    <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
   </div>
-  <div class="ad-mobile"><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+  <div class="ad-mobile" style="display:none;">
+    <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
   </div>
-</div>
-  <div class="tool-box">
-    <div class="dropzone" id="drop-compress-img">
-      <div class="dropzone-icon">📦</div>
-      <p><strong>Click to select</strong> or drag & drop an image here</p>
-      <small>JPG or PNG · No size limit</small>
-    </div>
-    <input type="file" id="file-input-compress-img" accept="image/jpeg,image/png,.jpg,.jpeg,.png" style="display:none;"/>
-    <div id="compress-preview" style="display:none;margin-top:1rem;">
-      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;flex-wrap:wrap;">
-        <label style="color:var(--muted);font-size:0.85rem;">Quality</label>
-        <input type="range" id="compress-quality" min="20" max="95" value="80" style="flex:1;" oninput="updateCompressPreview()"/>
-        <span id="compress-quality-val" style="color:var(--accent2);font-weight:600;min-width:36px;">80%</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
-        <div>
-          <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.4rem;">Original — <span id="orig-size"></span></p>
-          <img id="orig-preview" style="width:100%;border-radius:8px;border:1px solid var(--border);" alt="Original"/>
-        </div>
-        <div>
-          <p style="font-size:0.75rem;color:var(--muted);margin-bottom:0.4rem;">Compressed — <span id="comp-size"></span></p>
-          <img id="comp-preview" style="width:100%;border-radius:8px;border:1px solid var(--border);" alt="Compressed"/>
-        </div>
-      </div>
-      <button class="btn" id="compress-dl-btn" onclick="downloadCompressed()">📦 Download Compressed Image</button>
-    </div>
-    <div class="status" id="status-compress-img"></div>
   </div>
-  <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;"><span style="font-size:1.3rem;">💡</span><div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">Done? You might also need:</p><a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div></div>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone">
+      <div class="dropzone-icon">🖼️</div>
+      <p><strong>Click to select</strong> or drag & drop your image here</p>
+      <small>JPG, PNG, WebP supported · No file size limit</small>
+    </div>
+    <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" style="display:none;"/>
+
+    <div id="options-area" style="display:none;">
+      <div style="margin-bottom:1rem;">
+        <label style="font-size:0.85rem;color:var(--muted);display:flex;justify-content:space-between;margin-bottom:0.4rem;">
+          <span>Quality</span><span id="quality-label" style="color:var(--accent2);font-weight:700;">80%</span>
+        </label>
+        <input type="range" id="quality-slider" min="10" max="100" value="80" step="5" style="width:100%;"/>
+      </div>
+
+      <div id="preview-area">
+        <div class="preview-box">
+          <img id="preview-img" src="" alt="Preview" style="max-height:200px;"/>
+          <div class="preview-info">
+            <div class="preview-stat"><div class="val" id="orig-size">—</div><div class="lbl">Original</div></div>
+            <div class="preview-stat"><div class="val" id="new-size">—</div><div class="lbl">Compressed</div></div>
+            <div class="preview-stat"><div class="val" id="savings">—</div><div class="lbl">Saved</div></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn" onclick="compressAndDownload()">📦 Compress & Download</button>
+      <div class="status" id="status"></div>
+    <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+      <span style="font-size:1.3rem;">💡</span>
+      <div><p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a></div>
+    </div>
+    </div>
+  </div>
+
+
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem;">
-    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;"><div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div><h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select image</h3><p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Click or drag & drop your image. Your file never leaves your device.</p></div>
-    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;"><div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div><h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Convert instantly</h3><p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your browser converts the image locally using the Canvas API — no upload needed.</p></div>
-    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;"><div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div><h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download result</h3><p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your converted image downloads immediately. Free, instant, no account.</p></div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select image</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Click or drag & drop your image. Your file never leaves your device.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Convert instantly</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your browser converts the image locally using the Canvas API — no upload needed.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download result</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your converted image downloads immediately. Free, instant, no account.</p>
+    </div>
   </div>
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
     <div class="ad-banner ad-rectangle">
-  <div class="ad-label">Advertisement</div>
-  <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+      <div class="ad-label">Advertisement</div>
+      <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-</div>
+    </div>
   </div>
-  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/image/jpg-to-png.html"><span class="icon">🔄</span><div class="info"><h4>JPG to PNG</h4><p>Convert format</p></div></a>
-      <a class="related-card" href="/image/resize.html"><span class="icon">📐</span><div class="info"><h4>Resize Image</h4><p>Change dimensions</p></div></a>
-      <a class="related-card" href="/image/webp-to-jpg.html"><span class="icon">🔄</span><div class="info"><h4>WebP to JPG</h4><p>Convert WebP</p></div></a>
-      <a class="related-card" href="/pdf/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress PDF</h4><p>Reduce PDF size</p></div></a></div></div>
-  <div class="info-section"><h2>How to Use the Image Quality Slider</h2><p>The quality percentage controls how much data JPEG compression discards. At 100% quality, almost no data is discarded — the file remains large. At 60-70% quality, significant data is discarded — the file is much smaller but artefacts may appear around edges and fine details.</p><p>For most web images and email attachments, 75-85% quality provides the right balance. The live preview shows both versions simultaneously so you can compare before downloading.</p></div>
 
-  <div style="max-width:700px;margin:1.5rem auto 0;text-align:center;">
-    <p class="ad-label" style="font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;">Advertisement</p>
-    <script async data-cfasync="false" src="https://pl30262832.effectivecpmnetwork.com/3b1d9451e7820015a5655748e744c3f0/invoke.js"></script>
-    <div id="container-3b1d9451e7820015a5655748e744c3f0"></div>
+  <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:1.25rem;">
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:0;">The live preview shows both the original and compressed image side by side with file size information. Adjust the quality slider until you find the right balance between file size and visual quality for your use case. For web images, 75-85% quality typically provides a good balance. For photography archives, 90-95% quality preserves more detail.</p>
   </div>
-  <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is image compression free?<span class="arrow">▼</span></button><div class="faq-a">Yes — completely free, no account, no file size limits.</div></div>
-    <div class="faq-item"><button class="faq-q">Does my file get uploaded to a server?<span class="arrow">▼</span></button><div class="faq-a">No. Compression runs entirely in your browser.</div></div>
-    <div class="faq-item"><button class="faq-q">What formats are supported?<span class="arrow">▼</span></button><div class="faq-a">JPG and PNG. For JPG, quality is adjustable. For PNG, the lossless compression level is optimised automatically.</div></div>
-    <div class="faq-item"><button class="faq-q">Will the image dimensions change?<span class="arrow">▼</span></button><div class="faq-a">No — only file size changes. The pixel dimensions remain identical.</div></div>
-    <div class="faq-item"><button class="faq-q">How much can I reduce file size?<span class="arrow">▼</span></button><div class="faq-a">Depends on the original and quality setting. At 80% quality, most photos shrink 40-60% with minimal visible difference.</div></div></div>
+  <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.1rem;margin-bottom:1.25rem;">
+    <p style="font-weight:600;margin-bottom:0.4rem;">How to use the quality slider</p>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:0;">The quality percentage controls how much data JPEG compression discards. At 100% quality, almost no data is discarded — the file remains large. At 60-70% quality, significant data is discarded — the file is much smaller but artefacts may appear around edges and fine details. For most web images and email attachments, 75-85% quality provides the right balance. The live preview shows both versions simultaneously so you can compare before downloading.</p>
+  </div>
+  <div class="related-tools">
+    <h3>Related Tools</h3>
+    <div class="related-grid">
+      <a class="related-card" href="/image/jpg-to-png.html"><span class="icon">🔄</span><div class="info"><h4>JPG to PNG</h4><p>Convert format</p></div></a>
+      <a class="related-card" href="/image/resize.html"><span class="icon">↔️</span><div class="info"><h4>Resize Image</h4><p>Change dimensions</p></div></a>
+      <a class="related-card" href="/pdf/"><span class="icon">📄</span><div class="info"><h4>Compress PDF</h4><p>Reduce PDF size</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What Is the Best Quality Setting for Web Images?</h2>
+    <p>For web use, 75-85% quality is the sweet spot. At 80%, most images look virtually identical to the original while file size drops by 50-70%. This makes pages load faster and saves bandwidth. For print or professional use, stick to 90-95%.</p>
+    <p>PNG images are compressed losslessly — quality settings apply only to the output format. When compressing PNGs, the tool converts them to WebP or JPEG for maximum size reduction while maintaining visual quality.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Is this image compressor free?<span class="arrow">▼</span></button><div class="faq-a">Yes — completely free, no account, no file size limits, no usage restrictions.</div></div>
+    <div class="faq-item"><button class="faq-q">What quality setting should I use?<span class="arrow">▼</span></button><div class="faq-a">80% is the recommended setting for web images. It significantly reduces file size while maintaining excellent visual quality. For printing, use 90-95%.</div></div>
+    <div class="faq-item"><button class="faq-q">Does my image get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. All compression happens locally in your browser. Your images never leave your device.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I compress PNG images?<span class="arrow">▼</span></button><div class="faq-a">Yes. PNG images are compressed using the selected quality level. Depending on the image, you can typically achieve 30-60% size reduction.</div></div>
+  </div>
 </div>
+
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
-    <a href="/qr/">QR</a><a href="/units/">Units</a><a href="/about.html">About</a>
-    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
-    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+  <div class="footer-links"><a href="/">Home</a><a href="/image/">Image Tools</a><a href="/pdf/">PDF</a><a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>  <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </footer>
+
+<script src="../js/common.js"></script>
 <script>
-function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
-function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
-(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
-function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
-function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
-function directDownload(bytes,filename,mime){const blob=new Blob([bytes],{type:mime||'application/pdf'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);}
-function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
-const HANDLE_SVG=`<svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.5"/><circle cx="10" cy="3" r="1.5"/><circle cx="4" cy="9" r="1.5"/><circle cx="10" cy="9" r="1.5"/><circle cx="4" cy="15" r="1.5"/><circle cx="10" cy="15" r="1.5"/></svg>`;
-document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
-  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';
-  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
-});
+  let currentFile = null;
+  let currentType = 'image/jpeg';
+
+  const slider = document.getElementById('quality-slider');
+  const label = document.getElementById('quality-label');
+  slider.addEventListener('input', () => {
+    label.textContent = slider.value + '%';
+    if (currentFile) updatePreview();
+  });
+
+  setupDropzone('drop-zone', 'file-input', files => {
+    currentFile = files[0];
+    if (!currentFile) return;
+    currentType = currentFile.type === 'image/png' ? 'image/jpeg' : currentFile.type;
+    document.getElementById('orig-size').textContent = formatBytes(currentFile.size);
+    const url = URL.createObjectURL(currentFile);
+    document.getElementById('preview-img').src = url;
+    document.getElementById('options-area').style.display = 'block';
+    updatePreview();
+  });
+
+  function updatePreview() {
+    if (!currentFile) return;
+    const url = URL.createObjectURL(currentFile);
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(blob => {
+        const newSize = blob.size;
+        document.getElementById('new-size').textContent = formatBytes(newSize);
+        const saved = ((currentFile.size - newSize) / currentFile.size * 100).toFixed(0);
+        document.getElementById('savings').textContent = saved + '%';
+      }, 'image/jpeg', parseInt(slider.value) / 100);
+    };
+    img.src = url;
+  }
+
+  function compressAndDownload() {
+    if (!currentFile) return;
+    showStatus('status', 'info', 'Compressing…');
+    const url = URL.createObjectURL(currentFile);
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(async blob => {
+        const ext = currentType === 'image/png' ? 'jpg' : currentFile.name.split('.').pop();
+        const outName = currentFile.name.replace(/\.[^.]+$/, '') + '_compressed.' + ext;
+        showAdAndDownload(await blob.arrayBuffer(), outName, 'image/jpeg');
+        showStatus('status', 'success', 'Compressed! Download starting…');
+      showNextStep("/image/jpg-to-png.html","Need lossless? Convert to PNG","🔄");
+      }, 'image/jpeg', parseInt(slider.value) / 100);
+    };
+    img.src = url;
+  }
+function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
 </script>
-<script>
-let compFile=null,compBlob=null,origFile=null;
-document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-compress-img','file-input-compress-img',f=>loadCompressFile(f[0])));
-function loadCompressFile(file){origFile=file;const url=URL.createObjectURL(file);document.getElementById('orig-preview').src=url;document.getElementById('orig-size').textContent=formatBytes(file.size);document.getElementById('compress-preview').style.display='block';showStatus('status-compress-img','','');updateCompressPreview();}
-function updateCompressPreview(){if(!origFile)return;const q=parseInt(document.getElementById('compress-quality').value)/100;document.getElementById('compress-quality-val').textContent=Math.round(q*100)+'%';const img=new Image();const url=URL.createObjectURL(origFile);img.onload=()=>{const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;c.getContext('2d').drawImage(img,0,0);const mime=origFile.type==='image/png'?'image/png':'image/jpeg';c.toBlob(b=>{compBlob=b;document.getElementById('comp-preview').src=URL.createObjectURL(b);document.getElementById('comp-size').textContent=formatBytes(b.size);URL.revokeObjectURL(url);},(mime==='image/png'?'image/png':'image/jpeg'),q);}; img.src=url;}
-function downloadCompressed(){if(!compBlob||!origFile)return;const url=URL.createObjectURL(compBlob);const a=document.createElement('a');a.href=url;const ext=origFile.type==='image/png'?'.png':'.jpg';a.download=origFile.name.replace(/\.(jpg|jpeg|png)$/i,'')+'_compressed'+ext;a.click();URL.revokeObjectURL(url);showNextStep('/image/resize.html','Resize Image','📐');}
-function trackRecentTool(){const url=window.location.pathname;const map={'/image/compress.html':['📦','Compress Image']};const e=map[url];if(!e)return;let r=JSON.parse(localStorage.getItem('oc-recent')||'[]');r=r.filter(x=>x.url!==url);r.unshift({url,icon:e[0],name:e[1]});localStorage.setItem('oc-recent',JSON.stringify(r.slice(0,8)));}trackRecentTool();
-function showNextStep(h,l,i){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=h;document.getElementById('ns-label').textContent=l;document.getElementById('ns-icon').textContent=i||'';el.style.display='flex';}
-</script>
-<script src="https://pl30262950.effectivecpmnetwork.com/06/9c/a7/069ca733ed2d8f59710eaf482a52a5f2.js"></script>
 <script src="../js/consent.js"></script>
-</body></html>
+<script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
+trackRecentTool();</script>
+<script src="https://pl30262950.effectivecpmnetwork.com/06/9c/a7/069ca733ed2d8f59710eaf482a52a5f2.js"></script>
+</body>
+</html>

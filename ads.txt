@@ -1,5 +1,5 @@
 # ads.txt for oneconvert.net
-# Authorized Digital Sellers — IAB Tech Lab standard
+# Authorized Digital Sellers
 
 # Adsterra
 adsterra.com, 5901760, DIRECT

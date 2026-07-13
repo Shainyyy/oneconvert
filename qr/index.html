@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
@@ -41,17 +42,25 @@
 
 
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">QR codes store information in a 2D matrix that smartphones can scan instantly. They are widely used for sharing website links, connecting to WiFi networks, providing contact information, directing customers to menus and much more. This generator creates high-resolution QR codes in PNG and SVG format with custom colours for foreground and background — all generated in your browser.</p>
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
-  <div class="ad-label">Advertisement</div>
-  <div class="ad-desktop">
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><div class="ad-desktop" style="display:block;">
     <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
   </div>
-  <div class="ad-mobile">
+  <div class="ad-mobile" style="display:none;">
     <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-  </div>
-</div>
+  </div></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+    <div class="tool-box" style="margin:0;">
+      <div class="unit-tabs" style="margin-bottom:1.25rem;">
+        <button class="unit-tab active" onclick="setType('url',this)">URL</button>
+        <button class="unit-tab" onclick="setType('text',this)">Text</button>
+        <button class="unit-tab" onclick="setType('wifi',this)">WiFi</button>
+        <button class="unit-tab" onclick="setType('email',this)">Email</button>
+        <button class="unit-tab" onclick="setType('phone',this)">Phone</button>
+      </div>
+      <div id="type-url"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Website URL</label><input type="text" id="url-input" placeholder="https://example.com" oninput="generateQR()"/></div></div>
       <div id="type-text" style="display:none;"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Text or message</label><textarea id="text-input" placeholder="Enter any text…" style="min-height:80px;" oninput="generateQR()"></textarea></div></div>
       <div id="type-wifi" style="display:none;">
         <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="MyWiFiNetwork" oninput="generateQR()"/></div>
@@ -84,11 +93,9 @@
   </div>
 
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-    <div class="ad-banner ad-rectangle">
-  <div class="ad-label">Advertisement</div>
-  <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-</div>
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script></div>
+  </div>
 
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
     <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress Image</h4><p>Reduce image size</p></div></a>

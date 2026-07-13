@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
@@ -47,17 +48,20 @@
   <div class="tool-page-header"><h1>Free Rotate PDF Pages Online</h1><p>Rotate all pages or specific pages of your PDF. Choose 90°, 180° or 270° — instant, no upload.</p></div>
 
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Rotating PDF pages fixes orientation issues that commonly occur when scanning — a document fed sideways, a page exported in the wrong orientation, or a mix of portrait and landscape pages in one file. You can rotate every page or target specific page numbers and ranges. The rotation is applied instantly in your browser using pdf-lib, with no impact on content quality.</p>
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
-  <div class="ad-label">Advertisement</div>
-  <div class="ad-desktop">
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><div class="ad-desktop" style="display:block;">
     <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
   </div>
-  <div class="ad-mobile">
+  <div class="ad-mobile" style="display:none;">
     <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-  </div>
-</div>
+  </div></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-rotate">
+      <div class="dropzone-icon">🔄</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <div id="rotate-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
+    </div>
     <input type="file" id="file-input-rotate" accept=".pdf" style="display:none;"/>
     <div class="input-row" style="margin-top:1rem;gap:1rem;flex-wrap:wrap;">
       <div style="display:flex;flex-direction:column;gap:0.3rem;">
@@ -96,22 +100,14 @@
     </div>
   </div>
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-    <div class="ad-banner ad-rectangle">
-  <div class="ad-label">Advertisement</div>
-  <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-</div>
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script></div>
+  </div>
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h4>Split PDF</h4><p>Extract pages</p></div></a>
       <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine PDFs</p></div></a>
       <a class="related-card" href="/pdf/delete-pages.html"><span class="icon">🗑️</span><div class="info"><h4>Delete Pages</h4><p>Remove pages</p></div></a>
       <a class="related-card" href="/pdf/watermark.html"><span class="icon">💧</span><div class="info"><h4>Add Watermark</h4><p>Add CONFIDENTIAL or DRAFT</p></div></a></div></div>
   <div class="info-section"><h2>When Do You Need to Rotate PDF Pages?</h2><p>Scanned documents often come out sideways or upside-down depending on how they were fed into a scanner. Rotating specific pages fixes orientation without affecting the rest of the document. You can also rotate entire PDFs when a document was saved in landscape but should be portrait, or vice versa.</p><p>Enter the pages you want to rotate using a comma-separated list (e.g. "1,3,5") or a range (e.g. "2-4"), or type "all" to rotate every page. Then select your rotation angle and click Rotate.</p></div>
-  <div style="max-width:700px;margin:1.5rem auto 0;text-align:center;">
-    <p class="ad-label" style="font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;">Advertisement</p>
-    <script async data-cfasync="false" src="https://pl30262832.effectivecpmnetwork.com/3b1d9451e7820015a5655748e744c3f0/invoke.js"></script>
-    <div id="container-3b1d9451e7820015a5655748e744c3f0"></div>
-  </div>
-
   <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Can I rotate only specific pages?<span class="arrow">▼</span></button><div class="faq-a">Yes — enter individual page numbers (e.g. 1,3,5) or ranges (e.g. 2-4) in the pages field.</div></div>
     <div class="faq-item"><button class="faq-q">Is rotation free?<span class="arrow">▼</span></button><div class="faq-a">Yes — completely free, no account, no limits.</div></div>
     <div class="faq-item"><button class="faq-q">Does the file get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Rotation runs entirely in your browser using pdf-lib.</div></div>

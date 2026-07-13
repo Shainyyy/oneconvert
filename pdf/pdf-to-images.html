@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
@@ -48,17 +49,20 @@
   <div class="tool-page-header"><h1>Free PDF to Image Converter</h1><p>Export PDF pages as high-quality PNG images — select page range, instant download, no upload.</p></div>
 
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Exporting PDF pages as images is useful for creating website thumbnails, extracting pages for presentations, sharing content on platforms that do not accept PDFs, or editing page content in image software. Each page is rendered at 2x resolution for sharp output. Download all pages as a ZIP archive or individually as separate PNG files.</p>
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
-  <div class="ad-label">Advertisement</div>
-  <div class="ad-desktop">
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><div class="ad-desktop" style="display:block;">
     <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
   </div>
-  <div class="ad-mobile">
+  <div class="ad-mobile" style="display:none;">
     <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-  </div>
-</div>
+  </div></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-pdf2img">
+      <div class="dropzone-icon">📄</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <div id="pdf2img-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
+    </div>
     <input type="file" id="file-input-pdf2img" accept=".pdf" style="display:none;"/>
     <div class="input-row" style="margin-top:1rem;gap:1rem;flex-wrap:wrap;">
       <div style="display:flex;flex-direction:column;gap:0.3rem;">
@@ -101,22 +105,14 @@
     </div>
   </div>
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-    <div class="ad-banner ad-rectangle">
-  <div class="ad-label">Advertisement</div>
-  <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-</div>
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script></div>
+  </div>
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/pdf/images-to-pdf.html"><span class="icon">🖼️</span><div class="info"><h4>Images to PDF</h4><p>Reverse — images to PDF</p></div></a>
       <a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h4>Split PDF</h4><p>Extract pages</p></div></a>
       <a class="related-card" href="/pdf/grayscale.html"><span class="icon">🖤</span><div class="info"><h4>PDF to Grayscale</h4><p>Convert to B&W</p></div></a>
       <a class="related-card" href="/image/jpg-to-png.html"><span class="icon">🔄</span><div class="info"><h4>JPG to PNG</h4><p>Convert format</p></div></a></div></div>
   <div class="info-section"><h2>When Should You Convert PDF to Images?</h2><p>Converting PDF pages to images is useful for creating thumbnails for website previews, extracting specific pages for presentation slides, sharing individual pages on social media, or editing page content in image editing software. PNG format preserves full quality without compression artifacts.</p><p>Select your PDF, choose the page range you want to export, and click Export. Each page renders at 2x scale (for sharp output at typical screen sizes) and downloads as a separate PNG file. Multiple pages download one after another with a short delay between each.</p></div>
-  <div style="max-width:700px;margin:1.5rem auto 0;text-align:center;">
-    <p class="ad-label" style="font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;">Advertisement</p>
-    <script async data-cfasync="false" src="https://pl30262832.effectivecpmnetwork.com/3b1d9451e7820015a5655748e744c3f0/invoke.js"></script>
-    <div id="container-3b1d9451e7820015a5655748e744c3f0"></div>
-  </div>
-
   <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is PDF to image conversion free?<span class="arrow">▼</span></button><div class="faq-a">Yes — free, no account, no limits.</div></div>
     <div class="faq-item"><button class="faq-q">What image format is output?<span class="arrow">▼</span></button><div class="faq-a">Pages are exported as PNG which is lossless and universally compatible.</div></div>
     <div class="faq-item"><button class="faq-q">Does my PDF get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Conversion runs locally in your browser using pdf.js.</div></div>

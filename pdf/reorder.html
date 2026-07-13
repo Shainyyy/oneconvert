@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
@@ -47,17 +48,20 @@
   <div class="tool-page-header"><h1>Free Reorder PDF Pages Online</h1><p>Drag and drop to rearrange pages in any order. Instant result, no upload required.</p></div>
 
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Reordering PDF pages lets you rearrange content without going back to the original application. Useful when a scanned document came out in the wrong sequence, when slides need reorganising after export, or when combining content from multiple sources requires a specific order. Drag page thumbnails into position and download — all processed locally with pdf-lib.</p>
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
-  <div class="ad-label">Advertisement</div>
-  <div class="ad-desktop">
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><div class="ad-desktop" style="display:block;">
     <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
   </div>
-  <div class="ad-mobile">
+  <div class="ad-mobile" style="display:none;">
     <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-  </div>
-</div>
+  </div></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-reorder">
+      <div class="dropzone-icon">↕️</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <div id="reorder-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
+    </div>
     <input type="file" id="file-input-reorder" accept=".pdf" style="display:none;"/>
     <div id="reorder-grid-wrap" style="display:none;margin-top:1rem;">
       <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;">Drag pages to reorder:</p>
@@ -90,22 +94,14 @@
     </div>
   </div>
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-    <div class="ad-banner ad-rectangle">
-  <div class="ad-label">Advertisement</div>
-  <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-</div>
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script></div>
+  </div>
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/pdf/delete-pages.html"><span class="icon">🗑️</span><div class="info"><h4>Delete Pages</h4><p>Remove pages</p></div></a>
       <a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h4>Split PDF</h4><p>Extract ranges</p></div></a>
       <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine PDFs</p></div></a>
       <a class="related-card" href="/pdf/rotate.html"><span class="icon">🔄</span><div class="info"><h4>Rotate PDF</h4><p>Rotate pages</p></div></a></div></div>
   <div class="info-section"><h2>When Do You Need to Reorder PDF Pages?</h2><p>Reordering pages is useful after scanning a multipage document that came out in the wrong sequence, when combining sections from different sources, or when preparing a presentation where slide order needs to change. Instead of re-exporting from the original application, reorder directly in your browser in seconds.</p><p>Upload your PDF and you will see numbered page thumbnails. Drag them into your desired order, then click Save. The reordered PDF downloads immediately.</p></div>
-  <div style="max-width:700px;margin:1.5rem auto 0;text-align:center;">
-    <p class="ad-label" style="font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;">Advertisement</p>
-    <script async data-cfasync="false" src="https://pl30262832.effectivecpmnetwork.com/3b1d9451e7820015a5655748e744c3f0/invoke.js"></script>
-    <div id="container-3b1d9451e7820015a5655748e744c3f0"></div>
-  </div>
-
   <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is reordering PDF pages free?<span class="arrow">▼</span></button><div class="faq-a">Yes — free, no account required, no file size limits.</div></div>
     <div class="faq-item"><button class="faq-q">Does my file get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Reordering runs entirely in your browser using pdf-lib.</div></div>
     <div class="faq-item"><button class="faq-q">How many pages can I reorder?<span class="arrow">▼</span></button><div class="faq-a">There is no limit beyond your available browser memory.</div></div>

@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
@@ -47,17 +48,20 @@
   <div class="tool-page-header"><h1>Free Compress PDF Online</h1><p>Reduce your PDF file size instantly — no upload, no account, runs entirely in your browser.</p></div>
 
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">PDF compression reduces file size by stripping embedded metadata, revision history, creator information and redundant data that accumulates in PDFs from various applications. The result is a leaner file that attaches faster in emails, uploads quicker to cloud services and takes less storage — without any visible change to content, fonts or images. Everything runs in your browser using pdf-lib.</p>
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
-  <div class="ad-label">Advertisement</div>
-  <div class="ad-desktop">
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><div class="ad-desktop" style="display:block;">
     <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
   </div>
-  <div class="ad-mobile">
+  <div class="ad-mobile" style="display:none;">
     <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-  </div>
-</div>
+  </div></div>
+  <div class="tool-box">
+    <div class="dropzone" id="drop-compress">
+      <div class="dropzone-icon">📄</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <div id="compress-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
+    </div>
     <input type="file" id="file-input-compress" accept=".pdf" style="display:none;"/>
     <button class="btn" id="compress-btn" onclick="doCompress()" disabled style="margin-top:1rem;">📦 Compress & Download</button>
     <div class="status" id="status-compress"></div>
@@ -86,22 +90,14 @@
     </div>
   </div>
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-    <div class="ad-banner ad-rectangle">
-  <div class="ad-label">Advertisement</div>
-  <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-</div>
+    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script></div>
+  </div>
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid"><a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h4>Split PDF</h4><p>Extract pages</p></div></a>
       <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine PDFs</p></div></a>
       <a class="related-card" href="/pdf/delete-pages.html"><span class="icon">🗑️</span><div class="info"><h4>Delete Pages</h4><p>Remove pages</p></div></a>
       <a class="related-card" href="/pdf/grayscale.html"><span class="icon">🖤</span><div class="info"><h4>PDF to Grayscale</h4><p>Convert to B&W</p></div></a></div></div>
   <div class="info-section"><h2>How Does PDF Compression Work?</h2><p>PDF compression reduces file size by stripping embedded metadata — author names, keywords, creation tools, revision history and other hidden data that adds weight without adding value. OneConvert uses pdf-lib with object stream compression (equivalent to PDF/1.5 compression) to pack the remaining data more efficiently.</p><p>Results vary by PDF: documents heavy with metadata can shrink significantly, while already-optimised PDFs may see smaller reductions. Image-heavy PDFs require deeper compression (resampling images) which is a server-side operation. For those, use our compress tool to remove metadata first, then open in your PDF viewer to reduce image quality.</p></div>
-  <div style="max-width:700px;margin:1.5rem auto 0;text-align:center;">
-    <p class="ad-label" style="font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;">Advertisement</p>
-    <script async data-cfasync="false" src="https://pl30262832.effectivecpmnetwork.com/3b1d9451e7820015a5655748e744c3f0/invoke.js"></script>
-    <div id="container-3b1d9451e7820015a5655748e744c3f0"></div>
-  </div>
-
   <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is PDF compression free?<span class="arrow">▼</span></button><div class="faq-a">Yes — completely free, no file size limits, no account required.</div></div>
     <div class="faq-item"><button class="faq-q">How much will my PDF shrink?<span class="arrow">▼</span></button><div class="faq-a">Depends on the original. Metadata-heavy PDFs can shrink 10-40%. Lean PDFs may see less reduction. The tool shows the percentage saved after processing.</div></div>
     <div class="faq-item"><button class="faq-q">Will compression reduce quality?<span class="arrow">▼</span></button><div class="faq-a">No — this tool strips metadata and uses lossless compression. Page content, images and fonts are not affected.</div></div>
