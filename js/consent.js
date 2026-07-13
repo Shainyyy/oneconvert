@@ -5,7 +5,7 @@
   const saved = localStorage.getItem('oc-consent');
   if (saved === 'accepted') {
     if (typeof gtag === 'function') {
-      gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' });
+      gtag('consent', 'update', { analytics_storage: 'granted' });
     }
   }
 
@@ -39,7 +39,7 @@
 function acceptCookies() {
   localStorage.setItem('oc-consent', 'accepted');
   if (typeof gtag === 'function') {
-    gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' });
+    gtag('consent', 'update', { analytics_storage: 'granted' });
   }
   removeBanner();
   updateConsentStatus('Accepted ✓');
@@ -49,7 +49,7 @@ function declineCookies() {
   localStorage.setItem('oc-consent', 'declined');
   // Revoke analytics if previously granted
   if (typeof gtag === 'function') {
-    gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied' });
+    gtag('consent', 'update', { analytics_storage: 'denied' });
   }
   removeBanner();
   updateConsentStatus('Declined ✗');

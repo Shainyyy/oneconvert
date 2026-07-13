@@ -18,9 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
@@ -49,13 +48,17 @@
   <div class="tool-page-header"><h1>Free PDF to Word Converter</h1><p>Convert text-based PDFs to editable DOCX files — detect headings, paragraphs and font sizes. No upload, no account.</p></div>
 
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Converting a PDF to Word extracts the text content and rebuilds it as an editable DOCX file using docx.js. This works best with text-based PDFs where you can select and copy text. The converter analyses font sizes to identify headings and body text, then reconstructs the document structure. Complex layouts, tables and images are not carried over — the focus is accurate text extraction.</p>
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:728px;max-width:100%;height:90px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-  <div class="tool-box">
-    <div class="dropzone" id="drop-p2w">
-      <div class="dropzone-icon">📝</div>
-      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
-      <div id="p2w-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
-    </div>
+  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
+  <div class="ad-label">Advertisement</div>
+  <div class="ad-desktop">
+    <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
+  </div>
+  <div class="ad-mobile">
+    <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
+  </div>
+</div>
     <input type="file" id="file-input-p2w" accept=".pdf" style="display:none;"/>
     <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;">⚠️ Works best with text-based PDFs where you can select text. Scanned documents (image-only PDFs) are not supported.</p>
     <button class="btn" id="p2w-btn" onclick="doP2W()" disabled style="margin-top:1rem;">📝 Convert to DOCX & Download</button>
@@ -85,8 +88,11 @@
     </div>
   </div>
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><ins class="adsbygoogle" style="display:block;width:300px;height:250px;" data-ad-client="ca-pub-2108686124406108" data-ad-slot="XXXXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-  </div>
+    <div class="ad-banner ad-rectangle">
+  <div class="ad-label">Advertisement</div>
+  <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
+</div>
   <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:1.25rem;">
     <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:0;">The converter works by extracting text positions and font sizes from the PDF using pdf.js, then reconstructing paragraph and heading structure in a Word-compatible DOCX file using docx.js. This approach preserves text content accurately for simple documents. For scanned PDFs (which contain images of text rather than actual text), OCR is required — a process that runs server-side and is not available in this browser-based tool.</p>
   </div>
@@ -95,6 +101,12 @@
       <a class="related-card" href="/pdf/pdf-to-images.html"><span class="icon">📷</span><div class="info"><h4>PDF to Images</h4><p>Export as PNG</p></div></a>
       <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine PDFs</p></div></a></div></div>
   <div class="info-section"><h2>How Does PDF to Word Conversion Work?</h2><p>PDF to Word conversion extracts text content from text-based PDFs using pdf.js, analyses font sizes to detect headings and body text, then reconstructs the document structure in DOCX format using docx.js. All processing happens in your browser — your document never reaches any server.</p><p>For best results, use PDFs where you can select and copy text. Scanned documents contain only images of text and require OCR (optical character recognition), which is not available in browser-based tools. Complex multi-column layouts and tables may not convert perfectly — the tool focuses on accurate text extraction with basic structure preservation.</p></div>
+  <div style="max-width:700px;margin:1.5rem auto 0;text-align:center;">
+    <p class="ad-label" style="font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;">Advertisement</p>
+    <script async data-cfasync="false" src="https://pl30262832.effectivecpmnetwork.com/3b1d9451e7820015a5655748e744c3f0/invoke.js"></script>
+    <div id="container-3b1d9451e7820015a5655748e744c3f0"></div>
+  </div>
+
   <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">Is PDF to Word conversion free?<span class="arrow">▼</span></button><div class="faq-a">Yes — free, no account, no file size limits.</div></div>
     <div class="faq-item"><button class="faq-q">Does my PDF get uploaded?<span class="arrow">▼</span></button><div class="faq-a">No. Conversion runs entirely in your browser using pdf.js and docx.js.</div></div>
     <div class="faq-item"><button class="faq-q">Will my formatting be preserved?<span class="arrow">▼</span></button><div class="faq-a">Text content, paragraph structure and heading sizes are preserved. Complex layouts, tables, columns and images are not carried over.</div></div>
@@ -129,4 +141,5 @@ function showNextStep(href,label,icon){const el=document.getElementById('next-st
 <script src="../js/consent.js"></script>
 <script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
 trackRecentTool();</script>
+<script src="https://pl30262950.effectivecpmnetwork.com/06/9c/a7/069ca733ed2d8f59710eaf482a52a5f2.js"></script>
 </body></html>

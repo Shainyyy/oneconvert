@@ -532,3 +532,11 @@ body { font-synthesis: none; }
 #cookie-banner { will-change: transform; }
 /* Prevent layout shift from dynamically inserted sections */
 #recently-used-section { contain: layout; }
+
+/* ── Adsterra responsive ad units ── */
+.ad-desktop { display: block; text-align: center; }
+.ad-mobile  { display: none;  text-align: center; }
+@media (max-width: 768px) {
+  .ad-desktop { display: none; }
+  .ad-mobile  { display: block; }
+}
