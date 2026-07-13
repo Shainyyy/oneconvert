@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Free Split PDF Online – Extract Pages | OneConvert</title>
   <meta name="description" content="Split PDF online for free. Extract any page range into a new PDF file. No upload, no account, no file size limit. Runs entirely in your browser."/>
-  <meta name="keywords" content="split pdf online free, split pdf pages, extract pages from pdf, split pdf no upload, pdf splitter free"/>
   <link rel="canonical" href="https://oneconvert.net/pdf/split.html"/>
   <meta property="og:title" content="Free Split PDF Online – Extract Pages | OneConvert"/>
   <meta property="og:description" content="Split PDF online for free. Extract any page range into a new PDF file. No upload, no account, no file size limit. Runs entirely in your browser."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image" content="https://oneconvert.net/og-image.png"/>
-  <meta name="robots" content="index, follow"/>
   <meta name="theme-color" content="#07090f"/>
+  <meta name="robots" content="index, follow"/>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"/>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Split PDF Online","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Split PDF online for free. Extract any page range into a new PDF file. No upload, no account, no file size limit. Runs entirely in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Split PDF Online","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"PDF Tools","item":"https://oneconvert.net/pdf/"},{"@type":"ListItem","position":3,"name":"Split PDF","item":"https://oneconvert.net/pdf/split.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the PDF splitter free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free with no file size limits, no account required, and no daily usage caps."}},{"@type":"Question","name":"Is my PDF uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. The split operation runs entirely in your browser. Your PDF file never leaves your device."}},{"@type":"Question","name":"Can I split a password-protected PDF?","acceptedAnswer":{"@type":"Answer","text":"If the PDF has owner permissions set, pdf-lib may not be able to process it. Remove the password first using a PDF editor."}},{"@type":"Question","name":"How do I extract a single page?","acceptedAnswer":{"@type":"Answer","text":"Set both From and To to the same page number — for example, From 3 To 3 extracts page 3 as a standalone PDF."}},{"@type":"Question","name":"Is there a file size limit?","acceptedAnswer":{"@type":"Answer","text":"No imposed limit. The practical limit is your browser memory, typically several gigabytes."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the PDF splitter free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no account required."}},{"@type":"Question","name":"Is my PDF uploaded?","acceptedAnswer":{"@type":"Answer","text":"No, it stays in your browser."}}]}</script>
 </head>
 <body>
 <nav>
   <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
   <div class="nav-links" id="nav-links">
-    <a href="/pdf/" class="active">PDF</a>
-    <a href="/image/">Image</a>
-    <a href="/qr/">QR Code</a>
-    <a href="/units/">Units</a>
-    <a href="/text/">Text</a>
-    <a href="/colors/">Colors</a>
+    <a href="/pdf/">PDF</a><a href="/image/">Image</a><a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a><a href="/text/">Text</a><a href="/colors/">Colors</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
-  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="tool-page" style="max-width:1000px;">
@@ -53,21 +46,41 @@
     <p>Extract any page range from your PDF — instantly, in your browser. No upload, no account required.</p>
   </div>
 
-
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">PDF splitting lets you extract specific pages or ranges into a new document without affecting the original. Common uses include isolating an invoice page from a multi-page bundle, sharing one chapter from a lengthy report, separating a scanned document into individual files, or removing unwanted pages before sending. The file never leaves your device — pdf-lib reads it in your browser memory, extracts the requested pages, and downloads the result.</p>
+
   <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;">
   <div class="ad-label">Advertisement</div>
-  <div class="ad-desktop">
-    <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
-  </div>
-  <div class="ad-mobile">
-    <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-  </div>
+  <div class="ad-desktop" style="display:block;"><script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script></div>
+  <div class="ad-mobile" style="display:none;"><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
+    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script></div>
 </div>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-split">
+      <div class="dropzone-icon">📄</div>
+      <p><strong>Click to select</strong> or drag & drop your PDF here</p>
+      <p id="split-filename" style="margin-top:0.5rem;color:var(--accent2);font-size:0.85rem;"></p>
+    </div>
+    <input type="file" id="file-input-split" accept=".pdf" style="display:none;"/>
+    <div class="input-row" style="margin-top:1rem;">
+      <label style="color:var(--muted);font-size:0.85rem;min-width:80px;">From page</label>
+      <input type="number" id="split-from" value="1" min="1" style="width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
+      <label style="color:var(--muted);font-size:0.85rem;min-width:60px;margin-left:0.5rem;">To page</label>
+      <input type="number" id="split-to" value="1" min="1" style="width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
+      <span id="split-total" style="color:var(--muted);font-size:0.8rem;margin-left:auto;"></span>
+    </div>
+    <button class="btn" id="split-btn" onclick="doSplit()">✂️ Split & Download</button>
+    <div class="status" id="status-split"></div>
   </div>
 
+  <div id="next-step" style="display:none;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.25);border-radius:12px;padding:0.9rem 1.2rem;margin-top:0.75rem;align-items:center;gap:1rem;">
+    <span style="font-size:1.3rem;">💡</span>
+    <div>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.2rem;">Done? You might also need:</p>
+      <a id="ns-link" href="" style="color:var(--accent2);font-weight:600;font-size:0.9rem;text-decoration:none;"><span id="ns-icon"></span> <span id="ns-label"></span></a>
+    </div>
+  </div>
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem;">
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
@@ -86,31 +99,32 @@
       <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your processed file downloads immediately. No waiting, no email, no account needed.</p>
     </div>
   </div>
+
   <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
     <div class="ad-banner ad-rectangle">
   <div class="ad-label">Advertisement</div>
   <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
     <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
 </div>
-
-  <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:1.25rem;">
-    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:0;">Enter a starting page and ending page to extract that range as a new PDF. Page numbering starts at 1. To extract a single page, enter the same number in both fields. The original PDF is not modified — the tool creates a new document containing only the selected pages and downloads it immediately.</p>
   </div>
+
   <div class="related-tools">
     <h3>Related Tools</h3>
     <div class="related-grid">
       <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h4>Merge PDF</h4><p>Combine multiple PDFs</p></div></a>
       <a class="related-card" href="/pdf/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress PDF</h4><p>Reduce file size</p></div></a>
       <a class="related-card" href="/pdf/delete-pages.html"><span class="icon">🗑️</span><div class="info"><h4>Delete Pages</h4><p>Remove pages</p></div></a>
-      <a class="related-card" href="/pdf/watermark.html"><span class="icon">💧</span><div class="info"><h4>Add Watermark</h4><p>Add CONFIDENTIAL or DRAFT</p></div></a>
+      <a class="related-card" href="/pdf/pdf-to-word.html"><span class="icon">📝</span><div class="info"><h4>PDF to Word</h4><p>Convert to DOCX</p></div></a>
     </div>
   </div>
 
   <div class="info-section">
     <h2>When Should You Split a PDF?</h2>
-    <p>Splitting a PDF is useful when you need to share only a portion of a document — for example, extracting specific chapters from a report, separating invoices from a batch, or isolating pages for email attachment. Unlike server-based tools, OneConvert processes your PDF entirely in your browser using pdf-lib, meaning your document never leaves your device.</p>
-    <p>Simply select your PDF, enter the start and end page numbers, and click Split. The extracted pages download immediately as a new PDF file. You can repeat the process to extract multiple ranges from the same document.</p>
+    <p>Splitting a PDF is useful when you need to share only a portion of a document — for example, extracting specific chapters from a report, separating invoices from a batch, or isolating pages for email attachment. Unlike server-based tools, OneConvert processes your PDF entirely in your browser using pdf-lib, meaning your document never leaves your device.</p><p>Simply select your PDF, enter the start and end page numbers, and click Split. The extracted pages download immediately as a new PDF file. You can repeat the process to extract multiple ranges from the same document.</p>
   </div>
+
+
+
   <div style="max-width:700px;margin:1.5rem auto 0;text-align:center;">
     <p class="ad-label" style="font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem;">Advertisement</p>
     <script async data-cfasync="false" src="https://pl30262832.effectivecpmnetwork.com/3b1d9451e7820015a5655748e744c3f0/invoke.js"></script>
@@ -124,6 +138,7 @@
     <div class="faq-item"><button class="faq-q">Can I split a password-protected PDF?<span class="arrow">▼</span></button><div class="faq-a">If the PDF has owner permissions set, pdf-lib may not be able to process it. Remove the password first using a PDF editor.</div></div>
     <div class="faq-item"><button class="faq-q">How do I extract a single page?<span class="arrow">▼</span></button><div class="faq-a">Set both From and To to the same page number — for example, From 3 To 3 extracts page 3 as a standalone PDF.</div></div>
     <div class="faq-item"><button class="faq-q">Is there a file size limit?<span class="arrow">▼</span></button><div class="faq-a">No imposed limit. The practical limit is your browser memory, typically several gigabytes.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I split a PDF into individual pages?<span class="arrow">▼</span></button><div class="faq-a">Yes — to extract individual pages, enter the same number in both From and To fields. Repeat for each page you need.</div></div>
   </div>
 </div>
 
@@ -131,13 +146,14 @@
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">
     <a href="/">Home</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
-    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
-    <a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="/qr/">QR</a><a href="/units/">Units</a><a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
     <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </footer>
 <script>
 function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='🌙';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='☀️';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
 (function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
 function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
 function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
@@ -145,21 +161,20 @@ function directDownload(bytes,filename,mime){const blob=new Blob([bytes],{type:m
 function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
 const HANDLE_SVG=`<svg width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.5"/><circle cx="10" cy="3" r="1.5"/><circle cx="4" cy="9" r="1.5"/><circle cx="10" cy="9" r="1.5"/><circle cx="4" cy="15" r="1.5"/><circle cx="10" cy="15" r="1.5"/></svg>`;
 document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const isOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!isOpen){btn.classList.add('open');a.classList.add('open');}});});
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
   const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='☀️';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
 });
 </script>
 <script>
 let splitFile=null;
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-split','file-input-split',f=>processSplitFile(f[0])));
 async function processSplitFile(file){splitFile=file;document.getElementById('split-filename').textContent='📎 '+file.name;try{const buf=await file.arrayBuffer();const pdf=await PDFLib.PDFDocument.load(buf);const n=pdf.getPageCount();document.getElementById('split-to').value=n;document.getElementById('split-from').value=1;document.getElementById('split-total').textContent=n+' pages';}catch(e){showStatus('status-split','error','Could not read PDF: '+e.message);}}
-async function doSplit(){if(!splitFile)return showStatus('status-split','error','Please select a PDF first.');const from=parseInt(document.getElementById('split-from').value)-1;const to=parseInt(document.getElementById('split-to').value)-1;if(isNaN(from)||isNaN(to)||from>to||from<0)return showStatus('status-split','error','Invalid page range.');showStatus('status-split','info','Splitting…');try{const buf=await splitFile.arrayBuffer();const src=await PDFLib.PDFDocument.load(buf);const out=await PDFLib.PDFDocument.create();const pages=await out.copyPages(src,Array.from({length:to-from+1},(_,i)=>from+i));pages.forEach(p=>out.addPage(p));const bytes=await out.save();directDownload(bytes,splitFile.name.replace(/\.pdf$/i,'')+`_pages${from+1}-${to+1}.pdf`,'application/pdf');showStatus('status-split','success','Done! Download started.');
-    showNextStep("/pdf/compress.html","Compress your new PDF","📦");}catch(e){showStatus('status-split','error','Error: '+e.message);}}
-function showNextStep(href,label,icon){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=href;document.getElementById('ns-label').textContent=label;document.getElementById('ns-icon').textContent=icon||'';el.style.display='flex';}
+async function doSplit(){if(!splitFile)return showStatus('status-split','error','Please select a PDF first.');const from=parseInt(document.getElementById('split-from').value)-1;const to=parseInt(document.getElementById('split-to').value)-1;if(isNaN(from)||isNaN(to)||from>to||from<0)return showStatus('status-split','error','Invalid page range.');showStatus('status-split','info','Splitting…');try{const buf=await splitFile.arrayBuffer();const src=await PDFLib.PDFDocument.load(buf);const out=await PDFLib.PDFDocument.create();const pages=await out.copyPages(src,Array.from({length:to-from+1},(_,i)=>from+i));pages.forEach(p=>out.addPage(p));const bytes=await out.save();directDownload(bytes,splitFile.name.replace(/\.pdf$/i,'')+`_pages${from+1}-${to+1}.pdf`,'application/pdf');showStatus('status-split','success','Done! Download started.');showNextStep('/pdf/compress.html','Compress PDF','📦');}catch(e){showStatus('status-split','error','Error: '+e.message);}}
+function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF']};const entry=map[url];if(!entry)return;let r=JSON.parse(localStorage.getItem('oc-recent')||'[]');r=r.filter(x=>x.url!==url);r.unshift({url,icon:entry[0],name:entry[1]});localStorage.setItem('oc-recent',JSON.stringify(r.slice(0,8)));}trackRecentTool();
+function showNextStep(h,l,i){const el=document.getElementById('next-step');if(!el)return;document.getElementById('ns-link').href=h;document.getElementById('ns-label').textContent=l;document.getElementById('ns-icon').textContent=i||'';el.style.display='flex';}
 </script>
-<script src="../js/consent.js"></script>
-<script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
-trackRecentTool();</script>
 <script src="https://pl30262950.effectivecpmnetwork.com/06/9c/a7/069ca733ed2d8f59710eaf482a52a5f2.js"></script>
+<script src="../js/consent.js"></script>
 </body>
 </html>
