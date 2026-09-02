@@ -22,12 +22,14 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
   
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
   <script>gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSS Unit Converter","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"Unit Converter","item":"https://oneconvert.net/units/"},{"@type":"ListItem","position":3,"name":"CSS Units","item":"https://oneconvert.net/units/css-units.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many px is 1rem?","acceptedAnswer":{"@type":"Answer","text":"By default 1rem = 16px (the browser default font size). You can set a custom base size in the converter."}},{"@type":"Question","name":"What is the difference between rem and em?","acceptedAnswer":{"@type":"Answer","text":"rem is relative to the root element font size (usually 16px). em is relative to the parent element font size, which can vary."}},{"@type":"Question","name":"How do I convert px to vh?","acceptedAnswer":{"@type":"Answer","text":"1vh = 1% of the viewport height. Enter your viewport height (e.g. 900px) and the px value to get the equivalent in vh."}},{"@type":"Question","name":"What is 16px in rem?","acceptedAnswer":{"@type":"Answer","text":"16px = 1rem when the base font size is 16px (browser default)."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many px is 1rem?","acceptedAnswer":{"@type":"Answer","text":"By default 1rem = 16px (browser default root font size). You can change the base in the converter settings above."}},{"@type":"Question","name":"What is the difference between rem and em?","acceptedAnswer":{"@type":"Answer","text":"rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements."}},{"@type":"Question","name":"How do I convert px to vh?","acceptedAnswer":{"@type":"Answer","text":"Set your viewport height above, enter your px value, and the vh result shows automatically. Formula: vh = px / viewportHeight × 100."}},{"@type":"Question","name":"What is 16px in rem?","acceptedAnswer":{"@type":"Answer","text":"16px = 1rem at the default browser font size of 16px."}},{"@type":"Question","name":"Should I use px or rem for font sizes?","acceptedAnswer":{"@type":"Answer","text":"rem is recommended for font sizes — it respects the user's browser font size preferences, making your site more accessible. Use px for borders, shadows and decorative elements that should not scale."}},{"@type":"Question","name":"What base font size should I use?","acceptedAnswer":{"@type":"Answer","text":"Most browsers default to 16px. If your project sets a custom root font size (e.g. html { font-size: 62.5% } for 10px base), enter that value in the Base font size field."}},{"@type":"Question","name":"When should I use rem versus em?","acceptedAnswer":{"@type":"Answer","text":"Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you specifically want sizing relative to a parent element, such as in component-level typography scales."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many px is 1rem?","acceptedAnswer":{"@type":"Answer","text":"By default 1rem = 16px (browser default root font size). You can change the base in the converter settings above."}},{"@type":"Question","name":"What is the difference between rem and em?","acceptedAnswer":{"@type":"Answer","text":"rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements."}},{"@type":"Question","name":"How do I convert px to vh?","acceptedAnswer":{"@type":"Answer","text":"Set your viewport height above, enter your px value, and the vh result shows automatically. Formula: vh = px / viewportHeight × 100."}},{"@type":"Question","name":"What is 16px in rem?","acceptedAnswer":{"@type":"Answer","text":"16px = 1rem at the default browser font size of 16px."}},{"@type":"Question","name":"Should I use px or rem for font sizes?","acceptedAnswer":{"@type":"Answer","text":"rem is recommended for font sizes — it respects the user's browser font size preferences, making your site more accessible. Use px for borders, shadows and decorative elements that should not scale."}},{"@type":"Question","name":"What base font size should I use?","acceptedAnswer":{"@type":"Answer","text":"Most browsers default to 16px. If your project sets a custom root font size (e.g. html { font-size: 62.5% } for 10px base), enter that value in the Base font size field."}},{"@type":"Question","name":"When should I use rem versus em?","acceptedAnswer":{"@type":"Answer","text":"Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you specifically want sizing relative to a parent element, such as in component-level typography scales."}}]}</script>
 </head>
 <body>
 <nav>
@@ -47,16 +49,8 @@
     <p>Convert px to rem, em, vh, vw, pt and back — instantly. Set your base font size for accurate results.</p>
   </div>
 
-
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">CSS unit conversion is a constant task for web developers — calculating rem values for pixel measurements, converting to viewport-relative units for responsive layouts, or verifying pt values for print stylesheets. Set your base font size and viewport dimensions, enter any value, and get instant conversions to rem, em, vw, vh and pt. Click any result to copy it directly.</p>
-  <div class="ad-banner ad-leaderboard" style="max-width:100%;margin-bottom:1.5rem;"><div class="ad-label">Advertisement</div><div class="ad-desktop" style="display:block;">
-    <script>atOptions={'key':'6b1723e170220ddc6e4f567e90de015b','format':'iframe','height':90,'width':728,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/6b1723e170220ddc6e4f567e90de015b/invoke.js"></script>
-  </div>
-  <div class="ad-mobile" style="display:none;">
-    <script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script>
-  </div></div>
+  
 
   <div class="tool-box">
     <!-- Settings row -->
@@ -113,11 +107,6 @@
     </div>
   </div>
 
-  <div style="display:flex;justify-content:center;margin:1.5rem 0;">
-    <div class="ad-banner ad-rectangle"><div class="ad-label">Advertisement</div><script>atOptions={'key':'0c23ba1472f90172a59baa6648a34d85','format':'iframe','height':250,'width':300,'params':{}}</script>
-    <script src="https://www.highperformanceformat.com/0c23ba1472f90172a59baa6648a34d85/invoke.js"></script></div>
-  </div>
-
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
     <a class="related-card" href="/units/"><span class="icon">📐</span><div class="info"><h4>Unit Converter</h4><p>Length, weight, temp</p></div></a>
     <a class="related-card" href="/units/number-base.html"><span class="icon">🔢</span><div class="info"><h4>Number Base</h4><p>Binary, hex, decimal</p></div></a>
@@ -129,6 +118,14 @@
     <h2>CSS Units Explained for Web Developers</h2>
     <p><strong>px</strong> (pixels) is the most common CSS unit — fixed size regardless of parent. <strong>rem</strong> (root em) is relative to the root HTML font size (typically 16px by default in browsers). <strong>em</strong> is relative to the parent element's font size. <strong>vw/vh</strong> are percentages of the viewport width and height — 1vw = 1% of viewport width. <strong>pt</strong> (points) is used for print media: 1pt ≈ 1.333px.</p>
     <p>Using rem instead of px for font sizes and spacing makes layouts more accessible — when a user increases their browser font size, rem-based layouts scale accordingly while px-based ones do not.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Absolute, Relative and Viewport Units in Practice</h2>
+<p>CSS units divide into three groups that behave quite differently. Absolute units — <code>px</code>, <code>pt</code>, <code>cm</code> — are fixed. A CSS pixel is a reference unit rather than a physical device pixel: on a high-density display the browser maps one CSS pixel onto two or three hardware pixels, which is why a 16px font looks the same size on a phone and a desktop despite vastly different pixel densities. <code>pt</code> is defined as 1/72 inch and equals exactly 1.333px; it belongs to print stylesheets and has no business in screen layout.</p>
+<p>Relative units are the ones that matter for accessible design. <code>rem</code> resolves against the root element's font size — 16px in every browser by default — so <code>1.5rem</code> is 24px unless the user has changed their browser's font setting, in which case it scales with them. <code>em</code> resolves against the current element's font size instead, which makes it useful for properties that should track their own text, such as padding inside a button, and treacherous for nested structures: an <code>em</code>-sized font inside an <code>em</code>-sized font compounds, and three levels of nested list can end up unexpectedly tiny.</p>
+<p>Viewport units measure the window: <code>1vw</code> is 1% of viewport width, <code>1vh</code> 1% of height. They excel at full-screen sections and fluid headings, and they have two well-known traps. Sizing body text in <code>vw</code> alone means text that becomes unreadably small on narrow screens and ignores the user's font preference entirely — use <code>clamp()</code> to set a floor and ceiling. And <code>100vh</code> on mobile historically referred to the viewport without the browser's address bar, causing content to be cut off; the newer <code>dvh</code> unit tracks the dynamic viewport and is the correct choice today.</p>
+<p>The working rule most teams converge on: <code>rem</code> for font sizes and spacing so everything scales with user preference, <code>em</code> for padding that should follow its own element's text, <code>px</code> for hairlines and borders that should never scale, percentages and viewport units for layout dimensions.</p>
   </div>
 
   <div class="faq-section"><h2>Frequently Asked Questions</h2>
@@ -227,6 +224,5 @@ function updateAll(){
 <script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
 trackRecentTool();</script>
 <script>document.getElementById("try-also-links").innerHTML='<a href="/colors/" style="color:var(--accent2);font-weight:600;">🎨 Color Tools</a> · <a href="/units/number-base.html" style="color:var(--accent2);font-weight:600;">🔢 Number Base</a>';</script>
-<script src="https://pl30262950.effectivecpmnetwork.com/06/9c/a7/069ca733ed2d8f59710eaf482a52a5f2.js"></script>
 </body>
 </html>
