@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Rotate &amp; Flip Image | OneConvert</title>
+  <meta name="description" content="Rotate images by 90, 180 or 270 degrees and flip them horizontally or vertically. Free, no upload — the picture never leaves your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/image/rotate.html"/>
+  <meta property="og:title" content="Free Rotate &amp; Flip Image | OneConvert"/>
+  <meta property="og:description" content="Rotate images by 90, 180 or 270 degrees and flip them horizontally or vertically. Free, no upload — the picture never leaves your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/image/rotate.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free Rotate &amp; Flip Image | OneConvert"/>
+  <meta name="twitter:description" content="Rotate images by 90, 180 or 270 degrees and flip them horizontally or vertically. Free, no upload — the picture never leaves your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rotate and Flip Image","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Rotate images by 90, 180 or 270 degrees and flip them horizontally or vertically. Free, no upload — the picture never leaves your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"https://oneconvert.net/image/"},{"@type":"ListItem","position":3,"name":"Rotate &amp; Flip Image","item":"https://oneconvert.net/image/rotate.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does rotating lose quality?","acceptedAnswer":{"@type":"Answer","text":"For PNG, WebP and BMP, no — those formats are lossless. A JPEG is re-encoded at high quality, which costs one generation of compression. Rotating the same JPEG many times in a row would slowly soften it; doing it once is not noticeable."}},{"@type":"Question","name":"Can I rotate by an arbitrary angle like 45 degrees?","acceptedAnswer":{"@type":"Answer","text":"Not here. Arbitrary angles require deciding what fills the corners that open up and resampling every pixel, which softens the image. The 90-degree steps this tool offers are exact pixel movements with no interpolation."}},{"@type":"Question","name":"Why did my photo come out sideways in the first place?","acceptedAnswer":{"@type":"Answer","text":"Cameras record in the sensor's native orientation and store a rotation flag in EXIF instead of rotating the pixels. Software that ignores that flag shows the raw orientation. Rotating here moves the actual pixels, so the result is correct everywhere."}},{"@type":"Question","name":"Is my image uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. Decoding, rotation and re-encoding all happen through the Canvas API in your browser. The file is read into memory and handed straight back."}},{"@type":"Question","name":"What formats can I use?","acceptedAnswer":{"@type":"Answer","text":"Anything your browser can decode: JPG, PNG, WebP, GIF and BMP. Animated GIFs are converted to a single still frame, since a canvas holds one image."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/image/">Image Tools</a><span>&rsaquo;</span><span>Rotate &amp; Flip Image</span></div>
+  <div class="tool-page-header">
+    <h1>Free Rotate &amp; Flip Image</h1>
+    <p>Turn a picture by 90 degrees at a time, or mirror it — instantly, in your browser.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Rotate a photo that came out sideways, or mirror one that was taken with a front camera. The image is redrawn through the Canvas API at full resolution and downloaded straight back to you — nothing is uploaded, and there is no limit on file size beyond your device’s memory.</p>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone" tabindex="0" role="button" aria-label="Choose an image">
+      <div class="dropzone-icon">&#128444;&#65039;</div>
+      <p><strong>Click to select</strong> or drag &amp; drop an image here</p>
+      <small>JPG, PNG, WebP, GIF and BMP &middot; no size limit</small>
+    </div>
+    <input type="file" id="file-input" accept="image/*" style="display:none;" aria-label="Choose an image file"/>
+    <div id="rot-area" style="display:none;margin-top:1rem;">
+      <div style="text-align:center;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+        <img id="rot-preview" alt="Preview of the rotated image" style="max-width:100%;max-height:320px;border-radius:6px;"/>
+        <p id="rot-dims" style="color:var(--muted);font-size:0.82rem;margin-top:0.5rem;"></p>
+      </div>
+      <div class="input-row" style="margin-top:1rem;flex-wrap:wrap;gap:0.5rem;justify-content:center;">
+        <button class="btn btn-outline" onclick="rotateBy(-90)" style="width:auto;">&#8630; Left 90&deg;</button>
+        <button class="btn btn-outline" onclick="rotateBy(90)" style="width:auto;">&#8631; Right 90&deg;</button>
+        <button class="btn btn-outline" onclick="flipImg('h')" style="width:auto;">&#8646; Flip horizontal</button>
+        <button class="btn btn-outline" onclick="flipImg('v')" style="width:auto;">&#8645; Flip vertical</button>
+        <button class="btn btn-outline" onclick="resetRot()" style="width:auto;">Reset</button>
+      </div>
+      <button class="btn" id="rot-download" onclick="downloadRot()" style="margin-top:1rem;">&#11015;&#65039; Download</button>
+    </div>
+    <div class="status" id="status-rot"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select an image</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Any common format — JPG, PNG, WebP, GIF or BMP.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Rotate or flip</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Steps combine, so two right turns give 180 degrees.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download the result</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Redrawn at full resolution, never uploaded.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/image/"><span class="icon">&#128444;&#65039;</span><div class="info"><h3>Image Tools</h3><p>All image converters</p></div></a>
+      <a class="related-card" href="/image/compress.html"><span class="icon">&#128230;</span><div class="info"><h3>Compress Image</h3><p>Reduce file size</p></div></a>
+      <a class="related-card" href="/image/resize.html"><span class="icon">&#8596;&#65039;</span><div class="info"><h3>Resize Image</h3><p>Exact pixel dimensions</p></div></a>
+      <a class="related-card" href="/image/jpg-to-png.html"><span class="icon">&#128260;</span><div class="info"><h3>JPG to PNG</h3><p>Convert between formats</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Rotation here redraws pixels — and why that matters</h2>
+    <p>There are two ways to rotate an image. A JPEG can sometimes be rotated losslessly by rewriting its EXIF orientation flag, leaving the compressed data untouched. That is fast and perfect, but it only works for multiples of 90 degrees on JPEGs, and plenty of software ignores the flag — which is exactly why photos still turn up sideways on other people’s screens.</p>
+    <p>This tool takes the other approach: the image is decoded, redrawn onto a rotated canvas and re-encoded. The result is correct everywhere, because the pixels themselves have moved rather than a flag telling the viewer to move them. For PNG, WebP and BMP this is lossless. For JPEG the file is re-encoded at high quality, so there is one generation of compression — negligible once, worth avoiding if you rotate the same photo repeatedly.</p>
+    <p>Because the canvas swaps width and height on a 90-degree turn, a 4000&times;3000 photo becomes 3000&times;4000. The pixel count is unchanged, so the file size stays roughly the same.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Flipping is not the same as rotating</h2>
+    <p>A 180-degree rotation and a double flip look similar on symmetric shapes but are different operations. Rotating turns the image around its centre; flipping mirrors it across an axis, producing a reflection. On anything containing text, the difference is obvious — flipped text reads backwards while rotated text is merely upside down.</p>
+    <p>Horizontal flip is the common one, because front-facing cameras usually mirror the preview so it feels like a mirror, then save the unmirrored version. The photo ends up looking "wrong" compared with what you saw. Flipping horizontally restores the familiar view — though it also reverses any writing in the shot.</p>
+    <p>Every operation applies to the current state, so they stack: two right turns give 180 degrees, and a horizontal flip followed by a vertical flip equals a 180-degree rotation. Reset returns to the original at any point.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Does rotating lose quality?<span class="arrow">&#9660;</span></button><div class="faq-a">For PNG, WebP and BMP, no — those formats are lossless. A JPEG is re-encoded at high quality, which costs one generation of compression. Rotating the same JPEG many times in a row would slowly soften it; doing it once is not noticeable.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I rotate by an arbitrary angle like 45 degrees?<span class="arrow">&#9660;</span></button><div class="faq-a">Not here. Arbitrary angles require deciding what fills the corners that open up and resampling every pixel, which softens the image. The 90-degree steps this tool offers are exact pixel movements with no interpolation.</div></div>
+    <div class="faq-item"><button class="faq-q">Why did my photo come out sideways in the first place?<span class="arrow">&#9660;</span></button><div class="faq-a">Cameras record in the sensor's native orientation and store a rotation flag in EXIF instead of rotating the pixels. Software that ignores that flag shows the raw orientation. Rotating here moves the actual pixels, so the result is correct everywhere.</div></div>
+    <div class="faq-item"><button class="faq-q">Is my image uploaded to a server?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Decoding, rotation and re-encoding all happen through the Canvas API in your browser. The file is read into memory and handed straight back.</div></div>
+    <div class="faq-item"><button class="faq-q">What formats can I use?<span class="arrow">&#9660;</span></button><div class="faq-a">Anything your browser can decode: JPG, PNG, WebP, GIF and BMP. Animated GIFs are converted to a single still frame, since a canvas holds one image.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+let rotImg=null, rotAngle=0, flipH=false, flipV=false, rotName='image.png', rotType='image/png';
+document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-zone','file-input',files=>loadRot(files[0])));
+function loadRot(file){
+  if(!file||!file.type.startsWith('image/')){showStatus('status-rot','error','Please choose an image file.');return;}
+  rotName=file.name; rotType=file.type==='image/jpeg'?'image/jpeg':'image/png';
+  const url=URL.createObjectURL(file); const img=new Image();
+  img.onload=()=>{ rotImg=img; rotAngle=0; flipH=flipV=false;
+    document.getElementById('rot-area').style.display='block'; render();
+    URL.revokeObjectURL(url); showStatus('status-rot','success','Loaded '+file.name+' ('+formatBytes(file.size)+').'); };
+  img.onerror=()=>{showStatus('status-rot','error','Could not read that image.');URL.revokeObjectURL(url);};
+  img.src=url;
+}
+function drawRot(){
+  const swap=rotAngle===90||rotAngle===270;
+  const c=document.createElement('canvas');
+  c.width = swap? rotImg.naturalHeight : rotImg.naturalWidth;
+  c.height= swap? rotImg.naturalWidth  : rotImg.naturalHeight;
+  const x=c.getContext('2d');
+  x.translate(c.width/2,c.height/2);
+  x.rotate(rotAngle*Math.PI/180);
+  x.scale(flipH?-1:1, flipV?-1:1);
+  x.drawImage(rotImg,-rotImg.naturalWidth/2,-rotImg.naturalHeight/2);
+  return c;
+}
+function render(){
+  if(!rotImg)return;
+  const c=drawRot();
+  document.getElementById('rot-preview').src=c.toDataURL(rotType,0.92);
+  document.getElementById('rot-dims').textContent=c.width+' × '+c.height+' px'+(rotAngle?' · rotated '+rotAngle+'°':'')+(flipH?' · flipped horizontally':'')+(flipV?' · flipped vertically':'');
+}
+function rotateBy(d){ if(!rotImg)return; rotAngle=(rotAngle+d+360)%360; render(); }
+function flipImg(a){ if(!rotImg)return; if(a==='h')flipH=!flipH; else flipV=!flipV; render(); }
+function resetRot(){ if(!rotImg)return; rotAngle=0; flipH=flipV=false; render(); showStatus('status-rot','success','Back to the original.'); }
+function downloadRot(){
+  if(!rotImg){showStatus('status-rot','error','Choose an image first.');return;}
+  const c=drawRot();
+  c.toBlob(b=>{
+    const ext=rotType==='image/jpeg'?'jpg':'png';
+    directDownload(b, rotName.replace(/\.[^.]+$/,'')+'_rotated.'+ext, rotType);
+    showStatus('status-rot','success','Downloaded at '+c.width+' × '+c.height+' px.');
+  }, rotType, 0.92);
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

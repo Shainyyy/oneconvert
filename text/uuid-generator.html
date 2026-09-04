@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free UUID Generator – Version 4 Online | OneConvert</title>
+  <meta name="description" content="Generate random version 4 UUIDs online for free. Bulk generation up to 500 at once, using your browser’s cryptographic random source."/>
+  <link rel="canonical" href="https://oneconvert.net/text/uuid-generator.html"/>
+  <meta property="og:title" content="Free UUID Generator – Version 4 Online | OneConvert"/>
+  <meta property="og:description" content="Generate random version 4 UUIDs online for free. Bulk generation up to 500 at once, using your browser’s cryptographic random source."/>
+  <meta property="og:url" content="https://oneconvert.net/text/uuid-generator.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free UUID Generator – Version 4 Online | OneConvert"/>
+  <meta name="twitter:description" content="Generate random version 4 UUIDs online for free. Bulk generation up to 500 at once, using your browser’s cryptographic random source."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"UUID Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Generate random version 4 UUIDs online for free. Bulk generation up to 500 at once, using your browser’s cryptographic random source."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"UUID Generator","item":"https://oneconvert.net/text/uuid-generator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a UUID guaranteed to be unique?","acceptedAnswer":{"@type":"Answer","text":"Not mathematically guaranteed, but the probability of a collision is negligible. With 122 random bits you would need around 2.7 quintillion UUIDs for a 50% chance of one duplicate. Treating them as unique is standard practice."}},{"@type":"Question","name":"Are these random enough to be secure?","acceptedAnswer":{"@type":"Answer","text":"They use crypto.getRandomValues, your browser's cryptographically secure random source — the same one used for encryption keys. This is not Math.random, which is predictable and must never be used for identifiers."}},{"@type":"Question","name":"What is the difference between UUID v4 and v7?","acceptedAnswer":{"@type":"Answer","text":"Version 4 is entirely random. Version 7 puts a timestamp in the leading bits so identifiers sort by creation time, which keeps database inserts sequential and avoids index fragmentation. This tool generates v4, the most widely supported form."}},{"@type":"Question","name":"Should I use a UUID as a database primary key?","acceptedAnswer":{"@type":"Answer","text":"It depends on the trade-off. UUIDs let separate systems create records without coordination, but cost storage and scatter index writes. Store them in a native uuid or BINARY(16) column rather than as a 36-character string, and consider v7 for large, write-heavy tables."}},{"@type":"Question","name":"Can a UUID be used as a secret token?","acceptedAnswer":{"@type":"Answer","text":"Better not. A v4 UUID is unguessable in practice, but it is designed as an identifier and ends up in URLs, server logs and browser history. For anything requiring real secrecy, use a purpose-built token you can revoke."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>UUID Generator</span></div>
+  <div class="tool-page-header">
+    <h1>Free UUID Generator</h1>
+    <p>Random version 4 UUIDs, generated locally with a cryptographic random source.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">A UUID is a 128-bit identifier written as 36 characters, designed so that anyone can generate one at any time without coordinating with anyone else and still be confident it is unique. Version 4 fills almost all of those bits with random data. This generator uses crypto.getRandomValues, the browser’s cryptographically secure source — not Math.random, which is predictable and unsuitable for identifiers that must not be guessable.</p>
+
+  <div class="tool-box">
+    <div class="input-row" style="flex-wrap:wrap;gap:0.75rem;align-items:end;">
+      <div style="flex:1;min-width:130px;">
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="uuid-count">How many</label>
+        <input type="number" id="uuid-count" value="5" min="1" max="500" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.55rem 0.7rem;"/>
+      </div>
+      <div style="flex:1;min-width:130px;">
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="uuid-case">Format</label>
+        <select id="uuid-case" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.55rem 0.7rem;">
+          <option value="lower">Lowercase</option><option value="upper">Uppercase</option>
+          <option value="nodash">No hyphens</option><option value="braces">With braces</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" id="uuid-btn" onclick="genUuids()" style="margin-top:1rem;">Generate</button>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="uuid-out" style="margin-top:1rem;">Result</label>
+    <textarea id="uuid-out" style="width:100%;min-height:110px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.9rem;font-family:monospace;resize:vertical;" readonly aria-label="Generated UUIDs"></textarea>
+    <button class="btn btn-outline" onclick="copyUuids()" style="margin-top:0.5rem;">Copy all</button>
+    <div class="status" id="status-uuid"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose a quantity</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">One, or up to five hundred at a time.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick a format</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Lowercase, uppercase, without hyphens or in braces.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy them out</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">One per line, ready to paste into code or a database.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h3>JSON Formatter</h3><p>Validate and beautify JSON</p></div></a>
+      <a class="related-card" href="/text/hash-generator.html"><span class="icon">&#128273;</span><div class="info"><h3>Hash Generator</h3><p>SHA-256, SHA-1, SHA-512</p></div></a>
+      <a class="related-card" href="/text/password-generator.html"><span class="icon">&#128274;</span><div class="info"><h3>Password Generator</h3><p>Strong random passwords</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>How version 4 works, and why collisions are not a worry</h2>
+    <p>A version 4 UUID is 128 bits, of which 122 are random — the remaining six are fixed to mark the version and variant, which is why the thirteenth character is always 4 and the seventeenth is always 8, 9, a or b. That leaves 2<sup>122</sup> possible values, a number with 37 digits.</p>
+    <p>The practical consequence: you would need to generate roughly 2.7 quintillion UUIDs before reaching a 50% chance of a single collision. Generating a billion per second, that takes about 85 years. For any realistic application, treating version 4 UUIDs as unique without checking is entirely reasonable — which is the whole point of the format, since it means separate systems can create identifiers independently and merge the results without coordination.</p>
+    <p>This matters more than it sounds. A database using auto-incrementing integers needs a central authority to hand out the next number. UUIDs remove that constraint, which is why they appear in distributed systems, offline-capable apps that create records before syncing, and any situation where two systems must merge data without renumbering.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Where UUIDs cost you, and what to use instead</h2>
+    <p>They are not free. A UUID stored as text takes 36 bytes against 4 or 8 for an integer, and as a primary key that overhead is repeated in every index and every foreign key referencing it. Storing them in a native <code>uuid</code> or <code>BINARY(16)</code> column rather than as a string recovers most of that.</p>
+    <p>The subtler cost is index locality. Random UUIDs scatter inserts across a B-tree instead of appending at the end, which fragments the index and hurts write performance on large tables. This is why version 7 exists: it puts a timestamp in the high bits so identifiers sort roughly by creation time, keeping inserts sequential while staying collision-resistant.</p>
+    <p>Finally, a UUID is not a secret. It is unguessable in practice, but it appears in URLs, logs and browser history. Use it as an identifier, not as an access token — "anyone with the link can view" is a deliberate design decision, not a security model.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Is a UUID guaranteed to be unique?<span class="arrow">&#9660;</span></button><div class="faq-a">Not mathematically guaranteed, but the probability of a collision is negligible. With 122 random bits you would need around 2.7 quintillion UUIDs for a 50% chance of one duplicate. Treating them as unique is standard practice.</div></div>
+    <div class="faq-item"><button class="faq-q">Are these random enough to be secure?<span class="arrow">&#9660;</span></button><div class="faq-a">They use crypto.getRandomValues, your browser's cryptographically secure random source — the same one used for encryption keys. This is not Math.random, which is predictable and must never be used for identifiers.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between UUID v4 and v7?<span class="arrow">&#9660;</span></button><div class="faq-a">Version 4 is entirely random. Version 7 puts a timestamp in the leading bits so identifiers sort by creation time, which keeps database inserts sequential and avoids index fragmentation. This tool generates v4, the most widely supported form.</div></div>
+    <div class="faq-item"><button class="faq-q">Should I use a UUID as a database primary key?<span class="arrow">&#9660;</span></button><div class="faq-a">It depends on the trade-off. UUIDs let separate systems create records without coordination, but cost storage and scatter index writes. Store them in a native uuid or BINARY(16) column rather than as a 36-character string, and consider v7 for large, write-heavy tables.</div></div>
+    <div class="faq-item"><button class="faq-q">Can a UUID be used as a secret token?<span class="arrow">&#9660;</span></button><div class="faq-a">Better not. A v4 UUID is unguessable in practice, but it is designed as an identifier and ends up in URLs, server logs and browser history. For anything requiring real secrecy, use a purpose-built token you can revoke.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function uuid4(){
+  if(crypto.randomUUID) return crypto.randomUUID();
+  const b=crypto.getRandomValues(new Uint8Array(16));
+  b[6]=(b[6]&0x0f)|0x40; b[8]=(b[8]&0x3f)|0x80;
+  const h=[...b].map(x=>x.toString(16).padStart(2,'0')).join('');
+  return h.slice(0,8)+'-'+h.slice(8,12)+'-'+h.slice(12,16)+'-'+h.slice(16,20)+'-'+h.slice(20);
+}
+function genUuids(){
+  let n=parseInt(document.getElementById('uuid-count').value);
+  if(isNaN(n)||n<1){showStatus('status-uuid','error','Enter how many you need (1-500).');return;}
+  if(n>500){n=500;document.getElementById('uuid-count').value=500;}
+  const mode=document.getElementById('uuid-case').value;
+  const list=[];
+  for(let i=0;i<n;i++){
+    let u=uuid4();
+    if(mode==='upper')u=u.toUpperCase();
+    else if(mode==='nodash')u=u.replace(/-/g,'');
+    else if(mode==='braces')u='{'+u+'}';
+    list.push(u);
+  }
+  document.getElementById('uuid-out').value=list.join('\n');
+  showStatus('status-uuid','success','Generated '+n+' UUID'+(n>1?'s':'')+'.');
+}
+function copyUuids(){
+  const v=document.getElementById('uuid-out').value;
+  if(!v){showStatus('status-uuid','error','Generate some first.');return;}
+  navigator.clipboard.writeText(v).then(()=>showStatus('status-uuid','success','Copied to clipboard.'));
+}
+document.addEventListener('DOMContentLoaded',genUuids);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Hash Generator – SHA-256, SHA-1, SHA-512 | OneConvert</title>
+  <meta name="description" content="Generate SHA-256, SHA-1 and SHA-512 hashes from any text online. Runs in your browser via the Web Crypto API — nothing is uploaded."/>
+  <link rel="canonical" href="https://oneconvert.net/text/hash-generator.html"/>
+  <meta property="og:title" content="Free Hash Generator – SHA-256, SHA-1, SHA-512 | OneConvert"/>
+  <meta property="og:description" content="Generate SHA-256, SHA-1 and SHA-512 hashes from any text online. Runs in your browser via the Web Crypto API — nothing is uploaded."/>
+  <meta property="og:url" content="https://oneconvert.net/text/hash-generator.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free Hash Generator – SHA-256, SHA-1, SHA-512 | OneConvert"/>
+  <meta name="twitter:description" content="Generate SHA-256, SHA-1 and SHA-512 hashes from any text online. Runs in your browser via the Web Crypto API — nothing is uploaded."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hash Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Generate SHA-256, SHA-1 and SHA-512 hashes from any text online. Runs in your browser via the Web Crypto API — nothing is uploaded."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"Hash Generator","item":"https://oneconvert.net/text/hash-generator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is my text sent to a server?","acceptedAnswer":{"@type":"Answer","text":"No. Hashing uses the Web Crypto API built into your browser. The text never leaves the page, which matters when you are hashing something sensitive."}},{"@type":"Question","name":"Why is MD5 not offered?","acceptedAnswer":{"@type":"Answer","text":"MD5 has been cryptographically broken since 2004 and collisions can be generated in seconds. The Web Crypto API does not implement it at all, so offering it would mean shipping a third-party implementation of an algorithm nobody should use for security."}},{"@type":"Question","name":"Can I reverse a hash back to the original text?","acceptedAnswer":{"@type":"Answer","text":"No. Hashing is one-way by design. Sites claiming to \"decrypt\" a hash are looking it up in a table of precomputed common inputs — which works for short or common strings and is exactly why passwords need salting."}},{"@type":"Question","name":"Why do I get a different hash than another tool?","acceptedAnswer":{"@type":"Answer","text":"Almost always a text encoding or line-ending difference. This tool hashes the UTF-8 bytes of exactly what you typed. A trailing newline, or CRLF versus LF line endings, changes the input and therefore the hash."}},{"@type":"Question","name":"Can I hash a file?","acceptedAnswer":{"@type":"Answer","text":"Not in this tool — it takes text input. For file checksums, use the built-in command on your system: shasum -a 256 on macOS and Linux, or Get-FileHash in PowerShell on Windows."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>Hash Generator</span></div>
+  <div class="tool-page-header">
+    <h1>Free Hash Generator</h1>
+    <p>SHA-256, SHA-1 and SHA-512 from any text — computed locally in your browser.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Hashing turns any input into a fixed-length fingerprint. The same text always produces the same hash, and changing a single character produces a completely different one. Useful for verifying that a file or message arrived unaltered, comparing values without storing the original, and checking a download against a published checksum. This tool uses the browser’s built-in Web Crypto API, so your text is never transmitted.</p>
+
+  <div class="tool-box">
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="hash-in">Text to hash</label>
+    <textarea id="hash-in" style="width:100%;min-height:110px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.9rem;font-family:monospace;resize:vertical;" placeholder="Type or paste anything…" oninput="doHash()"></textarea>
+    <div style="display:grid;gap:0.75rem;margin-top:1rem;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="out-sha256">SHA-256</label><input id="out-sha256" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--accent2);padding:0.6rem 0.75rem;font-size:0.9rem;font-family:monospace;font-weight:600;" readonly onclick="copyHash('out-sha256')" title="Click to copy"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="out-sha1">SHA-1</label><input id="out-sha1" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--accent2);padding:0.6rem 0.75rem;font-size:0.9rem;font-family:monospace;font-weight:600;" readonly onclick="copyHash('out-sha1')" title="Click to copy"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="out-sha512">SHA-512</label><input id="out-sha512" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--accent2);padding:0.6rem 0.75rem;font-size:0.9rem;font-family:monospace;font-weight:600;" readonly onclick="copyHash('out-sha512')" title="Click to copy"/></div>
+    </div>
+    <div class="status" id="status-hash"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Enter your text</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Hashes update as you type — nothing to click.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Three algorithms at once</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">SHA-256, SHA-1 and SHA-512 side by side.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Click a value to copy</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Each field copies to the clipboard on click.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h3>JSON Formatter</h3><p>Validate and beautify JSON</p></div></a>
+      <a class="related-card" href="/text/uuid-generator.html"><span class="icon">&#127380;</span><div class="info"><h3>UUID Generator</h3><p>Version 4 identifiers</p></div></a>
+      <a class="related-card" href="/text/password-generator.html"><span class="icon">&#128274;</span><div class="info"><h3>Password Generator</h3><p>Strong random passwords</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What a hash is good for — and what it is not</h2>
+    <p>A cryptographic hash is a one-way function: easy to compute, effectively impossible to reverse. That makes it useful for integrity checking. Publish the SHA-256 of a download, and anyone can verify their copy matches yours byte for byte. Change one character anywhere in the input and roughly half the output bits flip — the "avalanche effect" — so tampering is immediately visible.</p>
+    <p>What hashing is <strong>not</strong> is encryption. There is no key and no way to recover the input, which also means it is not a way to protect data you need back. And it is not by itself a safe way to store passwords: a plain SHA-256 of a password can be cracked at billions of guesses per second on consumer hardware. Password storage needs a deliberately slow, salted algorithm such as bcrypt, scrypt or Argon2. Use this tool for integrity and comparison, not for building an authentication system.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Which algorithm to pick</h2>
+    <p><strong>SHA-256</strong> is the sensible default. It is the current standard for checksums, digital signatures and certificate fingerprints, with no known practical weaknesses. If you have no specific reason to choose otherwise, use it.</p>
+    <p><strong>SHA-1</strong> is included because you will still meet it — Git object IDs, older certificates, legacy checksums. It is cryptographically broken: practical collision attacks have been demonstrated, meaning two different inputs can be engineered to produce the same hash. It remains fine for detecting accidental corruption, but must not be used where an attacker could benefit from a forgery.</p>
+    <p><strong>SHA-512</strong> uses 64-bit operations and is often faster than SHA-256 on 64-bit hardware despite the longer output. The extra length rarely adds practical security for checksums, but it is required by some standards and produces a distinctive 128-character hex string.</p>
+    <p>MD5 is deliberately absent. It has been thoroughly broken since 2004, collisions can be produced in seconds, and the Web Crypto API does not implement it — a reasonable decision by the browser vendors that this tool follows.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Is my text sent to a server?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Hashing uses the Web Crypto API built into your browser. The text never leaves the page, which matters when you are hashing something sensitive.</div></div>
+    <div class="faq-item"><button class="faq-q">Why is MD5 not offered?<span class="arrow">&#9660;</span></button><div class="faq-a">MD5 has been cryptographically broken since 2004 and collisions can be generated in seconds. The Web Crypto API does not implement it at all, so offering it would mean shipping a third-party implementation of an algorithm nobody should use for security.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I reverse a hash back to the original text?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Hashing is one-way by design. Sites claiming to "decrypt" a hash are looking it up in a table of precomputed common inputs — which works for short or common strings and is exactly why passwords need salting.</div></div>
+    <div class="faq-item"><button class="faq-q">Why do I get a different hash than another tool?<span class="arrow">&#9660;</span></button><div class="faq-a">Almost always a text encoding or line-ending difference. This tool hashes the UTF-8 bytes of exactly what you typed. A trailing newline, or CRLF versus LF line endings, changes the input and therefore the hash.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I hash a file?<span class="arrow">&#9660;</span></button><div class="faq-a">Not in this tool — it takes text input. For file checksums, use the built-in command on your system: shasum -a 256 on macOS and Linux, or Get-FileHash in PowerShell on Windows.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+async function sha(algo,text){
+  const buf=new TextEncoder().encode(text);
+  const d=await crypto.subtle.digest(algo,buf);
+  return [...new Uint8Array(d)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+let hashTimer=null;
+function doHash(){
+  clearTimeout(hashTimer);
+  hashTimer=setTimeout(async()=>{
+    const t=document.getElementById('hash-in').value;
+    if(!t){['out-sha256','out-sha1','out-sha512'].forEach(i=>document.getElementById(i).value='');showStatus('status-hash','','');return;}
+    try{
+      document.getElementById('out-sha256').value=await sha('SHA-256',t);
+      document.getElementById('out-sha1').value=await sha('SHA-1',t);
+      document.getElementById('out-sha512').value=await sha('SHA-512',t);
+      showStatus('status-hash','success','Hashed '+new Blob([t]).size+' bytes of UTF-8 input.');
+    }catch(e){ showStatus('status-hash','error','Hashing failed: '+e.message); }
+  },120);
+}
+function copyHash(id){
+  const v=document.getElementById(id).value;
+  if(!v)return;
+  navigator.clipboard.writeText(v).then(()=>showStatus('status-hash','success','Copied '+id.replace('out-','').toUpperCase()+' to clipboard.'));
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

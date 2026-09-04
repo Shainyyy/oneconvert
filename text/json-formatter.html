@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free JSON Formatter &amp; Validator Online | OneConvert</title>
+  <meta name="description" content="Format, validate and minify JSON online for free. Pinpoints syntax errors with line numbers. No upload — runs entirely in your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/text/json-formatter.html"/>
+  <meta property="og:title" content="Free JSON Formatter &amp; Validator Online | OneConvert"/>
+  <meta property="og:description" content="Format, validate and minify JSON online for free. Pinpoints syntax errors with line numbers. No upload — runs entirely in your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/text/json-formatter.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free JSON Formatter &amp; Validator Online | OneConvert"/>
+  <meta name="twitter:description" content="Format, validate and minify JSON online for free. Pinpoints syntax errors with line numbers. No upload — runs entirely in your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JSON Formatter and Validator","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Format, validate and minify JSON online for free. Pinpoints syntax errors with line numbers. No upload — runs entirely in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"JSON Formatter","item":"https://oneconvert.net/text/json-formatter.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does my JSON fail with \"Unexpected token\"?","acceptedAnswer":{"@type":"Answer","text":"Almost always a trailing comma, a single quote, or an unquoted key. The error message here includes the line and column, which narrows it down immediately. Watch particularly for a comma after the final element of an array or object."}},{"@type":"Question","name":"Are comments allowed in JSON?","acceptedAnswer":{"@type":"Answer","text":"No. The specification has no comment syntax, so a // or /* */ line makes the document invalid. Formats such as JSON5 and JSONC add comments, but standard parsers reject them. If you need annotation, add a regular key like \"_comment\"."}},{"@type":"Question","name":"Does formatting change my data?","acceptedAnswer":{"@type":"Answer","text":"No. Whitespace between tokens has no meaning in JSON, so the parsed result is byte-for-byte equivalent. Key order is preserved as written."}},{"@type":"Question","name":"Is my data uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Parsing uses your browser's built-in JSON engine and the text never leaves the page. That matters when the payload contains tokens, personal data or anything else you would not paste into a random website."}},{"@type":"Question","name":"How large a document can it handle?","acceptedAnswer":{"@type":"Answer","text":"Several megabytes without trouble. The limit is browser memory rather than an imposed cap. Very large documents may take a moment to re-render in the output box."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>JSON Formatter</span></div>
+  <div class="tool-page-header">
+    <h1>Free JSON Formatter &amp; Validator</h1>
+    <p>Beautify, minify and validate JSON — with errors pointed to the exact line.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Paste JSON to reformat it with consistent indentation, collapse it to a single line, or check whether it is valid at all. When parsing fails, the error is reported with the line and column so you can find it immediately instead of scanning the whole document. Everything runs in your browser; the data is never sent anywhere.</p>
+
+  <div class="tool-box">
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="json-in">JSON input</label>
+    <textarea id="json-in" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.9rem;font-family:monospace;resize:vertical;" placeholder='{"name":"example","values":[1,2,3]}'></textarea>
+    <div class="input-row" style="margin-top:0.75rem;flex-wrap:wrap;gap:0.5rem;">
+      <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" style="margin:0;" for="json-indent">Indent</label>
+      <select id="json-indent" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
+        <option value="2">2 spaces</option><option value="4">4 spaces</option><option value="\t">Tab</option>
+      </select>
+      <button class="btn" id="btn-format" onclick="doFormat()" style="width:auto;">Format</button>
+      <button class="btn btn-outline" id="btn-minify" onclick="doMinify()" style="width:auto;">Minify</button>
+      <button class="btn btn-outline" id="btn-copy-json" onclick="copyJson()" style="width:auto;">Copy</button>
+    </div>
+    <div class="status" id="status-json"></div>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="json-out" style="margin-top:1rem;">Result</label>
+    <textarea id="json-out" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.9rem;font-family:monospace;resize:vertical;" readonly aria-label="Formatted JSON result"></textarea>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Paste your JSON</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Drop in the text you want to check or tidy up.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Format or minify</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Choose an indent width, or collapse everything to one line.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy the result</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Invalid JSON is reported with the exact line and column.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/"><span class="icon">&#9999;&#65039;</span><div class="info"><h3>Text Tools</h3><p>Word count, Base64, case conversion</p></div></a>
+      <a class="related-card" href="/text/hash-generator.html"><span class="icon">&#128273;</span><div class="info"><h3>Hash Generator</h3><p>MD5, SHA-1, SHA-256</p></div></a>
+      <a class="related-card" href="/text/uuid-generator.html"><span class="icon">&#127380;</span><div class="info"><h3>UUID Generator</h3><p>Version 4 identifiers</p></div></a>
+      <a class="related-card" href="/units/number-base.html"><span class="icon">&#128290;</span><div class="info"><h3>Number Base</h3><p>Binary, hex, decimal</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What the validator actually checks</h2>
+    <p>JSON is a stricter format than most people expect, and nearly every "invalid JSON" error comes down to one of five things. Trailing commas after the last item in an object or array are not allowed, even though most programming languages tolerate them. Keys must be wrapped in double quotes — <code>{name: "x"}</code> is JavaScript, not JSON. Single quotes are never valid, for keys or values. Comments do not exist in the specification, so a <code>//</code> line will fail. And <code>NaN</code>, <code>Infinity</code> and <code>undefined</code> are not JSON values, which is why serialising certain JavaScript objects produces output that cannot be parsed back.</p>
+    <p>This tool parses with the browser's own JSON engine, so it accepts exactly what your code will accept — no more and no less. If it validates here, <code>JSON.parse()</code> will succeed in any environment.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Formatting versus minifying</h2>
+    <p>Formatting adds newlines and indentation so the structure is readable. It changes nothing about the data: the parsed result is identical either way, since whitespace between tokens carries no meaning in JSON. Use it when reading an API response or diffing two payloads, where consistent indentation makes changes obvious.</p>
+    <p>Minifying strips every optional space and newline. For a typical configuration file this saves 15-30% of the bytes, which matters for anything sent over a network on every request. It is worth remembering that gzip or brotli compression, which almost every server applies, already removes most of that redundancy — so minifying JSON that is served compressed gains far less than the raw byte count suggests.</p>
+    <p>One practical note: key order is preserved exactly as written. JSON objects are unordered by specification, but every mainstream parser keeps insertion order, so formatting will not shuffle your keys.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Why does my JSON fail with "Unexpected token"?<span class="arrow">&#9660;</span></button><div class="faq-a">Almost always a trailing comma, a single quote, or an unquoted key. The error message here includes the line and column, which narrows it down immediately. Watch particularly for a comma after the final element of an array or object.</div></div>
+    <div class="faq-item"><button class="faq-q">Are comments allowed in JSON?<span class="arrow">&#9660;</span></button><div class="faq-a">No. The specification has no comment syntax, so a // or /* */ line makes the document invalid. Formats such as JSON5 and JSONC add comments, but standard parsers reject them. If you need annotation, add a regular key like "_comment".</div></div>
+    <div class="faq-item"><button class="faq-q">Does formatting change my data?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Whitespace between tokens has no meaning in JSON, so the parsed result is byte-for-byte equivalent. Key order is preserved as written.</div></div>
+    <div class="faq-item"><button class="faq-q">Is my data uploaded anywhere?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Parsing uses your browser's built-in JSON engine and the text never leaves the page. That matters when the payload contains tokens, personal data or anything else you would not paste into a random website.</div></div>
+    <div class="faq-item"><button class="faq-q">How large a document can it handle?<span class="arrow">&#9660;</span></button><div class="faq-a">Several megabytes without trouble. The limit is browser memory rather than an imposed cap. Very large documents may take a moment to re-render in the output box.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function parseJson(t){ return JSON.parse(t); }
+function showErr(e,text){
+  const m=String(e.message||e);
+  let msg=m.replace(/ in JSON at position \d+/,'');
+  if(!/line \d+/i.test(msg)){
+    const pm=m.match(/position (\d+)/);
+    if(pm){ const pos=parseInt(pm[1]); const upto=text.slice(0,pos);
+      msg+=' (line '+upto.split('\n').length+', column '+(pos-upto.lastIndexOf('\n'))+')'; }
+  }
+  showStatus('status-json','error','Invalid JSON: '+msg);
+}
+function doFormat(){
+  const t=document.getElementById('json-in').value.trim();
+  if(!t){showStatus('status-json','error','Paste some JSON first.');return;}
+  try{ const raw=document.getElementById('json-indent').value; const ind=raw==='\\t'?'\t':parseInt(raw);
+    document.getElementById('json-out').value=JSON.stringify(parseJson(t),null,ind);
+    showStatus('status-json','success','Valid JSON — formatted.');
+  }catch(e){ document.getElementById('json-out').value=''; showErr(e,t); }
+}
+function doMinify(){
+  const t=document.getElementById('json-in').value.trim();
+  if(!t){showStatus('status-json','error','Paste some JSON first.');return;}
+  try{ const out=JSON.stringify(parseJson(t));
+    document.getElementById('json-out').value=out;
+    const saved=t.length?Math.round((1-out.length/t.length)*100):0;
+    showStatus('status-json','success', saved>0
+      ? 'Valid JSON — minified, '+saved+'% smaller ('+t.length+' to '+out.length+' characters).'
+      : 'Valid JSON — already minified, nothing to strip.');
+  }catch(e){ document.getElementById('json-out').value=''; showErr(e,t); }
+}
+function copyJson(){
+  const v=document.getElementById('json-out').value;
+  if(!v){showStatus('status-json','error','Nothing to copy yet.');return;}
+  navigator.clipboard.writeText(v).then(()=>showStatus('status-json','success','Copied to clipboard.')).catch(()=>showStatus('status-json','error','Copy failed.'));
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

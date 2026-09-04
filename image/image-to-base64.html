@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Image to Base64 Converter – Data URI | OneConvert</title>
+  <meta name="description" content="Convert an image to a Base64 data URI for CSS or HTML. Get the raw string, an img tag or a CSS background rule. Runs entirely in your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/image/image-to-base64.html"/>
+  <meta property="og:title" content="Free Image to Base64 Converter – Data URI | OneConvert"/>
+  <meta property="og:description" content="Convert an image to a Base64 data URI for CSS or HTML. Get the raw string, an img tag or a CSS background rule. Runs entirely in your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/image/image-to-base64.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free Image to Base64 Converter – Data URI | OneConvert"/>
+  <meta name="twitter:description" content="Convert an image to a Base64 data URI for CSS or HTML. Get the raw string, an img tag or a CSS background rule. Runs entirely in your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Image to Base64 Converter","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert an image to a Base64 data URI for CSS or HTML. Get the raw string, an img tag or a CSS background rule. Runs entirely in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"https://oneconvert.net/image/"},{"@type":"ListItem","position":3,"name":"Image to Base64 Converter","item":"https://oneconvert.net/image/image-to-base64.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much bigger does Base64 make my image?","acceptedAnswer":{"@type":"Answer","text":"About 33% larger, because every three bytes become four ASCII characters. A 3 KB icon becomes roughly 4 KB of text."}},{"@type":"Question","name":"When should I inline an image instead of linking it?","acceptedAnswer":{"@type":"Answer","text":"For small assets needed immediately — under roughly 5 KB. Inlining removes a network request, which often outweighs the extra bytes. Above that, a linked file is better because it can be cached separately and loaded in parallel."}},{"@type":"Question","name":"Can I use a data URI in CSS?","acceptedAnswer":{"@type":"Answer","text":"Yes: background-image: url(\"data:image/png;base64,...\"). Choose the CSS output above and the rule is generated for you. Keep it small — a large data URI in a stylesheet delays every style on the page."}},{"@type":"Question","name":"Should I Base64 an SVG?","acceptedAnswer":{"@type":"Answer","text":"Usually not. SVG is text, so you can paste the markup straight into your HTML, which is smaller than encoding it and lets CSS style the shapes. Base64 for SVG only makes sense inside a CSS url() value."}},{"@type":"Question","name":"Is the image uploaded to convert it?","acceptedAnswer":{"@type":"Answer","text":"No. Encoding uses the FileReader API in your browser and the result never leaves the page."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/image/">Image Tools</a><span>&rsaquo;</span><span>Image to Base64 Converter</span></div>
+  <div class="tool-page-header">
+    <h1>Free Image to Base64 Converter</h1>
+    <p>Turn an image into a data URI you can paste straight into CSS or HTML.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">A data URI embeds an image directly in your markup or stylesheet instead of loading it from a separate file. That removes one network request, which is worth doing for small icons and inline SVGs. Drop an image here to get the raw Base64 string, a ready-made img tag and a CSS background rule — all produced in your browser.</p>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone" tabindex="0" role="button" aria-label="Choose an image">
+      <div class="dropzone-icon">&#128196;</div>
+      <p><strong>Click to select</strong> or drag &amp; drop an image here</p>
+      <small>PNG, JPG, WebP, GIF or SVG &middot; best under 10 KB</small>
+    </div>
+    <input type="file" id="file-input" accept="image/*" style="display:none;" aria-label="Choose an image file"/>
+    <div id="b64-area" style="display:none;margin-top:1rem;">
+      <div style="text-align:center;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+        <img id="b64-preview" alt="Preview of the selected image" style="max-width:100%;max-height:180px;border-radius:6px;"/>
+        <p id="b64-info" style="color:var(--muted);font-size:0.82rem;margin-top:0.5rem;"></p>
+      </div>
+      <div class="input-row" style="margin-top:1rem;flex-wrap:wrap;gap:0.5rem;">
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" style="margin:0;" for="b64-format">Output</label>
+        <select id="b64-format" onchange="renderB64()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
+          <option value="uri">Data URI</option>
+          <option value="img">HTML &lt;img&gt; tag</option>
+          <option value="css">CSS background</option>
+          <option value="raw">Raw Base64 only</option>
+        </select>
+        <button class="btn btn-outline" onclick="copyB64()" style="width:auto;">Copy</button>
+      </div>
+      <textarea id="b64-out" style="width:100%;min-height:130px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.82rem;font-family:monospace;resize:vertical;word-break:break-all;" readonly aria-label="Base64 output" style="margin-top:0.75rem;"></textarea>
+    </div>
+    <div class="status" id="status-b64"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select an image</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Small files work best — icons, logos, sprites.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick an output form</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Data URI, img tag, CSS rule or the raw string.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy and paste</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Nothing is uploaded; encoding happens locally.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/image/"><span class="icon">&#128444;&#65039;</span><div class="info"><h3>Image Tools</h3><p>All image converters</p></div></a>
+      <a class="related-card" href="/image/rotate.html"><span class="icon">&#128260;</span><div class="info"><h3>Rotate Image</h3><p>Turn and flip pictures</p></div></a>
+      <a class="related-card" href="/image/resize.html"><span class="icon">&#8596;&#65039;</span><div class="info"><h3>Resize Image</h3><p>Exact pixel dimensions</p></div></a>
+      <a class="related-card" href="/text/"><span class="icon">&#9999;&#65039;</span><div class="info"><h3>Text Tools</h3><p>Base64 for text, word count</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What a data URI costs you</h2>
+    <p>Base64 represents three bytes of binary as four ASCII characters, so the encoded form is <strong>about 33% larger</strong> than the file it came from. A 3 KB icon becomes roughly 4 KB of text. That is the price of avoiding a separate HTTP request.</p>
+    <p>For small assets the trade is usually worth it: one fewer round trip often saves more time than the extra bytes cost, particularly on high-latency mobile connections. The rough threshold most teams settle on is a few kilobytes — under about 5 KB, inline; above that, a normal file reference.</p>
+    <p>Beyond that size the maths turns against you quickly. A 100 KB photo becomes 133 KB of text embedded in your HTML or CSS, which means it can no longer be cached separately, cannot be loaded in parallel with other resources, and is re-downloaded in full every time the containing file changes. Worse, it blocks rendering: a large data URI in your stylesheet delays every style on the page until it has downloaded.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Where inlining genuinely helps</h2>
+    <p>The clearest case is a small image needed before first paint — a logo in the header, an icon in a critical UI element. Inlining it removes a request from the critical path, so it appears with the rest of the page rather than a moment later.</p>
+    <p>It also helps for single-file deliverables. An HTML email, a self-contained report, a document that must survive being emailed around — none of those can rely on external image files. Embedding is the only way the picture travels with the page.</p>
+    <p>Two things worth knowing. SVGs do not need Base64 at all: because they are text, you can inline the markup directly in your HTML, which is smaller than encoding it and lets CSS style the shapes. And a data URI is not a security boundary — it is trivially decoded, so it hides nothing. If you are embedding an image to obscure its source, it does not work.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How much bigger does Base64 make my image?<span class="arrow">&#9660;</span></button><div class="faq-a">About 33% larger, because every three bytes become four ASCII characters. A 3 KB icon becomes roughly 4 KB of text.</div></div>
+    <div class="faq-item"><button class="faq-q">When should I inline an image instead of linking it?<span class="arrow">&#9660;</span></button><div class="faq-a">For small assets needed immediately — under roughly 5 KB. Inlining removes a network request, which often outweighs the extra bytes. Above that, a linked file is better because it can be cached separately and loaded in parallel.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I use a data URI in CSS?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes: background-image: url("data:image/png;base64,..."). Choose the CSS output above and the rule is generated for you. Keep it small — a large data URI in a stylesheet delays every style on the page.</div></div>
+    <div class="faq-item"><button class="faq-q">Should I Base64 an SVG?<span class="arrow">&#9660;</span></button><div class="faq-a">Usually not. SVG is text, so you can paste the markup straight into your HTML, which is smaller than encoding it and lets CSS style the shapes. Base64 for SVG only makes sense inside a CSS url() value.</div></div>
+    <div class="faq-item"><button class="faq-q">Is the image uploaded to convert it?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Encoding uses the FileReader API in your browser and the result never leaves the page.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+let b64Data='', b64Mime='image/png', b64File='image.png', b64Size=0;
+document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-zone','file-input',f=>loadB64(f[0])));
+function loadB64(file){
+  if(!file||!file.type.startsWith('image/')){showStatus('status-b64','error','Please choose an image file.');return;}
+  b64Mime=file.type; b64File=file.name; b64Size=file.size;
+  const fr=new FileReader();
+  fr.onload=()=>{
+    b64Data=fr.result;                       // vollstaendige data:-URI
+    document.getElementById('b64-preview').src=b64Data;
+    document.getElementById('b64-area').style.display='block';
+    const b64only=(b64Data.split(',')[1]||'').length;   // ohne data:-Praefix
+    const grow=Math.round((b64only/file.size-1)*100);
+    document.getElementById('b64-info').textContent=
+      file.name+' · '+formatBytes(file.size)+' → '+formatBytes(b64only)+' of Base64 (+'+grow+'%), '
+      +formatBytes(b64Data.length)+' as a full data URI';
+    renderB64();
+    showStatus('status-b64', file.size>10240?'info':'success',
+      file.size>10240
+        ? 'That is '+formatBytes(file.size)+'. Inlining works best under about 5 KB — above that a linked file is usually faster.'
+        : 'Encoded '+formatBytes(file.size)+' — a good size for inlining.');
+  };
+  fr.onerror=()=>showStatus('status-b64','error','Could not read that file.');
+  fr.readAsDataURL(file);
+}
+function renderB64(){
+  if(!b64Data)return;
+  const mode=document.getElementById('b64-format').value;
+  const alt=b64File.replace(/\.[^.]+$/,'').replace(/[-_]/g,' ');
+  let out=b64Data;
+  if(mode==='img')      out='<img src="'+b64Data+'" alt="'+alt+'">';
+  else if(mode==='css') out='background-image: url("'+b64Data+'");';
+  else if(mode==='raw') out=b64Data.split(',')[1]||'';
+  document.getElementById('b64-out').value=out;
+}
+function copyB64(){
+  const v=document.getElementById('b64-out').value;
+  if(!v){showStatus('status-b64','error','Choose an image first.');return;}
+  navigator.clipboard.writeText(v).then(()=>showStatus('status-b64','success','Copied '+formatBytes(v.length)+' to clipboard.'));
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>
