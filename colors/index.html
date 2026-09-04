@@ -26,7 +26,6 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Color Tools","item":"https://oneconvert.net/colors/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Color Tools","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert HEX to RGB?","acceptedAnswer":{"@type":"Answer","text":"Enter a HEX code (e.g. #FF5733) in the HEX field and the RGB and HSL values appear instantly. You can also paste without the # symbol."}},{"@type":"Question","name":"What is a WCAG contrast ratio?","acceptedAnswer":{"@type":"Answer","text":"WCAG (Web Content Accessibility Guidelines) defines minimum contrast ratios between text and background colours to ensure readability. AA level requires 4.5:1 for normal text, AAA requires 7:1. The contrast checker shows your ratio and whether it passes each level."}},{"@type":"Question","name":"What does HSL stand for?","acceptedAnswer":{"@type":"Answer","text":"HSL stands for Hue, Saturation, Lightness. Hue is the colour angle (0–360°), Saturation is how vivid the colour is (0–100%), and Lightness controls how light or dark it is (0–100%). HSL is often more intuitive for designers than RGB."}},{"@type":"Question","name":"What is a complementary colour?","acceptedAnswer":{"@type":"Answer","text":"A complementary colour sits directly opposite on the colour wheel (180° away). Complementary pairs create high contrast and visual energy. The palette generator also offers analogous (adjacent colours) and triadic (120° apart) schemes."}},{"@type":"Question","name":"Can I copy the colour values?","acceptedAnswer":{"@type":"Answer","text":"Yes — click any colour value or palette swatch to copy it to your clipboard immediately."}}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert HEX to RGB?","acceptedAnswer":{"@type":"Answer","text":"Enter a HEX code (e.g. #FF5733) in the HEX field and the RGB and HSL values appear instantly. You can also paste without the # symbol."}},{"@type":"Question","name":"What is a WCAG contrast ratio?","acceptedAnswer":{"@type":"Answer","text":"WCAG (Web Content Accessibility Guidelines) defines minimum contrast ratios between text and background colours to ensure readability. AA level requires 4.5:1 for normal text, AAA requires 7:1. The contrast checker shows your ratio and whether it passes each level."}},{"@type":"Question","name":"What does HSL stand for?","acceptedAnswer":{"@type":"Answer","text":"HSL stands for Hue, Saturation, Lightness. Hue is the colour angle (0–360°), Saturation is how vivid the colour is (0–100%), and Lightness controls how light or dark it is (0–100%). HSL is often more intuitive for designers than RGB."}},{"@type":"Question","name":"What is a complementary colour?","acceptedAnswer":{"@type":"Answer","text":"A complementary colour sits directly opposite on the colour wheel (180° away). Complementary pairs create high contrast and visual energy. The palette generator also offers analogous (adjacent colours) and triadic (120° apart) schemes."}},{"@type":"Question","name":"Can I copy the colour values?","acceptedAnswer":{"@type":"Answer","text":"Yes — click any colour value or palette swatch to copy it to your clipboard immediately."}}]}</script>
 </head>
 <body>
 <nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
@@ -77,7 +76,7 @@
 
   <!-- Contrast Checker -->
   <div id="color-contrast" class="tool-box" style="display:none;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
       <div>
         <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;">Foreground (Text)</label>
         <div style="display:flex;gap:0.75rem;align-items:center;">
@@ -97,7 +96,7 @@
       <div style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:#fff;" id="preview-lg">Large Text Sample (18pt+)</div>
       <div style="font-size:0.9rem;color:#fff;margin-top:0.5rem;" id="preview-sm">Normal text sample for readability testing.</div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1rem;">
       <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center;">
         <div style="font-family:Syne,sans-serif;font-size:1.8rem;font-weight:800;" id="ratio-val">—</div>
         <div style="font-size:0.78rem;color:var(--muted);">Contrast Ratio</div>
@@ -120,7 +119,7 @@
       <div class="unit-input-group"><label>Mode</label><select id="pal-mode" onchange="genPalette()"><option value="shades">Shades</option><option value="complementary">Complementary</option><option value="triadic">Triadic</option><option value="analogous">Analogous</option></select></div>
       <button class="btn btn-sm" onclick="genPalette()">Generate</button>
     </div>
-    <div id="palette-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:0.5rem;"></div>
+    <div id="palette-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,64px),1fr));gap:0.5rem;"></div>
   </div>
 
   <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">

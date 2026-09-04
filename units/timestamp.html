@@ -29,7 +29,6 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Unix Timestamp Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"Unit Converter","item":"https://oneconvert.net/units/"},{"@type":"ListItem","position":3,"name":"Timestamp Converter","item":"https://oneconvert.net/units/timestamp.html"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a Unix timestamp?","acceptedAnswer":{"@type":"Answer","text":"A Unix timestamp is the number of seconds since January 1, 1970, 00:00:00 UTC. It is the standard way to represent time in programming, databases and APIs."}},{"@type":"Question","name":"What is the current Unix timestamp?","acceptedAnswer":{"@type":"Answer","text":"The current timestamp is shown live at the top of this page and updates every second. Click \"Now\" to use it as a conversion input."}},{"@type":"Question","name":"How do I convert epoch to date?","acceptedAnswer":{"@type":"Answer","text":"Enter the Unix timestamp in the \"Timestamp → Date\" field and the date appears instantly in local time, UTC and ISO 8601 format."}},{"@type":"Question","name":"What is the difference between seconds and milliseconds timestamps?","acceptedAnswer":{"@type":"Answer","text":"Standard Unix timestamps are in seconds (10 digits). JavaScript and many APIs use milliseconds (13 digits). To convert: divide milliseconds by 1000 to get seconds."}},{"@type":"Question","name":"What is Y2K38?","acceptedAnswer":{"@type":"Answer","text":"Y2K38 refers to the moment on January 19, 2038 when 32-bit Unix timestamps overflow their maximum value (2,147,483,647). Systems still using signed 32-bit integers for time storage may break at that point. Modern 64-bit systems are not affected."}},{"@type":"Question","name":"What is ISO 8601 format?","acceptedAnswer":{"@type":"Answer","text":"ISO 8601 is an international standard for representing dates and times, e.g. 2024-06-01T12:00:00Z. The Z at the end means UTC. It is widely used in APIs and data exchange formats."}}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a Unix timestamp?","acceptedAnswer":{"@type":"Answer","text":"A Unix timestamp is the number of seconds since January 1, 1970, 00:00:00 UTC. It is the standard way to represent time in programming, databases and APIs."}},{"@type":"Question","name":"What is the current Unix timestamp?","acceptedAnswer":{"@type":"Answer","text":"The current timestamp is shown live at the top of this page and updates every second. Click \"Now\" to use it as a conversion input."}},{"@type":"Question","name":"How do I convert epoch to date?","acceptedAnswer":{"@type":"Answer","text":"Enter the Unix timestamp in the \"Timestamp → Date\" field and the date appears instantly in local time, UTC and ISO 8601 format."}},{"@type":"Question","name":"What is the difference between seconds and milliseconds timestamps?","acceptedAnswer":{"@type":"Answer","text":"Standard Unix timestamps are in seconds (10 digits). JavaScript and many APIs use milliseconds (13 digits). To convert: divide milliseconds by 1000 to get seconds."}},{"@type":"Question","name":"What is Y2K38?","acceptedAnswer":{"@type":"Answer","text":"Y2K38 refers to the moment on January 19, 2038 when 32-bit Unix timestamps overflow their maximum value (2,147,483,647). Systems still using signed 32-bit integers for time storage may break at that point. Modern 64-bit systems are not affected."}},{"@type":"Question","name":"What is ISO 8601 format?","acceptedAnswer":{"@type":"Answer","text":"ISO 8601 is an international standard for representing dates and times, e.g. 2024-06-01T12:00:00Z. The Z at the end means UTC. It is widely used in APIs and data exchange formats."}}]}</script>
 </head>
 <body>
 <nav>
@@ -76,7 +75,7 @@
         </div>
         <button onclick="useNow()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--muted);padding:0.6rem 1rem;cursor:pointer;font-size:0.82rem;white-space:nowrap;height:40px;">Now</button>
       </div>
-      <div id="ts-results" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+      <div id="ts-results" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0.6rem;">
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Local time</div>
           <div id="ts-local" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
@@ -105,7 +104,7 @@
           <input type="datetime-local" id="date-input" oninput="dateToTs()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.75rem;font-size:0.95rem;"/>
         </div>
       </div>
-      <div id="date-result" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+      <div id="date-result" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0.6rem;">
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Unix timestamp</div>
           <div id="date-ts" style="font-family:Syne,sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent2);cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
@@ -206,7 +205,9 @@ function relativeTime(ts){
   if(abs<86400)return (future?'in ':'')+Math.floor(abs/3600)+' hr'+(future?'':' ago');
   if(abs<604800)return (future?'in ':'')+Math.floor(abs/86400)+' day'+(abs/86400>=2?'s':'')+(future?'':' ago');
   if(abs<2592000)return (future?'in ':'')+Math.floor(abs/604800)+' week'+(abs/604800>=2?'s':'')+(future?'':' ago');
-  return new Date(ts*1000).toLocaleDateString();
+  if(abs<31536000){const m=Math.floor(abs/2592000);return (future?'in ':'')+m+' month'+(m>=2?'s':'')+(future?'':' ago');}
+  const y=Math.floor(abs/31536000);
+  return (future?'in ':'')+y+' year'+(y>=2?'s':'')+(future?'':' ago');
 }
 
 function tsToDate(){
