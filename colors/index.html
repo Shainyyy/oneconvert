@@ -26,6 +26,13 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Color Tools","item":"https://oneconvert.net/colors/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Color Tools","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert HEX to RGB?","acceptedAnswer":{"@type":"Answer","text":"Enter a HEX code (e.g. #FF5733) in the HEX field and the RGB and HSL values appear instantly. You can also paste without the # symbol."}},{"@type":"Question","name":"What is a WCAG contrast ratio?","acceptedAnswer":{"@type":"Answer","text":"WCAG (Web Content Accessibility Guidelines) defines minimum contrast ratios between text and background colours to ensure readability. AA level requires 4.5:1 for normal text, AAA requires 7:1. The contrast checker shows your ratio and whether it passes each level."}},{"@type":"Question","name":"What does HSL stand for?","acceptedAnswer":{"@type":"Answer","text":"HSL stands for Hue, Saturation, Lightness. Hue is the colour angle (0–360°), Saturation is how vivid the colour is (0–100%), and Lightness controls how light or dark it is (0–100%). HSL is often more intuitive for designers than RGB."}},{"@type":"Question","name":"What is a complementary colour?","acceptedAnswer":{"@type":"Answer","text":"A complementary colour sits directly opposite on the colour wheel (180° away). Complementary pairs create high contrast and visual energy. The palette generator also offers analogous (adjacent colours) and triadic (120° apart) schemes."}},{"@type":"Question","name":"Can I copy the colour values?","acceptedAnswer":{"@type":"Answer","text":"Yes — click any colour value or palette swatch to copy it to your clipboard immediately."}}]}</script>
+  <meta property="og:title" content="Free Color Converter – HEX, RGB, HSL | OneConvert"/>
+  <meta property="og:description" content="Free online color converter. Convert HEX to RGB, RGB to HSL and more. Check contrast ratios, generate palettes and create gradients instantly."/>
+  <meta property="og:url" content="https://oneconvert.net/colors/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:title" content="Free Color Converter – HEX, RGB, HSL | OneConvert"/>
+  <meta name="twitter:description" content="Free online color converter. Convert HEX to RGB, RGB to HSL and more. Check contrast ratios, generate palettes and create gradients instantly."/>
 </head>
 <body>
 <nav><a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
@@ -122,11 +129,11 @@
     <div id="palette-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,64px),1fr));gap:0.5rem;"></div>
   </div>
 
-  <div class="related-tools"><h3>Related Tools</h3><div class="related-grid">
-      <a class="related-card" href="/units/css-units.html"><span class="icon">🖥️</span><div class="info"><h4>CSS Unit Converter</h4><p>px to rem, em, vh, vw</p></div></a>
-    <a class="related-card" href="/text/"><span class="icon">✏️</span><div class="info"><h4>Text Tools</h4><p>Word count, case convert</p></div></a>
-    <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress Image</h4><p>Reduce file size</p></div></a>
-    <a class="related-card" href="/qr/"><span class="icon">📱</span><div class="info"><h4>QR Generator</h4><p>Create QR codes</p></div></a>
+  <div class="related-tools"><h2>Related Tools</h2><div class="related-grid">
+      <a class="related-card" href="/units/css-units.html"><span class="icon">🖥️</span><div class="info"><h3>CSS Unit Converter</h3><p>px to rem, em, vh, vw</p></div></a>
+    <a class="related-card" href="/text/"><span class="icon">✏️</span><div class="info"><h3>Text Tools</h3><p>Word count, case convert</p></div></a>
+    <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h3>Compress Image</h3><p>Reduce file size</p></div></a>
+    <a class="related-card" href="/qr/"><span class="icon">📱</span><div class="info"><h3>QR Generator</h3><p>Create QR codes</p></div></a>
   </div></div>
   <div class="info-section">
     <h2>Free Online Colour Tools for Designers and Developers</h2>
@@ -152,7 +159,7 @@
 
 </div>
 
-<footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/units/">Units</a><a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
+<footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/units/">Units</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
 <script src="../js/common.js"></script>
 <script>
   function setColorTool(t,btn){document.querySelectorAll('.unit-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['convert','contrast','palette'].forEach(id=>document.getElementById('color-'+id).style.display=id===t?'block':'none');}

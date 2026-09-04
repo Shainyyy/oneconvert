@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OneConvert – Free Online Converter Tools | PDF, Image, QR, Units & More</title>
-  <meta name="description" content="Free browser-based converter tools — convert PDF, images, QR codes, units, text and colors. No upload, no account, no limits. Everything runs locally in your browser."/>
+  <title>OneConvert – Free Online Converter Tools for PDF & Images</title>
+  <meta name="description" content="Free online converter tools for PDF, images, QR codes and units. No upload, no account, no limits — everything runs in your browser."/>
   <meta name="keywords" content="free online converter, PDF converter, image converter, QR code generator, unit converter, text tools, color converter, browser based tools, no upload converter"/>
   <link rel="canonical" href="https://oneconvert.net/"/>
   <meta property="og:title" content="OneConvert – Free Online Converter Tools"/>
@@ -43,6 +43,10 @@
     }
   }
   </script>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:title" content="OneConvert – Free Online Converter Tools for PDF &amp; Images"/>
+  <meta name="twitter:description" content="Free browser-based converter tools — convert PDF, images, QR codes, units, text and colors. No upload, no account, no limits. Everything runs locally in your browser."/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"OneConvert","url":"https://oneconvert.net/","logo":"https://oneconvert.net/og-image.png","email":"hello@oneconvert.net","sameAs":["https://github.com/Shainyyy/oneconvert"]}</script>
 </head>
 <body>
 
@@ -173,6 +177,26 @@
   </a>
 </div>
 
+<!-- Popular tools: direkte Einstiege, damit jedes Tool einen Klick von der Startseite entfernt ist -->
+<div class="tool-page" style="max-width:1100px;margin:0 auto 2.5rem;padding:0 1.5rem;">
+  <h2 style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.4rem;">Most used tools</h2>
+  <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1rem;">The conversions people reach for most often — each opens directly, with no upload and no account.</p>
+  <div class="related-grid">
+    <a class="related-card" href="/pdf/merge.html"><span class="icon">🔗</span><div class="info"><h3>Merge PDF</h3><p>Combine several PDFs into one</p></div></a>
+    <a class="related-card" href="/pdf/split.html"><span class="icon">✂️</span><div class="info"><h3>Split PDF</h3><p>Extract a page range</p></div></a>
+    <a class="related-card" href="/pdf/compress.html"><span class="icon">📦</span><div class="info"><h3>Compress PDF</h3><p>Strip metadata, repack objects</p></div></a>
+    <a class="related-card" href="/pdf/pdf-to-word.html"><span class="icon">📝</span><div class="info"><h3>PDF to Word</h3><p>Editable .docx from a text PDF</p></div></a>
+    <a class="related-card" href="/pdf/rotate.html"><span class="icon">🔄</span><div class="info"><h3>Rotate PDF</h3><p>Fix sideways scanned pages</p></div></a>
+    <a class="related-card" href="/pdf/watermark.html"><span class="icon">💧</span><div class="info"><h3>Watermark PDF</h3><p>Stamp DRAFT or CONFIDENTIAL</p></div></a>
+    <a class="related-card" href="/image/heic-to-jpg.html"><span class="icon">🍎</span><div class="info"><h3>HEIC to JPG</h3><p>iPhone photos anything can open</p></div></a>
+    <a class="related-card" href="/image/compress.html"><span class="icon">🗜️</span><div class="info"><h3>Compress Image</h3><p>Smaller files with live preview</p></div></a>
+    <a class="related-card" href="/image/resize.html"><span class="icon">↔️</span><div class="info"><h3>Resize Image</h3><p>Exact pixel dimensions</p></div></a>
+    <a class="related-card" href="/image/png-to-jpg.html"><span class="icon">🔄</span><div class="info"><h3>PNG to JPG</h3><p>Much smaller photo files</p></div></a>
+    <a class="related-card" href="/image/png-to-webp.html"><span class="icon">⚡</span><div class="info"><h3>PNG to WebP</h3><p>Transparency at a fraction of the size</p></div></a>
+    <a class="related-card" href="/units/timestamp.html"><span class="icon">🕐</span><div class="info"><h3>Unix Timestamp</h3><p>Epoch to date and back</p></div></a>
+  </div>
+</div>
+
 <!-- Features Strip -->
 <div class="features-strip">
   <div class="feature-item"><div class="feature-icon">🔒</div><h4>100% Private</h4><p>Files stay on your device</p></div>
@@ -269,6 +293,7 @@
 <script src="js/consent.js"></script>
 <script>
 // ── Tool Search ──
+document.addEventListener('DOMContentLoaded',function(){var q=new URLSearchParams(location.search).get('q');if(!q)return;var i=document.getElementById('tool-search');if(i){i.value=q;filterTools(q);}});
 function filterTools(q){
   q=q.toLowerCase().trim();
   document.querySelectorAll('.category-card').forEach(card=>{

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free HEIC to JPG Converter Online – iPhone Photos | OneConvert</title>
+  <title>Free HEIC to JPG Converter – iPhone Photos | OneConvert</title>
   <meta name="description" content="Convert iPhone HEIC photos to JPG online for free. No upload, no registration, no file size limit. Your image never leaves your device."/>
   <meta name="keywords" content="heic to jpg converter, convert heic to jpeg free, iphone heic to jpg online, heic converter no upload"/>
   <link rel="canonical" href="https://oneconvert.net/image/heic-to-jpg.html"/>
@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../css/style.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
   <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
@@ -35,6 +35,11 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"https://oneconvert.net/image/"},{"@type":"ListItem","position":3,"name":"HEIC to JPG","item":"https://oneconvert.net/image/heic-to-jpg.html"}]}
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why will my HEIC file not open on Windows?","acceptedAnswer":{"@type":"Answer","text":"Windows 10 and 11 need the HEIF Image Extensions from the Microsoft Store to decode the container, and a separate HEVC Video Extensions package to decode the picture data inside it — the latter is usually a paid item. Converting to JPG avoids both dependencies entirely."}},{"@type":"Question","name":"How much quality is lost converting HEIC to JPG?","acceptedAnswer":{"@type":"Answer","text":"Very little that is visible. This tool encodes at high JPEG quality, so compression artefacts are hard to spot at normal viewing sizes. The real losses are structural: 16-bit colour depth drops to 8-bit, transparency is flattened onto white, and depth maps are discarded. For heavy editing or grading, keep the HEIC as your master."}},{"@type":"Question","name":"Why is my converted JPG larger than the HEIC?","acceptedAnswer":{"@type":"Answer","text":"That is expected. HEIC uses HEVC compression, which is roughly twice as efficient as JPEG for the same perceived quality — so a JPG of equivalent quality is normally one and a half to two times the size. Run the result through the image compressor if size matters more than fidelity."}},{"@type":"Question","name":"What happens to a Live Photo?","acceptedAnswer":{"@type":"Answer","text":"Only the primary still frame is converted. The paired video sequence is not part of the JPEG format and is dropped. If you need a specific frame from the motion part, choose it in the Photos app first (Edit → select key photo), then convert."}},{"@type":"Question","name":"Will my photo come out rotated the wrong way?","acceptedAnswer":{"@type":"Answer","text":"No. iPhones store a rotation flag in EXIF rather than rotating pixels, and some converters ignore it. This tool renders the image after the browser has applied that orientation, so the JPG matches what you see in Photos."}},{"@type":"Question","name":"Can I convert several HEIC files at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Select or drag multiple .heic or .heif files and each is converted and downloaded separately. Processing runs sequentially in your browser, so large batches take proportionally longer."}},{"@type":"Question","name":"Are my photos uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Decoding runs locally through the heic2any library and the Canvas API. Your photos are read into browser memory and never sent to a server — the tool has no backend that could receive them."}},{"@type":"Question","name":"How do I stop my iPhone creating HEIC files?","acceptedAnswer":{"@type":"Answer","text":"Open Settings → Camera → Formats and select \"Most Compatible\". The camera then writes JPEG directly, using roughly twice the storage per photo. This applies only to new pictures; your existing library stays HEIC."}}]}</script>
+  <meta property="og:url" content="https://oneconvert.net/image/heic-to-jpg.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:title" content="Free HEIC to JPG Converter – iPhone Photos | OneConvert"/>
+  <meta name="twitter:description" content="Convert iPhone HEIC photos to JPG online for free. No upload, no registration, no file size limit. Your image never leaves your device."/>
 </head>
 <body>
 <nav>
@@ -96,6 +101,7 @@
 
   <!-- Rectangle Ad under download -->
 
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
       <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
@@ -115,12 +121,12 @@
   </div>
   <!-- Related Tools -->
   <div class="related-tools">
-    <h3>Related Tools</h3>
+    <h2>Related Tools</h2>
     <div class="related-grid">
-      <a class="related-card" href="/image/png-to-jpg.html"><span class="icon">🔄</span><div class="info"><h4>PNG to JPG</h4><p>Convert PNG to JPEG</p></div></a>
-      <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h4>Compress Image</h4><p>Reduce image file size</p></div></a>
-      <a class="related-card" href="/image/webp-to-jpg.html"><span class="icon">🔄</span><div class="info"><h4>WebP to JPG</h4><p>Convert WebP images</p></div></a>
-      <a class="related-card" href="/pdf/"><span class="icon">📄</span><div class="info"><h4>Images to PDF</h4><p>Combine images into PDF</p></div></a>
+      <a class="related-card" href="/image/png-to-jpg.html"><span class="icon">🔄</span><div class="info"><h3>PNG to JPG</h3><p>Convert PNG to JPEG</p></div></a>
+      <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h3>Compress Image</h3><p>Reduce image file size</p></div></a>
+      <a class="related-card" href="/image/webp-to-jpg.html"><span class="icon">🔄</span><div class="info"><h3>WebP to JPG</h3><p>Convert WebP images</p></div></a>
+      <a class="related-card" href="/pdf/"><span class="icon">📄</span><div class="info"><h3>Images to PDF</h3><p>Combine images into PDF</p></div></a>
     </div>
   </div>
 
@@ -158,7 +164,7 @@
   <div class="footer-links">
     <a href="/">Home</a><a href="/image/">Image Tools</a><a href="/pdf/">PDF Tools</a>
     <a href="/qr/">QR Code</a><a href="/units/">Units</a>
-    <a href="../about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
     <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </footer>
