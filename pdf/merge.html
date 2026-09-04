@@ -51,6 +51,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Merge PDF</span></div>
   <div class="tool-page-header">
@@ -67,7 +68,7 @@
       <p><strong>Click to add files</strong> or drag & drop PDFs here</p>
       <small>Add as many PDFs as needed · Drag items to reorder</small>
     </div>
-    <input type="file" id="file-input-merge" accept=".pdf" multiple style="display:none;"/>
+    <input type="file" id="file-input-merge" accept=".pdf" multiple style="display:none;" aria-label="Choose PDF files">
     <div class="file-list" id="merge-file-list" style="margin-top:1rem;"></div>
     <button class="btn" id="merge-btn" onclick="doMerge()" disabled style="margin-top:0.5rem;">🔗 Merge & Download</button>
     <div class="status" id="status-merge"></div>
@@ -128,6 +129,7 @@
     <div class="faq-item"><button class="faq-q">Will the merged PDF keep bookmarks and links?<span class="arrow">▼</span></button><div class="faq-a">Basic page content, links and most internal bookmarks are preserved. Complex interactive elements may vary.</div></div>
   </div>
 </div>
+</main>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>

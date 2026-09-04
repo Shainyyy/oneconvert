@@ -56,6 +56,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb">
     <a href="/">Home</a><span>›</span><a href="/image/">Image Tools</a><span>›</span><span>JPG to PNG</span>
@@ -76,7 +77,7 @@
       <p><strong>Click to select</strong> or drag & drop your JPG files here</p>
       <small>JPG, JPEG supported · Multiple files allowed · No file size limit</small>
     </div>
-    <input type="file" id="file-input" accept=".jpg,.jpeg,image/jpeg" multiple style="display:none;"/>
+    <input type="file" id="file-input" accept=".jpg,.jpeg,image/jpeg" multiple style="display:none;" aria-label="Choose a file">
 
     <div id="preview-area" style="display:none;">
       <div class="preview-box">
@@ -152,6 +153,7 @@
     <div class="faq-item"><button class="faq-q">Does JPG to PNG conversion improve image quality?<span class="arrow">▼</span></button><div class="faq-a">No — converting from JPG to PNG does not recover quality that was lost during JPG compression. PNG preserves what's there without further loss, but cannot reverse previous compression artifacts.</div></div>
   </div>
 </div>
+</main>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>

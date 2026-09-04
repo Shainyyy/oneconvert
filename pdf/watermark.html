@@ -45,6 +45,7 @@
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Add Watermark</span></div>
   <div class="tool-page-header"><h1>Free Add Watermark to PDF</h1><p>Add custom text watermarks to every page of your PDF — CONFIDENTIAL, DRAFT, or any text. No upload.</p></div>
@@ -57,11 +58,11 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <div id="wm-fname" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
     </div>
-    <input type="file" id="file-input-wm" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-wm" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1rem;margin-top:1.25rem;">
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Watermark text</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="wm-text">Watermark text</label>
         <input type="text" id="wm-text" value="CONFIDENTIAL" placeholder="e.g. DRAFT" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.75rem;"/>
       </div>
       <div>
@@ -75,21 +76,21 @@
       </div>
       <div>
         <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Opacity: <span id="wm-opacity-label">30%</span></label>
-        <input type="range" id="wm-opacity" min="5" max="80" value="30" step="5" style="width:100%;" oninput="document.getElementById('wm-opacity-label').textContent=this.value+'%'"/>
+        <input type="range" id="wm-opacity" aria-label="Watermark opacity" min="5" max="80" value="30" step="5" style="width:100%;" oninput="document.getElementById('wm-opacity-label').textContent=this.value+'%'"/>
       </div>
       <div>
         <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Font size: <span id="wm-size-label">72</span></label>
-        <input type="range" id="wm-size" min="24" max="120" value="72" step="6" style="width:100%;" oninput="document.getElementById('wm-size-label').textContent=this.value"/>
+        <input type="range" id="wm-size" aria-label="Watermark font size" min="24" max="120" value="72" step="6" style="width:100%;" oninput="document.getElementById('wm-size-label').textContent=this.value"/>
       </div>
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Color</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="wm-color">Color</label>
         <div style="display:flex;gap:0.5rem;align-items:center;">
           <input type="color" id="wm-color" value="#ff0000" style="width:44px;height:36px;border-radius:6px;cursor:pointer;border:1px solid var(--border);"/>
           <span style="font-size:0.82rem;color:var(--muted);">Watermark colour</span>
         </div>
       </div>
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Position</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="wm-pos">Position</label>
         <select id="wm-pos" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
           <option value="center">Centre (diagonal)</option>
           <option value="top">Top</option>
@@ -135,6 +136,7 @@
     <div class="faq-item"><button class="faq-q">What text formats work best for watermarks?<span class="arrow">▼</span></button><div class="faq-a">Short, uppercase text in large font with 20-35% opacity works best visually. CONFIDENTIAL, DRAFT and SAMPLE are the most common. Custom text can be any length, but very long text may overlap page edges at the diagonal centre position.</div></div>
   </div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

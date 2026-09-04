@@ -47,6 +47,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Reorder PDF Pages</span></div>
   <div class="tool-page-header"><h1>Free Reorder PDF Pages Online</h1><p>Drag and drop to rearrange pages in any order. Instant result, no upload required.</p></div>
@@ -59,7 +60,7 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <div id="reorder-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
     </div>
-    <input type="file" id="file-input-reorder" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-reorder" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
     <div id="reorder-grid-wrap" style="display:none;margin-top:1rem;">
       <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;">Drag pages to reorder:</p>
       <div class="pages-grid" id="reorder-pages-grid"></div>
@@ -114,6 +115,7 @@
     <div class="faq-item"><button class="faq-q">Will bookmarks be preserved after reordering?<span class="arrow">▼</span></button><div class="faq-a">PDF bookmarks that link to specific page numbers may point to incorrect pages after reordering. The page content itself is fully preserved.</div></div>
   </div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

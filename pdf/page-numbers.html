@@ -35,6 +35,7 @@
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Add Page Numbers</span></div>
   <div class="tool-page-header"><h1>Free Add Page Numbers to PDF</h1><p>Add page numbers to any PDF — choose position, format and start number. No upload, instant.</p></div>
@@ -47,10 +48,10 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <div id="pn-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
     </div>
-    <input type="file" id="file-input-pn" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-pn" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1rem;margin-top:1.25rem;">
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Format</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="pn-format">Format</label>
         <select id="pn-format" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
           <option value="n">1, 2, 3 …</option>
           <option value="page_n">Page 1, Page 2 …</option>
@@ -59,7 +60,7 @@
         </select>
       </div>
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Position</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="pn-pos">Position</label>
         <select id="pn-pos" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
           <option value="bottom-center">Bottom Centre</option>
           <option value="bottom-right">Bottom Right</option>
@@ -70,11 +71,11 @@
         </select>
       </div>
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Start numbering at</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="pn-start">Start numbering at</label>
         <input type="number" id="pn-start" value="1" min="0" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
       </div>
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Font size</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="pn-fontsize">Font size</label>
         <input type="number" id="pn-fontsize" value="11" min="6" max="24" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
       </div>
     </div>
@@ -116,6 +117,7 @@
     <div class="faq-item"><button class="faq-q">Can I add page numbers in a different language?<span class="arrow">▼</span></button><div class="faq-a">The formats available are: 1, Page 1, 1 of 12, and Page 1 of 12. Custom text prefixes in other languages are not currently supported through the interface.</div></div>
   </div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

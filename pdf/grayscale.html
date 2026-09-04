@@ -36,6 +36,7 @@
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>PDF to Grayscale</span></div>
   <div class="tool-page-header"><h1>Free Convert PDF to Grayscale</h1><p>Convert any PDF to black & white — perfect for printing or accessibility. No upload, instant result.</p></div>
@@ -48,10 +49,10 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <div id="gs-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
     </div>
-    <input type="file" id="file-input-gs" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-gs" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1rem;margin-top:1.25rem;">
       <div>
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;">Render scale</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;" for="gs-scale">Render scale</label>
         <select id="gs-scale" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
           <option value="1.5">Standard (1.5x — smaller file)</option>
           <option value="2" selected>High quality (2x)</option>
@@ -101,6 +102,7 @@
     <div class="faq-item"><button class="faq-q">How does the quality scale setting work?<span class="arrow">▼</span></button><div class="faq-a">Higher scale means each page is rendered at higher resolution before being embedded — sharper output but a larger file. Standard (1.5x) suits screen viewing; Print quality (3x) suits high-resolution printing.</div></div>
   </div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

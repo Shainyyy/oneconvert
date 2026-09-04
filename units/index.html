@@ -50,6 +50,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>Unit Converter</span></div>
   <div class="tool-page-header"><h1>📐 Free Unit Converter</h1><p>Convert length, weight, temperature, speed, area, volume and data storage. Instant results with full reference tables.</p></div>
@@ -72,17 +73,17 @@
     <!-- Main converter -->
     <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:end;margin-bottom:1.5rem;">
       <div class="unit-input-group">
-        <label id="from-label">From</label>
+        <label id="from-label" for="from-unit">From</label>
         <select id="from-unit" onchange="convert()" style="margin-bottom:0.5rem;width:100%;"></select>
-        <input type="number" id="from-value" value="1" oninput="convert()" style="width:100%;font-size:1.1rem;font-weight:600;"/>
+        <input type="number" id="from-value" aria-label="Value to convert" value="1" oninput="convert()" style="width:100%;font-size:1.1rem;font-weight:600;"/>
       </div>
       <div style="display:flex;align-items:center;justify-content:center;padding-bottom:0.5rem;">
         <button onclick="swapUnits()" style="background:var(--bg3);border:1px solid var(--border);color:var(--accent2);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem;transition:background 0.2s;" title="Swap units">⇄</button>
       </div>
       <div class="unit-input-group">
-        <label id="to-label">To</label>
+        <label id="to-label" for="to-unit">To</label>
         <select id="to-unit" onchange="convert()" style="margin-bottom:0.5rem;width:100%;"></select>
-        <input type="number" id="to-value" value="" readonly style="width:100%;font-size:1.1rem;font-weight:600;color:var(--accent2);background:var(--bg3);"/>
+        <input type="number" id="to-value" aria-label="Converted value" value="" readonly style="width:100%;font-size:1.1rem;font-weight:600;color:var(--accent2);background:var(--bg3);"/>
       </div>
     </div>
 
@@ -132,6 +133,7 @@
   </div>
 
 </div>
+</main>
 
 <footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/qr/">QR</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
 <script src="../js/common.js"></script>

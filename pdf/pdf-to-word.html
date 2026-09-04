@@ -48,6 +48,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>PDF to Word</span></div>
   <div class="tool-page-header"><h1>Free PDF to Word Converter</h1><p>Convert text-based PDFs to editable DOCX files — detect headings, paragraphs and font sizes. No upload, no account.</p></div>
@@ -60,7 +61,7 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <div id="p2w-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
     </div>
-    <input type="file" id="file-input-p2w" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-p2w" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
     <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;">⚠️ Works best with text-based PDFs where you can select text. Scanned documents (image-only PDFs) are not supported.</p>
     <button class="btn" id="p2w-btn" onclick="doP2W()" disabled style="margin-top:1rem;">📝 Convert to DOCX & Download</button>
     <div class="status" id="status-p2w"></div>
@@ -110,6 +111,7 @@
     <div class="faq-item"><button class="faq-q">Why does my converted Word file look different?<span class="arrow">▼</span></button><div class="faq-a">PDF is a fixed-layout format — it does not store semantic structure like Word does. The converter reconstructs paragraphs from raw text positions, which works well for simple documents.</div></div>
     <div class="faq-item"><button class="faq-q">Can it convert scanned PDFs?<span class="arrow">▼</span></button><div class="faq-a">No. Scanned PDFs are images of text. Converting them requires OCR (optical character recognition), which is not available in a browser-based tool.</div></div></div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

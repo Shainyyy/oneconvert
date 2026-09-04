@@ -57,6 +57,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb">
     <a href="/">Home</a><span>›</span><a href="/image/">Image Tools</a><span>›</span><span>HEIC to JPG</span>
@@ -77,7 +78,7 @@
       <p><strong>Click to select</strong> or drag & drop your HEIC files here</p>
       <small>HEIC, HEIF supported (iPhone photos) · Multiple files · No file size limit</small>
     </div>
-    <input type="file" id="file-input" accept=".heic,.heif,image/heic,image/heif" multiple style="display:none;"/>
+    <input type="file" id="file-input" accept=".heic,.heif,image/heic,image/heif" multiple style="display:none;" aria-label="Choose a file">
 
     <div id="preview-area" style="display:none;">
       <div class="preview-box">
@@ -157,6 +158,7 @@
     <div class="faq-item"><button class="faq-q">How do I stop my iPhone creating HEIC files?<span class="arrow">▼</span></button><div class="faq-a">Open Settings → Camera → Formats and select "Most Compatible". The camera then writes JPEG directly, using roughly twice the storage per photo. This applies only to new pictures; your existing library stays HEIC.</div></div>
   </div>
 </div>
+</main>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>

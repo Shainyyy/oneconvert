@@ -64,6 +64,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<main>
 
 <!-- Leaderboard Ad -->
 
@@ -98,7 +99,7 @@
     <input type="text" id="tool-search" placeholder="Search tools… (PDF compress, jpg to png, unit converter…)" 
       oninput="filterTools(this.value)"
       style="width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:12px;color:var(--text);padding:0.75rem 1rem 0.75rem 2.75rem;font-size:0.95rem;font-family:DM Sans,sans-serif;transition:border-color 0.2s;"
-      onfocus="this.style.borderColor='var(--accent2)'" onblur="this.style.borderColor='var(--border)'"/>
+      onfocus="this.style.borderColor='var(--accent2)'" onblur="this.style.borderColor='var(--border)'" aria-label="Search tools">
   </div>
 </div>
 
@@ -273,6 +274,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

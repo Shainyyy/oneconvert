@@ -43,6 +43,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>QR Code Generator</span></div>
   <div class="tool-page-header"><h1>📱 Free QR Code Generator</h1><p>Create QR codes for URLs, WiFi, text, email and phone. Customize colors. Download as PNG or SVG — free, no account.</p></div>
@@ -59,23 +60,23 @@
         <button class="unit-tab" onclick="setType('email',this)">Email</button>
         <button class="unit-tab" onclick="setType('phone',this)">Phone</button>
       </div>
-      <div id="type-url"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Website URL</label><input type="text" id="url-input" placeholder="https://example.com" oninput="generateQR()"/></div></div>
-      <div id="type-text" style="display:none;"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Text or message</label><textarea id="text-input" placeholder="Enter any text…" style="min-height:80px;" oninput="generateQR()"></textarea></div></div>
+      <div id="type-url"><div class="unit-input-group" style="margin-bottom:1rem;"><label for="url-input">Website URL</label><input type="text" id="url-input" placeholder="https://example.com" oninput="generateQR()"/></div></div>
+      <div id="type-text" style="display:none;"><div class="unit-input-group" style="margin-bottom:1rem;"><label for="text-input">Text or message</label><textarea id="text-input" placeholder="Enter any text…" style="min-height:80px;" oninput="generateQR()"></textarea></div></div>
       <div id="type-wifi" style="display:none;">
-        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="MyWiFiNetwork" oninput="generateQR()"/></div>
-        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Password</label><input type="text" id="wifi-pass" placeholder="Password" oninput="generateQR()"/></div>
-        <div class="unit-input-group" style="margin-bottom:1rem;"><label>Security</label><select id="wifi-sec" onchange="generateQR()"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">None</option></select></div>
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label for="wifi-ssid">Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="MyWiFiNetwork" oninput="generateQR()"/></div>
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label for="wifi-pass">Password</label><input type="text" id="wifi-pass" placeholder="Password" oninput="generateQR()"/></div>
+        <div class="unit-input-group" style="margin-bottom:1rem;"><label for="wifi-sec">Security</label><select id="wifi-sec" onchange="generateQR()"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">None</option></select></div>
       </div>
       <div id="type-email" style="display:none;">
-        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Email address</label><input type="text" id="email-addr" placeholder="hello@example.com" oninput="generateQR()"/></div>
-        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label>Subject (optional)</label><input type="text" id="email-sub" placeholder="Subject" oninput="generateQR()"/></div>
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label for="email-addr">Email address</label><input type="text" id="email-addr" placeholder="hello@example.com" oninput="generateQR()"/></div>
+        <div class="unit-input-group" style="margin-bottom:0.75rem;"><label for="email-sub">Subject (optional)</label><input type="text" id="email-sub" placeholder="Subject" oninput="generateQR()"/></div>
       </div>
-      <div id="type-phone" style="display:none;"><div class="unit-input-group" style="margin-bottom:1rem;"><label>Phone number</label><input type="text" id="phone-input" placeholder="+1234567890" oninput="generateQR()"/></div></div>
+      <div id="type-phone" style="display:none;"><div class="unit-input-group" style="margin-bottom:1rem;"><label for="phone-input">Phone number</label><input type="text" id="phone-input" placeholder="+1234567890" oninput="generateQR()"/></div></div>
       <div class="qr-options">
-        <div class="option-group"><label>QR Color</label><div class="color-input"><input type="color" id="qr-color" value="#07090f" onchange="generateQR()"/></div></div>
-        <div class="option-group"><label>Background</label><div class="color-input"><input type="color" id="bg-color" value="#ffffff" onchange="generateQR()"/></div></div>
-        <div class="option-group"><label>Size (px)</label><input type="number" id="qr-size" value="300" min="100" max="1000" step="50" onchange="generateQR()"/></div>
-        <div class="option-group"><label>Error Correction</label><select id="qr-ecl" onchange="generateQR()"><option value="M">Medium</option><option value="L">Low</option><option value="Q">Quartile</option><option value="H">High</option></select></div>
+        <div class="option-group"><label for="qr-color">QR Color</label><div class="color-input"><input type="color" id="qr-color" value="#07090f" onchange="generateQR()"/></div></div>
+        <div class="option-group"><label for="bg-color">Background</label><div class="color-input"><input type="color" id="bg-color" value="#ffffff" onchange="generateQR()"/></div></div>
+        <div class="option-group"><label for="qr-size">Size (px)</label><input type="number" id="qr-size" value="300" min="100" max="1000" step="50" onchange="generateQR()"/></div>
+        <div class="option-group"><label for="qr-ecl">Error Correction</label><select id="qr-ecl" onchange="generateQR()"><option value="M">Medium</option><option value="L">Low</option><option value="Q">Quartile</option><option value="H">High</option></select></div>
       </div>
     </div>
     <div class="tool-box" style="margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
@@ -119,6 +120,7 @@
     <div class="faq-item"><button class="faq-q">Is there a character limit for QR code content?<span class="arrow">▼</span></button><div class="faq-a">QR codes can store up to about 4,000 characters. Very long text or complex data results in a denser matrix with more small squares, which may be harder to scan with older devices.</div></div>
   </div>
 </div>
+</main>
 
 <footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/units/">Units</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
 <script src="../js/common.js"></script>

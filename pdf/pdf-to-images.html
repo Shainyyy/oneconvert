@@ -48,6 +48,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>PDF to Images</span></div>
   <div class="tool-page-header"><h1>Free PDF to Image Converter</h1><p>Export PDF pages as high-quality PNG images — select page range, instant download, no upload.</p></div>
@@ -60,14 +61,14 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <div id="pdf2img-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
     </div>
-    <input type="file" id="file-input-pdf2img" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-pdf2img" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
     <div class="input-row" style="margin-top:1rem;gap:1rem;flex-wrap:wrap;">
       <div style="display:flex;flex-direction:column;gap:0.3rem;">
-        <label style="color:var(--muted);font-size:0.82rem;">From page</label>
+        <label style="color:var(--muted);font-size:0.82rem;" for="p2i-from">From page</label>
         <input type="number" id="p2i-from" value="1" min="1" style="width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
       </div>
       <div style="display:flex;flex-direction:column;gap:0.3rem;">
-        <label style="color:var(--muted);font-size:0.82rem;">To page</label>
+        <label style="color:var(--muted);font-size:0.82rem;" for="p2i-to">To page</label>
         <input type="number" id="p2i-to" value="1" min="1" style="width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
       </div>
       <span id="p2i-total" style="color:var(--muted);font-size:0.8rem;align-self:flex-end;padding-bottom:0.5rem;"></span>
@@ -126,6 +127,7 @@
     <div class="faq-item"><button class="faq-q">What if I only want to export one page?<span class="arrow">▼</span></button><div class="faq-a">Set both the From and To fields to the same page number to export a single page as a PNG.</div></div>
   </div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

@@ -42,6 +42,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>Color Tools</span></div>
   <div class="tool-page-header"><h1>🎨 Free Color Tools</h1><p>Convert HEX, RGB, HSL colors. Check contrast ratios and generate color palettes — instantly in your browser.</p></div>
@@ -58,7 +59,7 @@
   <!-- Color Converter -->
   <div id="color-convert" class="tool-box">
     <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-      <input type="color" id="color-picker" value="#2563eb" oninput="onPickerChange()" onchange="onPickerChange()" style="width:60px;height:60px;border-radius:12px;padding:2px;cursor:pointer;border:1px solid var(--border);background:var(--bg3);"/>
+      <input type="color" id="color-picker" value="#2563eb" oninput="onPickerChange()" onchange="onPickerChange()" style="width:60px;height:60px;border-radius:12px;padding:2px;cursor:pointer;border:1px solid var(--border);background:var(--bg3);" aria-label="Pick a colour">
       <div>
         <div style="font-family:Syne,sans-serif;font-size:1.2rem;font-weight:700;" id="color-name">Pick or enter a color</div>
         <div style="font-size:0.82rem;color:var(--muted);">Click the swatch or type in any field below</div>
@@ -66,12 +67,12 @@
     </div>
     <div class="color-display" id="color-display" style="background:#2563eb;"></div>
     <div class="color-values">
-      <div class="color-val-box" onclick="copyVal('hex-val')"><div class="format">HEX</div><div class="value" id="hex-val">#2563eb</div></div>
-      <div class="color-val-box" onclick="copyVal('rgb-val')"><div class="format">RGB</div><div class="value" id="rgb-val">37, 99, 235</div></div>
-      <div class="color-val-box" onclick="copyVal('hsl-val')"><div class="format">HSL</div><div class="value" id="hsl-val">224°, 83%, 53%</div></div>
+      <div class="color-val-box" onclick="copyVal('hex-val')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyVal('hex-val')}"><div class="format">HEX</div><div class="value" id="hex-val">#2563eb</div></div>
+      <div class="color-val-box" onclick="copyVal('rgb-val')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyVal('rgb-val')}"><div class="format">RGB</div><div class="value" id="rgb-val">37, 99, 235</div></div>
+      <div class="color-val-box" onclick="copyVal('hsl-val')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyVal('hsl-val')}"><div class="format">HSL</div><div class="value" id="hsl-val">224°, 83%, 53%</div></div>
     </div>
     <div style="margin-top:1rem;">
-      <label style="font-size:0.82rem;color:var(--muted);">Enter HEX, RGB or HSL value:</label>
+      <label style="font-size:0.82rem;color:var(--muted);" for="hex-input">Enter HEX, RGB or HSL value:</label>
       <div style="display:flex;gap:0.75rem;margin-top:0.4rem;">
         <input type="text" id="hex-input" placeholder="#2563eb" style="flex:1;" oninput="parseHexInput()"/>
         <button class="btn btn-outline btn-sm" onclick="parseHexInput()">Apply</button>
@@ -84,17 +85,17 @@
   <div id="color-contrast" class="tool-box" style="display:none;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
       <div>
-        <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;">Foreground (Text)</label>
+        <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;" for="fg-color">Foreground (Text)</label>
         <div style="display:flex;gap:0.75rem;align-items:center;">
           <input type="color" id="fg-color" value="#ffffff" oninput="checkContrast()" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
-          <input type="text" id="fg-hex" value="#ffffff" style="flex:1;" oninput="fgFromText()"/>
+          <input type="text" id="fg-hex" value="#ffffff" style="flex:1;" oninput="fgFromText()" aria-label="Foreground colour hex value">
         </div>
       </div>
       <div>
-        <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;">Background</label>
+        <label style="font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;display:block;" for="bg-picker">Background</label>
         <div style="display:flex;gap:0.75rem;align-items:center;">
           <input type="color" id="bg-picker" value="#2563eb" oninput="checkContrast()" onchange="checkContrast()" style="width:44px;height:44px;border-radius:8px;cursor:pointer;border:1px solid var(--border);"/>
-          <input type="text" id="bg-hex" value="#2563eb" style="flex:1;" oninput="bgFromText()"/>
+          <input type="text" id="bg-hex" value="#2563eb" style="flex:1;" oninput="bgFromText()" aria-label="Background colour hex value">
         </div>
       </div>
     </div>
@@ -121,8 +122,8 @@
   <!-- Palette Generator -->
   <div id="color-palette" class="tool-box" style="display:none;">
     <div style="display:flex;gap:1rem;align-items:flex-end;margin-bottom:1.5rem;flex-wrap:wrap;">
-      <div class="unit-input-group"><label>Base Color</label><div class="color-input"><input type="color" id="base-color" value="#2563eb" oninput="genPalette()" onchange="genPalette()"/><input type="text" id="base-hex" value="#2563eb" style="width:100px;" oninput="palFromText()"/></div></div>
-      <div class="unit-input-group"><label>Mode</label><select id="pal-mode" onchange="genPalette()"><option value="shades">Shades</option><option value="complementary">Complementary</option><option value="triadic">Triadic</option><option value="analogous">Analogous</option></select></div>
+      <div class="unit-input-group"><label for="base-color">Base Color</label><div class="color-input"><input type="color" id="base-color" value="#2563eb" oninput="genPalette()" onchange="genPalette()"/><input type="text" id="base-hex" value="#2563eb" style="width:100px;" oninput="palFromText()" aria-label="Base colour hex value"></div></div>
+      <div class="unit-input-group"><label for="pal-mode">Mode</label><select id="pal-mode" onchange="genPalette()"><option value="shades">Shades</option><option value="complementary">Complementary</option><option value="triadic">Triadic</option><option value="analogous">Analogous</option></select></div>
       <button class="btn btn-sm" onclick="genPalette()">Generate</button>
     </div>
     <div id="palette-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,64px),1fr));gap:0.5rem;"></div>
@@ -157,6 +158,7 @@
   </div>
 
 </div>
+</main>
 
 <footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/units/">Units</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
 <script src="../js/common.js"></script>
@@ -179,7 +181,7 @@
   function bgFromText(){try{document.getElementById('bg-picker').value=document.getElementById('bg-hex').value;checkContrast();}catch(e){}}
   // Palette
   function hslToHex(h,s,l){s/=100;l/=100;const a=s*Math.min(l,1-l);const f=n=>{const k=(n+h/30)%12;const color=l-a*Math.max(Math.min(k-3,9-k,1),-1);return Math.round(255*color).toString(16).padStart(2,'0');};return`#${f(0)}${f(8)}${f(4)}`;}
-  function genPalette(){const hex=document.getElementById('base-color').value;const{r,g,b}=hexToRgb(hex);const{h,s,l}=rgbToHsl(r,g,b);const mode=document.getElementById('pal-mode').value;let colors=[];if(mode==='shades'){for(let i=0;i<10;i++)colors.push(hslToHex(h,s,10+i*8));}else if(mode==='complementary'){colors=[hex,hslToHex((h+180)%360,s,l),...[20,40,60,70,80].map(ll=>hslToHex(h,s,ll)),...[20,40].map(ll=>hslToHex((h+180)%360,s,ll))];}else if(mode==='triadic'){colors=[hex,hslToHex((h+120)%360,s,l),hslToHex((h+240)%360,s,l),...[30,50,70].map(ll=>hslToHex(h,s,ll)),...[30,50].map(ll=>hslToHex((h+120)%360,s,ll))];}else{for(let i=-2;i<=2;i++)for(let j=0;j<2;j++)colors.push(hslToHex((h+i*20+360)%360,s,30+j*30));}colors=colors.slice(0,10);const grid=document.getElementById('palette-grid');grid.innerHTML=colors.map(c=>`<div onclick="navigator.clipboard.writeText('${c}')" style="height:80px;border-radius:10px;background:${c};cursor:pointer;transition:transform 0.15s;display:flex;align-items:flex-end;padding:0.4rem;" title="Click to copy ${c}" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"><span style="font-size:0.7rem;font-weight:700;color:${getLum(c)>0.4?'#000':'#fff'};font-family:monospace;">${c}</span></div>`).join('');}
+  function genPalette(){const hex=document.getElementById('base-color').value;const{r,g,b}=hexToRgb(hex);const{h,s,l}=rgbToHsl(r,g,b);const mode=document.getElementById('pal-mode').value;let colors=[];if(mode==='shades'){for(let i=0;i<10;i++)colors.push(hslToHex(h,s,10+i*8));}else if(mode==='complementary'){colors=[hex,hslToHex((h+180)%360,s,l),...[20,40,60,70,80].map(ll=>hslToHex(h,s,ll)),...[20,40].map(ll=>hslToHex((h+180)%360,s,ll))];}else if(mode==='triadic'){colors=[hex,hslToHex((h+120)%360,s,l),hslToHex((h+240)%360,s,l),...[30,50,70].map(ll=>hslToHex(h,s,ll)),...[30,50].map(ll=>hslToHex((h+120)%360,s,ll))];}else{for(let i=-2;i<=2;i++)for(let j=0;j<2;j++)colors.push(hslToHex((h+i*20+360)%360,s,30+j*30));}colors=colors.slice(0,10);const grid=document.getElementById('palette-grid');grid.innerHTML=colors.map(c=>`<div onclick="navigator.clipboard.writeText('${c}')" style="height:80px;border-radius:10px;background:${c};cursor:pointer;transition:transform 0.15s;display:flex;align-items:flex-end;padding:0.4rem;" title="Click to copy ${c}" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigator.clipboard.writeText('${c}')}"><span style="font-size:0.7rem;font-weight:700;color:${getLum(c)>0.4?'#000':'#fff'};font-family:monospace;">${c}</span></div>`).join('');}
   function palFromText(){try{document.getElementById('base-color').value=document.getElementById('base-hex').value;genPalette();}catch(e){}}
   checkContrast();genPalette();
 </script>

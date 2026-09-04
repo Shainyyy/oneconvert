@@ -50,6 +50,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>Text Tools</span></div>
   <div class="tool-page-header"><h1>✏️ Free Text Tools</h1><p>Word counter, case converter, Lorem Ipsum generator, Base64 encoder and more — all free, all in your browser.</p></div>
@@ -69,7 +70,7 @@
   <div class="tool-box">
     <!-- Word Count -->
     <div id="tool-wordcount">
-      <textarea id="wc-input" placeholder="Paste or type your text here…" style="width:100%;min-height:200px;" oninput="updateWordCount()"></textarea>
+      <textarea id="wc-input" placeholder="Paste or type your text here…" style="width:100%;min-height:200px;" oninput="updateWordCount()" aria-label="Paste or type your text here"></textarea>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,90px),1fr));gap:0.75rem;margin-top:1rem;">
         <div class="preview-stat" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center;"><div class="val" id="wc-words" style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent2);">0</div><div class="lbl" style="color:var(--muted);font-size:0.78rem;">Words</div></div>
         <div class="preview-stat" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;text-align:center;"><div class="val" id="wc-chars" style="font-family:Syne,sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent2);">0</div><div class="lbl" style="color:var(--muted);font-size:0.78rem;">Characters</div></div>
@@ -80,7 +81,7 @@
 
     <!-- Case -->
     <div id="tool-case" style="display:none;">
-      <textarea id="case-input" placeholder="Enter text to convert…" style="width:100%;min-height:150px;" oninput="updateCase()"></textarea>
+      <textarea id="case-input" placeholder="Enter text to convert…" style="width:100%;min-height:150px;" oninput="updateCase()" aria-label="Enter text to convert"></textarea>
       <div class="unit-tabs" style="margin:0.75rem 0;flex-wrap:wrap;">
         <button class="unit-tab active" onclick="setCaseMode('lower',this)">lowercase</button>
         <button class="unit-tab" onclick="setCaseMode('upper',this)">UPPERCASE</button>
@@ -90,18 +91,18 @@
         <button class="unit-tab" onclick="setCaseMode('snake',this)">snake_case</button>
         <button class="unit-tab" onclick="setCaseMode('kebab',this)">kebab-case</button>
       </div>
-      <textarea id="case-output" placeholder="Result will appear here…" style="width:100%;min-height:120px;" readonly></textarea>
+      <textarea id="case-output" placeholder="Result will appear here…" style="width:100%;min-height:120px;" readonly aria-label="Result will appear here"></textarea>
       <button class="btn" style="margin-top:0.75rem;" onclick="copyText('case-output')">📋 Copy Result</button>
     </div>
 
     <!-- Lorem Ipsum -->
     <div id="tool-lorem" style="display:none;">
       <div style="display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap;align-items:center;">
-        <div class="unit-input-group"><label>Amount</label><input type="number" id="lorem-count" value="3" min="1" max="20"/></div>
-        <div class="unit-input-group"><label>Type</label><select id="lorem-type"><option value="paragraphs">Paragraphs</option><option value="sentences">Sentences</option><option value="words">Words</option></select></div>
+        <div class="unit-input-group"><label for="lorem-count">Amount</label><input type="number" id="lorem-count" value="3" min="1" max="20"/></div>
+        <div class="unit-input-group"><label for="lorem-type">Type</label><select id="lorem-type"><option value="paragraphs">Paragraphs</option><option value="sentences">Sentences</option><option value="words">Words</option></select></div>
         <button class="btn btn-sm" onclick="genLorem()" style="align-self:flex-end;">Generate</button>
       </div>
-      <textarea id="lorem-output" style="width:100%;min-height:200px;" readonly></textarea>
+      <textarea id="lorem-output" aria-label="Generated Lorem Ipsum text" style="width:100%;min-height:200px;" readonly></textarea>
       <button class="btn" style="margin-top:0.75rem;" onclick="copyText('lorem-output')">📋 Copy</button>
     </div>
 
@@ -111,17 +112,17 @@
         <button class="unit-tab active" onclick="setB64Mode('encode',this)">Encode</button>
         <button class="unit-tab" onclick="setB64Mode('decode',this)">Decode</button>
       </div>
-      <textarea id="b64-input" placeholder="Enter text to encode…" style="width:100%;min-height:120px;" oninput="processB64()"></textarea>
+      <textarea id="b64-input" placeholder="Enter text to encode…" style="width:100%;min-height:120px;" oninput="processB64()" aria-label="Enter text to encode"></textarea>
       <div style="margin:0.5rem 0;text-align:center;color:var(--muted);font-size:0.8rem;">↓ Result ↓</div>
-      <textarea id="b64-output" style="width:100%;min-height:120px;" readonly></textarea>
+      <textarea id="b64-output" aria-label="Base64 result" style="width:100%;min-height:120px;" readonly></textarea>
       <button class="btn" style="margin-top:0.75rem;" onclick="copyText('b64-output')">📋 Copy Result</button>
     </div>
 
     <!-- Remove Duplicates -->
     <div id="tool-dedup" style="display:none;">
-      <textarea id="dedup-input" placeholder="Paste lines here — duplicates will be removed…" style="width:100%;min-height:150px;"></textarea>
+      <textarea id="dedup-input" placeholder="Paste lines here — duplicates will be removed…" style="width:100%;min-height:150px;" aria-label="Paste lines here — duplicates will be removed"></textarea>
       <button class="btn" style="margin:0.75rem 0;" onclick="removeDupes()">🗑️ Remove Duplicates</button>
-      <textarea id="dedup-output" style="width:100%;min-height:120px;" readonly></textarea>
+      <textarea id="dedup-output" aria-label="Text with duplicates removed" style="width:100%;min-height:120px;" readonly></textarea>
       <div id="dedup-info" style="font-size:0.82rem;color:var(--muted);margin-top:0.4rem;"></div>
       <button class="btn btn-outline" style="margin-top:0.5rem;" onclick="copyText('dedup-output')">📋 Copy Result</button>
     </div>
@@ -132,9 +133,9 @@
         <button class="unit-tab active" onclick="setUrlMode('encode',this)">Encode</button>
         <button class="unit-tab" onclick="setUrlMode('decode',this)">Decode</button>
       </div>
-      <textarea id="url-input" placeholder="Enter text or URL to encode…" style="width:100%;min-height:120px;" oninput="processUrl()"></textarea>
+      <textarea id="url-input" placeholder="Enter text or URL to encode…" style="width:100%;min-height:120px;" oninput="processUrl()" aria-label="Enter text or URL to encode"></textarea>
       <div style="margin:0.5rem 0;text-align:center;color:var(--muted);font-size:0.8rem;">↓ Result ↓</div>
-      <textarea id="url-output" style="width:100%;min-height:120px;" readonly></textarea>
+      <textarea id="url-output" aria-label="URL encoded result" style="width:100%;min-height:120px;" readonly></textarea>
       <button class="btn" style="margin-top:0.75rem;" onclick="copyText('url-output')">📋 Copy Result</button>
     </div>
   </div>
@@ -167,6 +168,7 @@
   </div>
 
 </div>
+</main>
 
 <footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/qr/">QR</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
 <script src="../js/common.js"></script>

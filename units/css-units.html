@@ -44,6 +44,7 @@
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/units/">Units</a><span>›</span><span>CSS Unit Converter</span></div>
   <div class="tool-page-header">
@@ -68,12 +69,12 @@
         <span style="font-size:0.82rem;color:var(--muted);">px</span>
       </div>
       <div style="display:flex;align-items:center;gap:0.5rem;">
-        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;">Viewport width:</label>
+        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;" for="vp-w">Viewport width:</label>
         <input type="number" id="vp-w" value="1440" min="320" max="3840" step="1" oninput="updateAll()" style="width:80px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
         <span style="font-size:0.82rem;color:var(--muted);">px</span>
       </div>
       <div style="display:flex;align-items:center;gap:0.5rem;">
-        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;">Viewport height:</label>
+        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;" for="vp-h">Viewport height:</label>
         <input type="number" id="vp-h" value="900" min="200" max="2400" step="1" oninput="updateAll()" style="width:80px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
         <span style="font-size:0.82rem;color:var(--muted);">px</span>
       </div>
@@ -82,11 +83,11 @@
     <!-- Main input -->
     <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;flex-wrap:wrap;">
       <div style="flex:1;min-width:150px;">
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">Input value</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;" for="main-input">Input value</label>
         <input type="number" id="main-input" value="16" step="any" oninput="updateAll()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.75rem;font-size:1.1rem;font-weight:600;"/>
       </div>
       <div style="min-width:120px;">
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">From unit</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;" for="from-unit">From unit</label>
         <select id="from-unit" onchange="updateAll()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.5rem;font-size:0.95rem;">
           <option value="px" selected>px</option>
           <option value="rem">rem</option>
@@ -152,6 +153,7 @@
     <div class="faq-item"><button class="faq-q">When should I use rem versus em?<span class="arrow">▼</span></button><div class="faq-a">Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you want sizing relative to a parent element, such as component-level typography scales — set the Parent font size field to match that parent.</div></div>
   </div>
 </div>
+</main>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>

@@ -47,6 +47,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Delete PDF Pages</span></div>
   <div class="tool-page-header"><h1>Free Delete Pages from PDF</h1><p>Remove specific pages or ranges from your PDF — instantly, no upload, no account.</p></div>
@@ -59,9 +60,9 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <div id="delete-info" style="margin-top:0.5rem;font-size:0.85rem;color:var(--accent2);"></div>
     </div>
-    <input type="file" id="file-input-delete" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-delete" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
     <div class="input-row" style="margin-top:1rem;">
-      <label style="color:var(--muted);font-size:0.82rem;min-width:130px;">Pages to delete</label>
+      <label style="color:var(--muted);font-size:0.82rem;min-width:130px;" for="delete-pages-input">Pages to delete</label>
       <input type="text" id="delete-pages-input" placeholder="e.g. 2,4,6-8" style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.75rem;"/>
     </div>
     <button class="btn" id="delete-btn" onclick="doDelete()" disabled style="margin-top:1rem;">🗑️ Delete Pages & Download</button>
@@ -117,6 +118,7 @@
     <div class="faq-item"><button class="faq-q">Can I preview which pages I am deleting?<span class="arrow">▼</span></button><div class="faq-a">The tool does not show a visual preview. To preview, use a PDF viewer to check page numbers before entering them. The original file is never modified — the tool downloads a new file.</div></div>
   </div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

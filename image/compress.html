@@ -52,6 +52,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image Tools</a><span>›</span><span>Compress Image</span></div>
   <div class="tool-page-header">
@@ -68,14 +69,14 @@
       <p><strong>Click to select</strong> or drag & drop your image here</p>
       <small>JPG, PNG, WebP supported · No file size limit</small>
     </div>
-    <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" style="display:none;"/>
+    <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" style="display:none;" aria-label="Choose a file">
 
     <div id="options-area" style="display:none;">
       <div style="margin-bottom:1rem;">
         <label style="font-size:0.85rem;color:var(--muted);display:flex;justify-content:space-between;margin-bottom:0.4rem;">
           <span>Quality</span><span id="quality-label" style="color:var(--accent2);font-weight:700;">80%</span>
         </label>
-        <input type="range" id="quality-slider" min="10" max="100" value="80" step="5" style="width:100%;"/>
+        <input type="range" id="quality-slider" min="10" max="100" value="80" step="5" style="width:100%;" aria-label="JPEG quality">
       </div>
 
       <div id="preview-area">
@@ -154,6 +155,7 @@
     <div class="faq-item"><button class="faq-q">Can I compress PNG images?<span class="arrow">▼</span></button><div class="faq-a">Yes. PNG images are compressed using the selected quality level. Depending on the image, you can typically achieve 30-60% size reduction.</div></div>
   </div>
 </div>
+</main>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>

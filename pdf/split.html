@@ -51,6 +51,7 @@
   </button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Split PDF</span></div>
   <div class="tool-page-header">
@@ -67,11 +68,11 @@
       <p><strong>Click to select</strong> or drag & drop your PDF here</p>
       <p id="split-filename" style="margin-top:0.5rem;color:var(--accent2);font-size:0.85rem;"></p>
     </div>
-    <input type="file" id="file-input-split" accept=".pdf" style="display:none;"/>
+    <input type="file" id="file-input-split" accept=".pdf" style="display:none;" aria-label="Choose a PDF file">
     <div class="input-row" style="margin-top:1rem;">
-      <label style="color:var(--muted);font-size:0.85rem;min-width:80px;">From page</label>
+      <label style="color:var(--muted);font-size:0.85rem;min-width:80px;" for="split-from">From page</label>
       <input type="number" id="split-from" value="1" min="1" style="width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
-      <label style="color:var(--muted);font-size:0.85rem;min-width:60px;margin-left:0.5rem;">To page</label>
+      <label style="color:var(--muted);font-size:0.85rem;min-width:60px;margin-left:0.5rem;" for="split-to">To page</label>
       <input type="number" id="split-to" value="1" min="1" style="width:80px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;"/>
       <span id="split-total" style="color:var(--muted);font-size:0.8rem;margin-left:auto;"></span>
     </div>
@@ -137,6 +138,7 @@
     <div class="faq-item"><button class="faq-q">Is there a file size limit?<span class="arrow">▼</span></button><div class="faq-a">No imposed limit. The practical limit is your browser memory, typically several gigabytes.</div></div>
   </div>
 </div>
+</main>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>

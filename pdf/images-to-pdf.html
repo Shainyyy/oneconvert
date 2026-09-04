@@ -48,6 +48,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/pdf/">PDF Tools</a><span>›</span><span>Images to PDF</span></div>
   <div class="tool-page-header"><h1>Free Images to PDF Converter</h1><p>Convert JPG, PNG, WebP, HEIC and GIF images into a PDF. Add multiple images, drag to reorder — no upload needed.</p></div>
@@ -60,7 +61,7 @@
       <p><strong>Click to add images</strong> or drag & drop here</p>
       <small>JPG, PNG, WebP, GIF, HEIC supported · Multiple files · No size limit</small>
     </div>
-    <input type="file" id="file-input-img2pdf" accept="image/*,.heic,.heif" multiple style="display:none;"/>
+    <input type="file" id="file-input-img2pdf" accept="image/*,.heic,.heif" multiple style="display:none;" aria-label="Choose image files">
     <div class="file-list" id="img2pdf-file-list" style="margin-top:1rem;"></div>
     <button class="btn" id="img2pdf-btn" onclick="doImg2Pdf()" disabled style="margin-top:0.5rem;">🖼️ Create PDF & Download</button>
     <div class="status" id="status-img2pdf"></div>
@@ -111,6 +112,7 @@
     <div class="faq-item"><button class="faq-q">Can I reorder images before converting?<span class="arrow">▼</span></button><div class="faq-a">Yes — drag the image thumbnails in the list to set the page order before clicking Convert.</div></div>
   </div>
 </div>
+</main>
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">

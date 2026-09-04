@@ -49,6 +49,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image</a><span>›</span><span>Resize Image</span></div>
   <div class="tool-page-header"><h1>Free Image Resizer</h1><p>Resize images by exact pixels or percentage. Lock aspect ratio to avoid distortion.</p></div>
@@ -57,7 +58,7 @@
   
   <div class="tool-box">
     <div class="dropzone" id="drop-zone"><div class="dropzone-icon">↔️</div><p><strong>Click to select</strong> or drag & drop an image</p><small>JPG, PNG, WebP, GIF · No file size limit</small></div>
-    <input type="file" id="file-input" accept="image/*" style="display:none;"/>
+    <input type="file" id="file-input" accept="image/*" style="display:none;" aria-label="Choose a file">
     <div id="options-area" style="display:none;">
       <div class="preview-box"><img id="pi" src="" alt="" style="max-height:150px;"/>
         <div class="preview-info"><div class="preview-stat"><div class="val" id="ow">—</div><div class="lbl">Width</div></div><div class="preview-stat"><div class="val" id="oh">—</div><div class="lbl">Height</div></div></div>
@@ -67,11 +68,11 @@
         <button class="unit-tab" onclick="setMode('pct',this)">Percentage</button>
       </div>
       <div class="converter-grid" id="px-mode">
-        <div class="unit-input-group"><label>Width (px)</label><input type="number" id="nw" min="1" max="10000" value="800" oninput="syncH()"/></div>
-        <div class="unit-input-group"><label>Height (px)</label><input type="number" id="nh" min="1" max="10000" value="600" oninput="syncW()"/></div>
+        <div class="unit-input-group"><label for="nw">Width (px)</label><input type="number" id="nw" min="1" max="10000" value="800" oninput="syncH()"/></div>
+        <div class="unit-input-group"><label for="nh">Height (px)</label><input type="number" id="nh" min="1" max="10000" value="600" oninput="syncW()"/></div>
       </div>
       <div id="pct-mode" style="display:none;">
-        <div class="unit-input-group"><label>Scale (%)</label><input type="number" id="scale" min="1" max="500" value="50"/></div>
+        <div class="unit-input-group"><label for="scale">Scale (%)</label><input type="number" id="scale" min="1" max="500" value="50"/></div>
       </div>
       <div style="margin:0.75rem 0;display:flex;align-items:center;gap:0.5rem;">
         <input type="checkbox" id="lock" checked style="width:16px;height:16px;cursor:pointer;"/>
@@ -123,6 +124,7 @@
     <div class="faq-item"><button class="faq-q">What common dimensions should I know?<span class="arrow">▼</span></button><div class="faq-a">Instagram square: 1080×1080px. Instagram portrait: 1080×1350px. Twitter header: 1500×500px. YouTube thumbnail: 1280×720px. Facebook cover: 820×312px. LinkedIn banner: 1584×396px.</div></div>
   </div>
 </div>
+</main>
 <footer><p>© 2026 OneConvert.</p><div class="footer-links"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
 <script src="../js/common.js"></script>
 <script>

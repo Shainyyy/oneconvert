@@ -44,6 +44,7 @@
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
+<main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/units/">Units</a><span>›</span><span>Timestamp Converter</span></div>
   <div class="tool-page-header">
@@ -59,7 +60,7 @@
     <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 1.1rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
       <div>
         <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.2rem;">Current Unix timestamp</div>
-        <div id="live-ts" style="font-family:Syne,sans-serif;font-weight:800;font-size:1.4rem;color:var(--accent2);cursor:pointer;" title="Click to copy" onclick="copyText(this.textContent)">—</div>
+        <div id="live-ts" style="font-family:Syne,sans-serif;font-weight:800;font-size:1.4rem;color:var(--accent2);cursor:pointer;" title="Click to copy" onclick="copyText(this.textContent)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyText(this.textContent)}">—</div>
       </div>
       <div style="flex:1;">
         <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.2rem;">Current UTC</div>
@@ -73,7 +74,7 @@
       <h2 style="font-family:Syne,sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.75rem;">⏱ Timestamp → Date</h2>
       <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:flex-end;">
         <div style="flex:1;min-width:180px;">
-          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">Unix timestamp (seconds)</label>
+          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;" for="ts-input">Unix timestamp (seconds)</label>
           <input type="number" id="ts-input" placeholder="e.g. 1717718400" oninput="tsToDate()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.75rem;font-family:monospace;font-size:1rem;font-weight:600;"/>
         </div>
         <button onclick="useNow()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--muted);padding:0.6rem 1rem;cursor:pointer;font-size:0.82rem;white-space:nowrap;height:40px;">Now</button>
@@ -81,15 +82,15 @@
       <div id="ts-results" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0.6rem;">
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Local time</div>
-          <div id="ts-local" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+          <div id="ts-local" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyText(this.textContent)}">—</div>
         </div>
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">UTC</div>
-          <div id="ts-utc" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+          <div id="ts-utc" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyText(this.textContent)}">—</div>
         </div>
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">ISO 8601</div>
-          <div id="ts-iso" style="font-weight:600;font-size:0.92rem;cursor:pointer;font-family:monospace;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+          <div id="ts-iso" style="font-weight:600;font-size:0.92rem;cursor:pointer;font-family:monospace;" onclick="copyText(this.textContent)" title="Click to copy" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyText(this.textContent)}">—</div>
         </div>
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Relative</div>
@@ -103,18 +104,18 @@
       <h2 style="font-family:Syne,sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:0.75rem;">📅 Date → Timestamp</h2>
       <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:flex-end;">
         <div style="flex:1;min-width:200px;">
-          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;">Date & time (local)</label>
+          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.3rem;" for="date-input">Date & time (local)</label>
           <input type="datetime-local" id="date-input" oninput="dateToTs()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.75rem;font-size:0.95rem;"/>
         </div>
       </div>
       <div id="date-result" style="display:none;margin-top:0.85rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0.6rem;">
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">Unix timestamp</div>
-          <div id="date-ts" style="font-family:Syne,sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent2);cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+          <div id="date-ts" style="font-family:Syne,sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent2);cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyText(this.textContent)}">—</div>
         </div>
         <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem 0.9rem;">
           <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:0.25rem;">UTC equivalent</div>
-          <div id="date-utc" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy">—</div>
+          <div id="date-utc" style="font-weight:600;font-size:0.92rem;cursor:pointer;" onclick="copyText(this.textContent)" title="Click to copy" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();copyText(this.textContent)}">—</div>
         </div>
       </div>
     </div>
@@ -167,6 +168,7 @@
     <div class="faq-item"><button class="faq-q">What is ISO 8601 format?<span class="arrow">▼</span></button><div class="faq-a">ISO 8601 is an international standard for representing dates and times, e.g. 2024-06-01T12:00:00Z. The Z at the end means UTC. It is widely used in APIs and data exchange formats.</div></div>
   </div>
 </div>
+</main>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
