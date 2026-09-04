@@ -4,8 +4,7 @@
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Free CSS Unit Converter – px to rem & em | OneConvert</title>
   <meta name="description" content="Convert CSS units online free. Convert px to rem, em, vh, vw, pt instantly. Set custom base font size. No account needed."/>
-  <meta name="keywords" content="px to rem converter, css unit converter, px to em, pixels to rem, px to vw, css units free online, px rem em converter"/>
-  <link rel="canonical" href="https://oneconvert.net/units/css-units.html"/>
+<link rel="canonical" href="https://oneconvert.net/units/css-units.html"/>
   <meta property="og:title" content="CSS Unit Converter – px to rem, em, vh | OneConvert"/>
   <meta property="og:description" content="Convert px to rem, em, vh, vw and pt instantly. Set your base font size."/>
   <meta property="og:type" content="website"/>
@@ -28,7 +27,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSS Unit Converter","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net"},{"@type":"ListItem","position":2,"name":"Unit Converter","item":"https://oneconvert.net/units/"},{"@type":"ListItem","position":3,"name":"CSS Units","item":"https://oneconvert.net/units/css-units.html"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many px is 1rem?","acceptedAnswer":{"@type":"Answer","text":"By default 1rem = 16px (browser default root font size). You can change the base in the converter settings above."}},{"@type":"Question","name":"What is the difference between rem and em?","acceptedAnswer":{"@type":"Answer","text":"rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements."}},{"@type":"Question","name":"How do I convert px to vh?","acceptedAnswer":{"@type":"Answer","text":"Set your viewport height above, enter your px value, and the vh result shows automatically. Formula: vh = px / viewportHeight × 100."}},{"@type":"Question","name":"What is 16px in rem?","acceptedAnswer":{"@type":"Answer","text":"16px = 1rem at the default browser font size of 16px."}},{"@type":"Question","name":"Should I use px or rem for font sizes?","acceptedAnswer":{"@type":"Answer","text":"rem is recommended for font sizes — it respects the user's browser font size preferences, making your site more accessible. Use px for borders, shadows and decorative elements that should not scale."}},{"@type":"Question","name":"What base font size should I use?","acceptedAnswer":{"@type":"Answer","text":"Most browsers default to 16px. If your project sets a custom root font size (e.g. html { font-size: 62.5% } for 10px base), enter that value in the Base font size field."}},{"@type":"Question","name":"When should I use rem versus em?","acceptedAnswer":{"@type":"Answer","text":"Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you specifically want sizing relative to a parent element, such as in component-level typography scales."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many px is 1rem?","acceptedAnswer":{"@type":"Answer","text":"By default 1rem = 16px (browser default root font size). You can change it in the Root font size field above."}},{"@type":"Question","name":"What is the difference between rem and em?","acceptedAnswer":{"@type":"Answer","text":"rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements. Set the Parent font size field above to convert em accurately."}},{"@type":"Question","name":"How do I convert px to vh?","acceptedAnswer":{"@type":"Answer","text":"Set your viewport height above, enter your px value, and the vh result shows automatically. Formula: vh = px / viewportHeight × 100."}},{"@type":"Question","name":"What is 16px in rem?","acceptedAnswer":{"@type":"Answer","text":"16px = 1rem at the default browser font size of 16px."}},{"@type":"Question","name":"Should I use px or rem for font sizes?","acceptedAnswer":{"@type":"Answer","text":"rem is recommended for font sizes — it respects the user's browser font size preferences, making your site more accessible. Use px for borders, shadows and decorative elements that should not scale."}},{"@type":"Question","name":"What base font size should I use?","acceptedAnswer":{"@type":"Answer","text":"Most browsers default to 16px. If your project sets a custom root font size (e.g. html { font-size: 62.5% } for 10px base), enter that value in the Root font size field."}},{"@type":"Question","name":"When should I use rem versus em?","acceptedAnswer":{"@type":"Answer","text":"Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you want sizing relative to a parent element, such as component-level typography scales — set the Parent font size field to match that parent."}}]}</script>
   <meta property="og:url" content="https://oneconvert.net/units/css-units.html"/>
   <meta property="og:site_name" content="OneConvert"/>
   <meta name="twitter:title" content="Free CSS Unit Converter – px to rem &amp; em | OneConvert"/>
@@ -59,8 +58,13 @@
     <!-- Settings row -->
     <div style="display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 1rem;align-items:center;">
       <div style="display:flex;align-items:center;gap:0.5rem;">
-        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;">Base font size (rem):</label>
-        <input type="number" id="base-font" value="16" min="8" max="32" step="1" oninput="updateAll()" style="width:70px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
+        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;" for="base-font">Root font size (rem):</label>
+        <input type="number" id="base-font" value="16" min="8" max="32" step="1" oninput="updateAll()" title="Font size of the html element — rem resolves against this" style="width:70px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
+        <span style="font-size:0.82rem;color:var(--muted);">px</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <label style="font-size:0.82rem;color:var(--muted);white-space:nowrap;" for="parent-font">Parent font size (em):</label>
+        <input type="number" id="parent-font" value="16" min="4" max="96" step="1" oninput="updateAll()" title="Font size of the element's parent — em resolves against this" style="width:70px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:0.35rem 0.5rem;font-size:0.9rem;"/>
         <span style="font-size:0.82rem;color:var(--muted);">px</span>
       </div>
       <div style="display:flex;align-items:center;gap:0.5rem;">
@@ -104,7 +108,7 @@
     <h2 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;">Common px → rem conversions (base: <span id="base-label">16</span>px)</h2>
     <div style="overflow-x:auto;">
       <table class="unit-table" id="ref-table">
-        <thead><tr><th>px</th><th>rem</th><th>em</th><th>pt</th><th>vw (1440px)</th></tr></thead>
+        <thead><tr><th>px</th><th>rem</th><th>em</th><th>pt</th><th>vw (<span id="ref-vw-label">1440</span>px)</th></tr></thead>
         <tbody id="ref-body"></tbody>
       </table>
     </div>
@@ -137,22 +141,22 @@
   </div>
 
   <div class="faq-section"><h2>Frequently Asked Questions</h2>
-    <div class="faq-item"><button class="faq-q">How many px is 1rem?<span class="arrow">▼</span></button><div class="faq-a">By default 1rem = 16px (browser default root font size). You can change the base in the converter settings above.</div></div>
-    <div class="faq-item"><button class="faq-q">What is the difference between rem and em?<span class="arrow">▼</span></button><div class="faq-a">rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements.</div></div>
+    <div class="faq-item"><button class="faq-q">How many px is 1rem?<span class="arrow">▼</span></button><div class="faq-a">By default 1rem = 16px (browser default root font size). You can change it in the Root font size field above.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between rem and em?<span class="arrow">▼</span></button><div class="faq-a">rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements. Set the Parent font size field above to convert em accurately.</div></div>
     <div class="faq-item"><button class="faq-q">How do I convert px to vh?<span class="arrow">▼</span></button><div class="faq-a">Set your viewport height above, enter your px value, and the vh result shows automatically. Formula: vh = px / viewportHeight × 100.</div></div>
     <div class="faq-item"><button class="faq-q">What is 16px in rem?<span class="arrow">▼</span></button><div class="faq-a">16px = 1rem at the default browser font size of 16px.</div></div>
     <div class="faq-item"><button class="faq-q">Should I use px or rem for font sizes?<span class="arrow">▼</span></button><div class="faq-a">rem is recommended for font sizes — it respects the user's browser font size preferences, making your site more accessible. Use px for borders, shadows and decorative elements that should not scale.</div></div>
   
-    <div class="faq-item"><button class="faq-q">What base font size should I use?<span class="arrow">▼</span></button><div class="faq-a">Most browsers default to 16px. If your project sets a custom root font size (e.g. html { font-size: 62.5% } for 10px base), enter that value in the Base font size field.</div></div>
+    <div class="faq-item"><button class="faq-q">What base font size should I use?<span class="arrow">▼</span></button><div class="faq-a">Most browsers default to 16px. If your project sets a custom root font size (e.g. html { font-size: 62.5% } for 10px base), enter that value in the Root font size field.</div></div>
   
-    <div class="faq-item"><button class="faq-q">When should I use rem versus em?<span class="arrow">▼</span></button><div class="faq-a">Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you specifically want sizing relative to a parent element, such as in component-level typography scales.</div></div>
+    <div class="faq-item"><button class="faq-q">When should I use rem versus em?<span class="arrow">▼</span></button><div class="faq-a">Use rem for consistent sizing relative to the root — it does not compound in nested elements. Use em when you want sizing relative to a parent element, such as component-level typography scales — set the Parent font size field to match that parent.</div></div>
   </div>
 </div>
 
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">
-    <a href="/">Home</a><a href="/units/">Units</a><a href="/pdf/">PDF</a>
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/units/">Units</a><a href="/pdf/">PDF</a>
     <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
     <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
@@ -169,31 +173,33 @@ const LABELS = {px:'px',rem:'rem',em:'em',vw:'vw',vh:'vh',pt:'pt','%':'%'};
 
 function toPx(val,unit){
   const base=parseFloat(document.getElementById('base-font').value)||16;
+  const parent=parseFloat(document.getElementById('parent-font').value)||base;
   const vpw=parseFloat(document.getElementById('vp-w').value)||1440;
   const vph=parseFloat(document.getElementById('vp-h').value)||900;
   switch(unit){
     case 'px': return val;
-    case 'rem': return val*base;
-    case 'em': return val*base; // assumes same as rem for simplicity
+    case 'rem': return val*base;      // rem: relativ zur Wurzel-Schriftgroesse
+    case 'em': return val*parent;     // em: relativ zur Schriftgroesse des Elternelements
     case 'vw': return val*vpw/100;
     case 'vh': return val*vph/100;
     case 'pt': return val*96/72;
-    case '%': return val*base/100;
+    case '%': return val*parent/100;  // % verhaelt sich bei font-size wie em
     default: return val;
   }
 }
 function fromPx(px,unit){
   const base=parseFloat(document.getElementById('base-font').value)||16;
+  const parent=parseFloat(document.getElementById('parent-font').value)||base;
   const vpw=parseFloat(document.getElementById('vp-w').value)||1440;
   const vph=parseFloat(document.getElementById('vp-h').value)||900;
   switch(unit){
     case 'px': return px;
     case 'rem': return px/base;
-    case 'em': return px/base;
+    case 'em': return px/parent;
     case 'vw': return px/vpw*100;
     case 'vh': return px/vph*100;
     case 'pt': return px*72/96;
-    case '%': return px/base*100;
+    case '%': return px/parent*100;
     default: return px;
   }
 }
@@ -220,10 +226,14 @@ function updateAll(){
   });
   // Reference table
   const tbody=document.getElementById('ref-body');
+  const parentRef=parseFloat(document.getElementById('parent-font').value)||base;
+  const vpwRef=parseFloat(document.getElementById('vp-w').value)||1440;
+  const vwLabel=document.getElementById('ref-vw-label');
+  if(vwLabel) vwLabel.textContent=vpwRef;
   tbody.innerHTML='';
   [4,8,12,14,16,18,20,24,32,48,64,96].forEach(px=>{
     const tr=document.createElement('tr');
-    tr.innerHTML=`<td>${px}</td><td class="val-col">${fmt(px/base)}</td><td class="val-col">${fmt(px/base)}</td><td class="val-col">${fmt(px*72/96)}</td><td class="val-col">${fmt(px/1440*100)}</td>`;
+    tr.innerHTML=`<td>${px}</td><td class="val-col">${fmt(px/base)}</td><td class="val-col">${fmt(px/parentRef)}</td><td class="val-col">${fmt(px*72/96)}</td><td class="val-col">${fmt(px/vpwRef*100)}</td>`;
     tbody.appendChild(tr);
   });
 }

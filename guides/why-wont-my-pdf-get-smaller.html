@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Won't My PDF Get Smaller? | OneConvert</title>
+  <meta name="description" content="Compression barely shrank your PDF? Here is why scanned files resist compression, how to tell what is in yours, and what actually reduces the size."/>
+  <link rel="canonical" href="https://oneconvert.net/guides/why-wont-my-pdf-get-smaller.html"/>
+  <meta property="og:title" content="Why Won't My PDF Get Smaller? | OneConvert"/>
+  <meta property="og:description" content="Compression barely shrank your PDF? Here is why scanned files resist compression, how to tell what is in yours, and what actually reduces the size."/>
+  <meta property="og:url" content="https://oneconvert.net/guides/why-wont-my-pdf-get-smaller.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Why Won't My PDF Get Smaller? | OneConvert"/>
+  <meta name="twitter:description" content="Compression barely shrank your PDF? Here is why scanned files resist compression, how to tell what is in yours, and what actually reduces the size."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://oneconvert.net/guides/"},{"@type":"ListItem","position":3,"name":"Why won't my PDF get smaller?","item":"https://oneconvert.net/guides/why-wont-my-pdf-get-smaller.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why did my PDF barely shrink after compressing it?","acceptedAnswer":{"@type":"Answer","text":"Almost certainly because it is a scan. A scanned PDF is a JPEG image per page, and the image data is nearly all of the file. Metadata and object-stream compression cannot touch that, so the saving is a fraction of a percent. Text-based PDFs, by contrast, often shrink noticeably."}},{"@type":"Question","name":"How do I tell whether my PDF is a scan?","acceptedAnswer":{"@type":"Answer","text":"Open it and try to select a sentence with your cursor. If the text highlights, it is a real text layer. If nothing selects, or you can only draw a box over the page, it is an image of text — a scan."}},{"@type":"Question","name":"What actually makes a PDF large?","acceptedAnswer":{"@type":"Answer","text":"In order: embedded images, embedded fonts, and object overhead. A 20-page text report is typically a few hundred kilobytes. If your file is tens of megabytes, images are the cause almost every time."}},{"@type":"Question","name":"Can I shrink a scanned PDF at all?","acceptedAnswer":{"@type":"Answer","text":"Only by re-encoding the images at lower quality or resolution, which is lossy and outside what a browser-based tool does safely. The practical alternatives are removing pages you do not need, or re-scanning at 200-300 DPI instead of 600."}},{"@type":"Question","name":"Does splitting a PDF reduce the total size?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Shared resources such as fonts and logos are copied into whichever output needs them, so two halves can together exceed the original. Splitting helps when you only need to send part of a document."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why Won't My PDF Get Smaller?","description":"Why scanned PDFs resist compression and what reduces size instead.","datePublished":"2026-09-02","dateModified":"2026-09-02","author":{"@type":"Organization","name":"OneConvert","url":"https://oneconvert.net/"},"publisher":{"@type":"Organization","name":"OneConvert","logo":{"@type":"ImageObject","url":"https://oneconvert.net/og-image.png"}},"mainEntityOfPage":"https://oneconvert.net/guides/why-wont-my-pdf-get-smaller.html"}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="tool-page" style="max-width:820px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/guides/">Guides</a><span>&rsaquo;</span><span>Why won't my PDF get smaller?</span></div>
+  <div class="tool-page-header">
+    <h1>Why Won't My PDF Get Smaller?</h1>
+    <p>You compressed it and saved 2%. Here is what is actually going on, and what to do instead.</p>
+  </div>
+  <div class="info-section">
+    <h2>First: what is actually in your file?</h2>
+    <p>Before compressing anything, it is worth knowing what you are dealing with, because the answer decides whether compression can help at all. Open the PDF and try to select a sentence with your cursor. If the text highlights, you have a text-based PDF — generated by a word processor, a browser's print-to-PDF, or an invoicing system. If nothing selects, you have a scan: the page is a photograph of text, and there is no text in the file at all.</p>
+    <p>This single test predicts the outcome better than any tool description. Text-based PDFs carry a lot of structural overhead that compresses well. Scans carry image data that does not.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Why compression works on some files and not others</h2>
+    <p>Our <a href="/pdf/compress.html">PDF compressor</a> does two things, both lossless: it strips document metadata, and it rewrites the file using object streams, which packs many small internal objects into one compressed block instead of storing each separately. Nothing visible is altered or re-encoded.</p>
+    <p>That mechanism explains the results. Reports, exports, forms and generated invoices contain exactly the kind of object overhead this targets, and often shrink meaningfully. A file already written with object streams by a modern producer will barely move, because the work is done. And a scan will not move at all — its weight is JPEG data, which the process does not touch.</p>
+    <p>Some tools promise large reductions on scans. They achieve it by re-encoding every page image at lower quality, which is a lossy operation: text edges soften, and repeating it degrades the document further each time. That is a legitimate trade, but it should be a decision you make knowingly, not a hidden side effect.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>What to do when compression is not enough</h2>
+    <p><strong>Remove what you do not need to send.</strong> This is the most reliable saving available and it is exact: ten pages out of forty is roughly a quarter of the size. Use <a href="/pdf/delete-pages.html">Delete Pages</a> to drop pages from the document, or <a href="/pdf/split.html">Split PDF</a> to extract just the range you want.</p>
+    <p><strong>Re-scan at a sensible resolution.</strong> Scanners frequently default to 600 DPI, which is four times the data of 300 DPI and visibly no better for ordinary documents. For text, 200-300 DPI is the sweet spot. If you still have the original, re-scanning beats any compression.</p>
+    <p><strong>Do not convert to images.</strong> Exporting pages as PNG and rebuilding a PDF makes the file larger, not smaller, and destroys the text layer. The same applies to our <a href="/pdf/grayscale.html">grayscale converter</a> — it rasterises pages, so the output is usually bigger than the input. Greyscale is for appearance, not size.</p>
+    <p><strong>Check whether you need a PDF at all.</strong> If the recipient just needs to read a few pages, a couple of images or a plain text extract may serve better. <a href="/pdf/pdf-to-word.html">PDF to Word</a> pulls the text out of a text-based PDF into an editable document that is a fraction of the size.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>A realistic set of expectations</h2>
+    <p>For a text-heavy report exported from Word, expect a modest but real reduction — often enough to clear an email limit. For a file already optimised by its producer, expect almost nothing. For a 40 MB scan, expect essentially nothing, and reach for page removal or re-scanning instead.</p>
+    <p>Every one of these tools runs entirely in your browser. Your document is never uploaded, which also means the size limit is your device's memory rather than an upload cap — a 200 MB scan is fine to open, it simply will not compress.</p>
+  </div>
+
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Why did my PDF barely shrink after compressing it?<span class="arrow">&#9660;</span></button><div class="faq-a">Almost certainly because it is a scan. A scanned PDF is a JPEG image per page, and the image data is nearly all of the file. Metadata and object-stream compression cannot touch that, so the saving is a fraction of a percent. Text-based PDFs, by contrast, often shrink noticeably.</div></div>
+    <div class="faq-item"><button class="faq-q">How do I tell whether my PDF is a scan?<span class="arrow">&#9660;</span></button><div class="faq-a">Open it and try to select a sentence with your cursor. If the text highlights, it is a real text layer. If nothing selects, or you can only draw a box over the page, it is an image of text — a scan.</div></div>
+    <div class="faq-item"><button class="faq-q">What actually makes a PDF large?<span class="arrow">&#9660;</span></button><div class="faq-a">In order: embedded images, embedded fonts, and object overhead. A 20-page text report is typically a few hundred kilobytes. If your file is tens of megabytes, images are the cause almost every time.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I shrink a scanned PDF at all?<span class="arrow">&#9660;</span></button><div class="faq-a">Only by re-encoding the images at lower quality or resolution, which is lossy and outside what a browser-based tool does safely. The practical alternatives are removing pages you do not need, or re-scanning at 200-300 DPI instead of 600.</div></div>
+    <div class="faq-item"><button class="faq-q">Does splitting a PDF reduce the total size?<span class="arrow">&#9660;</span></button><div class="faq-a">Not necessarily. Shared resources such as fonts and logos are copied into whichever output needs them, so two halves can together exceed the original. Splitting helps when you only need to send part of a document.</div></div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+document.addEventListener('DOMContentLoaded',()=>{const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));});
+</script>
+<script src="/js/consent.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});});
+</script>
+</body>
+</html>

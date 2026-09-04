@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What Is HEIC, and Why Won't It Open? | OneConvert</title>
+  <meta name="description" content="HEIC explained: what Apple's photo format is, why Windows and most websites reject it, what you lose converting to JPG, and how to stop your iPhone creating them."/>
+  <link rel="canonical" href="https://oneconvert.net/guides/what-is-heic.html"/>
+  <meta property="og:title" content="What Is HEIC, and Why Won't It Open? | OneConvert"/>
+  <meta property="og:description" content="HEIC explained: what Apple's photo format is, why Windows and most websites reject it, what you lose converting to JPG, and how to stop your iPhone creating them."/>
+  <meta property="og:url" content="https://oneconvert.net/guides/what-is-heic.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="What Is HEIC, and Why Won't It Open? | OneConvert"/>
+  <meta name="twitter:description" content="HEIC explained: what Apple's photo format is, why Windows and most websites reject it, what you lose converting to JPG, and how to stop your iPhone creating them."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://oneconvert.net/guides/"},{"@type":"ListItem","position":3,"name":"What is HEIC?","item":"https://oneconvert.net/guides/what-is-heic.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why will my iPhone photos not open on Windows?","acceptedAnswer":{"@type":"Answer","text":"They are HEIC files. Windows needs the HEIF Image Extensions from the Microsoft Store to read the container, plus a separate HEVC package to decode the picture data — the latter is usually a paid item. Converting to JPG removes both dependencies."}},{"@type":"Question","name":"Does converting HEIC to JPG lose quality?","acceptedAnswer":{"@type":"Answer","text":"Very little that is visible at normal sizes. The real losses are structural: 16-bit colour depth drops to 8-bit, transparency is flattened, and depth maps are discarded. For ordinary photos this is imperceptible; keep the HEIC as your master if you plan heavy editing."}},{"@type":"Question","name":"Why is my JPG bigger than the HEIC it came from?","acceptedAnswer":{"@type":"Answer","text":"That is expected. HEIC uses HEVC compression, roughly twice as efficient as JPEG at the same perceived quality, so an equivalent JPG is normally one and a half to two times the size."}},{"@type":"Question","name":"How do I stop my iPhone saving photos as HEIC?","acceptedAnswer":{"@type":"Answer","text":"Settings, then Camera, then Formats, and choose Most Compatible. The camera then writes JPEG directly at roughly double the storage per photo. This affects only new pictures; your existing library stays HEIC."}},{"@type":"Question","name":"What happens to Live Photos when I convert them?","acceptedAnswer":{"@type":"Answer","text":"Only the primary still frame is converted. The paired video sequence is not part of the JPEG format and is dropped. Choose the key frame in the Photos app first if you need a specific moment."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is HEIC, and Why Won't It Open?","description":"What HEIC is, why it will not open, and what conversion costs.","datePublished":"2026-09-02","dateModified":"2026-09-02","author":{"@type":"Organization","name":"OneConvert","url":"https://oneconvert.net/"},"publisher":{"@type":"Organization","name":"OneConvert","logo":{"@type":"ImageObject","url":"https://oneconvert.net/og-image.png"}},"mainEntityOfPage":"https://oneconvert.net/guides/what-is-heic.html"}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="tool-page" style="max-width:820px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/guides/">Guides</a><span>&rsaquo;</span><span>What is HEIC?</span></div>
+  <div class="tool-page-header">
+    <h1>What Is HEIC, and Why Won't It Open?</h1>
+    <p>Apple's photo format is technically better than JPEG — and that is exactly why it causes trouble.</p>
+  </div>
+  <div class="info-section">
+    <h2>What HEIC actually is</h2>
+    <p>HEIC is Apple's file extension for HEIF, the High Efficiency Image File Format standardised as ISO/IEC 23008-12. Inside the container, the picture is compressed with HEVC (H.265) — the same codec used for 4K video. Because HEVC models an image far more aggressively than JPEG's 1992-era approach, a HEIC photo typically occupies about half the space at visually comparable quality. Apple made it the camera default in iOS 11, which is why almost every recent iPhone photo arrives as a <code>.heic</code> file.</p>
+    <p>Technically it is the better format in several measurable ways: up to 16 bits per colour channel against JPEG's 8, an alpha channel for transparency, and the ability to hold multiple images plus depth maps in one container — which is how Live Photos and Portrait-mode data are packaged.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>So why is it such a nuisance?</h2>
+    <p>The problem is reach, not quality. Windows requires the HEIF Image Extensions from the Microsoft Store, and a separate paid HEVC extension for the picture data. Most content management systems reject the upload outright. Android only gained decoding in version 10. Plenty of desktop software still shows nothing but a placeholder icon, and many photo printers and older smart TVs cannot read it at all.</p>
+    <p>This is why <a href="/image/heic-to-jpg.html">converting HEIC to JPG</a> remains a routine task despite HEIC being the superior format. You are trading technical merit for the ability to actually use the file.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>What you give up in the conversion</h2>
+    <p>Worth knowing before you convert a whole library: the 16-bit colour depth is reduced to 8 bits, any transparency is flattened, depth maps are dropped, and a Live Photo becomes a single still frame. For ordinary photographs the visible difference is negligible — an 8-bit JPEG already covers far more tonal range than a screen or a print reproduces. If you are grading heavily or editing RAW-adjacent material, keep the HEIC original as your master and treat the JPG as a distribution copy.</p>
+    <p>One detail causes most of the confusion: orientation. iPhones record photos in the sensor's native landscape orientation and store a rotation flag in the EXIF metadata rather than rotating the pixels. Converters that ignore that flag output sideways images. Ours renders the photo after the browser has applied the orientation, so the result matches what you saw in the Photos app.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Avoiding the problem entirely</h2>
+    <p>If you would rather not convert at all, change the source. On your iPhone, open <strong>Settings &rarr; Camera &rarr; Formats</strong> and choose <strong>Most Compatible</strong>. The camera then writes JPEG directly, at roughly double the storage per photo. Note that this affects only newly taken pictures — everything already in your library stays HEIC.</p>
+    <p>There is also a middle path worth knowing: when you AirDrop or share photos to a non-Apple device, iOS often converts to JPEG automatically. The files that arrive as HEIC are usually the ones copied straight off the device over a cable or pulled from a backup.</p>
+    <p>If you do convert in bulk, the result will be larger than the source — expect roughly one and a half to two times. Running the output through our <a href="/image/compress.html">image compressor</a> at quality 80 typically brings it back near the original size with no visible difference.</p>
+  </div>
+
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Why will my iPhone photos not open on Windows?<span class="arrow">&#9660;</span></button><div class="faq-a">They are HEIC files. Windows needs the HEIF Image Extensions from the Microsoft Store to read the container, plus a separate HEVC package to decode the picture data — the latter is usually a paid item. Converting to JPG removes both dependencies.</div></div>
+    <div class="faq-item"><button class="faq-q">Does converting HEIC to JPG lose quality?<span class="arrow">&#9660;</span></button><div class="faq-a">Very little that is visible at normal sizes. The real losses are structural: 16-bit colour depth drops to 8-bit, transparency is flattened, and depth maps are discarded. For ordinary photos this is imperceptible; keep the HEIC as your master if you plan heavy editing.</div></div>
+    <div class="faq-item"><button class="faq-q">Why is my JPG bigger than the HEIC it came from?<span class="arrow">&#9660;</span></button><div class="faq-a">That is expected. HEIC uses HEVC compression, roughly twice as efficient as JPEG at the same perceived quality, so an equivalent JPG is normally one and a half to two times the size.</div></div>
+    <div class="faq-item"><button class="faq-q">How do I stop my iPhone saving photos as HEIC?<span class="arrow">&#9660;</span></button><div class="faq-a">Settings, then Camera, then Formats, and choose Most Compatible. The camera then writes JPEG directly at roughly double the storage per photo. This affects only new pictures; your existing library stays HEIC.</div></div>
+    <div class="faq-item"><button class="faq-q">What happens to Live Photos when I convert them?<span class="arrow">&#9660;</span></button><div class="faq-a">Only the primary still frame is converted. The paired video sequence is not part of the JPEG format and is dropped. Choose the key frame in the Photos app first if you need a specific moment.</div></div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+document.addEventListener('DOMContentLoaded',()=>{const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));});
+</script>
+<script src="/js/consent.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});});
+</script>
+</body>
+</html>

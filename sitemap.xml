@@ -33,4 +33,8 @@
   <url><loc>https://oneconvert.net/about.html</loc><lastmod>2026-09-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://oneconvert.net/privacy.html</loc><lastmod>2026-09-02</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://oneconvert.net/terms.html</loc><lastmod>2026-09-02</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://oneconvert.net/guides/</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oneconvert.net/guides/why-wont-my-pdf-get-smaller.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://oneconvert.net/guides/jpg-png-or-webp.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://oneconvert.net/guides/what-is-heic.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>
