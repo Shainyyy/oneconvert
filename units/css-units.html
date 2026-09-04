@@ -131,6 +131,11 @@
 <p>The working rule most teams converge on: <code>rem</code> for font sizes and spacing so everything scales with user preference, <code>em</code> for padding that should follow its own element's text, <code>px</code> for hairlines and borders that should never scale, percentages and viewport units for layout dimensions.</p>
   </div>
 
+  <div class="related-tools">
+    <h2>Try Also</h2>
+    <p style="font-size:0.9rem;"><a style="color:var(--accent2);font-weight:600;" href="/colors/">🎨 Color Tools</a> · <a style="color:var(--accent2);font-weight:600;" href="/units/number-base.html">🔢 Number Base</a> · <a style="color:var(--accent2);font-weight:600;" href="/units/timestamp.html">⏱ Unix Timestamp</a></p>
+  </div>
+
   <div class="faq-section"><h2>Frequently Asked Questions</h2>
     <div class="faq-item"><button class="faq-q">How many px is 1rem?<span class="arrow">▼</span></button><div class="faq-a">By default 1rem = 16px (browser default root font size). You can change the base in the converter settings above.</div></div>
     <div class="faq-item"><button class="faq-q">What is the difference between rem and em?<span class="arrow">▼</span></button><div class="faq-a">rem is relative to the root (html) element font size — it's consistent everywhere. em is relative to the parent element font size, which can chain and compound in nested elements.</div></div>
@@ -226,6 +231,5 @@ function updateAll(){
 <script src="../js/consent.js"></script>
 <script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
 trackRecentTool();</script>
-<script>document.getElementById("try-also-links").innerHTML='<a href="/colors/" style="color:var(--accent2);font-weight:600;">🎨 Color Tools</a> · <a href="/units/number-base.html" style="color:var(--accent2);font-weight:600;">🔢 Number Base</a>';</script>
 </body>
 </html>

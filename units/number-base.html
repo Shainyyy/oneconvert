@@ -124,6 +124,11 @@
 <p>Two details cause most confusion. Bit width is not implied by the value: 255 is <code>11111111</code> in 8 bits and <code>0000000011111111</code> in 16, the same number with different padding, which matters when a protocol specifies a field size. And negative numbers are normally stored in two's complement, where the leading bit indicates sign and −1 in 8 bits is <code>11111111</code> — indistinguishable from 255 unless you already know how the value is meant to be interpreted.</p>
   </div>
 
+  <div class="related-tools">
+    <h2>Try Also</h2>
+    <p style="font-size:0.9rem;"><a style="color:var(--accent2);font-weight:600;" href="/units/css-units.html">🖥️ CSS Units</a> · <a style="color:var(--accent2);font-weight:600;" href="/units/timestamp.html">⏱ Unix Timestamp</a> · <a style="color:var(--accent2);font-weight:600;" href="/text/">✏️ Text Tools</a></p>
+  </div>
+
   <div class="faq-section"><h2>Frequently Asked Questions</h2>
     <div class="faq-item"><button class="faq-q">How do I convert binary to decimal?<span class="arrow">▼</span></button><div class="faq-a">Type the binary number in the Binary field and the decimal result appears immediately. You can also multiply each bit by its positional power of 2 and sum them: 1010 = 1×8 + 0×4 + 1×2 + 0×1 = 10.</div></div>
     <div class="faq-item"><button class="faq-q">What is 0xFF in decimal?<span class="arrow">▼</span></button><div class="faq-a">0xFF = 255 in decimal. F in hex = 15. FF = (15 × 16) + 15 = 255.</div></div>
@@ -200,6 +205,5 @@ function convert(from,val){
 <script src="../js/consent.js"></script>
 <script>function trackRecentTool(){const url=window.location.pathname;const map={'/pdf/split.html':['✂️','Split PDF'],'/pdf/merge.html':['🔗','Merge PDF'],'/pdf/compress.html':['📦','Compress PDF'],'/pdf/rotate.html':['🔄','Rotate PDF'],'/pdf/watermark.html':['💧','Add Watermark'],'/pdf/page-numbers.html':['🔢','Page Numbers'],'/pdf/grayscale.html':['🖤','PDF Grayscale'],'/pdf/pdf-to-word.html':['📝','PDF to Word'],'/pdf/images-to-pdf.html':['🖼️','Images to PDF'],'/pdf/pdf-to-images.html':['📷','PDF to Images'],'/pdf/delete-pages.html':['🗑️','Delete Pages'],'/pdf/reorder.html':['↕️','Reorder Pages'],'/image/jpg-to-png.html':['🔄','JPG to PNG'],'/image/png-to-jpg.html':['🔄','PNG to JPG'],'/image/compress.html':['📦','Compress Image'],'/image/resize.html':['↔️','Resize Image'],'/image/jpg-to-webp.html':['⚡','JPG to WebP'],'/image/png-to-webp.html':['⚡','PNG to WebP'],'/image/webp-to-jpg.html':['🔄','WebP to JPG'],'/image/heic-to-jpg.html':['🍎','HEIC to JPG'],'/qr/':['📱','QR Generator'],'/units/':['📐','Unit Converter'],'/units/css-units.html':['🖥️','CSS Units'],'/units/number-base.html':['🔢','Number Base'],'/text/':['✏️','Text Tools'],'/colors/':['🎨','Color Tools'],};const entry=map[url];if(!entry)return;const[icon,name]=entry;let recent=JSON.parse(localStorage.getItem('oc-recent')||'[]');recent=recent.filter(r=>r.url!==url);recent.unshift({url,icon,name});localStorage.setItem('oc-recent',JSON.stringify(recent.slice(0,8)));}
 trackRecentTool();</script>
-<script>document.getElementById("try-also-links").innerHTML='<a href="/units/css-units.html" style="color:var(--accent2);font-weight:600;">🖥️ CSS Units</a> · <a href="/units/timestamp.html" style="color:var(--accent2);font-weight:600;">⏱ Timestamp</a>';</script>
 </body>
 </html>
