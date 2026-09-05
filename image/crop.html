@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 </script>
 <script>
 let cImg=null, cName='image.png', cType='image/png';
-let sel={x:0,y:0,w:0,h:0};        // in Anzeige-Pixeln
+let sel={x:0,y:0,w:0,h:0};        // in displayed pixels
 let drag=null;
 
 document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-zone','file-input',f=>loadCrop(f[0])));
@@ -192,7 +192,7 @@ function loadCrop(file){
     cImg=img;
     const el=document.getElementById('crop-img');
     document.getElementById('crop-area').style.display='block';
-    // erst wenn das sichtbare <img> geladen UND gelayoutet ist, hat es eine Breite
+    // the visible <img> only has a width once it is loaded and laid out
     const start=()=>{
       if(!el.clientWidth){ requestAnimationFrame(start); return; }
       selectAll();
@@ -207,8 +207,8 @@ function loadCrop(file){
 }
 function shown(){
   const el=document.getElementById('crop-img');
-  // In einem verborgenen Tab ist die Layoutbreite 0 — dann auf die Originalmasse zurueckfallen,
-  // damit die Skalierung nie durch 0 teilt.
+  // In a hidden tab the layout width is 0 — fall back to the intrinsic size
+  // so the scale factor never divides by zero.
   const w=el.clientWidth||(cImg?cImg.naturalWidth:0), h=el.clientHeight||(cImg?cImg.naturalHeight:0);
   return {w,h};
 }
@@ -250,7 +250,7 @@ function applyRatio(){
   sel.w=w; sel.h=h; paint();
 }
 
-// Pointer Events decken Maus und Touch gemeinsam ab
+// pointer events cover mouse and touch in one path
 const stage=()=>document.getElementById('crop-stage');
 document.addEventListener('pointerdown',e=>{
   const h=e.target.closest('.crop-h'), box=e.target.closest('#crop-box');

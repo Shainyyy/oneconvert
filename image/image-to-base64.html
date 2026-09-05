@@ -170,10 +170,10 @@ function loadB64(file){
   b64Mime=file.type; b64File=file.name; b64Size=file.size;
   const fr=new FileReader();
   fr.onload=()=>{
-    b64Data=fr.result;                       // vollstaendige data:-URI
+    b64Data=fr.result;                       // the complete data: URI
     document.getElementById('b64-preview').src=b64Data;
     document.getElementById('b64-area').style.display='block';
-    const b64only=(b64Data.split(',')[1]||'').length;   // ohne data:-Praefix
+    const b64only=(b64Data.split(',')[1]||'').length;   // Base64 payload only, without the data: prefix
     const grow=Math.round((b64only/file.size-1)*100);
     document.getElementById('b64-info').textContent=
       file.name+' · '+formatBytes(file.size)+' → '+formatBytes(b64only)+' of Base64 (+'+grow+'%), '

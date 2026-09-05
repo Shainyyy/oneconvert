@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free CSS Gradient Generator – Linear &amp; Radial | OneConvert</title>
+  <meta name="description" content="Build linear, radial and conic CSS gradients with a live preview. Copy the rule straight into your stylesheet. Free, no account, runs in your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/colors/gradient-generator.html"/>
+  <meta property="og:title" content="Free CSS Gradient Generator – Linear &amp; Radial | OneConvert"/>
+  <meta property="og:description" content="Build linear, radial and conic CSS gradients with a live preview. Copy the rule straight into your stylesheet. Free, no account, runs in your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/colors/gradient-generator.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free CSS Gradient Generator – Linear &amp; Radial | OneConvert"/>
+  <meta name="twitter:description" content="Build linear, radial and conic CSS gradients with a live preview. Copy the rule straight into your stylesheet. Free, no account, runs in your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSS Gradient Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Build linear, radial and conic CSS gradients with a live preview. Copy the rule straight into your stylesheet. Free, no account, runs in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Colors Tools","item":"https://oneconvert.net/colors/"},{"@type":"ListItem","position":3,"name":"CSS Gradient Generator","item":"https://oneconvert.net/colors/gradient-generator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the angle mean in a CSS gradient?","acceptedAnswer":{"@type":"Answer","text":"It points toward where the gradient ends, measured clockwise from north. 0deg runs bottom to top, 90deg left to right, 180deg top to bottom. This differs from the mathematical convention, which is why it often feels backwards at first."}},{"@type":"Question","name":"Why does my gradient look grey in the middle?","acceptedAnswer":{"@type":"Answer","text":"You are blending between colours on opposite sides of the colour wheel, so the interpolation passes through the desaturated centre. Either keep the colours closer together on the wheel, or add a third stop to steer the blend around the middle."}},{"@type":"Question","name":"Do I need vendor prefixes?","acceptedAnswer":{"@type":"Answer","text":"No. Every browser in current use supports unprefixed linear, radial and conic gradients. Prefixes like -webkit-linear-gradient are only relevant for browsers well over a decade old."}},{"@type":"Question","name":"Can I use a gradient as text colour?","acceptedAnswer":{"@type":"Answer","text":"Yes, with a small trick: set the gradient as background-image, then add background-clip: text and color: transparent. The text then shows the gradient through its own shapes. Check readability — gradient text is often harder to read than flat colour."}},{"@type":"Question","name":"Is conic-gradient widely supported?","acceptedAnswer":{"@type":"Answer","text":"Yes, in every current browser. It is the newest of the three but has been broadly available since 2021, and it replaces what previously needed an image or SVG for pie charts and colour wheels."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/" class="active">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/colors/">Colors Tools</a><span>&rsaquo;</span><span>CSS Gradient Generator</span></div>
+  <div class="tool-page-header">
+    <h1>Free CSS Gradient Generator</h1>
+    <p>Linear, radial and conic gradients with a live preview and copy-ready CSS.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Pick two or three colours, choose a direction, and the CSS appears below the preview ready to paste. Everything updates as you adjust it, so you can judge the result rather than imagine it. No account, no export step, and nothing leaves your browser.</p>
+
+  <div class="tool-box">
+    <div id="grad-preview" style="height:190px;border-radius:12px;border:1px solid var(--border);margin-bottom:1rem;"></div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1rem;">
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="grad-type">Type</label>
+        <select id="grad-type" onchange="renderGrad()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.6rem;">
+          <option value="linear">Linear</option><option value="radial">Radial</option><option value="conic">Conic</option>
+        </select>
+      </div>
+      <div id="angle-wrap">
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="grad-angle">Angle (&deg;)</label>
+        <input type="number" id="grad-angle" value="90" min="0" max="360" oninput="renderGrad()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.6rem;"/>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="grad-c1">Start colour</label>
+        <input type="color" id="grad-c1" value="#2563eb" oninput="renderGrad()" style="width:100%;height:40px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;"/>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="grad-c2">End colour</label>
+        <input type="color" id="grad-c2" value="#9333ea" oninput="renderGrad()" style="width:100%;height:40px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;"/>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:1rem;align-items:center;">
+      <label style="font-size:0.88rem;display:flex;align-items:center;gap:0.4rem;cursor:pointer;">
+        <input type="checkbox" id="grad-third" onchange="renderGrad()" aria-label="Add a third colour"/> Third colour</label>
+      <input type="color" id="grad-c3" value="#f59e0b" oninput="renderGrad()" aria-label="Middle colour" style="width:56px;height:34px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;"/>
+      <button class="btn btn-outline" onclick="randomGrad()" style="width:auto;">&#127922; Random</button>
+      <button class="btn btn-outline" onclick="swapGrad()" style="width:auto;">&#8646; Swap</button>
+    </div>
+
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="grad-css" style="margin-top:1rem;">CSS</label>
+    <textarea id="grad-css" readonly aria-label="Generated CSS" style="width:100%;min-height:90px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.85rem;font-family:monospace;resize:vertical;"></textarea>
+    <button class="btn" onclick="copyGrad()" style="margin-top:0.6rem;">Copy CSS</button>
+    <div class="status" id="status-grad"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose colours</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Two by default, or add a third stop.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Set type and angle</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Linear, radial or conic — preview follows live.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy the CSS</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">One declaration, ready for your stylesheet.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/colors/"><span class="icon">&#127912;</span><div class="info"><h3>Colour Tools</h3><p>HEX, RGB, HSL and contrast</p></div></a>
+      <a class="related-card" href="/units/css-units.html"><span class="icon">&#128421;&#65039;</span><div class="info"><h3>CSS Units</h3><p>px to rem, em, vw and vh</p></div></a>
+      <a class="related-card" href="/image/svg-to-png.html"><span class="icon">&#128208;</span><div class="info"><h3>SVG to PNG</h3><p>Rasterise a vector</p></div></a>
+      <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h3>JSON Formatter</h3><p>Validate and beautify JSON</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Which gradient type does what</h2>
+    <p><strong>Linear</strong> blends along a straight line, and the angle sets its direction. In CSS the angle points toward where the gradient ends: <code>0deg</code> runs bottom to top, <code>90deg</code> left to right, <code>180deg</code> top to bottom. This trips people up because it is measured clockwise from north, unlike the mathematical convention.</p>
+    <p><strong>Radial</strong> spreads outward from a centre point in ellipses, which suits spotlights, soft vignettes and giving a flat surface a sense of depth.</p>
+    <p><strong>Conic</strong> sweeps around a centre like a clock hand rather than outward. It is what you need for pie charts, colour wheels and the gradient rings common in modern interfaces — effects that previously required an image or SVG.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Making gradients that look good rather than muddy</h2>
+    <p>The most common problem is a grey band in the middle. It happens when you blend between two colours that sit opposite each other on the colour wheel — blue to orange, for example. The interpolation passes through the desaturated centre, and the midpoint turns to mud.</p>
+    <p>Two fixes work. Keep your colours within a similar region of the wheel, so the path between them stays saturated: blue to purple, orange to red, teal to green. Or add a third stop that steers the blend away from the centre, which is what the third colour option here is for.</p>
+    <p>Keep contrast in mind too. If text sits on the gradient it must remain readable across the whole span, not just where you happened to look. The darkest and lightest points both need to clear the threshold against your text colour — our <a href="/colors/">contrast checker</a> will tell you whether they do. And be sparing: a gradient works as an accent, but a page where every surface has one reads as noisy rather than modern.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What does the angle mean in a CSS gradient?<span class="arrow">&#9660;</span></button><div class="faq-a">It points toward where the gradient ends, measured clockwise from north. 0deg runs bottom to top, 90deg left to right, 180deg top to bottom. This differs from the mathematical convention, which is why it often feels backwards at first.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does my gradient look grey in the middle?<span class="arrow">&#9660;</span></button><div class="faq-a">You are blending between colours on opposite sides of the colour wheel, so the interpolation passes through the desaturated centre. Either keep the colours closer together on the wheel, or add a third stop to steer the blend around the middle.</div></div>
+    <div class="faq-item"><button class="faq-q">Do I need vendor prefixes?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Every browser in current use supports unprefixed linear, radial and conic gradients. Prefixes like -webkit-linear-gradient are only relevant for browsers well over a decade old.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I use a gradient as text colour?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes, with a small trick: set the gradient as background-image, then add background-clip: text and color: transparent. The text then shows the gradient through its own shapes. Check readability — gradient text is often harder to read than flat colour.</div></div>
+    <div class="faq-item"><button class="faq-q">Is conic-gradient widely supported?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes, in every current browser. It is the newest of the three but has been broadly available since 2021, and it replaces what previously needed an image or SVG for pie charts and colour wheels.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function gradCss(){
+  const type=document.getElementById('grad-type').value;
+  const a=document.getElementById('grad-angle').value||90;
+  const c1=document.getElementById('grad-c1').value;
+  const c2=document.getElementById('grad-c2').value;
+  const useThird=document.getElementById('grad-third').checked;
+  const c3=document.getElementById('grad-c3').value;
+  const stops=useThird? c1+', '+c3+', '+c2 : c1+', '+c2;
+  if(type==='linear') return 'linear-gradient('+a+'deg, '+stops+')';
+  if(type==='radial') return 'radial-gradient(circle, '+stops+')';
+  return 'conic-gradient(from '+a+'deg, '+stops+')';
+}
+function renderGrad(){
+  const css=gradCss();
+  document.getElementById('grad-preview').style.background=css;
+  document.getElementById('grad-css').value='background: '+css+';';
+  // the angle has no effect on a radial gradient
+  const t=document.getElementById('grad-type').value;
+  document.getElementById('angle-wrap').style.opacity = t==='radial'? '0.4':'1';
+  document.getElementById('grad-angle').disabled = t==='radial';
+  document.getElementById('grad-c3').style.display=document.getElementById('grad-third').checked?'':'none';
+}
+function swapGrad(){
+  const a=document.getElementById('grad-c1'), b=document.getElementById('grad-c2');
+  const t=a.value; a.value=b.value; b.value=t; renderGrad();
+  showStatus('status-grad','success','Colours swapped.');
+}
+function randomGrad(){
+  // keep hues close together so the midpoint does not go grey
+  const h=Math.floor(Math.random()*360), spread=30+Math.floor(Math.random()*60);
+  const hsl=(hh,s,l)=>{ hh=((hh%360)+360)%360; s/=100; l/=100;
+    const k=n=>(n+hh/30)%12, aa=s*Math.min(l,1-l);
+    const f=n=>l-aa*Math.max(-1,Math.min(k(n)-3,Math.min(9-k(n),1)));
+    return '#'+[f(0),f(8),f(4)].map(v=>Math.round(v*255).toString(16).padStart(2,'0')).join(''); };
+  document.getElementById('grad-c1').value=hsl(h,70,55);
+  document.getElementById('grad-c2').value=hsl(h+spread,70,45);
+  document.getElementById('grad-c3').value=hsl(h+spread/2,75,60);
+  document.getElementById('grad-angle').value=Math.floor(Math.random()*12)*30;
+  renderGrad(); showStatus('status-grad','success','New gradient — colours kept close on the wheel to avoid a grey midpoint.');
+}
+function copyGrad(){
+  const v=document.getElementById('grad-css').value;
+  navigator.clipboard.writeText(v).then(()=>showStatus('status-grad','success','CSS copied to clipboard.'))
+    .catch(()=>showStatus('status-grad','error','Copy failed — select the text manually.'));
+}
+document.addEventListener('DOMContentLoaded',renderGrad);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

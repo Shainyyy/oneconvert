@@ -181,7 +181,7 @@ function drawFav(size){
   const x=c.getContext('2d');
   const bg=document.getElementById('fav-bg').value;
   if(bg!=='transparent'){ x.fillStyle=bg; x.fillRect(0,0,size,size); }
-  // quadratisch einpassen, Seitenverhaeltnis erhalten
+  // fit into the square, preserving the aspect ratio
   const s=Math.min(size/favImg.naturalWidth,size/favImg.naturalHeight);
   const w=favImg.naturalWidth*s, h=favImg.naturalHeight*s;
   x.imageSmoothingQuality='high';
@@ -202,7 +202,7 @@ function renderFavicons(){
     lab.style.cssText='font-size:0.7rem;color:var(--muted);margin-top:0.3rem;';
     wrap.appendChild(im); wrap.appendChild(lab); box.appendChild(wrap);
   });
-  // href aus Teilen zusammensetzen, damit im Quelltext keine Pseudo-Links stehen
+  // href assembled from parts so the source contains no pseudo-links
   const H='hre'+'f', L='<link rel=';
   const icon=(sz)=>L+'"icon" type="image/png" sizes="'+sz+'x'+sz+'" '+H+'="/'+favName+'-'+sz+'.png">';
   document.getElementById('fav-html').value=
@@ -218,7 +218,7 @@ function downloadFavicons(){
       drawFav(s).toBlob(b=>{ directDownload(b, favName+'-'+s+'.png','image/png'); i++;
         if(i===FAV_SIZES.length) showStatus('status-fav','success','Downloaded '+FAV_SIZES.length+' PNG files.');
       },'image/png');
-    }, idx*350);   // gestaffelt, sonst blockt der Browser mehrfache Downloads
+    }, idx*350);   // staggered: browsers block rapid repeated downloads
   });
   showStatus('status-fav','info','Preparing '+FAV_SIZES.length+' files…');
 }
