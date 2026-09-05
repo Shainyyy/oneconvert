@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free CSV to JSON Converter Online | OneConvert</title>
+  <meta name="description" content="Convert CSV to JSON in your browser. Handles quoted fields, embedded commas and custom delimiters. Nothing is uploaded."/>
+  <link rel="canonical" href="https://oneconvert.net/text/csv-to-json.html"/>
+  <meta property="og:title" content="Free CSV to JSON Converter Online | OneConvert"/>
+  <meta property="og:description" content="Convert CSV to JSON in your browser. Handles quoted fields, embedded commas and custom delimiters. Nothing is uploaded."/>
+  <meta property="og:url" content="https://oneconvert.net/text/csv-to-json.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free CSV to JSON Converter Online | OneConvert"/>
+  <meta name="twitter:description" content="Convert CSV to JSON in your browser. Handles quoted fields, embedded commas and custom delimiters. Nothing is uploaded."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CSV to JSON Converter","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert CSV to JSON in your browser. Handles quoted fields, embedded commas and custom delimiters. Nothing is uploaded."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"CSV to JSON Converter Online","item":"https://oneconvert.net/text/csv-to-json.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does it handle commas inside quoted fields?","acceptedAnswer":{"@type":"Answer","text":"Yes. The parser tracks quote state character by character, so a value like \"Mathematician, writer\" stays one field. Escaped quotes (doubled) and line breaks inside quoted fields are handled too."}},{"@type":"Question","name":"My file uses semicolons — will that work?","acceptedAnswer":{"@type":"Answer","text":"Yes. Detection usually picks it up automatically, and you can set the delimiter manually. Semicolons are common in European exports because the comma serves as the decimal separator."}},{"@type":"Question","name":"Why did my postcode lose its leading zero?","acceptedAnswer":{"@type":"Answer","text":"Because \"Convert numbers\" turned it into a JSON number, and 01234 as a number is 1234. Untick that option to keep every value as a string — the right choice for identifiers, postcodes and account numbers."}},{"@type":"Question","name":"What happens to empty cells?","acceptedAnswer":{"@type":"Answer","text":"They become empty strings. CSV cannot distinguish an empty value from a missing one, so there is no reliable way to produce null instead."}},{"@type":"Question","name":"Is my data uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Parsing happens entirely in your browser, which is the point — you can convert data you would not paste into an unknown website."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>CSV to JSON Converter Online</span></div>
+  <div class="tool-page-header">
+    <h1>Free CSV to JSON Converter</h1>
+    <p>Turn a spreadsheet export into JSON — quotes and embedded commas handled.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Paste CSV or drop a file to get an array of JSON objects, one per row, using the header line for keys. The parser follows RFC 4180: quoted fields may contain commas, newlines and escaped quotes, which is where naive split-on-comma conversions fall apart. Everything runs locally, so you can convert data you would not paste into an unknown website.</p>
+
+  <div class="tool-box">
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="csv-in">CSV input</label>
+    <textarea id="csv-in" style="width:100%;min-height:140px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.85rem;font-family:monospace;resize:vertical;" placeholder="name,city,notes&#10;Ada,London,&quot;Mathematician, writer&quot;&#10;Alan,Cambridge,Cryptanalyst"></textarea>
+    <div class="input-row" style="margin-top:0.75rem;flex-wrap:wrap;gap:0.5rem;align-items:center;">
+      <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" style="margin:0;" for="csv-delim">Delimiter</label>
+      <select id="csv-delim" onchange="doCsv()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
+        <option value="auto">Detect</option><option value=",">Comma</option><option value=";">Semicolon</option><option value="\t">Tab</option><option value="|">Pipe</option>
+      </select>
+      <label style="font-size:0.88rem;display:flex;align-items:center;gap:0.4rem;cursor:pointer;"><input type="checkbox" id="csv-header" checked onchange="doCsv()" aria-label="First row contains headers"/> First row is a header</label>
+      <label style="font-size:0.88rem;display:flex;align-items:center;gap:0.4rem;cursor:pointer;"><input type="checkbox" id="csv-numbers" checked onchange="doCsv()" aria-label="Convert numeric values to numbers"/> Convert numbers</label>
+      <button class="btn" onclick="doCsv()" style="width:auto;">Convert</button>
+      <button class="btn btn-outline" onclick="copyCsv()" style="width:auto;">Copy</button>
+    </div>
+    <div class="status" id="status-csv"></div>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="csv-out" style="margin-top:1rem;">JSON output</label>
+    <textarea id="csv-out" style="width:100%;min-height:140px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.85rem;font-family:monospace;resize:vertical;" readonly aria-label="JSON output"></textarea>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Paste or type CSV</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Straight from a spreadsheet export.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Check the delimiter</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Detected automatically, or set it yourself.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy the JSON</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">An array of objects, keyed by the header row.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h3>JSON Formatter</h3><p>Validate and beautify the result</p></div></a>
+      <a class="related-card" href="/text/"><span class="icon">&#9999;&#65039;</span><div class="info"><h3>Text Tools</h3><p>Word count, Base64, case</p></div></a>
+      <a class="related-card" href="/text/hash-generator.html"><span class="icon">&#128273;</span><div class="info"><h3>Hash Generator</h3><p>SHA-256, SHA-1, SHA-512</p></div></a>
+      <a class="related-card" href="/text/uuid-generator.html"><span class="icon">&#127380;</span><div class="info"><h3>UUID Generator</h3><p>Version 4 identifiers</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Why splitting on commas is not enough</h2>
+    <p>The obvious approach — split each line on commas — breaks on the first field that contains one. <code>Ada,London,"Mathematician, writer"</code> has three fields, but a naive split produces four. The CSV convention wraps such values in double quotes, and a quote inside a quoted field is written by doubling it.</p>
+    <p>Newlines are the harder case. A quoted field may contain a line break, so a CSV row is not the same thing as a line of text. Any parser that reads line by line before splitting will silently mangle data exported from spreadsheets where someone pressed Enter inside a cell.</p>
+    <p>The parser here walks the input character by character, tracking whether it is inside quotes, which handles all three cases correctly. If your output looks wrong, the usual cause is a different delimiter rather than a parsing failure — European exports commonly use semicolons because the comma is the decimal separator.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Types, empty values and what JSON cannot express</h2>
+    <p>CSV has no types: every value is text. With "Convert numbers" enabled, fields that look numeric become JSON numbers rather than strings, which is usually what you want — but check two cases. Identifiers with leading zeros such as postcodes lose them, since <code>01234</code> as a number is <code>1234</code>. And very long digit strings beyond about 15 digits lose precision, which matters for account numbers and IDs. Untick the option to keep everything as strings.</p>
+    <p>Empty fields become empty strings rather than null, because CSV genuinely cannot distinguish "empty" from "absent" — both are nothing between two delimiters. If your data needs that distinction, it has to be encoded explicitly, for instance with a literal NULL marker.</p>
+    <p>One more detail worth knowing: duplicate header names. If two columns share a name, the later one overwrites the earlier in each object, because JSON objects cannot hold repeated keys. Rename the columns before converting if that matters.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Does it handle commas inside quoted fields?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. The parser tracks quote state character by character, so a value like "Mathematician, writer" stays one field. Escaped quotes (doubled) and line breaks inside quoted fields are handled too.</div></div>
+    <div class="faq-item"><button class="faq-q">My file uses semicolons — will that work?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Detection usually picks it up automatically, and you can set the delimiter manually. Semicolons are common in European exports because the comma serves as the decimal separator.</div></div>
+    <div class="faq-item"><button class="faq-q">Why did my postcode lose its leading zero?<span class="arrow">&#9660;</span></button><div class="faq-a">Because "Convert numbers" turned it into a JSON number, and 01234 as a number is 1234. Untick that option to keep every value as a string — the right choice for identifiers, postcodes and account numbers.</div></div>
+    <div class="faq-item"><button class="faq-q">What happens to empty cells?<span class="arrow">&#9660;</span></button><div class="faq-a">They become empty strings. CSV cannot distinguish an empty value from a missing one, so there is no reliable way to produce null instead.</div></div>
+    <div class="faq-item"><button class="faq-q">Is my data uploaded?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Parsing happens entirely in your browser, which is the point — you can convert data you would not paste into an unknown website.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function parseCsv(text,delim){
+  const rows=[]; let row=[], cur='', q=false;
+  for(let i=0;i<text.length;i++){
+    const ch=text[i];
+    if(q){
+      if(ch==='"'){ if(text[i+1]==='"'){cur+='"';i++;} else q=false; }
+      else cur+=ch;
+    } else {
+      if(ch==='"') q=true;
+      else if(ch===delim){ row.push(cur); cur=''; }
+      else if(ch==='\n'){ row.push(cur); cur=''; rows.push(row); row=[]; }
+      else if(ch==='\r'){ /* CRLF: ignorieren */ }
+      else cur+=ch;
+    }
+  }
+  if(cur!==''||row.length){ row.push(cur); rows.push(row); }
+  return rows.filter(r=>r.length&&!(r.length===1&&r[0]===''));
+}
+function detectDelim(text){
+  const line=text.split('\n')[0]||'';
+  const counts=[[',',0],[';',0],['\t',0],['|',0]].map(([d])=>{
+    let n=0,q=false;
+    for(const ch of line){ if(ch==='"')q=!q; else if(ch===d&&!q)n++; }
+    return [d,n];
+  });
+  counts.sort((a,b)=>b[1]-a[1]);
+  return counts[0][1]>0? counts[0][0] : ',';
+}
+function doCsv(){
+  const text=document.getElementById('csv-in').value.replace(/\r\n/g,'\n').trim();
+  if(!text){ document.getElementById('csv-out').value=''; showStatus('status-csv','error','Paste some CSV first.'); return; }
+  let d=document.getElementById('csv-delim').value;
+  const auto=d==='auto';
+  if(auto) d=detectDelim(text); else if(d==='\\t') d='\t';
+  const rows=parseCsv(text,d);
+  if(!rows.length){ showStatus('status-csv','error','No rows found.'); return; }
+  const useHeader=document.getElementById('csv-header').checked;
+  const conv=document.getElementById('csv-numbers').checked;
+  const cast=v=>{ if(!conv)return v; const t=v.trim();
+    if(t===''||!/^-?\d+(\.\d+)?$/.test(t))return v;
+    const n=Number(t); return Number.isSafeInteger(n)||!Number.isInteger(n)? n : v; };
+  let out;
+  if(useHeader){
+    const head=rows[0].map(h=>h.trim());
+    out=rows.slice(1).map(r=>{ const o={}; head.forEach((h,i)=>o[h]=cast(r[i]!==undefined?r[i]:'')); return o; });
+  } else {
+    out=rows.map(r=>r.map(cast));
+  }
+  document.getElementById('csv-out').value=JSON.stringify(out,null,2);
+  const name={',':'comma',';':'semicolon','\t':'tab','|':'pipe'}[d]||d;
+  showStatus('status-csv','success',out.length+' row'+(out.length===1?'':'s')+' converted'+(auto?' — detected '+name+' delimiter.':'.'));
+}
+function copyCsv(){
+  const v=document.getElementById('csv-out').value;
+  if(!v){showStatus('status-csv','error','Convert something first.');return;}
+  navigator.clipboard.writeText(v).then(()=>showStatus('status-csv','success','Copied to clipboard.'));
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

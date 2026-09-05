@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free SVG to PNG Converter – Any Size | OneConvert</title>
+  <meta name="description" content="Convert SVG to PNG at any resolution. Vectors scale without loss, so pick the exact pixel size you need. Runs entirely in your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/image/svg-to-png.html"/>
+  <meta property="og:title" content="Free SVG to PNG Converter – Any Size | OneConvert"/>
+  <meta property="og:description" content="Convert SVG to PNG at any resolution. Vectors scale without loss, so pick the exact pixel size you need. Runs entirely in your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/image/svg-to-png.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free SVG to PNG Converter – Any Size | OneConvert"/>
+  <meta name="twitter:description" content="Convert SVG to PNG at any resolution. Vectors scale without loss, so pick the exact pixel size you need. Runs entirely in your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SVG to PNG Converter","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert SVG to PNG at any resolution. Vectors scale without loss, so pick the exact pixel size you need. Runs entirely in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"https://oneconvert.net/image/"},{"@type":"ListItem","position":3,"name":"SVG to PNG Converter","item":"https://oneconvert.net/image/svg-to-png.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What size should I export at?","acceptedAnswer":{"@type":"Answer","text":"The size it will be displayed at, doubled for high-density screens. A logo shown at 200px wide should be exported at 400px so it stays sharp on phones and modern laptops."}},{"@type":"Question","name":"Why does my text look different after converting?","acceptedAnswer":{"@type":"Answer","text":"The SVG probably references a font by name rather than embedding the shapes. If that font is not available, the browser substitutes another. Convert text to outlines in a vector editor before converting to avoid this."}},{"@type":"Question","name":"Can I keep the transparent background?","acceptedAnswer":{"@type":"Answer","text":"Yes — Transparent is the default and PNG supports an alpha channel. Choose white or black if the destination cannot handle transparency, such as some email clients."}},{"@type":"Question","name":"Should I convert my website logo to PNG?","acceptedAnswer":{"@type":"Answer","text":"Usually not. SVG is smaller for logos, stays sharp at any zoom or screen density, and can be styled with CSS. Convert only when the destination cannot accept a vector — social previews, email, some app stores."}},{"@type":"Question","name":"Is my file uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. The SVG is rendered through the Canvas API in your browser and the PNG is produced locally."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/image/">Image Tools</a><span>&rsaquo;</span><span>SVG to PNG Converter</span></div>
+  <div class="tool-page-header">
+    <h1>Free SVG to PNG Converter</h1>
+    <p>Rasterise a vector at whatever size you need — sharp at every resolution.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">An SVG describes shapes mathematically, so it can be rendered at any size without losing sharpness. Converting to PNG fixes it to a pixel grid — necessary whenever something will not accept vectors: a social preview image, an email, an app icon, a document. Choose the output width and the height follows the original proportions.</p>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone" tabindex="0" role="button" aria-label="Choose an SVG file">
+      <div class="dropzone-icon">&#128208;</div>
+      <p><strong>Click to select</strong> or drag &amp; drop an SVG here</p>
+      <small>Vector files only &middot; rendered locally, never uploaded</small>
+    </div>
+    <input type="file" id="file-input" accept=".svg,image/svg+xml" style="display:none;" aria-label="Choose an SVG file"/>
+
+    <div id="svg-area" style="display:none;margin-top:1rem;">
+      <div style="text-align:center;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1rem;">
+        <img id="svg-preview" alt="Preview of the converted image" style="max-width:100%;max-height:260px;border-radius:6px;"/>
+        <p id="svg-info" style="color:var(--muted);font-size:0.82rem;margin-top:0.5rem;"></p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:0.75rem;margin-top:1rem;">
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="svg-w">Output width (px)</label><input type="number" id="svg-w" min="1" max="8000" value="1024" oninput="syncSvg('w')" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.6rem;"/></div>
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="svg-h">Output height (px)</label><input type="number" id="svg-h" min="1" max="8000" oninput="syncSvg('h')" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.6rem;"/></div>
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="svg-bg">Background</label>
+          <select id="svg-bg" onchange="renderSvg()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.6rem;">
+            <option value="transparent">Transparent</option><option value="#ffffff">White</option><option value="#000000">Black</option>
+          </select></div>
+      </div>
+      <button class="btn" onclick="downloadSvg()" style="margin-top:1rem;">&#11015;&#65039; Download PNG</button>
+    </div>
+    <div class="status" id="status-svg"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select an SVG</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Any vector file your browser can render.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose the size</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Height follows the aspect ratio automatically.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download the PNG</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Rendered at exactly the pixels you asked for.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/image/"><span class="icon">&#128444;&#65039;</span><div class="info"><h3>Image Tools</h3><p>All image converters</p></div></a>
+      <a class="related-card" href="/image/favicon-generator.html"><span class="icon">&#127760;</span><div class="info"><h3>Favicon Generator</h3><p>Icons in every size</p></div></a>
+      <a class="related-card" href="/image/resize.html"><span class="icon">&#8596;&#65039;</span><div class="info"><h3>Resize Image</h3><p>Change pixel dimensions</p></div></a>
+      <a class="related-card" href="/image/image-to-base64.html"><span class="icon">&#128196;</span><div class="info"><h3>Image to Base64</h3><p>Inline it in CSS or HTML</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Why you pick a size at all</h2>
+    <p>This is the step people find odd: an SVG has no inherent pixel size. It has a coordinate system and a viewBox, and the renderer decides how many pixels to paint. That is the whole advantage of vectors — the same file is razor sharp on a watch face and on a billboard.</p>
+    <p>PNG has no such freedom. Every PNG is a fixed grid, so converting means choosing one. Pick the size the image will actually be displayed at, then double it if it will appear on a high-density screen. A logo shown at 200 pixels wide should be exported at 400 to look crisp on a phone or a modern laptop.</p>
+    <p>Going larger than needed costs file size for no visible benefit, since the extra pixels are never shown. Going smaller and letting the browser scale up produces exactly the blurriness you converted from a vector to avoid.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>When to convert and when to keep the SVG</h2>
+    <p>Keep the SVG wherever it works. On the web it is almost always the better choice: smaller for logos and icons, sharp at every zoom level and screen density, and styleable with CSS. Converting a website logo to PNG is usually a step backwards.</p>
+    <p>Convert when the destination cannot take a vector. Social preview images must be raster — Open Graph and Twitter cards will not render an SVG. Email clients largely ignore SVG. Many app stores, print workflows and document formats require PNG or JPEG. Some older software will not open a vector at all.</p>
+    <p>One caveat specific to this conversion: fonts. If your SVG references a typeface by name rather than converting text to paths, the rendering depends on that font being available. Where it is missing, the browser substitutes something else and your text changes shape. If the output looks wrong, open the SVG in a vector editor and convert its text to outlines before converting here.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What size should I export at?<span class="arrow">&#9660;</span></button><div class="faq-a">The size it will be displayed at, doubled for high-density screens. A logo shown at 200px wide should be exported at 400px so it stays sharp on phones and modern laptops.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does my text look different after converting?<span class="arrow">&#9660;</span></button><div class="faq-a">The SVG probably references a font by name rather than embedding the shapes. If that font is not available, the browser substitutes another. Convert text to outlines in a vector editor before converting to avoid this.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I keep the transparent background?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes — Transparent is the default and PNG supports an alpha channel. Choose white or black if the destination cannot handle transparency, such as some email clients.</div></div>
+    <div class="faq-item"><button class="faq-q">Should I convert my website logo to PNG?<span class="arrow">&#9660;</span></button><div class="faq-a">Usually not. SVG is smaller for logos, stays sharp at any zoom or screen density, and can be styled with CSS. Convert only when the destination cannot accept a vector — social previews, email, some app stores.</div></div>
+    <div class="faq-item"><button class="faq-q">Is my file uploaded?<span class="arrow">&#9660;</span></button><div class="faq-a">No. The SVG is rendered through the Canvas API in your browser and the PNG is produced locally.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+let svgUrl=null, svgRatio=1, svgName='image';
+document.addEventListener('DOMContentLoaded',()=>setupDropzone('drop-zone','file-input',f=>loadSvg(f[0])));
+function loadSvg(file){
+  if(!file||!/svg/i.test(file.type+file.name)){showStatus('status-svg','error','Please choose an SVG file.');return;}
+  svgName=file.name.replace(/\.svg$/i,'')||'image';
+  const fr=new FileReader();
+  fr.onload=()=>{
+    const blob=new Blob([fr.result],{type:'image/svg+xml'});
+    if(svgUrl)URL.revokeObjectURL(svgUrl);
+    svgUrl=URL.createObjectURL(blob);
+    const probe=new Image();
+    probe.onload=()=>{
+      svgRatio=(probe.naturalWidth&&probe.naturalHeight)? probe.naturalHeight/probe.naturalWidth : 1;
+      document.getElementById('svg-area').style.display='block';
+      const w=+document.getElementById('svg-w').value||1024;
+      document.getElementById('svg-h').value=Math.round(w*svgRatio);
+      renderSvg();
+      showStatus('status-svg','success','Loaded '+file.name+'. Intrinsic size '+(probe.naturalWidth||'?')+'×'+(probe.naturalHeight||'?')+' — pick any output size.');
+    };
+    probe.onerror=()=>showStatus('status-svg','error','That SVG could not be rendered. It may reference external resources.');
+    probe.src=svgUrl;
+  };
+  fr.onerror=()=>showStatus('status-svg','error','Could not read that file.');
+  fr.readAsText(file);
+}
+function syncSvg(which){
+  const wEl=document.getElementById('svg-w'), hEl=document.getElementById('svg-h');
+  if(which==='w'){ const w=+wEl.value; if(w>0) hEl.value=Math.round(w*svgRatio); }
+  else { const h=+hEl.value; if(h>0&&svgRatio>0) wEl.value=Math.round(h/svgRatio); }
+  renderSvg();
+}
+function drawSvg(cb){
+  const w=Math.max(1,Math.min(8000,+document.getElementById('svg-w').value||1024));
+  const h=Math.max(1,Math.min(8000,+document.getElementById('svg-h').value||Math.round(w*svgRatio)));
+  const img=new Image();
+  img.onload=()=>{
+    const c=document.createElement('canvas'); c.width=w; c.height=h;
+    const x=c.getContext('2d');
+    const bg=document.getElementById('svg-bg').value;
+    if(bg!=='transparent'){ x.fillStyle=bg; x.fillRect(0,0,w,h); }
+    x.drawImage(img,0,0,w,h);
+    cb(c,w,h);
+  };
+  img.onerror=()=>showStatus('status-svg','error','Rendering failed.');
+  img.src=svgUrl;
+}
+function renderSvg(){ if(!svgUrl)return;
+  drawSvg((c,w,h)=>{ document.getElementById('svg-preview').src=c.toDataURL('image/png');
+    document.getElementById('svg-info').textContent='Output: '+w+' × '+h+' px PNG'; }); }
+function downloadSvg(){
+  if(!svgUrl){showStatus('status-svg','error','Choose an SVG first.');return;}
+  drawSvg((c,w,h)=>c.toBlob(b=>{ directDownload(b,svgName+'-'+w+'x'+h+'.png','image/png');
+    showStatus('status-svg','success','Downloaded '+w+' × '+h+' px PNG ('+formatBytes(b.size)+').'); },'image/png'));
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>
