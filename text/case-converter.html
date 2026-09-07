@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Case Converter – Title, camelCase, snake_case | OneConvert</title>
+  <meta name="description" content="Convert text between lowercase, UPPERCASE, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and CONSTANT_CASE."/>
+  <link rel="canonical" href="https://oneconvert.net/text/case-converter.html"/>
+  <meta property="og:title" content="Free Case Converter – Title, camelCase, snake_case | OneConvert"/>
+  <meta property="og:description" content="Convert text between lowercase, UPPERCASE, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and CONSTANT_CASE."/>
+  <meta property="og:url" content="https://oneconvert.net/text/case-converter.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free Case Converter – Title, camelCase, snake_case | OneConvert"/>
+  <meta name="twitter:description" content="Convert text between lowercase, UPPERCASE, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and CONSTANT_CASE."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Case Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert text between lowercase, UPPERCASE, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case and CONSTANT_CASE."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"Case Converter","item":"https://oneconvert.net/text/case-converter.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Title Case keep small words lowercase?","acceptedAnswer":{"@type":"Answer","text":"Yes. Articles, coordinating conjunctions and short prepositions stay lowercase unless they open or close the title, following the Chicago Manual of Style. Many converters capitalise every word instead."}},{"@type":"Question","name":"What is the difference between camelCase and PascalCase?","acceptedAnswer":{"@type":"Answer","text":"Only the first letter. camelCase starts lowercase (userName), PascalCase starts uppercase (UserName). Most languages use the first for variables and the second for classes and types."}},{"@type":"Question","name":"Can it convert camelCase back into words?","acceptedAnswer":{"@type":"Answer","text":"Yes. Word boundaries are detected at the lowercase-to-uppercase transition as well as at spaces and punctuation, so getUserName converts cleanly to get_user_name or Get User Name."}},{"@type":"Question","name":"Does Sentence case fix every full stop?","acceptedAnswer":{"@type":"Answer","text":"It capitalises the first letter after a full stop, question mark or exclamation mark. Abbreviations such as \"e.g.\" will therefore trigger a capital, which is the same trade-off word processors make."}},{"@type":"Question","name":"Is my text sent to a server?","acceptedAnswer":{"@type":"Answer","text":"No. The conversion is a few lines of JavaScript running in this tab. The page makes no request carrying your text, so nothing to upload and nothing to delete afterwards."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>Case Converter</span></div>
+  <div class="tool-page-header">
+    <h1>Free Case Converter</h1>
+    <p>Nine cases, including proper Title Case that leaves the small words alone.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Retyping a heading in a different case is the kind of task that takes thirty seconds and interrupts a train of thought. This converter handles nine of them, including the two that most online converters get wrong: Title Case that keeps articles and short prepositions lowercase, and the programming cases that need to detect word boundaries in text that has none.</p>
+
+  <div class="tool-box">
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="cc-input">Your text</label>
+    <textarea id="cc-input" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" placeholder="Type or paste the text you want to convert&hellip;" oninput="applyCase()"></textarea>
+    <div class="unit-tabs" style="margin:1rem 0 0.75rem;">
+      <button class="unit-tab active" onclick="setCase('lower',this)">lowercase</button>
+      <button class="unit-tab" onclick="setCase('upper',this)">UPPERCASE</button>
+      <button class="unit-tab" onclick="setCase('title',this)">Title Case</button>
+      <button class="unit-tab" onclick="setCase('sentence',this)">Sentence case</button>
+      <button class="unit-tab" onclick="setCase('camel',this)">camelCase</button>
+      <button class="unit-tab" onclick="setCase('pascal',this)">PascalCase</button>
+      <button class="unit-tab" onclick="setCase('snake',this)">snake_case</button>
+      <button class="unit-tab" onclick="setCase('kebab',this)">kebab-case</button>
+      <button class="unit-tab" onclick="setCase('constant',this)">CONSTANT_CASE</button>
+    </div>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="cc-output">Result</label>
+    <textarea id="cc-output" style="width:100%;min-height:130px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" readonly></textarea>
+    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.75rem;">
+      <button class="btn btn-sm" onclick="copyCase()">Copy result</button>
+      <button class="btn btn-sm btn-outline" onclick="swapCase()">Use as input</button>
+    </div>
+    <div class="status" id="status-cc"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Paste your text</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">It stays in the box — nothing is sent anywhere.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick a case</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Nine options, from plain lowercase to CONSTANT_CASE.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy or keep going</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Copy the result, or move it back into the input to chain conversions.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/word-counter.html"><span class="icon">&#128202;</span><div class="info"><h3>Word Counter</h3><p>Words, characters, reading time</p></div></a>
+      <a class="related-card" href="/text/remove-duplicate-lines.html"><span class="icon">&#128465;</span><div class="info"><h3>Remove Duplicate Lines</h3><p>Deduplicate any list</p></div></a>
+      <a class="related-card" href="/text/url-encoder.html"><span class="icon">&#128279;</span><div class="info"><h3>URL Encoder</h3><p>Percent-encoding, both ways</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Title case is not one rule but several</h2>
+    <p>Most converters implement title case as "capitalise every word", which produces "The Rise Of The Machines" — recognisably wrong to anyone who edits for a living. The style guides agree that minor words stay lowercase; they disagree about which words are minor.</p>
+    <p>Chicago keeps articles, coordinating conjunctions and all prepositions lowercase regardless of length, so "Notes on the Making of a Film" keeps both "on" and "of" down. AP capitalises any word of four letters or more, which promotes "With", "Over" and "From". APA follows the four-letter rule too but capitalises everything after a colon. All three agree on one thing: the first and last word of a title are always capitalised, whatever they are.</p>
+    <p>This tool follows the Chicago convention and always capitalises the opening and closing word. If your house style is AP, the handful of four-letter prepositions are the only places you will need to intervene — which is a smaller edit than fixing every article by hand.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Why programmers argue about case at all</h2>
+    <p>The programming cases are not decoration. Each one signals something to a reader: in most codebases <code>PascalCase</code> names a class or type, <code>camelCase</code> a variable or function, and <code>CONSTANT_CASE</code> a value that never changes. Seeing the case tells you what kind of thing you are looking at before you read the name.</p>
+    <p>The conventions split along language lines and rarely mix. Python and Rust use snake_case for functions and variables; Java, JavaScript and C# use camelCase; Go uses PascalCase for anything exported from a package, which makes capitalisation part of the language rather than a style preference. CSS classes and URL slugs use kebab-case, because a hyphen is legal there and an underscore is easy to lose under a text underline.</p>
+    <p>Converting between them means finding word boundaries in text that may not have any. This tool splits on spaces and punctuation, and also on the lowercase-to-uppercase transition — so <code>getUserName</code> becomes <code>get_user_name</code> rather than one long lowercase run. Acronyms remain the awkward case: <code>parseHTTPResponse</code> has no boundary a machine can see between the letters of the acronym.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Does Title Case keep small words lowercase?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Articles, coordinating conjunctions and short prepositions stay lowercase unless they open or close the title, following the Chicago Manual of Style. Many converters capitalise every word instead.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between camelCase and PascalCase?<span class="arrow">&#9660;</span></button><div class="faq-a">Only the first letter. camelCase starts lowercase (userName), PascalCase starts uppercase (UserName). Most languages use the first for variables and the second for classes and types.</div></div>
+    <div class="faq-item"><button class="faq-q">Can it convert camelCase back into words?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Word boundaries are detected at the lowercase-to-uppercase transition as well as at spaces and punctuation, so getUserName converts cleanly to get_user_name or Get User Name.</div></div>
+    <div class="faq-item"><button class="faq-q">Does Sentence case fix every full stop?<span class="arrow">&#9660;</span></button><div class="faq-a">It capitalises the first letter after a full stop, question mark or exclamation mark. Abbreviations such as "e.g." will therefore trigger a capital, which is the same trade-off word processors make.</div></div>
+    <div class="faq-item"><button class="faq-q">Is my text sent to a server?<span class="arrow">&#9660;</span></button><div class="faq-a">No. The conversion is a few lines of JavaScript running in this tab. The page makes no request carrying your text, so nothing to upload and nothing to delete afterwards.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+// Words kept lowercase inside a title, unless they open or close it (Chicago style).
+var MINOR = new Set(['a','an','the','and','but','or','nor','for','yet','so','at','by','in','of','off','on','per','to','up','via','as','if','vs']);
+var ccMode = 'lower';
+function setCase(m, btn){
+  ccMode = m;
+  document.querySelectorAll('.unit-tab').forEach(function(b){ b.classList.remove('active'); });
+  if(btn) btn.classList.add('active');
+  applyCase();
+}
+function titleCase(t){
+  var words = t.toLowerCase().split(/(\s+)/);
+  var idx = [];
+  words.forEach(function(w,i){ if(w.trim()) idx.push(i); });
+  return words.map(function(w,i){
+    if(!w.trim()) return w;
+    var first = i === idx[0], last = i === idx[idx.length-1];
+    var bare = w.replace(/^[^\p{L}\p{N}]+/u,'');
+    var lead = w.slice(0, w.length - bare.length);
+    if(!first && !last && MINOR.has(bare.replace(/[^\p{L}]+$/u,''))) return w;
+    return lead + bare.charAt(0).toUpperCase() + bare.slice(1);
+  }).join('');
+}
+function words(t){
+  return t.replace(/([a-z0-9])([A-Z])/g,'$1 $2').split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+}
+function applyCase(){
+  var t = document.getElementById('cc-input').value, r;
+  switch(ccMode){
+    case 'lower': r = t.toLowerCase(); break;
+    case 'upper': r = t.toUpperCase(); break;
+    case 'title': r = titleCase(t); break;
+    case 'sentence': r = t.toLowerCase().replace(/(^\s*\p{L})|([.!?]\s+\p{L})/gu, function(c){ return c.toUpperCase(); }); break;
+    case 'camel': r = words(t).map(function(w,i){ w = w.toLowerCase(); return i ? w.charAt(0).toUpperCase()+w.slice(1) : w; }).join(''); break;
+    case 'pascal': r = words(t).map(function(w){ w = w.toLowerCase(); return w.charAt(0).toUpperCase()+w.slice(1); }).join(''); break;
+    case 'snake': r = words(t).map(function(w){ return w.toLowerCase(); }).join('_'); break;
+    case 'kebab': r = words(t).map(function(w){ return w.toLowerCase(); }).join('-'); break;
+    case 'constant': r = words(t).map(function(w){ return w.toUpperCase(); }).join('_'); break;
+  }
+  document.getElementById('cc-output').value = r;
+}
+function copyCase(){
+  var v = document.getElementById('cc-output').value;
+  if(!v){ showStatus('status-cc','error','Enter some text first.'); return; }
+  navigator.clipboard.writeText(v).then(function(){ showStatus('status-cc','success','Result copied to clipboard.'); });
+}
+function swapCase(){
+  var v = document.getElementById('cc-output').value;
+  if(!v){ showStatus('status-cc','error','There is no result to reuse yet.'); return; }
+  document.getElementById('cc-input').value = v; applyCase();
+  showStatus('status-cc','info','Result moved into the input box.');
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

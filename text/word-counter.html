@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Word Counter – Words, Characters and Reading Time | OneConvert</title>
+  <meta name="description" content="Count words, characters, sentences, paragraphs and reading time as you type. No upload, no length limit, everything stays in your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/text/word-counter.html"/>
+  <meta property="og:title" content="Free Word Counter – Words, Characters and Reading Time | OneConvert"/>
+  <meta property="og:description" content="Count words, characters, sentences, paragraphs and reading time as you type. No upload, no length limit, everything stays in your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/text/word-counter.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Free Word Counter – Words, Characters and Reading Time | OneConvert"/>
+  <meta name="twitter:description" content="Count words, characters, sentences, paragraphs and reading time as you type. No upload, no length limit, everything stays in your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Word Counter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Count words, characters, sentences, paragraphs and reading time as you type. No upload, no length limit, everything stays in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"Word Counter","item":"https://oneconvert.net/text/word-counter.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the word count match Microsoft Word?","acceptedAnswer":{"@type":"Answer","text":"In almost all cases, yes. Both split on whitespace, so hyphenated compounds count as one word and a URL counts as one word. Small differences can appear with unusual punctuation or footnote markers."}},{"@type":"Question","name":"Are spaces counted as characters?","acceptedAnswer":{"@type":"Answer","text":"Both figures are shown. \"Characters\" includes every space, tab and line break; \"No spaces\" strips all whitespace first. Platforms with character limits usually count the version that includes spaces."}},{"@type":"Question","name":"How is reading time calculated?","acceptedAnswer":{"@type":"Answer","text":"Words divided by 225 per minute, rounded to the nearest minute with a floor of one. That average suits ordinary prose; dense technical text will take noticeably longer."}},{"@type":"Question","name":"Is there a limit on how much text I can paste?","acceptedAnswer":{"@type":"Answer","text":"No fixed limit. Counting runs in your browser, so the practical ceiling is your device memory. Texts of a few hundred thousand words may feel sluggish while typing on older phones."}},{"@type":"Question","name":"What does the frequency table ignore?","acceptedAnswer":{"@type":"Answer","text":"Common function words such as \"the\", \"and\" and \"of\", plus anything shorter than two letters. Without that filter the list would be identical for every text ever written."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>Word Counter</span></div>
+  <div class="tool-page-header">
+    <h1>Free Word Counter</h1>
+    <p>Live counts for words, characters, sentences, paragraphs and reading time.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Word counts decide more than people expect: essay limits, meta descriptions, ad headlines, journal submissions and translation quotes are all measured in words or characters. This counter updates as you type and reports six figures at once, plus the words you lean on most often. Nothing is uploaded — the text never leaves the tab it is typed into.</p>
+
+  <div class="tool-box">
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="wc-input">Your text</label>
+    <textarea id="wc-input" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" placeholder="Start typing or paste your text here&hellip;" oninput="countText()"></textarea>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,110px),1fr));gap:0.6rem;margin-top:1rem;">
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 0.6rem;text-align:center;"><div id="wc-words" style="font-family:Syne,sans-serif;font-size:1.45rem;font-weight:800;color:var(--accent2);line-height:1.1;">0</div><div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem;letter-spacing:0.03em;text-transform:uppercase;">Words</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 0.6rem;text-align:center;"><div id="wc-chars" style="font-family:Syne,sans-serif;font-size:1.45rem;font-weight:800;color:var(--accent2);line-height:1.1;">0</div><div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem;letter-spacing:0.03em;text-transform:uppercase;">Characters</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 0.6rem;text-align:center;"><div id="wc-nospace" style="font-family:Syne,sans-serif;font-size:1.45rem;font-weight:800;color:var(--accent2);line-height:1.1;">0</div><div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem;letter-spacing:0.03em;text-transform:uppercase;">No spaces</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 0.6rem;text-align:center;"><div id="wc-sent" style="font-family:Syne,sans-serif;font-size:1.45rem;font-weight:800;color:var(--accent2);line-height:1.1;">0</div><div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem;letter-spacing:0.03em;text-transform:uppercase;">Sentences</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 0.6rem;text-align:center;"><div id="wc-para" style="font-family:Syne,sans-serif;font-size:1.45rem;font-weight:800;color:var(--accent2);line-height:1.1;">0</div><div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem;letter-spacing:0.03em;text-transform:uppercase;">Paragraphs</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.85rem 0.6rem;text-align:center;"><div id="wc-read" style="font-family:Syne,sans-serif;font-size:1.45rem;font-weight:800;color:var(--accent2);line-height:1.1;">0</div><div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem;letter-spacing:0.03em;text-transform:uppercase;">Min read</div></div>
+    </div>
+    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1rem;">
+      <button class="btn btn-sm" onclick="copyWc()">Copy text</button>
+      <button class="btn btn-sm btn-outline" onclick="clearWc()">Clear</button>
+    </div>
+    <div style="margin-top:1.25rem;">
+      <div style="font-size:0.82rem;color:var(--muted);font-weight:600;margin-bottom:0.4rem;">Most frequent words</div>
+      <div style="overflow-x:auto;"><table class="unit-table" id="wc-freq"><thead><tr><th>Word</th><th>Count</th><th>Share</th></tr></thead><tbody id="wc-freq-body"><tr><td colspan="3" style="color:var(--muted);">Nothing counted yet.</td></tr></tbody></table></div>
+    </div>
+    <div class="status" id="status-wc"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Paste or type</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Counts update on every keystroke, with no button to press.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Read the six figures</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Words, characters with and without spaces, sentences, paragraphs and reading time.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Check your repetition</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The frequency table shows which words you are relying on most.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/case-converter.html"><span class="icon">&#127362;</span><div class="info"><h3>Case Converter</h3><p>Title, camel, snake, kebab</p></div></a>
+      <a class="related-card" href="/text/remove-duplicate-lines.html"><span class="icon">&#128465;</span><div class="info"><h3>Remove Duplicate Lines</h3><p>Deduplicate any list</p></div></a>
+      <a class="related-card" href="/text/lorem-ipsum.html"><span class="icon">&#128221;</span><div class="info"><h3>Lorem Ipsum Generator</h3><p>Placeholder text on demand</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Why two word counters disagree about the same text</h2>
+    <p>There is no single definition of a word, so every counter draws the line somewhere. This one splits on whitespace, which is the same rule Microsoft Word uses — so "state-of-the-art" counts as one word, an em dash surrounded by spaces counts as one, and a URL counts as one however long it is. A counter that splits on punctuation instead would report four, zero and several for the same input.</p>
+    <p>The gap widens with languages that do not put spaces between words. Chinese, Japanese and Thai text has no whitespace to split on, so a whitespace counter reports a handful of words for a full page. Character counts are the meaningful measure there, which is why this tool reports characters both with and without spaces rather than treating the word count as the headline number.</p>
+    <p>Characters have their own trap. JavaScript stores text as UTF-16, and characters outside the Basic Multilingual Plane — most emoji, some rarer CJK characters, several historic scripts — occupy two units each. A tool reading the raw length reports 2 for a single emoji. This counter iterates by code point instead, so one emoji counts as one character. Your database may still disagree, because a UTF-8 column counts bytes: that same emoji occupies four.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>The character limits that actually matter</h2>
+    <p>A page title is truncated by Google at roughly 580 pixels, which works out to about 60 characters in practice — wide capitals eat the budget faster than narrow lowercase. Meta descriptions get cut around 155 to 160 characters on desktop and closer to 120 on mobile, so the sentence that must survive belongs first.</p>
+    <p>Elsewhere the limits are hard rather than cosmetic. A single SMS holds 160 characters in GSM-7 encoding but only 70 once any character forces a switch to UCS-2 — one curly apostrophe or emoji is enough to trigger it. Google Ads headlines cap at 30 characters and descriptions at 90. Twitter/X counts 280, but URLs count as a fixed 23 regardless of their real length.</p>
+    <p>Reading time here uses 225 words per minute, a common average for adults reading prose on screen. Treat it as a rough figure: technical writing with code examples reads far slower, and a scannable listicle far faster. Estimates published by other sites vary between 200 and 265 words per minute, which is why two blogs can label the same article a 4-minute and a 5-minute read.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Does the word count match Microsoft Word?<span class="arrow">&#9660;</span></button><div class="faq-a">In almost all cases, yes. Both split on whitespace, so hyphenated compounds count as one word and a URL counts as one word. Small differences can appear with unusual punctuation or footnote markers.</div></div>
+    <div class="faq-item"><button class="faq-q">Are spaces counted as characters?<span class="arrow">&#9660;</span></button><div class="faq-a">Both figures are shown. "Characters" includes every space, tab and line break; "No spaces" strips all whitespace first. Platforms with character limits usually count the version that includes spaces.</div></div>
+    <div class="faq-item"><button class="faq-q">How is reading time calculated?<span class="arrow">&#9660;</span></button><div class="faq-a">Words divided by 225 per minute, rounded to the nearest minute with a floor of one. That average suits ordinary prose; dense technical text will take noticeably longer.</div></div>
+    <div class="faq-item"><button class="faq-q">Is there a limit on how much text I can paste?<span class="arrow">&#9660;</span></button><div class="faq-a">No fixed limit. Counting runs in your browser, so the practical ceiling is your device memory. Texts of a few hundred thousand words may feel sluggish while typing on older phones.</div></div>
+    <div class="faq-item"><button class="faq-q">What does the frequency table ignore?<span class="arrow">&#9660;</span></button><div class="faq-a">Common function words such as "the", "and" and "of", plus anything shorter than two letters. Without that filter the list would be identical for every text ever written.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+var WC_STOP = new Set(['the','a','an','and','or','but','of','to','in','on','at','for','with','is','are','was','were','be','been','it','this','that','as','by','from','not','have','has','had','i','you','he','she','we','they','my','your','its','their']);
+function countText(){
+  var t = document.getElementById('wc-input').value;
+  var words = t.trim() ? t.trim().split(/\s+/) : [];
+  document.getElementById('wc-words').textContent = words.length.toLocaleString('en-GB');
+  // Count by code point, so an emoji or CJK character counts once, not twice.
+  document.getElementById('wc-chars').textContent = Array.from(t).length.toLocaleString('en-GB');
+  document.getElementById('wc-nospace').textContent = Array.from(t.replace(/\s/g,'')).length.toLocaleString('en-GB');
+  var sent = t.trim() ? (t.match(/[^.!?\u2026]+[.!?\u2026]+(\s|$)|[^.!?\u2026]+$/g)||[]).length : 0;
+  document.getElementById('wc-sent').textContent = sent.toLocaleString('en-GB');
+  var para = t.trim() ? t.trim().split(/\n\s*\n/).filter(function(p){return p.trim();}).length : 0;
+  document.getElementById('wc-para').textContent = para.toLocaleString('en-GB');
+  document.getElementById('wc-read').textContent = words.length ? Math.max(1, Math.round(words.length/225)) : 0;
+  freq(words);
+}
+function freq(words){
+  var body = document.getElementById('wc-freq-body'), m = {}, total = 0;
+  words.forEach(function(w){
+    w = w.toLowerCase().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu,'');
+    if(w.length < 2 || WC_STOP.has(w)) return;
+    m[w] = (m[w]||0)+1; total++;
+  });
+  var rows = Object.keys(m).map(function(k){return [k,m[k]];}).sort(function(a,b){return b[1]-a[1]||a[0].localeCompare(b[0]);}).slice(0,8);
+  if(!rows.length){ body.innerHTML = '<tr><td colspan="3" style="color:var(--muted);">Nothing counted yet.</td></tr>'; return; }
+  body.innerHTML = rows.map(function(r){
+    var pct = (100*r[1]/total).toFixed(1)+'%';
+    return '<tr><td>'+r[0].replace(/[<>&]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];})+'</td><td>'+r[1]+'</td><td>'+pct+'</td></tr>';
+  }).join('');
+}
+function copyWc(){
+  var v = document.getElementById('wc-input').value;
+  if(!v){ showStatus('status-wc','error','There is nothing to copy yet.'); return; }
+  navigator.clipboard.writeText(v).then(function(){ showStatus('status-wc','success','Text copied to clipboard.'); });
+}
+function clearWc(){ document.getElementById('wc-input').value=''; countText(); showStatus('status-wc','info','Cleared.'); }
+document.addEventListener('DOMContentLoaded', countText);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

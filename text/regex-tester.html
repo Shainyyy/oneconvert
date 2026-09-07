@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Regex Tester – Test Regular Expressions Online | OneConvert</title>
+  <meta name="description" content="Test a regular expression against sample text with live highlighting, a match list and capture groups. Free, instant and browser-based."/>
+  <link rel="canonical" href="https://oneconvert.net/text/regex-tester.html"/>
+  <meta property="og:title" content="Regex Tester – Test Regular Expressions Online | OneConvert"/>
+  <meta property="og:description" content="Test a regular expression against sample text with live highlighting, a match list and capture groups. Free, instant and browser-based."/>
+  <meta property="og:url" content="https://oneconvert.net/text/regex-tester.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Regex Tester – Test Regular Expressions Online | OneConvert"/>
+  <meta name="twitter:description" content="Test a regular expression against sample text with live highlighting, a match list and capture groups. Free, instant and browser-based."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Regex Tester","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Test a regular expression against sample text with live highlighting, a match list and capture groups. Free, instant and browser-based."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"Regex Tester","item":"https://oneconvert.net/text/regex-tester.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which regex flavour does this use?","acceptedAnswer":{"@type":"Answer","text":"JavaScript, the ECMAScript flavour built into your browser. It differs from PCRE and Python in places: no lookbehind in older browsers, no recursion, and named groups written as (?<name>...)."}},{"@type":"Question","name":"Why does my pattern match too much?","acceptedAnswer":{"@type":"Answer","text":"Quantifiers are greedy by default, so .* consumes as far as it can. Add a question mark for the lazy form, .*?, or use a negated character class to stop the match at a known boundary."}},{"@type":"Question","name":"What does the g flag change?","acceptedAnswer":{"@type":"Answer","text":"It finds every match instead of just the first, and makes the expression keep its position between calls. That state is why reusing one global regex across several strings can skip matches."}},{"@type":"Question","name":"Can I test capture groups?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each match in the table lists its groups with their contents, and undefined groups are shown as a dash. Named groups are shown by name instead of number."}},{"@type":"Question","name":"Why did the page freeze on my pattern?","acceptedAnswer":{"@type":"Answer","text":"Almost certainly catastrophic backtracking, caused by nested quantifiers over overlapping characters such as (a+)+. Reload the page and rewrite the pattern to avoid quantifying a group that already repeats."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>Regex Tester</span></div>
+  <div class="tool-page-header">
+    <h1>Regex Tester</h1>
+    <p>Live match highlighting, a match table and capture groups, as you type.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">A regular expression is easy to write and hard to be sure about. It looks correct, matches the three examples you had in mind, and then quietly fails on the fourth. Testing against real sample text is the only reliable check, so this tester highlights every match as you type, lists them with their positions, and shows what each capture group actually captured.</p>
+
+  <div class="tool-box">
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="rx-pattern">Regular expression</label>
+    <div style="display:flex;align-items:center;gap:0.4rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.55rem 0.7rem;">
+      <span style="color:var(--muted);font-family:monospace;">/</span>
+      <input type="text" id="rx-pattern" value="\b[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}\b" oninput="runRegex()" style="flex:1;background:none;border:none;color:var(--text);font-family:monospace;font-size:0.92rem;outline:none;padding:0;"/>
+      <span style="color:var(--muted);font-family:monospace;">/</span>
+      <span id="rx-flagview" style="color:var(--accent2);font-family:monospace;">gi</span>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.75rem;">
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" class="rx-flag" value="g" checked onchange="runRegex()" style="width:auto;"/> g — all matches</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" class="rx-flag" value="i" checked onchange="runRegex()" style="width:auto;"/> i — ignore case</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" class="rx-flag" value="m" onchange="runRegex()" style="width:auto;"/> m — ^ and $ per line</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" class="rx-flag" value="s" onchange="runRegex()" style="width:auto;"/> s — dot matches newline</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" class="rx-flag" value="u" onchange="runRegex()" style="width:auto;"/> u — unicode</label>
+    </div>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="rx-test" style="margin-top:0.9rem;">Test string</label>
+    <textarea id="rx-test" style="width:100%;min-height:110px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.9rem;line-height:1.6;resize:vertical;font-family:monospace;" oninput="runRegex()">Contact ada@example.com or grace.hopper@navy.mil before Friday.
+Invalid: someone@localhost and @nobody.com should not match.</textarea>
+    <div id="rx-highlight" style="margin-top:0.9rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:0.75rem;font-family:monospace;font-size:0.88rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;min-height:3em;"></div>
+    <div style="overflow-x:auto;"><table class="unit-table" id="rx-table"><thead><tr><th>#</th><th>Match</th><th>Index</th><th>Groups</th></tr></thead><tbody id="rx-body"></tbody></table></div>
+    <div class="status" id="status-rx"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Write your pattern</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Enter it without the surrounding slashes; the flags sit beside them.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Toggle the flags</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Global, case-insensitive, multiline, dot-all and unicode.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Check the matches</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Highlighted in place, and listed below with index and captures.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/text-diff.html"><span class="icon">&#128203;</span><div class="info"><h3>Text Diff Checker</h3><p>Compare two versions</p></div></a>
+      <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h3>JSON Formatter</h3><p>Validate and beautify JSON</p></div></a>
+      <a class="related-card" href="/text/remove-duplicate-lines.html"><span class="icon">&#128465;</span><div class="info"><h3>Remove Duplicate Lines</h3><p>Clean up any list</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>The flags change more than they appear to</h2>
+    <p>Without <code>g</code> a pattern stops at the first match, which is the right behaviour for validation and the wrong one for extraction. With it, the expression keeps a position between calls — the source of a classic bug where reusing one global regex object across several strings starts each search partway through the next.</p>
+    <p>The <code>m</code> flag redefines <code>^</code> and <code>$</code> to mean the start and end of each line rather than of the whole string, which is what you want when the test string is a log file and not what you want when validating a single field. Without it, a pattern anchored with <code>^</code> and <code>$</code> checks the entire input, newlines included — the reason a validation regex can accept a value with a newline smuggled onto the end.</p>
+    <p>The <code>s</code> flag makes <code>.</code> match line breaks as well; by default it matches anything except them. And <code>u</code> switches on proper Unicode handling, which is what makes <code>\p{L}</code> and code point escapes work and what stops an emoji being treated as two separate characters.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Greedy quantifiers, and the pattern that hangs the page</h2>
+    <p>Quantifiers are greedy: <code>.*</code> takes as much as it can and gives back only when forced. Applied to <code>&lt;b&gt;one&lt;/b&gt; and &lt;b&gt;two&lt;/b&gt;</code>, the pattern <code>&lt;b&gt;.*&lt;/b&gt;</code> matches the whole line rather than the first tag. Adding a question mark makes the quantifier lazy — <code>.*?</code> takes as little as possible — which is usually what was meant.</p>
+    <p>Greed also has a performance edge. Nested quantifiers over overlapping character sets, the classic being <code>(a+)+b</code>, force the engine to try an exponential number of ways to split the input before concluding there is no match. On a few dozen characters that can take longer than the age of the universe, and because JavaScript regular expressions run on the main thread, the tab simply stops responding. The condition has a name — catastrophic backtracking — and it is a real denial-of-service class in server-side code.</p>
+    <p>Two habits avoid nearly all of it. Prefer a negated character class to a dot when you know what must not appear: <code>[^&lt;]*</code> instead of <code>.*?</code> when scanning up to a tag. And avoid quantifying a group that already contains a quantifier over the same characters. This tester runs against whatever you paste, so a pathological pattern will freeze the page here too — reload it and simplify.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Which regex flavour does this use?<span class="arrow">&#9660;</span></button><div class="faq-a">JavaScript, the ECMAScript flavour built into your browser. It differs from PCRE and Python in places: no lookbehind in older browsers, no recursion, and named groups written as (?<name>...).</div></div>
+    <div class="faq-item"><button class="faq-q">Why does my pattern match too much?<span class="arrow">&#9660;</span></button><div class="faq-a">Quantifiers are greedy by default, so .* consumes as far as it can. Add a question mark for the lazy form, .*?, or use a negated character class to stop the match at a known boundary.</div></div>
+    <div class="faq-item"><button class="faq-q">What does the g flag change?<span class="arrow">&#9660;</span></button><div class="faq-a">It finds every match instead of just the first, and makes the expression keep its position between calls. That state is why reusing one global regex across several strings can skip matches.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I test capture groups?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Each match in the table lists its groups with their contents, and undefined groups are shown as a dash. Named groups are shown by name instead of number.</div></div>
+    <div class="faq-item"><button class="faq-q">Why did the page freeze on my pattern?<span class="arrow">&#9660;</span></button><div class="faq-a">Almost certainly catastrophic backtracking, caused by nested quantifiers over overlapping characters such as (a+)+. Reload the page and rewrite the pattern to avoid quantifying a group that already repeats.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function rxEsc(s){ return s.replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+function runRegex(){
+  var pat = document.getElementById('rx-pattern').value;
+  var flags = Array.prototype.slice.call(document.querySelectorAll('.rx-flag:checked')).map(function(c){ return c.value; }).join('');
+  document.getElementById('rx-flagview').textContent = flags || '\u00a0';
+  var text = document.getElementById('rx-test').value;
+  var hl = document.getElementById('rx-highlight'), body = document.getElementById('rx-body');
+  if(!pat){ hl.innerHTML = '<span style="color:var(--muted);">Enter a pattern above.</span>'; body.innerHTML = ''; document.getElementById('status-rx').className = 'status'; return; }
+  var re;
+  try { re = new RegExp(pat, flags); }
+  catch(e){
+    hl.innerHTML = '<span style="color:var(--muted);">\u2014</span>';
+    body.innerHTML = '';
+    showStatus('status-rx','error','Invalid pattern: ' + e.message);
+    return;
+  }
+  var matches = [], m, guard = 0;
+  if(flags.indexOf('g') >= 0){
+    while((m = re.exec(text)) !== null){
+      matches.push(m);
+      // A zero-length match would spin here forever; step past it manually.
+      if(m.index === re.lastIndex) re.lastIndex++;
+      if(++guard > 5000) break;
+    }
+  } else {
+    m = re.exec(text);
+    if(m) matches.push(m);
+  }
+  var out = '', pos = 0;
+  matches.forEach(function(mm){
+    out += rxEsc(text.slice(pos, mm.index));
+    out += '<mark style="background:rgba(37,99,235,0.35);color:var(--text);border-radius:3px;padding:0 2px;">' + (rxEsc(mm[0]) || '\u2b1a') + '</mark>';
+    pos = mm.index + (mm[0].length || 0);
+  });
+  out += rxEsc(text.slice(pos));
+  hl.innerHTML = out || '<span style="color:var(--muted);">Nothing to test against.</span>';
+  body.innerHTML = matches.length ? matches.map(function(mm, i){
+    var groups = mm.slice(1).map(function(g, gi){ return (gi + 1) + ': ' + (g === undefined ? '\u2014' : g); }).join('  \u00b7  ');
+    if(mm.groups) groups = Object.keys(mm.groups).map(function(k){ return k + ': ' + (mm.groups[k] === undefined ? '\u2014' : mm.groups[k]); }).join('  \u00b7  ') || groups;
+    return '<tr><td>' + (i + 1) + '</td><td style="font-family:monospace;">' + rxEsc(mm[0]) + '</td><td>' + mm.index + '</td><td style="font-family:monospace;color:var(--muted);">' + (groups ? rxEsc(groups) : '\u2014') + '</td></tr>';
+  }).join('') : '<tr><td colspan="4" style="color:var(--muted);">No matches.</td></tr>';
+  showStatus('status-rx', matches.length ? 'success' : 'info',
+    matches.length ? matches.length + ' match' + (matches.length === 1 ? '' : 'es') + ' found.' : 'The pattern is valid but matches nothing in the test string.');
+}
+document.addEventListener('DOMContentLoaded', runRegex);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

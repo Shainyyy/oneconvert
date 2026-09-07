@@ -4,10 +4,10 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OneConvert – Free Online Converter Tools for PDF & Images</title>
-  <meta name="description" content="Free online converter tools for PDF, images, QR codes and units. No upload, no account, no limits — everything runs in your browser."/>
+  <meta name="description" content="Fifty-five free online tools for PDF, images, QR codes, units, text, colours and everyday calculations. No upload, no account, no limits."/>
 <link rel="canonical" href="https://oneconvert.net/"/>
   <meta property="og:title" content="OneConvert – Free Online Converter Tools"/>
-  <meta property="og:description" content="PDF, Image, QR, Unit and Text tools — free, instant, private. No upload to any server."/>
+  <meta property="og:description" content="PDF, image, QR, unit, text, colour and calculator tools — free, instant, private. No upload to any server."/>
   <meta property="og:url" content="https://oneconvert.net/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
@@ -58,6 +58,7 @@
     <a href="/units/">Units</a>
     <a href="/text/">Text</a>
     <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
@@ -128,6 +129,7 @@
       <span class="tool-tag">Resize</span>
       <span class="tool-tag">WebP to JPG</span>
       <span class="tool-tag">HEIC</span>
+      <span class="tool-tag">+9 more</span>
     </div>
   </a>
   <a class="category-card" href="/qr/">
@@ -144,24 +146,25 @@
   <a class="category-card" href="/units/">
     <div class="category-icon">📐</div>
     <h2>Unit Converter</h2>
-    <p>Convert length, weight, temperature, speed, area, volume and data storage units instantly.</p>
+    <p>Length, weight, temperature and data storage, plus CSS units, number bases and timestamps.</p>
     <div class="category-tools">
-      <span class="tool-tag">Length</span>
-      <span class="tool-tag">Weight</span>
-      <span class="tool-tag">Temperature</span>
-      <span class="tool-tag">Speed</span>
-      <span class="tool-tag">Volume</span>
+      <span class="tool-tag">cm to inch</span>
+      <span class="tool-tag">kg to lbs</span>
+      <span class="tool-tag">&deg;C to &deg;F</span>
+      <span class="tool-tag">KB, MB, GB</span>
+      <span class="tool-tag">+4 more</span>
     </div>
   </a>
   <a class="category-card" href="/text/">
     <div class="category-icon">✏️</div>
     <h2>Text Tools</h2>
-    <p>Word counter, case converter, Lorem Ipsum generator, remove duplicates, Base64 encode and more.</p>
+    <p>Word counter, case converter, Lorem Ipsum, Base64, diff checker, regex tester, JSON and CSV.</p>
     <div class="category-tools">
       <span class="tool-tag">Word Count</span>
       <span class="tool-tag">Case Convert</span>
       <span class="tool-tag">Base64</span>
-      <span class="tool-tag">Lorem Ipsum</span>
+      <span class="tool-tag">Text Diff</span>
+      <span class="tool-tag">+10 more</span>
     </div>
   </a>
   <a class="category-card" href="/colors/">
@@ -175,9 +178,20 @@
       <span class="tool-tag">Contrast</span>
     </div>
   </a>
+  <a class="category-card" href="/calc/">
+    <div class="category-icon">🧮</div>
+    <h2>Calculators</h2>
+    <p>Percentages, exact age, the days between two dates and unbiased random numbers.</p>
+    <div class="category-tools">
+      <span class="tool-tag">Percentage</span>
+      <span class="tool-tag">Age</span>
+      <span class="tool-tag">Days Between</span>
+      <span class="tool-tag">Random Numbers</span>
+    </div>
+  </a>
 </div>
 
-<!-- Popular tools: direkte Einstiege, damit jedes Tool einen Klick von der Startseite entfernt ist -->
+<!-- Popular tools: direct entry points, so every tool is one click from the homepage -->
 <div class="tool-page" style="max-width:1100px;margin:0 auto 2.5rem;padding:0 1.5rem;">
   <h2 style="font-family:Syne,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.4rem;">Most used tools</h2>
   <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1rem;">The conversions people reach for most often — each opens directly, with no upload and no account.</p>
@@ -193,11 +207,19 @@
     <a class="related-card" href="/image/resize.html"><span class="icon">↔️</span><div class="info"><h3>Resize Image</h3><p>Exact pixel dimensions</p></div></a>
     <a class="related-card" href="/image/png-to-jpg.html"><span class="icon">🔄</span><div class="info"><h3>PNG to JPG</h3><p>Much smaller photo files</p></div></a>
     <a class="related-card" href="/image/png-to-webp.html"><span class="icon">⚡</span><div class="info"><h3>PNG to WebP</h3><p>Transparency at a fraction of the size</p></div></a>
-    <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h4>JSON Formatter</h4><p>Validate, beautify and minify</p></div></a>
-    <a class="related-card" href="/text/password-generator.html"><span class="icon">&#128274;</span><div class="info"><h4>Password Generator</h4><p>Strong random passwords</p></div></a>
-    <a class="related-card" href="/image/rotate.html"><span class="icon">&#128260;</span><div class="info"><h4>Rotate &amp; Flip</h4><p>Turn 90° at a time or mirror</p></div></a>
-    <a class="related-card" href="/image/crop.html"><span class="icon">&#9986;</span><div class="info"><h4>Crop Image</h4><p>Cut a picture to any size or ratio</p></div></a>
-    <a class="related-card" href="/colors/gradient-generator.html"><span class="icon">&#127752;</span><div class="info"><h4>Gradient Generator</h4><p>Linear, radial and conic CSS gradients</p></div></a>
+    <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h3>JSON Formatter</h3><p>Validate, beautify and minify</p></div></a>
+    <a class="related-card" href="/text/password-generator.html"><span class="icon">&#128274;</span><div class="info"><h3>Password Generator</h3><p>Strong random passwords</p></div></a>
+    <a class="related-card" href="/image/rotate.html"><span class="icon">&#128260;</span><div class="info"><h3>Rotate &amp; Flip</h3><p>Turn 90° at a time or mirror</p></div></a>
+    <a class="related-card" href="/image/crop.html"><span class="icon">&#9986;</span><div class="info"><h3>Crop Image</h3><p>Cut a picture to any size or ratio</p></div></a>
+    <a class="related-card" href="/colors/gradient-generator.html"><span class="icon">&#127752;</span><div class="info"><h3>Gradient Generator</h3><p>Linear, radial and conic CSS gradients</p></div></a>
+    <a class="related-card" href="/text/word-counter.html"><span class="icon">&#128202;</span><div class="info"><h3>Word Counter</h3><p>Words, characters and reading time</p></div></a>
+    <a class="related-card" href="/calc/percentage-calculator.html"><span class="icon">&#128200;</span><div class="info"><h3>Percentage Calculator</h3><p>Of, share, change, increase</p></div></a>
+    <a class="related-card" href="/calc/age-calculator.html"><span class="icon">&#127874;</span><div class="info"><h3>Age Calculator</h3><p>Exact age to the day</p></div></a>
+    <a class="related-card" href="/units/weight-converter.html"><span class="icon">&#9878;</span><div class="info"><h3>kg to lbs</h3><p>Weight in nine units</p></div></a>
+    <a class="related-card" href="/units/temperature-converter.html"><span class="icon">&#127777;</span><div class="info"><h3>Celsius to Fahrenheit</h3><p>And Kelvin, all linked</p></div></a>
+    <a class="related-card" href="/text/case-converter.html"><span class="icon">&#127362;</span><div class="info"><h3>Case Converter</h3><p>Title, camel, snake, kebab</p></div></a>
+    <a class="related-card" href="/text/text-diff.html"><span class="icon">&#128203;</span><div class="info"><h3>Text Diff Checker</h3><p>Compare two versions</p></div></a>
+    <a class="related-card" href="/text/base64.html"><span class="icon">&#128272;</span><div class="info"><h3>Base64 Encoder</h3><p>Encode and decode text</p></div></a>
     <a class="related-card" href="/units/timestamp.html"><span class="icon">🕐</span><div class="info"><h3>Unix Timestamp</h3><p>Epoch to date and back</p></div></a>
   </div>
 </div>
@@ -229,7 +251,7 @@
     <div class="seo-icon-box">📄</div>
     <div>
       <h2>Complete PDF Toolkit — Free Online</h2>
-      <p>Split PDFs into individual pages, merge multiple files, compress for email, rotate pages, reorder, delete and convert between formats. All 9 PDF tools run instantly in your browser with no file size limits and no registration required.</p>
+      <p>Split PDFs into individual pages, merge multiple files, compress for email, rotate pages, reorder, delete and convert between formats. All twelve PDF tools run instantly in your browser with no file size limits and no registration required.</p>
     </div>
   </div>
   <div class="seo-row">
@@ -270,7 +292,7 @@
     </div>
     <div>
       <h3 style="font-family:Syne,sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.6rem;color:var(--accent2);">🛠️ Built for everyday use</h3>
-      <p style="color:var(--muted);font-size:0.9rem;line-height:1.75;">OneConvert covers the conversions and edits that come up regularly — splitting a PDF to share one section, compressing an image before uploading it, generating a QR code for a link, converting between CSS units while building a website, or checking whether two colours have sufficient contrast for accessibility. Thirty-seven tools across six categories, each with its own URL and focused functionality.</p>
+      <p style="color:var(--muted);font-size:0.9rem;line-height:1.75;">OneConvert covers the conversions and edits that come up regularly — splitting a PDF to share one section, compressing an image before uploading it, generating a QR code for a link, converting between CSS units while building a website, or checking whether two colours have sufficient contrast for accessibility. Fifty-five tools across seven categories, each with its own URL and focused functionality.</p>
     </div>
     <div>
       <h3 style="font-family:Syne,sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.6rem;color:var(--accent2);">🌐 Works on any device</h3>
@@ -283,15 +305,8 @@
 <footer>
   <p>© 2026 OneConvert. All rights reserved.</p>
   <div class="footer-links">
-    <a href="/pdf/">PDF Tools</a>
-    <a href="/image/">Image Tools</a>
-    <a href="/qr/">QR Code</a>
-    <a href="/units/">Unit Converter</a>
-    <a href="/text/">Text Tools</a>
-    <a href="/colors/">Color Tools</a>
-    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
   </div>
 </footer>
 

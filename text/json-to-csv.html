@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JSON to CSV Converter – Free and Browser-Based | OneConvert</title>
+  <meta name="description" content="Convert JSON to CSV online. Nested objects flatten into dotted columns, quoting follows RFC 4180, and the file never leaves your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/text/json-to-csv.html"/>
+  <meta property="og:title" content="JSON to CSV Converter – Free and Browser-Based | OneConvert"/>
+  <meta property="og:description" content="Convert JSON to CSV online. Nested objects flatten into dotted columns, quoting follows RFC 4180, and the file never leaves your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/text/json-to-csv.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="JSON to CSV Converter – Free and Browser-Based | OneConvert"/>
+  <meta name="twitter:description" content="Convert JSON to CSV online. Nested objects flatten into dotted columns, quoting follows RFC 4180, and the file never leaves your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JSON to CSV Converter","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert JSON to CSV online. Nested objects flatten into dotted columns, quoting follows RFC 4180, and the file never leaves your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"JSON to CSV","item":"https://oneconvert.net/text/json-to-csv.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What happens to nested objects?","acceptedAnswer":{"@type":"Answer","text":"They become dotted column names, so a city inside a user object appears as user.city. Switch flattening off to keep nested objects as raw JSON inside a single cell instead."}},{"@type":"Question","name":"How are arrays handled?","acceptedAnswer":{"@type":"Answer","text":"Array values are joined into one cell, separated by semicolons. Arrays of objects are written as JSON text, since giving each element its own column would make the header depend on the longest record."}},{"@type":"Question","name":"My CSV opens as one column in Excel. Why?","acceptedAnswer":{"@type":"Answer","text":"Excel follows your regional list separator. In most of Europe that is a semicolon, not a comma. Choose the semicolon delimiter and the file will split into columns correctly."}},{"@type":"Question","name":"Why do accented characters look wrong in Excel?","acceptedAnswer":{"@type":"Answer","text":"Excel assumes a legacy code page unless the file begins with a byte order mark. Tick \"Add BOM for Excel\" to include it. Leave it off for imports into databases or scripts."}},{"@type":"Question","name":"What if my records have different keys?","acceptedAnswer":{"@type":"Answer","text":"The header collects every key found across all records, and any record missing one gets an empty cell. Nothing is dropped and no row is shifted out of alignment."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>JSON to CSV</span></div>
+  <div class="tool-page-header">
+    <h1>JSON to CSV Converter</h1>
+    <p>Turn an array of objects into a spreadsheet-ready CSV file.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">JSON describes a tree; CSV describes a grid. Converting between them means answering a question the data does not answer for you: what happens to values nested two levels down, and to arrays that have no fixed length. This converter flattens nested objects into dotted column names, joins arrays into a single cell, and quotes every value that needs it — then hands you a file Excel, Numbers or a database import will read without complaint.</p>
+
+  <div class="tool-box">
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="jc-input">JSON input</label>
+    <textarea id="jc-input" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.9rem;line-height:1.6;resize:vertical;font-family:monospace;" placeholder='[{"name": "Ada", "role": "Engineer"}, {"name": "Grace", "role": "Admiral"}]'></textarea>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:0.75rem;margin-top:0.9rem;align-items:end;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="jc-delim">Delimiter</label>
+        <select id="jc-delim" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.55rem 0.7rem;"><option value=",">Comma ( , )</option><option value=";">Semicolon ( ; )</option><option value="\t">Tab</option><option value="|">Pipe ( | )</option></select>
+      </div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="jc-eol">Line endings</label>
+        <select id="jc-eol" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.55rem 0.7rem;"><option value="crlf">CRLF &mdash; Excel, RFC 4180</option><option value="lf">LF &mdash; Unix</option></select>
+      </div>
+    </div>
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:0.85rem;">
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" id="jc-flatten" checked style="width:auto;"/> Flatten nested objects into dotted columns</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" id="jc-bom" style="width:auto;"/> Add BOM for Excel</label>
+    </div>
+    <button class="btn" onclick="jsonToCsv()" style="margin-top:1rem;">Convert to CSV</button>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="jc-output" style="margin-top:1rem;">CSV output</label>
+    <textarea id="jc-output" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.9rem;line-height:1.6;resize:vertical;font-family:monospace;" readonly></textarea>
+    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.6rem;">
+      <button class="btn btn-sm" onclick="downloadCsv()">Download .csv</button>
+      <button class="btn btn-sm btn-outline" onclick="copyCsv()">Copy result</button>
+    </div>
+    <div class="status" id="status-jc"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Paste your JSON</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">An array of objects, or an object that contains one.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose delimiter and line endings</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Semicolons and CRLF for European Excel; commas and LF elsewhere.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download or copy</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The header row is built from every key found across all records.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/csv-to-json.html"><span class="icon">&#128202;</span><div class="info"><h3>CSV to JSON</h3><p>The same conversion, reversed</p></div></a>
+      <a class="related-card" href="/text/json-formatter.html"><span class="icon">&#128220;</span><div class="info"><h3>JSON Formatter</h3><p>Validate and beautify JSON</p></div></a>
+      <a class="related-card" href="/text/text-diff.html"><span class="icon">&#128203;</span><div class="info"><h3>Text Diff Checker</h3><p>Compare two versions</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Flattening a tree into a grid</h2>
+    <p>A CSV row is a flat list of values, so anything nested has to be given a column of its own. This converter joins the path with dots: <code>{"user": {"city": "Bern"}}</code> becomes a column named <code>user.city</code>. The convention is widely understood, survives a round trip through a spreadsheet, and keeps the original structure legible in the header row.</p>
+    <p>Arrays are the harder case, because their length varies between records. Splitting them into <code>tags.0</code>, <code>tags.1</code> and so on produces a column count driven by whichever record happens to have the most entries, and a table full of blanks. This tool joins array values into one cell separated by semicolons instead — lossy for nested arrays of objects, which are stored as JSON text, but predictable for the tags, categories and ID lists that arrays usually hold.</p>
+    <p>Records rarely share the same keys. The header is therefore built by walking every record and collecting every key that appears anywhere, in order of first appearance. A record missing a key gets an empty cell rather than a shifted row, which is what keeps the grid aligned when the JSON is the output of an API that omits null fields.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>The parts of CSV that are not standardised</h2>
+    <p>CSV has a specification, RFC 4180, and almost nothing follows it exactly. It defines the comma as the separator, CRLF as the line ending, and double quotes around any value containing a comma, a quote or a newline — with an embedded quote written twice. This tool follows all of that, which is why a value like <code>Smith, John</code> comes out as <code>"Smith, John"</code>.</p>
+    <p>The separator is where regional settings intervene. In locales that use a comma as the decimal mark — most of continental Europe — Excel writes and expects semicolons instead, so a comma-separated file opens as a single column per row. If your CSV lands in one column in Excel, switching the delimiter to a semicolon usually fixes it in one step.</p>
+    <p>Encoding is the other recurring problem. This tool writes UTF-8, which is correct, but Excel on Windows assumes the regional code page unless the file starts with a byte order mark. Without it, accented and non-Latin characters arrive mangled. The BOM option adds those three bytes; leave it off for imports into databases and scripts, which usually treat them as part of the first column name.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What happens to nested objects?<span class="arrow">&#9660;</span></button><div class="faq-a">They become dotted column names, so a city inside a user object appears as user.city. Switch flattening off to keep nested objects as raw JSON inside a single cell instead.</div></div>
+    <div class="faq-item"><button class="faq-q">How are arrays handled?<span class="arrow">&#9660;</span></button><div class="faq-a">Array values are joined into one cell, separated by semicolons. Arrays of objects are written as JSON text, since giving each element its own column would make the header depend on the longest record.</div></div>
+    <div class="faq-item"><button class="faq-q">My CSV opens as one column in Excel. Why?<span class="arrow">&#9660;</span></button><div class="faq-a">Excel follows your regional list separator. In most of Europe that is a semicolon, not a comma. Choose the semicolon delimiter and the file will split into columns correctly.</div></div>
+    <div class="faq-item"><button class="faq-q">Why do accented characters look wrong in Excel?<span class="arrow">&#9660;</span></button><div class="faq-a">Excel assumes a legacy code page unless the file begins with a byte order mark. Tick "Add BOM for Excel" to include it. Leave it off for imports into databases or scripts.</div></div>
+    <div class="faq-item"><button class="faq-q">What if my records have different keys?<span class="arrow">&#9660;</span></button><div class="faq-a">The header collects every key found across all records, and any record missing one gets an empty cell. Nothing is dropped and no row is shifted out of alignment.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+// The textarea normalises CRLF to LF on read, so keep the real output here.
+var jcLast = '';
+function flattenObj(obj, prefix, out, deep){
+  Object.keys(obj).forEach(function(k){
+    var key = prefix ? prefix + '.' + k : k, v = obj[k];
+    if(deep && v && typeof v === 'object' && !Array.isArray(v) && !(v instanceof Date)) flattenObj(v, key, out, deep);
+    else if(Array.isArray(v)) out[key] = v.map(function(x){ return x === null || typeof x === 'object' ? JSON.stringify(x) : x; }).join('; ');
+    else if(v && typeof v === 'object') out[key] = JSON.stringify(v);
+    else out[key] = v === null || v === undefined ? '' : v;
+  });
+  return out;
+}
+function csvCell(v, delim){
+  var s = String(v);
+  // RFC 4180: quote when the value contains the delimiter, a quote or a line break.
+  if(s.indexOf(delim) >= 0 || s.indexOf('"') >= 0 || /[\r\n]/.test(s)) return '"' + s.replace(/"/g, '""') + '"';
+  return s;
+}
+function buildCsv(){
+  var raw = document.getElementById('jc-input').value.trim();
+  if(!raw){ showStatus('status-jc','error','Paste some JSON first.'); return null; }
+  var data;
+  try { data = JSON.parse(raw); }
+  catch(e){ showStatus('status-jc','error','Invalid JSON: ' + e.message); return null; }
+  if(data && !Array.isArray(data) && typeof data === 'object'){
+    // A single object, or a wrapper such as {"results": [...]} — use the first array found.
+    var arrKey = Object.keys(data).find(function(k){ return Array.isArray(data[k]); });
+    data = arrKey ? data[arrKey] : [data];
+  }
+  if(!Array.isArray(data)){ showStatus('status-jc','error','Expected an array of objects, or an object containing one.'); return null; }
+  if(!data.length){ showStatus('status-jc','error','The array is empty, so there are no rows to write.'); return null; }
+  var deep = document.getElementById('jc-flatten').checked;
+  var rows = data.map(function(item){
+    if(item === null || typeof item !== 'object') return {value: item === null ? '' : item};
+    return flattenObj(item, '', {}, deep);
+  });
+  var cols = [];
+  rows.forEach(function(r){ Object.keys(r).forEach(function(k){ if(cols.indexOf(k) < 0) cols.push(k); }); });
+  var delim = document.getElementById('jc-delim').value.replace('\\t', '\t');
+  var eol = document.getElementById('jc-eol').value === 'lf' ? '\n' : '\r\n';
+  var lines = [cols.map(function(c){ return csvCell(c, delim); }).join(delim)];
+  rows.forEach(function(r){
+    lines.push(cols.map(function(c){ return csvCell(r[c] === undefined ? '' : r[c], delim); }).join(delim));
+  });
+  showStatus('status-jc','success', rows.length + ' row' + (rows.length === 1 ? '' : 's') + ' and ' + cols.length + ' column' + (cols.length === 1 ? '' : 's') + ' written.');
+  return lines.join(eol);
+}
+function jsonToCsv(){
+  var csv = buildCsv();
+  if(csv === null || csv === undefined) return;
+  jcLast = csv;
+  document.getElementById('jc-output').value = csv;
+}
+function copyCsv(){
+  var v = jcLast;
+  if(!v){ showStatus('status-jc','error','Convert something first.'); return; }
+  navigator.clipboard.writeText(v).then(function(){ showStatus('status-jc','success','CSV copied to clipboard.'); });
+}
+function downloadCsv(){
+  var v = jcLast;
+  if(!v){ v = buildCsv(); if(v === null || v === undefined) return; jcLast = v; document.getElementById('jc-output').value = v; }
+  var bom = document.getElementById('jc-bom').checked ? '\ufeff' : '';
+  directDownload(new Blob([bom + v], {type:'text/csv;charset=utf-8'}), 'data.csv');
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

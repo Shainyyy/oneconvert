@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>URL Encoder and Decoder – Free Percent-Encoding Tool | OneConvert</title>
+  <meta name="description" content="Percent-encode a value or decode one back, with a choice between encoding a single component and preserving a whole URL. Free and browser-based."/>
+  <link rel="canonical" href="https://oneconvert.net/text/url-encoder.html"/>
+  <meta property="og:title" content="URL Encoder and Decoder – Free Percent-Encoding Tool | OneConvert"/>
+  <meta property="og:description" content="Percent-encode a value or decode one back, with a choice between encoding a single component and preserving a whole URL. Free and browser-based."/>
+  <meta property="og:url" content="https://oneconvert.net/text/url-encoder.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="URL Encoder and Decoder – Free Percent-Encoding Tool | OneConvert"/>
+  <meta name="twitter:description" content="Percent-encode a value or decode one back, with a choice between encoding a single component and preserving a whole URL. Free and browser-based."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"URL Encoder and Decoder","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Percent-encode a value or decode one back, with a choice between encoding a single component and preserving a whole URL. Free and browser-based."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"URL Encoder","item":"https://oneconvert.net/text/url-encoder.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between the two encoding scopes?","acceptedAnswer":{"@type":"Answer","text":"Component encoding escapes the structural characters & ? = / # as well, which is what a single query value needs. Whole-URL encoding leaves them intact so the address keeps working."}},{"@type":"Question","name":"Why did my URL stop working after encoding?","acceptedAnswer":{"@type":"Answer","text":"Most likely the whole address was encoded as a component, turning the colon and slashes into %3A and %2F. Encode individual values as you assemble the URL, not the finished result."}},{"@type":"Question","name":"Should a space be %20 or a plus sign?","acceptedAnswer":{"@type":"Answer","text":"%20 is valid everywhere and is the safe default. The plus sign comes from HTML form encoding and is only read as a space by parsers expecting that format."}},{"@type":"Question","name":"What is double-encoding?","acceptedAnswer":{"@type":"Answer","text":"Encoding an already-encoded string, which turns the % of %20 into %25 and produces %2520. The result decodes to %20 rather than a space, so the value arrives visibly wrong."}},{"@type":"Question","name":"Which characters never need encoding?","acceptedAnswer":{"@type":"Answer","text":"The unreserved set: A to Z, a to z, 0 to 9, and the four marks - _ . ~ . Everything else is either reserved for structure or must be percent-encoded."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>URL Encoder</span></div>
+  <div class="tool-page-header">
+    <h1>URL Encoder and Decoder</h1>
+    <p>Percent-encoding in both directions, with the component and whole-URL rules kept apart.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">A URL can only carry a restricted set of characters, and several of those characters mean something structural: a question mark opens the query string, an ampersand separates parameters, a hash starts the fragment. Anything else has to be percent-encoded. Which characters count as "anything else" depends on whether you are encoding one value or an entire address — a distinction this tool makes explicit rather than guessing.</p>
+
+  <div class="tool-box">
+    <div class="unit-tabs" style="margin-bottom:1rem;">
+      <button class="unit-tab active" onclick="setUrlMode('encode',this)">Encode</button>
+      <button class="unit-tab" onclick="setUrlMode('decode',this)">Decode</button>
+    </div>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="url-input" id="url-label">Text to encode</label>
+    <textarea id="url-input" style="width:100%;min-height:120px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" placeholder="Paste a value, a query string or a whole URL&hellip;" oninput="runUrl()"></textarea>
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:0.85rem;">
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="radio" name="url-scope" value="component" checked onchange="runUrl()" style="width:auto;"/> Component &mdash; encodes &amp; ? = / #</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="radio" name="url-scope" value="full" onchange="runUrl()" style="width:auto;"/> Whole URL &mdash; keeps the structure intact</label>
+    </div>
+    <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;" style="margin-top:0.6rem;">
+      <input type="checkbox" id="url-plus" onchange="runUrl()" style="width:auto;"/> Form encoding: spaces become + instead of %20
+    </label>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="url-output" style="margin-top:0.85rem;">Result</label>
+    <textarea id="url-output" style="width:100%;min-height:120px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" readonly></textarea>
+    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.75rem;">
+      <button class="btn btn-sm" onclick="copyUrl()">Copy result</button>
+      <button class="btn btn-sm btn-outline" onclick="swapUrl()">Swap in</button>
+    </div>
+    <div class="status" id="status-url"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose encode or decode</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The same rules apply in reverse when decoding.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick the scope</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">A single component encodes the structural characters too; a whole URL leaves them working.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy, or swap the result back in</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Chaining a decode after an encode is a quick way to check a round trip.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/base64.html"><span class="icon">&#128272;</span><div class="info"><h3>Base64 Encoder</h3><p>Encode and decode text</p></div></a>
+      <a class="related-card" href="/text/case-converter.html"><span class="icon">&#127362;</span><div class="info"><h3>Case Converter</h3><p>Title, camel, snake, kebab</p></div></a>
+      <a class="related-card" href="/text/word-counter.html"><span class="icon">&#128202;</span><div class="info"><h3>Word Counter</h3><p>Words, characters, reading time</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Component or whole URL — the mistake behind most broken links</h2>
+    <p>JavaScript offers two functions and the difference matters. <code>encodeURIComponent</code> escapes everything that is not unreserved, including <code>&amp; ? = / # +</code>, and is correct for a single value being dropped into a query string. <code>encodeURI</code> leaves those characters alone because it assumes you are handing it a complete, already-structured address that must keep working.</p>
+    <p>Using the wrong one fails in opposite directions. Encode a whole URL with the component function and <code>https://example.com/</code> becomes <code>https%3A%2F%2Fexample.com%2F</code> — a valid string that is no longer a link. Encode a single value with the URL function and a search term containing an ampersand splits into two parameters, silently truncating the search.</p>
+    <p>The rule that avoids both: encode values, not addresses. Build the URL from its parts, run each value through component encoding as you insert it, and never encode the assembled result a second time. Double-encoding turns <code>%20</code> into <code>%2520</code>, which is one of the harder bugs to spot because it looks almost right.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Why a space is sometimes %20 and sometimes +</h2>
+    <p>Both are correct, in different places. The percent-encoding standard defines a space as <code>%20</code> and that form is valid anywhere in a URL. The plus sign comes from HTML form submission, where the <code>application/x-www-form-urlencoded</code> content type has encoded spaces as <code>+</code> since the earliest browsers and continues to for compatibility.</p>
+    <p>The consequence is a genuine ambiguity in query strings. A server parsing form-encoded data reads <code>+</code> as a space, so a literal plus sign in a value — a phone number such as <code>+41 44 123</code>, or a search for <code>C++</code> — must itself be encoded as <code>%2B</code> or it disappears. Inside a URL path, by contrast, a plus is just a plus and no decoder converts it.</p>
+    <p>The safe default is <code>%20</code>, which every parser reads as a space in every position. Turn on the form-encoding option only when you are reproducing what a browser sends from an HTML form, or matching an existing API that expects that style.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What is the difference between the two encoding scopes?<span class="arrow">&#9660;</span></button><div class="faq-a">Component encoding escapes the structural characters & ? = / # as well, which is what a single query value needs. Whole-URL encoding leaves them intact so the address keeps working.</div></div>
+    <div class="faq-item"><button class="faq-q">Why did my URL stop working after encoding?<span class="arrow">&#9660;</span></button><div class="faq-a">Most likely the whole address was encoded as a component, turning the colon and slashes into %3A and %2F. Encode individual values as you assemble the URL, not the finished result.</div></div>
+    <div class="faq-item"><button class="faq-q">Should a space be %20 or a plus sign?<span class="arrow">&#9660;</span></button><div class="faq-a">%20 is valid everywhere and is the safe default. The plus sign comes from HTML form encoding and is only read as a space by parsers expecting that format.</div></div>
+    <div class="faq-item"><button class="faq-q">What is double-encoding?<span class="arrow">&#9660;</span></button><div class="faq-a">Encoding an already-encoded string, which turns the % of %20 into %25 and produces %2520. The result decodes to %20 rather than a space, so the value arrives visibly wrong.</div></div>
+    <div class="faq-item"><button class="faq-q">Which characters never need encoding?<span class="arrow">&#9660;</span></button><div class="faq-a">The unreserved set: A to Z, a to z, 0 to 9, and the four marks - _ . ~ . Everything else is either reserved for structure or must be percent-encoded.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+var urlMode = 'encode';
+function setUrlMode(m, btn){
+  urlMode = m;
+  document.querySelectorAll('.unit-tab').forEach(function(b){ b.classList.remove('active'); });
+  if(btn) btn.classList.add('active');
+  document.getElementById('url-label').textContent = m === 'encode' ? 'Text to encode' : 'Encoded text to decode';
+  runUrl();
+}
+function runUrl(){
+  var t = document.getElementById('url-input').value;
+  var scope = document.querySelector('input[name="url-scope"]:checked').value;
+  var plus = document.getElementById('url-plus').checked;
+  var out = document.getElementById('url-output');
+  var st = document.getElementById('status-url');
+  if(!t){ out.value = ''; st.className = 'status'; return; }
+  try {
+    var r;
+    if(urlMode === 'encode'){
+      r = scope === 'component' ? encodeURIComponent(t) : encodeURI(t);
+      if(plus) r = r.replace(/%20/g,'+');
+    } else {
+      var s = plus ? t.replace(/\+/g,' ') : t;
+      r = scope === 'component' ? decodeURIComponent(s) : decodeURI(s);
+    }
+    out.value = r;
+    st.className = 'status';
+  } catch(e){
+    out.value = '';
+    showStatus('status-url','error','That is not valid percent-encoding \u2014 a % must be followed by two hexadecimal digits.');
+  }
+}
+function copyUrl(){
+  var v = document.getElementById('url-output').value;
+  if(!v){ showStatus('status-url','error','There is no result to copy yet.'); return; }
+  navigator.clipboard.writeText(v).then(function(){ showStatus('status-url','success','Result copied to clipboard.'); });
+}
+function swapUrl(){
+  var v = document.getElementById('url-output').value;
+  if(!v){ showStatus('status-url','error','There is no result to reuse yet.'); return; }
+  document.getElementById('url-input').value = v;
+  var tabs = document.querySelectorAll('.unit-tab');
+  setUrlMode(urlMode === 'encode' ? 'decode' : 'encode', urlMode === 'encode' ? tabs[1] : tabs[0]);
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

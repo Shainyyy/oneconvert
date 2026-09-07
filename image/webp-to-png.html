@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WebP to PNG Converter – Free, Keeps Transparency | OneConvert</title>
+  <meta name="description" content="Convert WebP images to PNG in your browser. Transparency is preserved, multiple files at once, nothing uploaded to a server."/>
+  <link rel="canonical" href="https://oneconvert.net/image/webp-to-png.html"/>
+  <meta property="og:title" content="WebP to PNG Converter – Free, Keeps Transparency | OneConvert"/>
+  <meta property="og:description" content="Convert WebP images to PNG in your browser. Transparency is preserved, multiple files at once, nothing uploaded to a server."/>
+  <meta property="og:url" content="https://oneconvert.net/image/webp-to-png.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="WebP to PNG Converter – Free, Keeps Transparency | OneConvert"/>
+  <meta name="twitter:description" content="Convert WebP images to PNG in your browser. Transparency is preserved, multiple files at once, nothing uploaded to a server."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"WebP to PNG Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert WebP images to PNG in your browser. Transparency is preserved, multiple files at once, nothing uploaded to a server."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Image Tools","item":"https://oneconvert.net/image/"},{"@type":"ListItem","position":3,"name":"WebP to PNG","item":"https://oneconvert.net/image/webp-to-png.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the conversion keep transparency?","acceptedAnswer":{"@type":"Answer","text":"Yes. The canvas is left unfilled before the image is drawn, so transparent areas stay transparent in the PNG. This is the main reason to choose PNG over JPG for a WebP."}},{"@type":"Question","name":"Why is the PNG larger than the WebP?","acceptedAnswer":{"@type":"Answer","text":"Because PNG is lossless and WebP usually is not. The PNG stores every pixel exactly, including detail the WebP compression had already approximated, and for photographs that can mean a file several times the size."}},{"@type":"Question","name":"Can I convert several files at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Select or drop as many as you like and each one downloads separately, staggered slightly so the browser does not block the repeated downloads."}},{"@type":"Question","name":"What happens to an animated WebP?","acceptedAnswer":{"@type":"Answer","text":"Only the first frame is converted. PNG holds a single image, and the animated variant APNG cannot be produced by browser encoders."}},{"@type":"Question","name":"Are my images uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Decoding and re-encoding both happen in your browser using the canvas API. The files never leave your device, so there is nothing stored or deleted on a server."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/" class="active">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/image/">Image Tools</a><span>&rsaquo;</span><span>WebP to PNG</span></div>
+  <div class="tool-page-header">
+    <h1>WebP to PNG Converter</h1>
+    <p>Lossless PNG output with the alpha channel kept intact.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">PNG is the format to convert a WebP into when the image has transparency and the destination will not accept WebP — a logo going into an older design tool, an icon for a desktop application, an asset for software that predates the format. Unlike a JPG conversion, PNG keeps the alpha channel, so a cut-out image stays cut out rather than gaining a white rectangle.</p>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone" role="button" tabindex="0" aria-label="Choose WebP files or drop them here"><div class="dropzone-icon">&#128444;&#65039;</div><p><strong>Click to select</strong> or drag &amp; drop WebP files</p><small>Transparency preserved &middot; Multiple files &middot; Nothing uploaded</small></div>
+    <input type="file" id="file-input" accept="image/webp,.webp" multiple style="display:none;" aria-label="Choose WebP files"/>
+    <div id="options-area" style="display:none;">
+      <div class="preview-box"><img id="wp-preview" src="" alt="Preview of the first selected image" style="max-height:180px;"/><div class="preview-info">
+        <div class="preview-stat"><div class="val" id="wp-count">&mdash;</div><div class="lbl">Files selected</div></div>
+        <div class="preview-stat"><div class="val" id="wp-dims">&mdash;</div><div class="lbl">First image</div></div>
+      </div></div>
+      <button class="btn" onclick="convertWebp()">Convert to PNG &amp; download</button>
+      <div class="status" id="status-wp"></div>
+    </div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select your WebP files</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">One or many, by clicking or dropping them in.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Convert</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Each image is decoded and re-encoded as PNG in the page.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Files download themselves</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Multiple files arrive one after another, a fraction of a second apart.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/image/webp-to-jpg.html"><span class="icon">&#128260;</span><div class="info"><h3>WebP to JPG</h3><p>When the image has no transparency</p></div></a>
+      <a class="related-card" href="/image/png-to-webp.html"><span class="icon">&#128260;</span><div class="info"><h3>PNG to WebP</h3><p>The conversion in the other direction</p></div></a>
+      <a class="related-card" href="/image/compress.html"><span class="icon">&#128230;</span><div class="info"><h3>Compress Image</h3><p>Reduce the size of the result</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Why PNG rather than JPG for a WebP</h2>
+    <p>The deciding factor is usually transparency. WebP supports an alpha channel and so does PNG; JPEG does not, and has no way to represent it. Convert a transparent WebP to JPG and every transparent pixel is composited against something — usually white, sometimes black — which turns a logo meant to sit on any background into one that only works on that colour.</p>
+    <p>The second factor is what the image contains. PNG uses lossless compression, so converting a WebP that was itself losslessly encoded produces a pixel-identical result. For screenshots, diagrams, logos and anything with flat colour and hard edges, that is exactly right, and PNG will often be smaller than a JPG of comparable quality.</p>
+    <p>For photographs the trade-off reverses. PNG stores photographic detail badly — a converted photo can easily be three to five times the size of the WebP it came from, because lossless compression has little to exploit in continuous-tone image data. If the source is a photograph and the destination accepts JPEG, converting to JPG will produce a far smaller file.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>What a conversion can and cannot recover</h2>
+    <p>If the original WebP was saved with lossy compression, its detail is already gone. Re-encoding it as PNG stores the damaged pixels perfectly and faithfully — a large file that looks exactly like the small one it came from. Converting to a lossless format does not restore anything; it only stops further loss from that point on.</p>
+    <p>Animation is the one thing that does not survive. WebP can hold an animated sequence, and PNG in its ordinary form holds a single frame. An animated WebP converted here yields its first frame, which is usually not what was wanted. APNG exists and can hold animation, but browser encoders do not produce it.</p>
+    <p>Metadata is also dropped. The conversion draws the image onto a canvas and re-encodes it, and the canvas holds pixels — not EXIF data, not an embedded colour profile, not a copyright field. For a web asset that is often an improvement, since it strips location data and shrinks the file. For an archival copy it is a loss worth knowing about before converting the only version you have.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Does the conversion keep transparency?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. The canvas is left unfilled before the image is drawn, so transparent areas stay transparent in the PNG. This is the main reason to choose PNG over JPG for a WebP.</div></div>
+    <div class="faq-item"><button class="faq-q">Why is the PNG larger than the WebP?<span class="arrow">&#9660;</span></button><div class="faq-a">Because PNG is lossless and WebP usually is not. The PNG stores every pixel exactly, including detail the WebP compression had already approximated, and for photographs that can mean a file several times the size.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I convert several files at once?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Select or drop as many as you like and each one downloads separately, staggered slightly so the browser does not block the repeated downloads.</div></div>
+    <div class="faq-item"><button class="faq-q">What happens to an animated WebP?<span class="arrow">&#9660;</span></button><div class="faq-a">Only the first frame is converted. PNG holds a single image, and the animated variant APNG cannot be produced by browser encoders.</div></div>
+    <div class="faq-item"><button class="faq-q">Are my images uploaded?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Decoding and re-encoding both happen in your browser using the canvas API. The files never leave your device, so there is nothing stored or deleted on a server.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+var wpFiles = [];
+document.addEventListener('DOMContentLoaded', function(){
+  setupDropzone('drop-zone', 'file-input', function(list){
+    wpFiles = Array.prototype.slice.call(list).filter(function(f){
+      return f.type === 'image/webp' || /\.webp$/i.test(f.name);
+    });
+    if(!wpFiles.length){ showStatus('status-wp','error','Those do not look like WebP files. Select files ending in .webp.'); return; }
+    document.getElementById('wp-count').textContent = wpFiles.length;
+    var url = URL.createObjectURL(wpFiles[0]);
+    var img = document.getElementById('wp-preview');
+    img.onload = function(){ document.getElementById('wp-dims').textContent = img.naturalWidth + ' \u00d7 ' + img.naturalHeight; };
+    img.src = url;
+    document.getElementById('options-area').style.display = 'block';
+    showStatus('status-wp','info', wpFiles.length + ' file' + (wpFiles.length === 1 ? '' : 's') + ' ready \u00b7 ' + formatBytes(wpFiles.reduce(function(a,f){ return a + f.size; }, 0)));
+  });
+});
+function decodeWebp(file){
+  return new Promise(function(resolve, reject){
+    var url = URL.createObjectURL(file);
+    var i = new Image();
+    i.onload = function(){
+      var c = document.createElement('canvas');
+      c.width = i.naturalWidth; c.height = i.naturalHeight;
+      // No fill: leaving the canvas transparent is what preserves a WebP alpha channel.
+      c.getContext('2d').drawImage(i, 0, 0);
+      URL.revokeObjectURL(url);
+      c.toBlob(function(b){ b ? resolve(b) : reject(new Error('encode failed')); }, 'image/png');
+    };
+    i.onerror = function(){ URL.revokeObjectURL(url); reject(new Error('This browser could not decode ' + file.name)); };
+    i.src = url;
+  });
+}
+async function convertWebp(){
+  if(!wpFiles.length){ showStatus('status-wp','error','Select a WebP file first.'); return; }
+  showStatus('status-wp','info','Converting\u2026');
+  var out = [], failed = [];
+  for(var i = 0; i < wpFiles.length; i++){
+    try {
+      var blob = await decodeWebp(wpFiles[i]);
+      out.push({blob: blob, name: wpFiles[i].name.replace(/\.webp$/i, '') + '.png'});
+    } catch(e){ failed.push(wpFiles[i].name); }
+  }
+  if(!out.length){ showStatus('status-wp','error','Nothing could be converted. ' + failed.join(', ')); return; }
+  if(out.length === 1) directDownload(out[0].blob, out[0].name, 'image/png');
+  else out.forEach(function(o, n){
+    // staggered: browsers block rapid repeated downloads
+    setTimeout(function(){ directDownload(o.blob, o.name, 'image/png'); }, n * 300);
+  });
+  var total = out.reduce(function(a, o){ return a + o.blob.size; }, 0);
+  showStatus('status-wp', failed.length ? 'info' : 'success',
+    'Converted ' + out.length + ' file' + (out.length === 1 ? '' : 's') + ' \u00b7 ' + formatBytes(total) +
+    (failed.length ? ' \u00b7 could not read: ' + failed.join(', ') : ''));
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

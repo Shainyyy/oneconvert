@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Number Generator – Free and Unbiased | OneConvert</title>
+  <meta name="description" content="Draw random numbers in any range, with or without repeats, using your browser’s cryptographic random source rather than Math.random."/>
+  <link rel="canonical" href="https://oneconvert.net/calc/random-number-generator.html"/>
+  <meta property="og:title" content="Random Number Generator – Free and Unbiased | OneConvert"/>
+  <meta property="og:description" content="Draw random numbers in any range, with or without repeats, using your browser’s cryptographic random source rather than Math.random."/>
+  <meta property="og:url" content="https://oneconvert.net/calc/random-number-generator.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Random Number Generator – Free and Unbiased | OneConvert"/>
+  <meta name="twitter:description" content="Draw random numbers in any range, with or without repeats, using your browser’s cryptographic random source rather than Math.random."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Random Number Generator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Draw random numbers in any range, with or without repeats, using your browser’s cryptographic random source rather than Math.random."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Calculators Tools","item":"https://oneconvert.net/calc/"},{"@type":"ListItem","position":3,"name":"Random Number Generator","item":"https://oneconvert.net/calc/random-number-generator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this generator truly random?","acceptedAnswer":{"@type":"Answer","text":"It uses crypto.getRandomValues, which draws from the operating system’s entropy pool and is designed to be unpredictable. That is cryptographically secure randomness, not the pseudorandom Math.random."}},{"@type":"Question","name":"What is modulo bias?","acceptedAnswer":{"@type":"Answer","text":"The uneven distribution you get by taking a remainder to fit a random value into a range. Values at the low end come up slightly more often. This tool discards the draws that would cause it."}},{"@type":"Question","name":"Can I draw numbers without repeats?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tick \"No repeats\" and each value can appear only once. The range must contain at least as many values as you are asking for, or the tool says so."}},{"@type":"Question","name":"How many numbers can I generate at once?","acceptedAnswer":{"@type":"Answer","text":"Up to a thousand per draw. There is no daily limit and no account, so generate as many batches as you need."}},{"@type":"Question","name":"Can I use this for a prize draw?","acceptedAnswer":{"@type":"Answer","text":"For something informal, yes. For a draw that must be provably fair to others, no web page can help — the result cannot be audited afterwards. Use a procedure with published seeds or observed physical selection."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/" class="active">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/calc/">Calculators Tools</a><span>&rsaquo;</span><span>Random Number Generator</span></div>
+  <div class="tool-page-header">
+    <h1>Random Number Generator</h1>
+    <p>Any range, any quantity, drawn from a cryptographic source with no modulo bias.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Most online random number generators call Math.random and take the remainder, which produces numbers that are neither unpredictable nor quite evenly distributed. This one draws from the same cryptographic source browsers use for encryption keys, and rejects the draws that would tilt the distribution — so every value in the range really is equally likely.</p>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:1rem;align-items:end;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="rn-min">Minimum</label><input type="number" id="rn-min" value="1" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="rn-max">Maximum</label><input type="number" id="rn-max" value="100" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="rn-count">How many</label><input type="number" id="rn-count" value="1" min="1" max="1000" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+    </div>
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:0.85rem;">
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.85rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="rn-unique" style="width:auto;"/> No repeats</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.85rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="rn-sort" style="width:auto;"/> Sort the result</label>
+    </div>
+    <button class="btn" onclick="genRandom()" style="margin-top:1rem;">Generate</button>
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;margin-top:1.25rem;">
+      <div id="rn-out" style="font-family:Syne,sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent2);line-height:1.2;word-break:break-word;">&mdash;</div>
+    </div>
+    <button class="btn btn-outline btn-sm" onclick="copyRandom()" style="margin-top:0.6rem;">Copy result</button>
+    <div class="status" id="status-rn"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Set the range</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Any two whole numbers, in either order.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose how many</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">One draw, or up to a thousand at once.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick the rules</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Allow repeats or forbid them, and sort the result if you like.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/calc/percentage-calculator.html"><span class="icon">&#128200;</span><div class="info"><h3>Percentage Calculator</h3><p>Increase, decrease, of</p></div></a>
+      <a class="related-card" href="/calc/date-difference.html"><span class="icon">&#128197;</span><div class="info"><h3>Date Difference</h3><p>Days between two dates</p></div></a>
+      <a class="related-card" href="/text/password-generator.html"><span class="icon">&#128274;</span><div class="info"><h3>Password Generator</h3><p>Strong random passwords</p></div></a>
+      <a class="related-card" href="/text/uuid-generator.html"><span class="icon">&#127380;</span><div class="info"><h3>UUID Generator</h3><p>Random version 4 identifiers</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Where most random number generators go slightly wrong</h2>
+    <p>The usual approach is to take a random value and use the remainder after dividing by the size of the range. If the source produces numbers from 0 to 9 and you want a range of 3, the remainders come out as 0,1,2,0,1,2,0,1,2,0 — zero appears four times, one and two three times each. The result is real but uneven, and the effect is called modulo bias.</p>
+    <p>With a 32-bit source and a small range the skew is a few parts per billion, invisible in a raffle and unacceptable in a simulation or anything security-related. The fix is rejection sampling: discard any draw that falls in the incomplete final block and try again. It costs a few extra draws and removes the bias entirely, which is what this generator does.</p>
+    <p>The source matters as much as the method. <code>Math.random</code> is a fast pseudorandom generator seeded from the environment, and its output is predictable to anyone who can observe enough of it — fine for shuffling a playlist, unfit for anything where guessing the next value has value. This tool uses <code>crypto.getRandomValues</code>, which draws from the operating system’s entropy pool.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Drawing without repeats, and what "random" does not guarantee</h2>
+    <p>Forbidding repeats is a different problem from drawing one number. The naive method — draw, check, redraw on a collision — gets slower as the pool empties, and drawing 99 unique values from a range of 100 spends most of its time rejecting. This generator instead shuffles the range with a partial Fisher-Yates pass, which takes each value at most once and never retries.</p>
+    <p>What no generator can offer is a result that looks random to a human. Genuine randomness produces clusters: in six draws from 1 to 49, a pair of adjacent numbers appears far more often than intuition suggests, and a run of three is unremarkable. A sequence with no clumps at all is a sign of a generator that has been tampered with to look fair.</p>
+    <p>Nor does any of this make a result verifiable. Anyone watching a number appear on a screen has to trust the page that produced it, which is fine for choosing a restaurant and not fine for a public prize draw. Those need a procedure that can be audited afterwards — published seeds, sealed entries, or an observed physical draw — and no web page can supply that on its own.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Is this generator truly random?<span class="arrow">&#9660;</span></button><div class="faq-a">It uses crypto.getRandomValues, which draws from the operating system’s entropy pool and is designed to be unpredictable. That is cryptographically secure randomness, not the pseudorandom Math.random.</div></div>
+    <div class="faq-item"><button class="faq-q">What is modulo bias?<span class="arrow">&#9660;</span></button><div class="faq-a">The uneven distribution you get by taking a remainder to fit a random value into a range. Values at the low end come up slightly more often. This tool discards the draws that would cause it.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I draw numbers without repeats?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Tick "No repeats" and each value can appear only once. The range must contain at least as many values as you are asking for, or the tool says so.</div></div>
+    <div class="faq-item"><button class="faq-q">How many numbers can I generate at once?<span class="arrow">&#9660;</span></button><div class="faq-a">Up to a thousand per draw. There is no daily limit and no account, so generate as many batches as you need.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I use this for a prize draw?<span class="arrow">&#9660;</span></button><div class="faq-a">For something informal, yes. For a draw that must be provably fair to others, no web page can help — the result cannot be audited afterwards. Use a procedure with published seeds or observed physical selection.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+// Rejection sampling on crypto.getRandomValues: a plain modulo would make the
+// lowest values of the range very slightly more likely than the highest.
+function randomBelow(n){
+  if(n <= 0) return 0;
+  var limit = Math.floor(0x100000000 / n) * n;
+  var buf = new Uint32Array(1);
+  do { crypto.getRandomValues(buf); } while(buf[0] >= limit);
+  return buf[0] % n;
+}
+function genRandom(){
+  var min = parseInt(document.getElementById('rn-min').value, 10);
+  var max = parseInt(document.getElementById('rn-max').value, 10);
+  var count = parseInt(document.getElementById('rn-count').value, 10);
+  if(isNaN(min) || isNaN(max)){ showStatus('status-rn','error','Enter a minimum and a maximum.'); return; }
+  if(min > max){ var t = min; min = max; max = t; document.getElementById('rn-min').value = min; document.getElementById('rn-max').value = max; }
+  if(isNaN(count) || count < 1) count = 1;
+  if(count > 1000){ count = 1000; document.getElementById('rn-count').value = 1000; }
+  var span = max - min + 1;
+  var unique = document.getElementById('rn-unique').checked;
+  if(unique && count > span){
+    showStatus('status-rn','error','Only ' + span.toLocaleString('en-GB') + ' distinct value' + (span === 1 ? '' : 's') + ' exist between ' + min + ' and ' + max + ', so ' + count + ' cannot all differ.');
+    return;
+  }
+  var out = [];
+  if(unique && span <= 200000){
+    // Partial Fisher-Yates over the whole range: unbiased and never retries.
+    var pool = new Array(span);
+    for(var i = 0; i < span; i++) pool[i] = min + i;
+    for(var k = 0; k < count; k++){
+      var j = k + randomBelow(span - k);
+      var tmp = pool[k]; pool[k] = pool[j]; pool[j] = tmp;
+      out.push(pool[k]);
+    }
+  } else if(unique){
+    var seen = new Set();
+    while(out.length < count){
+      var v = min + randomBelow(span);
+      if(!seen.has(v)){ seen.add(v); out.push(v); }
+    }
+  } else {
+    for(var c = 0; c < count; c++) out.push(min + randomBelow(span));
+  }
+  if(document.getElementById('rn-sort').checked) out.sort(function(a, b){ return a - b; });
+  document.getElementById('rn-out').textContent = out.join(', ');
+  showStatus('status-rn','success', count === 1 ? 'One number drawn between ' + min + ' and ' + max + '.' : count + ' numbers drawn between ' + min + ' and ' + max + '.');
+}
+function copyRandom(){
+  var v = document.getElementById('rn-out').textContent;
+  if(!v || v === '\u2014'){ showStatus('status-rn','error','Generate something first.'); return; }
+  navigator.clipboard.writeText(v).then(function(){ showStatus('status-rn','success','Copied to clipboard.'); });
+}
+document.addEventListener('DOMContentLoaded', genRandom);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

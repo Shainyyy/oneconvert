@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Percentage Calculator – Increase, Decrease and Change | OneConvert</title>
+  <meta name="description" content="Work out a percentage of a value, what share one number is of another, the change between two numbers, or add and subtract a percentage."/>
+  <link rel="canonical" href="https://oneconvert.net/calc/percentage-calculator.html"/>
+  <meta property="og:title" content="Percentage Calculator – Increase, Decrease and Change | OneConvert"/>
+  <meta property="og:description" content="Work out a percentage of a value, what share one number is of another, the change between two numbers, or add and subtract a percentage."/>
+  <meta property="og:url" content="https://oneconvert.net/calc/percentage-calculator.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Percentage Calculator – Increase, Decrease and Change | OneConvert"/>
+  <meta name="twitter:description" content="Work out a percentage of a value, what share one number is of another, the change between two numbers, or add and subtract a percentage."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Percentage Calculator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Work out a percentage of a value, what share one number is of another, the change between two numbers, or add and subtract a percentage."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Calculators Tools","item":"https://oneconvert.net/calc/"},{"@type":"ListItem","position":3,"name":"Percentage Calculator","item":"https://oneconvert.net/calc/percentage-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate a percentage of a number?","acceptedAnswer":{"@type":"Answer","text":"Divide the percentage by 100 and multiply by the number. 15% of 200 is 0.15 x 200 = 30. The first mode does this and shows the working."}},{"@type":"Question","name":"How do I work out percentage change?","acceptedAnswer":{"@type":"Answer","text":"Subtract the old value from the new one, divide by the old value, and multiply by 100. The result is negative for a decrease. The base is always the starting figure."}},{"@type":"Question","name":"Why does a 50% rise followed by a 50% fall not return to the start?","acceptedAnswer":{"@type":"Answer","text":"Because the second percentage is applied to the larger number the first one produced. 100 becomes 150, and half of 150 is 75. Returning to 100 would need a fall of 33.3%."}},{"@type":"Question","name":"What is the difference between percent and percentage points?","acceptedAnswer":{"@type":"Answer","text":"A move from 2% to 3% is one percentage point and a 50% relative increase. Points describe the arithmetic gap; percent describes the change relative to the starting value."}},{"@type":"Question","name":"Can I calculate a percentage change from zero?","acceptedAnswer":{"@type":"Answer","text":"No, and no calculator can. Change is measured against the starting value, and dividing by zero is undefined. Report the absolute change instead."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/" class="active">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/calc/">Calculators Tools</a><span>&rsaquo;</span><span>Percentage Calculator</span></div>
+  <div class="tool-page-header">
+    <h1>Percentage Calculator</h1>
+    <p>Four kinds of percentage question, with the arithmetic shown alongside each answer.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Most percentage mistakes are not arithmetic mistakes. They come from calculating a different question than the one being asked — a share instead of a change, or a decrease measured against the wrong starting figure. This calculator separates the four common questions into four modes and prints the working underneath the answer, so you can see which one you actually asked.</p>
+
+  <div class="tool-box">
+    <div class="unit-tabs" style="margin-bottom:1.25rem;">
+      <button class="unit-tab active" onclick="setPct('of',this)">What is X% of Y?</button>
+      <button class="unit-tab" onclick="setPct('is',this)">X is what % of Y?</button>
+      <button class="unit-tab" onclick="setPct('change',this)">Change from X to Y</button>
+      <button class="unit-tab" onclick="setPct('addsub',this)">Increase or decrease X by Y%</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1rem;align-items:end;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="pc-a" id="pc-la">Percentage</label><input type="number" id="pc-a" value="15" oninput="calcPct()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="pc-b" id="pc-lb">Of value</label><input type="number" id="pc-b" value="200" oninput="calcPct()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+    </div>
+    <div id="pc-dir" style="display:none;margin-top:0.85rem;">
+      <div style="display:flex;gap:1.25rem;flex-wrap:wrap;">
+        <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.85rem;color:var(--muted);cursor:pointer;"><input type="radio" name="pc-sign" value="inc" checked onchange="calcPct()" style="width:auto;"/> Increase</label>
+        <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.85rem;color:var(--muted);cursor:pointer;"><input type="radio" name="pc-sign" value="dec" onchange="calcPct()" style="width:auto;"/> Decrease</label>
+      </div>
+    </div>
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;margin-top:1.25rem;">
+      <div id="pc-result" style="font-family:Syne,sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent2);line-height:1.2;word-break:break-word;">&mdash;</div>
+      <div id="pc-working" style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;"></div>
+    </div>
+    <div class="status" id="status-pc"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick the question</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">A share of a value, a proportion, a change, or an adjustment.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Fill in the two numbers</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The labels change to match the mode you chose.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Check the working</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The line under the result shows the calculation that produced it.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/calc/date-difference.html"><span class="icon">&#128197;</span><div class="info"><h3>Date Difference</h3><p>Days between two dates</p></div></a>
+      <a class="related-card" href="/calc/age-calculator.html"><span class="icon">&#127874;</span><div class="info"><h3>Age Calculator</h3><p>Exact age and next birthday</p></div></a>
+      <a class="related-card" href="/calc/random-number-generator.html"><span class="icon">&#127922;</span><div class="info"><h3>Random Number Generator</h3><p>Fair, unbiased draws</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>A rise of 50% and a fall of 50% do not cancel out</h2>
+    <p>Percentage change is measured against the starting value, and after a rise the starting value has changed. Take 100, add 50% to reach 150, then take 50% off: you land on 75, not 100. Getting back to 100 from 150 requires a fall of 33.3%, because the same 50 is now being measured against a larger base.</p>
+    <p>This asymmetry is behind a great deal of misleading arithmetic. An investment that loses 50% needs a 100% gain to recover. A price cut of 20% followed by a rise of 20% leaves the price 4% below where it started. And a shop advertising "50% off, then 20% off at the till" is offering 60% off in total, not 70% — the second discount applies to the already reduced price.</p>
+    <p>The reliable habit is to always name the base. "Sales rose 15%" is meaningless until you know 15% of what, measured when. The change mode here uses the first number as the base and prints it in the working line for exactly that reason.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Percentage points are not percentages</h2>
+    <p>If an interest rate moves from 2% to 3%, that is a rise of one percentage point, and also a rise of 50%. Both statements are true and they describe the same event, which is why the difference between them is such a reliable source of confusion — and such a common tool in a misleading headline.</p>
+    <p>The convention is simple once stated: use percentage points for the arithmetic difference between two percentages, and percent for the relative change between them. A poll moving from 40% to 44% has gained four percentage points, or ten percent of its previous share. Reporting that as "a 10% rise" is not wrong, but it means something quite different from "a 10 point rise".</p>
+    <p>A related trap is averaging percentages. The mean of 50% and 100% is not the overall rate unless both were measured on the same sized group. If a shop converts 50% of 10 visitors one day and 100% of 90 the next, the combined rate is 95%, not 75%. Percentages can only be averaged directly when their bases are equal — otherwise you have to return to the underlying counts.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How do I calculate a percentage of a number?<span class="arrow">&#9660;</span></button><div class="faq-a">Divide the percentage by 100 and multiply by the number. 15% of 200 is 0.15 x 200 = 30. The first mode does this and shows the working.</div></div>
+    <div class="faq-item"><button class="faq-q">How do I work out percentage change?<span class="arrow">&#9660;</span></button><div class="faq-a">Subtract the old value from the new one, divide by the old value, and multiply by 100. The result is negative for a decrease. The base is always the starting figure.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does a 50% rise followed by a 50% fall not return to the start?<span class="arrow">&#9660;</span></button><div class="faq-a">Because the second percentage is applied to the larger number the first one produced. 100 becomes 150, and half of 150 is 75. Returning to 100 would need a fall of 33.3%.</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between percent and percentage points?<span class="arrow">&#9660;</span></button><div class="faq-a">A move from 2% to 3% is one percentage point and a 50% relative increase. Points describe the arithmetic gap; percent describes the change relative to the starting value.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I calculate a percentage change from zero?<span class="arrow">&#9660;</span></button><div class="faq-a">No, and no calculator can. Change is measured against the starting value, and dividing by zero is undefined. Report the absolute change instead.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+var pctMode = 'of';
+function fmtP(v){
+  if(!isFinite(v)) return '\u2014';
+  var r = Math.round(v * 1e6) / 1e6;
+  return r.toLocaleString('en-GB', {maximumFractionDigits: 6});
+}
+function setPct(m, btn){
+  pctMode = m;
+  document.querySelectorAll('.unit-tab').forEach(function(b){ b.classList.remove('active'); });
+  if(btn) btn.classList.add('active');
+  var la = document.getElementById('pc-la'), lb = document.getElementById('pc-lb');
+  var dir = document.getElementById('pc-dir');
+  dir.style.display = m === 'addsub' ? 'block' : 'none';
+  if(m === 'of'){ la.textContent = 'Percentage'; lb.textContent = 'Of value'; }
+  else if(m === 'is'){ la.textContent = 'This value'; lb.textContent = 'Out of'; }
+  else if(m === 'change'){ la.textContent = 'From'; lb.textContent = 'To'; }
+  else { la.textContent = 'Starting value'; lb.textContent = 'Percentage'; }
+  calcPct();
+}
+function calcPct(){
+  var a = parseFloat(document.getElementById('pc-a').value);
+  var b = parseFloat(document.getElementById('pc-b').value);
+  var res = document.getElementById('pc-result'), work = document.getElementById('pc-working');
+  if(isNaN(a) || isNaN(b)){ res.innerHTML = '&mdash;'; work.textContent = 'Fill in both fields.'; return; }
+  var out, note;
+  if(pctMode === 'of'){
+    out = a * b / 100;
+    res.textContent = fmtP(out);
+    note = a + '% of ' + b + '  =  ' + a + ' \u00f7 100 \u00d7 ' + b + '  =  ' + fmtP(out);
+  } else if(pctMode === 'is'){
+    if(b === 0){ res.innerHTML = '&mdash;'; work.textContent = 'A percentage of zero is undefined \u2014 there is nothing to be a share of.'; return; }
+    out = a / b * 100;
+    res.textContent = fmtP(out) + '%';
+    note = a + ' \u00f7 ' + b + ' \u00d7 100  =  ' + fmtP(out) + '%';
+  } else if(pctMode === 'change'){
+    if(a === 0){ res.innerHTML = '&mdash;'; work.textContent = 'Percentage change from zero is undefined \u2014 any increase from nothing is infinite.'; return; }
+    out = (b - a) / Math.abs(a) * 100;
+    res.textContent = (out > 0 ? '+' : '') + fmtP(out) + '%';
+    note = '(' + b + ' \u2212 ' + a + ') \u00f7 ' + Math.abs(a) + ' \u00d7 100  =  ' + fmtP(out) + '%' +
+      '  \u00b7  ' + (out > 0 ? 'an increase' : out < 0 ? 'a decrease' : 'no change');
+  } else {
+    var inc = document.querySelector('input[name="pc-sign"]:checked').value === 'inc';
+    out = inc ? a * (1 + b / 100) : a * (1 - b / 100);
+    res.textContent = fmtP(out);
+    note = a + ' ' + (inc ? '+' : '\u2212') + ' ' + b + '%  =  ' + a + ' \u00d7 ' +
+      fmtP(inc ? 1 + b / 100 : 1 - b / 100) + '  =  ' + fmtP(out) +
+      '  \u00b7  difference of ' + fmtP(Math.abs(out - a));
+  }
+  work.textContent = note;
+}
+document.addEventListener('DOMContentLoaded', calcPct);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

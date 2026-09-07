@@ -43,6 +43,7 @@
     <a href="/units/" class="active">Units</a>
     <a href="/text/">Text</a>
     <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
@@ -53,7 +54,7 @@
 <main>
 <div class="tool-page" style="max-width:1000px;">
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><span>Unit Converter</span></div>
-  <div class="tool-page-header"><h1>📐 Free Unit Converter</h1><p>Convert length, weight, temperature, speed, area, volume and data storage. Instant results with full reference tables.</p></div>
+  <div class="tool-page-header"><h1>📐 Free Unit Converter</h1><p>Convert length, weight, temperature, speed, area, volume and data storage — here in one converter, or on a dedicated page for each.</p></div>
 
   <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Unit conversion is a daily task in engineering, science, cooking, fitness and international work. This converter handles length (metres to feet), weight (kg to lbs), temperature (Celsius to Fahrenheit), speed (km/h to mph), area, volume and data storage. Enter any value and instantly see all related conversions with a complete reference table. Everything runs in your browser.</p>
   
@@ -96,19 +97,23 @@
     </div>
   </div>
 
-  <div style="background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.2);border-radius:14px;padding:1rem 1.25rem;margin-bottom:1.5rem;">
-    <p style="font-size:0.82rem;font-weight:600;margin-bottom:0.5rem;">🖥️ Developer Tools</p>
-    <div style="display:flex;gap:0.65rem;flex-wrap:wrap;">
-      <a href="/units/css-units.html" style="display:flex;align-items:center;gap:0.4rem;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.85rem;text-decoration:none;color:var(--text);font-size:0.82rem;font-weight:500;">🖥️ CSS Unit Converter (px → rem, em, vh)</a>
-      <a href="/units/number-base.html" style="display:flex;align-items:center;gap:0.4rem;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.85rem;text-decoration:none;color:var(--text);font-size:0.82rem;font-weight:500;">🔢 Number Base Converter (Binary, Hex, Decimal)</a>
-      <a href="/units/timestamp.html" style="display:flex;align-items:center;gap:0.4rem;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.85rem;text-decoration:none;color:var(--text);font-size:0.82rem;font-weight:500;">⏱ Unix Timestamp Converter (Epoch to Date)</a>
-    </div>
+  <h2 style="font-family:Syne,sans-serif;font-size:1.3rem;font-weight:700;margin:2rem 0 0.9rem;">A dedicated page for each conversion</h2>
+  <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1rem;">The converter above handles every category at once. These pages go deeper on one each, with reference tables and the definitions the figures rest on.</p>
+  <div class="tools-grid" style="margin-bottom:2rem;">
+    <a class="tool-card" href="/units/length-converter.html"><div class="tool-icon">📏</div><h3>Length Converter</h3><p>Centimetres to inches, metres to feet, kilometres to miles — nine units with exact factors.</p></a>
+    <a class="tool-card" href="/units/weight-converter.html"><div class="tool-icon">⚖️</div><h3>Weight Converter</h3><p>Kilograms to pounds, grams to ounces, stones and all three kinds of ton.</p></a>
+    <a class="tool-card" href="/units/temperature-converter.html"><div class="tool-icon">🌡️</div><h3>Temperature Converter</h3><p>Celsius, Fahrenheit and Kelvin, all three linked so any one of them can be edited.</p></a>
+    <a class="tool-card" href="/units/data-storage.html"><div class="tool-icon">💾</div><h3>Data Storage Converter</h3><p>Bytes to terabytes, with the 1000 and 1024 systems kept separate rather than blurred.</p></a>
+    <a class="tool-card" href="/units/css-units.html"><div class="tool-icon">🖥️</div><h3>CSS Unit Converter</h3><p>Pixels to rem, em, vh and vw, against the root and parent font sizes you set.</p></a>
+    <a class="tool-card" href="/units/number-base.html"><div class="tool-icon">🔢</div><h3>Number Base Converter</h3><p>Binary, octal, decimal and hexadecimal, converted in every direction at once.</p></a>
+    <a class="tool-card" href="/units/timestamp.html"><div class="tool-icon">⏱️</div><h3>Unix Timestamp Converter</h3><p>Epoch seconds to a readable date and back, in local time and UTC.</p></a>
   </div>
   <div class="related-tools"><h2>Related Tools</h2><div class="related-grid">
     <a class="related-card" href="/pdf/"><span class="icon">📄</span><div class="info"><h3>PDF Tools</h3><p>Split, merge, compress</p></div></a>
     <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h3>Compress Image</h3><p>Reduce file size</p></div></a>
     <a class="related-card" href="/qr/"><span class="icon">📱</span><div class="info"><h3>QR Code Generator</h3><p>Create QR codes</p></div></a>
-    <a class="related-card" href="/text/"><span class="icon">✏️</span><div class="info"><h3>Text Tools</h3><p>Word count, case convert</p></div></a>
+    <a class="related-card" href="/text/word-counter.html"><span class="icon">📊</span><div class="info"><h3>Word Counter</h3><p>Words, characters, reading time</p></div></a>
+    <a class="related-card" href="/calc/"><span class="icon">🧮</span><div class="info"><h3>Calculators</h3><p>Percentages, ages, dates</p></div></a>
   </div></div>
 
   <div class="faq-section"><h2>Frequently Asked Questions</h2>
@@ -135,7 +140,10 @@
 </div>
 </main>
 
-<footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/image/">Image</a><a href="/pdf/">PDF</a><a href="/qr/">QR</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></footer>
+<footer><p>© 2026 OneConvert. All rights reserved.</p><div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div></footer>
 <script src="../js/common.js"></script>
 <script>
 const CATEGORIES = {

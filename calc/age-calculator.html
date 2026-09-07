@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator – Exact Age in Years, Months and Days | OneConvert</title>
+  <meta name="description" content="Work out an exact age in years, months and days, plus the total in days, weeks and hours, and how long until the next birthday."/>
+  <link rel="canonical" href="https://oneconvert.net/calc/age-calculator.html"/>
+  <meta property="og:title" content="Age Calculator – Exact Age in Years, Months and Days | OneConvert"/>
+  <meta property="og:description" content="Work out an exact age in years, months and days, plus the total in days, weeks and hours, and how long until the next birthday."/>
+  <meta property="og:url" content="https://oneconvert.net/calc/age-calculator.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Age Calculator – Exact Age in Years, Months and Days | OneConvert"/>
+  <meta name="twitter:description" content="Work out an exact age in years, months and days, plus the total in days, weeks and hours, and how long until the next birthday."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Age Calculator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Work out an exact age in years, months and days, plus the total in days, weeks and hours, and how long until the next birthday."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Calculators Tools","item":"https://oneconvert.net/calc/"},{"@type":"ListItem","position":3,"name":"Age Calculator","item":"https://oneconvert.net/calc/age-calculator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is age calculated in years, months and days?","acceptedAnswer":{"@type":"Answer","text":"Whole years first, then whole months, then the days left over. When the day of the month has not yet been reached, a month is borrowed from the preceding month’s actual length."}},{"@type":"Question","name":"Can I calculate age on a future date?","acceptedAnswer":{"@type":"Answer","text":"Yes. Change the second date to any date you like. This is the quickest way to check whether someone will meet an age requirement by a given deadline."}},{"@type":"Question","name":"What happens with a 29 February birthday?","acceptedAnswer":{"@type":"Answer","text":"The next birthday is shown on 1 March in years without a 29th, which is the convention most legal systems follow. The tool flags this so the choice is visible."}},{"@type":"Question","name":"Why does the day total not match years multiplied by 365?","acceptedAnswer":{"@type":"Answer","text":"Because of leap days. Thirty years contains seven or eight of them depending on where the span falls, so the day total varies by a day between two people of the same stated age."}},{"@type":"Question","name":"Is my date of birth sent anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The calculation runs entirely in your browser and nothing is transmitted or stored. Reloading the page clears the fields."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/" class="active">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/calc/">Calculators Tools</a><span>&rsaquo;</span><span>Age Calculator</span></div>
+  <div class="tool-page-header">
+    <h1>Age Calculator</h1>
+    <p>Exact age in years, months and days, and the countdown to the next birthday.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Age looks like subtraction and is not. Months have different lengths, February changes size every four years, and the answer depends on whether the birthday has already passed this year. This calculator does the counting properly, gives the total in days, weeks and hours as well, and tells you when the next birthday falls and on which weekday.</p>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:1rem;align-items:end;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="ag-birth">Date of birth</label><input type="date" id="ag-birth" onchange="calcAge()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="ag-on">Age at this date</label><input type="date" id="ag-on" onchange="calcAge()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+    </div>
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;margin-top:1.25rem;">
+      <div id="ag-main" style="font-family:Syne,sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent2);line-height:1.2;word-break:break-word;">&mdash;</div>
+      <div id="ag-next" style="font-size:0.9rem;color:var(--muted);margin-top:0.5rem;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,120px),1fr));gap:0.6rem;margin-top:1rem;" id="ag-stats"></div>
+    <div class="status" id="status-ag"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Enter the date of birth</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Any date in the past.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose the reference date</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Today by default, but it can be any date — useful for eligibility checks.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Read the breakdown</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Years, months and days, plus the totals and the next birthday.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/calc/date-difference.html"><span class="icon">&#128197;</span><div class="info"><h3>Date Difference</h3><p>Days between two dates</p></div></a>
+      <a class="related-card" href="/calc/percentage-calculator.html"><span class="icon">&#128200;</span><div class="info"><h3>Percentage Calculator</h3><p>Increase, decrease, of</p></div></a>
+      <a class="related-card" href="/calc/random-number-generator.html"><span class="icon">&#127922;</span><div class="info"><h3>Random Number Generator</h3><p>Fair, unbiased draws</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Why age is not a subtraction</h2>
+    <p>Ask how old someone born on 31 January is on 1 March, and there is no single correct answer. Counting whole months gives one month and one day if you treat 28 February as the month’s end, or one month and two days if you count from the 31st onward into a month that has no 31st. Different jurisdictions and different software resolve this differently.</p>
+    <p>This calculator uses the convention almost everyone means: count whole years first, then whole months, then the remaining days, borrowing from the length of the preceding month when the day of the month has not yet been reached. It is the same method a person uses counting on a calendar, and it produces answers that match how ages are stated in ordinary speech.</p>
+    <p>The total in days is a separate calculation and does not divide neatly into the years-and-months figure. Someone aged exactly 30 has lived either 10,957 or 10,958 days depending on how many leap years fell in that span. Both numbers are correct; they answer different questions, which is why both are shown.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Leap years, and the people born on 29 February</h2>
+    <p>A leap year is not simply every fourth year. Years divisible by 100 are skipped, unless they are also divisible by 400 — which is why 1900 was not a leap year and 2000 was. The rule exists because the Earth takes about 365.2422 days to orbit the Sun, and the plain four-year rule overcorrects by roughly three days every four centuries.</p>
+    <p>Around one person in 1,461 is born on 29 February, and in three years out of four their birthday does not occur. Most legal systems settle this by treating 1 March as the anniversary in common years; a few, including parts of New Zealand and Taiwan, use 28 February instead. This calculator follows the 1 March convention and says so when the birth date is a 29 February.</p>
+    <p>The distinction matters wherever an age threshold has legal weight — a driving licence, a pension entitlement, an insurance band. In most of the world a person legally becomes a given age on the anniversary itself; in traditional East Asian age reckoning the count starts at one and increases at new year, so the same person can be two years older by that measure. If an official form asks for an age, it is asking for the anniversary count this tool produces.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How is age calculated in years, months and days?<span class="arrow">&#9660;</span></button><div class="faq-a">Whole years first, then whole months, then the days left over. When the day of the month has not yet been reached, a month is borrowed from the preceding month’s actual length.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I calculate age on a future date?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Change the second date to any date you like. This is the quickest way to check whether someone will meet an age requirement by a given deadline.</div></div>
+    <div class="faq-item"><button class="faq-q">What happens with a 29 February birthday?<span class="arrow">&#9660;</span></button><div class="faq-a">The next birthday is shown on 1 March in years without a 29th, which is the convention most legal systems follow. The tool flags this so the choice is visible.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does the day total not match years multiplied by 365?<span class="arrow">&#9660;</span></button><div class="faq-a">Because of leap days. Thirty years contains seven or eight of them depending on where the span falls, so the day total varies by a day between two people of the same stated age.</div></div>
+    <div class="faq-item"><button class="faq-q">Is my date of birth sent anywhere?<span class="arrow">&#9660;</span></button><div class="faq-a">No. The calculation runs entirely in your browser and nothing is transmitted or stored. Reloading the page clears the fields.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function addMonths(date, n){
+  var t = new Date(date.getFullYear(), date.getMonth() + n, 1);
+  // Clamp: 31 January plus one month is the end of February, not 3 March.
+  var last = new Date(t.getFullYear(), t.getMonth() + 1, 0).getDate();
+  t.setDate(Math.min(date.getDate(), last));
+  return t;
+}
+function isoToday(){ var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+function statCard(v, l){
+  return '<div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.8rem 0.6rem;text-align:center;">' +
+    '<div style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:800;color:var(--accent2);">' + v + '</div>' +
+    '<div style="font-size:0.72rem;color:var(--muted);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.03em;">' + l + '</div></div>';
+}
+function calcAge(){
+  var bs = document.getElementById('ag-birth').value, os_ = document.getElementById('ag-on').value;
+  var main = document.getElementById('ag-main'), next = document.getElementById('ag-next');
+  if(!bs || !os_){ main.innerHTML = '&mdash;'; next.textContent = 'Pick a date of birth to begin.'; document.getElementById('ag-stats').innerHTML = ''; return; }
+  // Parse as local dates: new Date('2000-01-01') would be read as UTC and can shift a day.
+  var b = new Date(bs + 'T00:00:00'), o = new Date(os_ + 'T00:00:00');
+  if(b > o){ main.innerHTML = '&mdash;'; next.textContent = ''; showStatus('status-ag','error','The date of birth is after the date you are measuring to.'); return; }
+  document.getElementById('status-ag').className = 'status';
+  var months = (o.getFullYear() - b.getFullYear()) * 12 + (o.getMonth() - b.getMonth());
+  if(addMonths(b, months) > o) months--;
+  var d = Math.round((o - addMonths(b, months)) / 86400000);
+  var y = Math.floor(months / 12), m = months % 12;
+  main.textContent = y + ' year' + (y === 1 ? '' : 's') + ', ' + m + ' month' + (m === 1 ? '' : 's') + ', ' + d + ' day' + (d === 1 ? '' : 's');
+  var days = Math.round((o - b) / 86400000);
+  document.getElementById('ag-stats').innerHTML =
+    statCard(days.toLocaleString('en-GB'), 'Days') +
+    statCard(Math.floor(days / 7).toLocaleString('en-GB'), 'Weeks') +
+    statCard(months.toLocaleString('en-GB'), 'Months') +
+    statCard((days * 24).toLocaleString('en-GB'), 'Hours');
+  // Next birthday, allowing for 29 February on a non-leap year.
+  var nb = new Date(o.getFullYear(), b.getMonth(), b.getDate());
+  if(nb < o) nb = new Date(o.getFullYear() + 1, b.getMonth(), b.getDate());
+  var toGo = Math.ceil((nb - o) / 86400000);
+  var leapling = b.getMonth() === 1 && b.getDate() === 29;
+  next.textContent = toGo === 0
+    ? 'That date is the birthday itself.'
+    : 'Next birthday in ' + toGo + ' day' + (toGo === 1 ? '' : 's') + ', on ' + nb.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'}) +
+      (leapling ? ' \u2014 a 29 February birth date, shown on 1 March in years without one.' : '');
+}
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('ag-on').value = isoToday();
+  document.getElementById('ag-birth').value = '1990-06-15';
+  calcAge();
+});
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

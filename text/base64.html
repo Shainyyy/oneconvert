@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Base64 Encoder and Decoder – Free Online Tool | OneConvert</title>
+  <meta name="description" content="Encode text to Base64 or decode it back, with correct UTF-8 handling and an optional URL-safe alphabet. Runs entirely in your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/text/base64.html"/>
+  <meta property="og:title" content="Base64 Encoder and Decoder – Free Online Tool | OneConvert"/>
+  <meta property="og:description" content="Encode text to Base64 or decode it back, with correct UTF-8 handling and an optional URL-safe alphabet. Runs entirely in your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/text/base64.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Base64 Encoder and Decoder – Free Online Tool | OneConvert"/>
+  <meta name="twitter:description" content="Encode text to Base64 or decode it back, with correct UTF-8 handling and an optional URL-safe alphabet. Runs entirely in your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Base64 Encoder and Decoder","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Encode text to Base64 or decode it back, with correct UTF-8 handling and an optional URL-safe alphabet. Runs entirely in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Text Tools","item":"https://oneconvert.net/text/"},{"@type":"ListItem","position":3,"name":"Base64 Encoder","item":"https://oneconvert.net/text/base64.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Base64 a form of encryption?","acceptedAnswer":{"@type":"Answer","text":"No. It is a reversible encoding with no key and no secret. Anyone who has the string can decode it instantly, so it must never be used to protect passwords, tokens or personal data."}},{"@type":"Question","name":"Why is the encoded output longer than the input?","acceptedAnswer":{"@type":"Answer","text":"Every three bytes become four characters, so the output grows by roughly 33% plus padding. That overhead is the price of expressing arbitrary bytes using only text-safe characters."}},{"@type":"Question","name":"Does it handle emoji and accented characters?","acceptedAnswer":{"@type":"Answer","text":"Yes. The text is converted to UTF-8 bytes before encoding and decoded back the same way, so ä, é, 中文 and emoji all survive a round trip intact."}},{"@type":"Question","name":"When should I use the URL-safe alphabet?","acceptedAnswer":{"@type":"Answer","text":"Whenever the value goes into a URL path, query string or cookie. It replaces + and / with - and _ and drops the = padding, all of which would otherwise be misread. JSON Web Tokens use this variant."}},{"@type":"Question","name":"Why does my Base64 fail to decode?","acceptedAnswer":{"@type":"Answer","text":"Usually one of three reasons: it is URL-safe input decoded as standard, padding was stripped, or a line break or space was pasted in. This tool strips whitespace and restores padding automatically."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/" class="active">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/text/">Text Tools</a><span>&rsaquo;</span><span>Base64 Encoder</span></div>
+  <div class="tool-page-header">
+    <h1>Base64 Encoder and Decoder</h1>
+    <p>Both directions, UTF-8 safe, with the URL-safe alphabet when you need it.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Base64 exists because some channels only carry text. Email bodies, JSON strings, XML documents and URLs all choke on arbitrary bytes, so binary data is re-expressed using 64 characters that survive the trip. This tool converts in both directions, handles accented and non-Latin text correctly, and offers the URL-safe variant that replaces the two characters a URL would otherwise mangle.</p>
+
+  <div class="tool-box">
+    <div class="unit-tabs" style="margin-bottom:1rem;">
+      <button class="unit-tab active" onclick="setB64('encode',this)">Encode</button>
+      <button class="unit-tab" onclick="setB64('decode',this)">Decode</button>
+    </div>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="b64-input" id="b64-label">Text to encode</label>
+    <textarea id="b64-input" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" placeholder="Type or paste text here&hellip;" oninput="runB64()"></textarea>
+    <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;" style="margin-top:0.85rem;">
+      <input type="checkbox" id="b64-urlsafe" onchange="runB64()" style="width:auto;"/> URL-safe alphabet (- and _ instead of + and /, no padding)
+    </label>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="b64-output" style="margin-top:0.85rem;">Result</label>
+    <textarea id="b64-output" style="width:100%;min-height:130px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" readonly></textarea>
+    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.75rem;align-items:center;">
+      <button class="btn btn-sm" onclick="copyB64()">Copy result</button>
+      <button class="btn btn-sm btn-outline" onclick="swapB64()">Swap in</button>
+      <span id="b64-size" style="font-size:0.8rem;color:var(--muted);"></span>
+    </div>
+    <div class="status" id="status-b64"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick a direction</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Encode plain text into Base64, or decode Base64 back to text.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Paste your input</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The result updates as you type, with the size change shown underneath.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Switch alphabet if needed</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The URL-safe option swaps + and / for - and _ and drops the padding.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/text/url-encoder.html"><span class="icon">&#128279;</span><div class="info"><h3>URL Encoder</h3><p>Percent-encoding, both ways</p></div></a>
+      <a class="related-card" href="/text/word-counter.html"><span class="icon">&#128202;</span><div class="info"><h3>Word Counter</h3><p>Words, characters, reading time</p></div></a>
+      <a class="related-card" href="/text/lorem-ipsum.html"><span class="icon">&#128221;</span><div class="info"><h3>Lorem Ipsum Generator</h3><p>Placeholder text on demand</p></div></a>
+      <a class="related-card" href="/image/image-to-base64.html"><span class="icon">&#128444;</span><div class="info"><h3>Image to Base64</h3><p>Data URIs for CSS and HTML</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What Base64 actually costs</h2>
+    <p>The scheme reads three bytes at a time — 24 bits — and rewrites them as four characters of six bits each. Four characters carrying three bytes means the output is always about a third larger than the input, plus up to two padding characters to round the length to a multiple of four.</p>
+    <p>That overhead is the reason inlining images as data URIs is a trade-off rather than an optimisation. A 9 KB icon becomes 12 KB of CSS, and unlike a separate file it cannot be cached independently, so every visitor downloads it again with each stylesheet change. Below roughly 2 KB the saved request usually wins; above it, rarely.</p>
+    <p>Encoding text adds a step before that arithmetic. Base64 encodes bytes, not characters, so the text must first be turned into bytes — and the choice of encoding changes the result. This tool uses UTF-8, where ASCII costs one byte per character while accented, Greek, Cyrillic or CJK characters cost two to four. The byte counter under the result shows the real input size, which is why the same number of characters can produce noticeably different output lengths.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Base64 is not encryption, and the URL-safe variant exists for a reason</h2>
+    <p>Anyone can decode Base64 — that is the entire point, and it takes one function call. It hides nothing. A password, an API key or a token stored Base64-encoded in a config file is stored in plain text with an extra step. The encoding of the credentials in HTTP Basic authentication is Base64 precisely because it is meant to be reversible; the confidentiality there comes from TLS, not from the encoding.</p>
+    <p>The standard alphabet ends with <code>+</code> and <code>/</code>, both of which mean something else in a URL: a plus is decoded as a space in query strings, and a slash is a path separator. Padding with <code>=</code> causes its own trouble in query parameters. RFC 4648 therefore defines a URL-safe variant using <code>-</code> and <code>_</code> with padding omitted, and that is what JSON Web Tokens use for every one of their three segments.</p>
+    <p>Decoding is where the two variants meet. A decoder expecting the standard alphabet will fail or produce nonsense on URL-safe input, which is a common cause of "invalid Base64" errors in code that looks correct. This tool restores the substituted characters and re-adds missing padding when the URL-safe box is ticked, so both forms decode cleanly.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Is Base64 a form of encryption?<span class="arrow">&#9660;</span></button><div class="faq-a">No. It is a reversible encoding with no key and no secret. Anyone who has the string can decode it instantly, so it must never be used to protect passwords, tokens or personal data.</div></div>
+    <div class="faq-item"><button class="faq-q">Why is the encoded output longer than the input?<span class="arrow">&#9660;</span></button><div class="faq-a">Every three bytes become four characters, so the output grows by roughly 33% plus padding. That overhead is the price of expressing arbitrary bytes using only text-safe characters.</div></div>
+    <div class="faq-item"><button class="faq-q">Does it handle emoji and accented characters?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. The text is converted to UTF-8 bytes before encoding and decoded back the same way, so ä, é, 中文 and emoji all survive a round trip intact.</div></div>
+    <div class="faq-item"><button class="faq-q">When should I use the URL-safe alphabet?<span class="arrow">&#9660;</span></button><div class="faq-a">Whenever the value goes into a URL path, query string or cookie. It replaces + and / with - and _ and drops the = padding, all of which would otherwise be misread. JSON Web Tokens use this variant.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does my Base64 fail to decode?<span class="arrow">&#9660;</span></button><div class="faq-a">Usually one of three reasons: it is URL-safe input decoded as standard, padding was stripped, or a line break or space was pasted in. This tool strips whitespace and restores padding automatically.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+var b64Mode = 'encode';
+function setB64(m, btn){
+  b64Mode = m;
+  document.querySelectorAll('.unit-tab').forEach(function(b){ b.classList.remove('active'); });
+  if(btn) btn.classList.add('active');
+  document.getElementById('b64-label').textContent = m === 'encode' ? 'Text to encode' : 'Base64 to decode';
+  document.getElementById('b64-input').placeholder = m === 'encode' ? 'Type or paste text here\u2026' : 'Paste Base64 here\u2026';
+  runB64();
+}
+function runB64(){
+  var t = document.getElementById('b64-input').value;
+  var urlsafe = document.getElementById('b64-urlsafe').checked;
+  var out = document.getElementById('b64-output'), size = document.getElementById('b64-size');
+  if(!t){ out.value = ''; size.textContent = ''; return; }
+  try {
+    if(b64Mode === 'encode'){
+      var bytes = new TextEncoder().encode(t);
+      var bin = '';
+      // Chunked, because String.fromCharCode.apply overflows the stack on large inputs.
+      for(var i=0;i<bytes.length;i+=0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i+0x8000));
+      var r = btoa(bin);
+      if(urlsafe) r = r.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+      out.value = r;
+      size.textContent = bytes.length + ' bytes in, ' + r.length + ' characters out (+' + Math.round(100*(r.length-bytes.length)/bytes.length) + '%)';
+    } else {
+      var s = t.trim().replace(/\s+/g,'');
+      if(urlsafe) s = s.replace(/-/g,'+').replace(/_/g,'/');
+      while(s.length % 4) s += '=';
+      var raw = atob(s);
+      var arr = new Uint8Array(raw.length);
+      for(var j=0;j<raw.length;j++) arr[j] = raw.charCodeAt(j);
+      out.value = new TextDecoder('utf-8', {fatal:false}).decode(arr);
+      size.textContent = s.length + ' characters in, ' + arr.length + ' bytes out';
+    }
+    showStatus('status-b64','','');
+    document.getElementById('status-b64').className = 'status';
+  } catch(e){
+    out.value = '';
+    size.textContent = '';
+    showStatus('status-b64','error','That is not valid Base64. Check for stray characters or a truncated string.');
+  }
+}
+function copyB64(){
+  var v = document.getElementById('b64-output').value;
+  if(!v){ showStatus('status-b64','error','There is no result to copy yet.'); return; }
+  navigator.clipboard.writeText(v).then(function(){ showStatus('status-b64','success','Result copied to clipboard.'); });
+}
+function swapB64(){
+  var v = document.getElementById('b64-output').value;
+  if(!v){ showStatus('status-b64','error','There is no result to reuse yet.'); return; }
+  document.getElementById('b64-input').value = v;
+  var tabs = document.querySelectorAll('.unit-tab');
+  setB64(b64Mode === 'encode' ? 'decode' : 'encode', b64Mode === 'encode' ? tabs[1] : tabs[0]);
+}
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

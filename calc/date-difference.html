@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Days Between Dates – Date Difference Calculator | OneConvert</title>
+  <meta name="description" content="Count the days between two dates, including weekdays and weekend days, and add or subtract days from any date."/>
+  <link rel="canonical" href="https://oneconvert.net/calc/date-difference.html"/>
+  <meta property="og:title" content="Days Between Dates – Date Difference Calculator | OneConvert"/>
+  <meta property="og:description" content="Count the days between two dates, including weekdays and weekend days, and add or subtract days from any date."/>
+  <meta property="og:url" content="https://oneconvert.net/calc/date-difference.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Days Between Dates – Date Difference Calculator | OneConvert"/>
+  <meta name="twitter:description" content="Count the days between two dates, including weekdays and weekend days, and add or subtract days from any date."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Date Difference Calculator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Count the days between two dates, including weekdays and weekend days, and add or subtract days from any date."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Calculators Tools","item":"https://oneconvert.net/calc/"},{"@type":"ListItem","position":3,"name":"Date Difference","item":"https://oneconvert.net/calc/date-difference.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I count the days between two dates?","acceptedAnswer":{"@type":"Answer","text":"Enter both dates and the total appears immediately. Leave the checkbox unticked for the plain interval, or tick it to count both the first and last day."}},{"@type":"Question","name":"Does it count working days?","acceptedAnswer":{"@type":"Answer","text":"It separates weekdays from weekend days, which is the Monday-to-Friday count. Public holidays are not deducted, since they differ by country, region and year."}},{"@type":"Question","name":"Can I add days to a date?","acceptedAnswer":{"@type":"Answer","text":"Yes. The lower section takes a date and a number of days, positive or negative, and returns the resulting date along with the weekday it falls on."}},{"@type":"Question","name":"Are leap years handled?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculation works on real calendar dates, so 29 February is counted whenever it falls inside the range. The years figure uses 365.2425 days, the average length of a Gregorian year."}},{"@type":"Question","name":"What if the end date is before the start date?","acceptedAnswer":{"@type":"Answer","text":"The tool reports the size of the gap and notes that the dates are the other way round, rather than showing a negative number or refusing to calculate."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/" class="active">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/calc/">Calculators Tools</a><span>&rsaquo;</span><span>Date Difference</span></div>
+  <div class="tool-page-header">
+    <h1>Date Difference Calculator</h1>
+    <p>Days between two dates, split into weekdays and weekends, plus date arithmetic.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Counting days across a calendar by hand goes wrong in predictable places: the month with 31 days, the leap February, and the question of whether the last day counts. This calculator handles all three, splits the total into weekdays and weekend days for anything measured in working time, and can also add or subtract a number of days from a date.</p>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:1rem;align-items:end;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="dt-a">Start date</label><input type="date" id="dt-a" onchange="calcDates()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="dt-b">End date</label><input type="date" id="dt-b" onchange="calcDates()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+    </div>
+    <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:0.85rem;">
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.85rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="dt-incl" onchange="calcDates()" style="width:auto;"/> Count the end date as well</label>
+    </div>
+    <div style="background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;margin-top:1.25rem;">
+      <div id="dt-main" style="font-family:Syne,sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent2);line-height:1.2;word-break:break-word;">&mdash;</div>
+      <div id="dt-sub" style="font-size:0.9rem;color:var(--muted);margin-top:0.5rem;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,120px),1fr));gap:0.6rem;margin-top:1rem;" id="dt-stats"></div>
+    <div style="border-top:1px solid var(--border);margin-top:1.5rem;padding-top:1.25rem;">
+      <div style="font-size:0.82rem;color:var(--muted);font-weight:600;margin-bottom:0.6rem;">Or add and subtract days</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:1rem;align-items:end;">
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="dt-from">From</label><input type="date" id="dt-from" onchange="calcAdd()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="dt-days">Days to add</label><input type="number" id="dt-days" value="30" oninput="calcAdd()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:1rem;"/></div>
+      </div>
+      <div id="dt-added" style="font-size:0.95rem;color:var(--text);margin-top:0.85rem;font-weight:600;"></div>
+    </div>
+    <div class="status" id="status-dt"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Set the two dates</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">In either order — a negative span is reported rather than rejected.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Decide whether the last day counts</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Contracts and notice periods usually include it; durations usually do not.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Or do date arithmetic</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Add or subtract days from a date and get the weekday it lands on.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/calc/age-calculator.html"><span class="icon">&#127874;</span><div class="info"><h3>Age Calculator</h3><p>Exact age and next birthday</p></div></a>
+      <a class="related-card" href="/calc/percentage-calculator.html"><span class="icon">&#128200;</span><div class="info"><h3>Percentage Calculator</h3><p>Increase, decrease, of</p></div></a>
+      <a class="related-card" href="/calc/random-number-generator.html"><span class="icon">&#127922;</span><div class="info"><h3>Random Number Generator</h3><p>Fair, unbiased draws</p></div></a>
+      <a class="related-card" href="/units/timestamp.html"><span class="icon">&#9201;</span><div class="info"><h3>Timestamp Converter</h3><p>Unix epoch to date</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Whether the last day counts changes the answer by one</h2>
+    <p>From 1 March to 8 March is seven days if you are measuring a duration and eight if you are counting days affected. Both are used constantly, and neither is more correct — they answer different questions. A hotel stay of seven nights spans eight dates; a seven-day notice period usually means seven clear days after the notice.</p>
+    <p>Legal and contractual deadlines have their own conventions on top of this. Many jurisdictions exclude the day an event happened and include the day the period ends, which is the "clear days" rule. Others count both. If a deadline matters, the contract or statute will say which — and if it does not, the difference of one day is exactly the kind of ambiguity that ends up being argued about.</p>
+    <p>The checkbox here makes the choice explicit rather than picking one silently. Left unticked, the result is the plain interval: the number of midnights between the two dates. Ticked, it counts both endpoints, which is what you want for "how many days does this cover".</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Weekdays, working days, and why they are not the same</h2>
+    <p>The weekday count here excludes Saturdays and Sundays and nothing else. That makes it a starting point for a working-day calculation, not a finished one — public holidays vary by country, by region within a country, and by year, and there is no universal list to apply.</p>
+    <p>The gap is larger than it looks. A calendar year holds about 261 weekdays; subtract public holidays and the working total lands closer to 250 in most of Europe, and lower again in countries with more of them. Over a 90-day project window that is typically three or four days of difference, which is enough to move a delivery date.</p>
+    <p>The weekend itself is not universal either. Friday and Saturday are the weekend across much of the Middle East, and a few countries observe a single rest day. If you are scheduling across regions, the weekday figure here reflects the Monday-to-Friday convention and will need adjusting — the plain day count is the neutral figure to work from.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How do I count the days between two dates?<span class="arrow">&#9660;</span></button><div class="faq-a">Enter both dates and the total appears immediately. Leave the checkbox unticked for the plain interval, or tick it to count both the first and last day.</div></div>
+    <div class="faq-item"><button class="faq-q">Does it count working days?<span class="arrow">&#9660;</span></button><div class="faq-a">It separates weekdays from weekend days, which is the Monday-to-Friday count. Public holidays are not deducted, since they differ by country, region and year.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I add days to a date?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. The lower section takes a date and a number of days, positive or negative, and returns the resulting date along with the weekday it falls on.</div></div>
+    <div class="faq-item"><button class="faq-q">Are leap years handled?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. The calculation works on real calendar dates, so 29 February is counted whenever it falls inside the range. The years figure uses 365.2425 days, the average length of a Gregorian year.</div></div>
+    <div class="faq-item"><button class="faq-q">What if the end date is before the start date?<span class="arrow">&#9660;</span></button><div class="faq-a">The tool reports the size of the gap and notes that the dates are the other way round, rather than showing a negative number or refusing to calculate.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a><a href="/qr/">QR Code</a><a href="/units/">Units</a><a href="/text/">Text</a><a href="/calc/">Calculators</a><a href="/colors/">Colors</a><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function dtStat(v, l){
+  return '<div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.8rem 0.6rem;text-align:center;">' +
+    '<div style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:800;color:var(--accent2);">' + v + '</div>' +
+    '<div style="font-size:0.72rem;color:var(--muted);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.03em;">' + l + '</div></div>';
+}
+function dtIso(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+function calcDates(){
+  var as = document.getElementById('dt-a').value, bs = document.getElementById('dt-b').value;
+  var main = document.getElementById('dt-main'), sub = document.getElementById('dt-sub');
+  if(!as || !bs){ main.innerHTML = '&mdash;'; sub.textContent = 'Pick both dates.'; document.getElementById('dt-stats').innerHTML = ''; return; }
+  var a = new Date(as + 'T00:00:00'), b = new Date(bs + 'T00:00:00');
+  var inclusive = document.getElementById('dt-incl').checked;
+  var sign = b < a ? -1 : 1;
+  var lo = sign > 0 ? a : b, hi = sign > 0 ? b : a;
+  var days = Math.round((hi - lo) / 86400000) + (inclusive ? 1 : 0);
+  main.textContent = days.toLocaleString('en-GB') + ' day' + (days === 1 ? '' : 's');
+  // Whole calendar months and years between the two dates.
+  var y = hi.getFullYear() - lo.getFullYear(), m = hi.getMonth() - lo.getMonth(), d = hi.getDate() - lo.getDate();
+  if(d < 0){ m--; d += new Date(hi.getFullYear(), hi.getMonth(), 0).getDate(); }
+  if(m < 0){ y--; m += 12; }
+  sub.textContent = (sign < 0 ? 'The end date is before the start date. ' : '') +
+    'That is ' + y + ' year' + (y === 1 ? '' : 's') + ', ' + m + ' month' + (m === 1 ? '' : 's') + ' and ' + d + ' day' + (d === 1 ? '' : 's') + '.';
+  // Weekdays, counted by stepping through the range.
+  var work = 0, weekend = 0, cur = new Date(lo);
+  var last = new Date(hi); if(!inclusive) last.setDate(last.getDate() - 1);
+  while(cur <= last){
+    var wd = cur.getDay();
+    if(wd === 0 || wd === 6) weekend++; else work++;
+    cur.setDate(cur.getDate() + 1);
+  }
+  document.getElementById('dt-stats').innerHTML =
+    dtStat(work.toLocaleString('en-GB'), 'Weekdays') +
+    dtStat(weekend.toLocaleString('en-GB'), 'Weekend days') +
+    dtStat((Math.round(days / 7 * 10) / 10).toLocaleString('en-GB'), 'Weeks') +
+    dtStat((Math.round(days / 365.2425 * 100) / 100).toLocaleString('en-GB'), 'Years');
+}
+function calcAdd(){
+  var fs = document.getElementById('dt-from').value;
+  var n = parseInt(document.getElementById('dt-days').value, 10);
+  var out = document.getElementById('dt-added');
+  if(!fs || isNaN(n)){ out.textContent = ''; return; }
+  var d = new Date(fs + 'T00:00:00');
+  d.setDate(d.getDate() + n);
+  out.textContent = (n < 0 ? Math.abs(n) + ' days before' : n + ' days after') + ' ' +
+    new Date(fs + 'T00:00:00').toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) +
+    ' is ' + d.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'}) + '.';
+}
+document.addEventListener('DOMContentLoaded', function(){
+  var t = new Date(), later = new Date(); later.setDate(later.getDate() + 90);
+  document.getElementById('dt-a').value = dtIso(t);
+  document.getElementById('dt-b').value = dtIso(later);
+  document.getElementById('dt-from').value = dtIso(t);
+  calcDates(); calcAdd();
+});
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>
