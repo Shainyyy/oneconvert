@@ -55,7 +55,7 @@
   <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/image/">Image</a><span>›</span><span>WebP to JPG</span></div>
   <div class="tool-page-header"><h1>Free WebP to JPG Converter</h1><p>Convert WebP images to universally compatible JPG format — instantly in your browser.</p></div>
 
-  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">WebP is an efficient modern image format but not universally supported. Some email clients, older Windows software and certain social media platforms still require JPG or PNG. Converting WebP to JPG ensures maximum compatibility across all applications and devices. The conversion uses the Canvas API in your browser at 92% JPEG quality, with no upload needed.</p>
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">WebP is an efficient modern image format but not universally supported. Some email clients, older Windows software and certain social media platforms still require JPG or PNG. Converting WebP to JPG ensures maximum compatibility across all applications and devices. Nothing is uploaded — the conversion happens in this tab.</p>
   
   <div class="tool-box">
     <div class="dropzone" id="drop-zone"><div class="dropzone-icon">🖼️</div><p><strong>Click to select</strong> or drag & drop WebP files</p><small>WebP supported · Multiple files · No limits</small></div>
@@ -72,14 +72,14 @@
     </div>
   </div>
   <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:1.25rem;">
-    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:0;">The converted JPG file uses 92% JPEG quality which preserves visual detail while reducing file size compared to the original WebP. For images that will be displayed on screen, this quality setting produces results that are indistinguishable from the original for most content. The conversion runs entirely in your browser — no files are uploaded or stored on any server.</p>
+    <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:0;">The output is written at 92% JPEG quality. On screen that is close enough to the WebP that most people will not see a difference side by side, though it is not the same data — see below for what re-encoding actually costs. The conversion runs entirely in your browser, so no file is uploaded or stored anywhere.</p>
   </div>
   <div class="related-tools"><h2>Related Tools</h2><div class="related-grid">
     <a class="related-card" href="/image/jpg-to-png.html"><span class="icon">🔄</span><div class="info"><h3>JPG to PNG</h3><p>Convert to PNG</p></div></a>
     <a class="related-card" href="/image/compress.html"><span class="icon">📦</span><div class="info"><h3>Compress Image</h3><p>Reduce file size</p></div></a>
   </div></div>
   <div class="info-section"><h2>Why Convert WebP to JPG?</h2><p>WebP is a modern format developed by Google that offers excellent compression. However, not all applications and older systems support WebP. Converting to JPG ensures universal compatibility — every device, browser and application can open JPG files.</p>
-    <p style="color:var(--muted);margin-top:0.75rem;">WebP images are not universally supported — some email clients, older Windows applications and certain social media platforms still require JPG or PNG. Converting to JPG ensures maximum compatibility across all devices and software while keeping file sizes small. This converter processes the image entirely in your browser at 92% JPEG quality, with no upload required.</p></div>
+    <p style="color:var(--muted);margin-top:0.75rem;">Converting costs quality that cannot be recovered. A WebP saved with lossy compression has already discarded detail; re-encoding it as JPEG discards more, and the two schemes make different choices about what to throw away, so the losses compound rather than overlap. Convert once from the best source you have, and keep the WebP if you may need it again. Where the WebP is a graphic with transparency, convert to <a href="/image/webp-to-png.html">PNG</a> instead — JPEG has no alpha channel and will fill those areas with white.</p></div>
   <div class="info-section">
     <h2>Why You Would Convert Away From the Better Format</h2>
 <p>On technical merit WebP wins: smaller files at comparable quality, plus transparency. Converting to JPEG is almost always about compatibility with something that has not caught up, and it is worth knowing exactly what those situations are rather than converting reflexively.</p>

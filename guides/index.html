@@ -27,6 +27,7 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://oneconvert.net/guides/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are these guides trying to sell me something?","acceptedAnswer":{"@type":"Answer","text":"No. Every tool on OneConvert is free with no account, so there is nothing to upsell. That is why a guide can say plainly that compression will not rescue a scanned document, rather than steering you toward another button."}},{"@type":"Question","name":"Do I need to use your tools to follow them?","acceptedAnswer":{"@type":"Answer","text":"No. The guides explain the formats and the trade-offs, which apply whatever software you use. Where one of our tools genuinely solves the problem it is linked, and where it does not, the guide says what does."}},{"@type":"Question","name":"Why are there only three guides?","acceptedAnswer":{"@type":"Answer","text":"Because these are the three questions that account for most conversions that end in frustration. A guide is added when a question comes up repeatedly and the honest answer is longer than a sentence, rather than to fill a page."}},{"@type":"Question","name":"My PDF will not get smaller. What should I read first?","acceptedAnswer":{"@type":"Answer","text":"The PDF guide. The short answer is that compression removes structural overhead, not image data, so a document that is mostly scanned pages has almost nothing to give up. The guide explains how to tell which kind you have."}},{"@type":"Question","name":"Which image format should I use for a website?","acceptedAnswer":{"@type":"Answer","text":"WebP in nearly all cases, with JPEG as the fallback for photographs and PNG for graphics that need transparency in older software. The image format guide covers the reasoning and the cases where the rule does not hold."}}]}</script>
 </head>
 <body>
 <nav>
@@ -68,7 +69,7 @@
   <div class="info-section">
     <h2>The tools these guides point to</h2>
     <p>Everything referenced here runs entirely in your browser. Files are read into memory, processed with JavaScript and handed straight back &mdash; nothing is uploaded, so there is no size cap beyond your device's memory and no queue to wait in.</p>
-    <p>For documents there are <a href="/pdf/">PDF tools</a> covering splitting, merging, compression, rotation, page removal and conversion to Word or images. For pictures, the <a href="/image/">image converters</a> handle JPG, PNG, WebP and HEIC along with compression and resizing. Beyond those sit a <a href="/qr/">QR code generator</a>, a <a href="/units/">unit converter</a>, <a href="/text/">text utilities</a> and <a href="/colors/">colour tools</a> including a WCAG contrast checker.</p>
+    <p>For documents there are <a href="/pdf/">PDF tools</a> covering splitting, merging, compression, rotation, page removal and conversion to Word or images. For pictures, the <a href="/image/">image converters</a> handle JPG, PNG, WebP and HEIC along with compression and resizing. Beyond those sit a <a href="/qr/">QR code generator and reader</a>, <a href="/units/">unit converters</a> for length, weight, temperature and data storage, fourteen <a href="/text/">text tools</a> from a word counter to a regular expression tester, <a href="/colors/">colour tools</a> including a WCAG contrast checker, and a set of <a href="/calc/">everyday calculators</a>.</p>
     <p>That local-processing design is also why these guides can be blunt about limitations. There is no upsell behind them: if compression will not shrink your scan, saying so costs us nothing and saves you an afternoon.</p>
   </div>
 
@@ -81,6 +82,15 @@
     </div>
   </div>
 
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Are these guides trying to sell me something?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Every tool on OneConvert is free with no account, so there is nothing to upsell. That is why a guide can say plainly that compression will not rescue a scanned document, rather than steering you toward another button.</div></div>
+    <div class="faq-item"><button class="faq-q">Do I need to use your tools to follow them?<span class="arrow">&#9660;</span></button><div class="faq-a">No. The guides explain the formats and the trade-offs, which apply whatever software you use. Where one of our tools genuinely solves the problem it is linked, and where it does not, the guide says what does.</div></div>
+    <div class="faq-item"><button class="faq-q">Why are there only three guides?<span class="arrow">&#9660;</span></button><div class="faq-a">Because these are the three questions that account for most conversions that end in frustration. A guide is added when a question comes up repeatedly and the honest answer is longer than a sentence, rather than to fill a page.</div></div>
+    <div class="faq-item"><button class="faq-q">My PDF will not get smaller. What should I read first?<span class="arrow">&#9660;</span></button><div class="faq-a">The PDF guide. The short answer is that compression removes structural overhead, not image data, so a document that is mostly scanned pages has almost nothing to give up. The guide explains how to tell which kind you have.</div></div>
+    <div class="faq-item"><button class="faq-q">Which image format should I use for a website?<span class="arrow">&#9660;</span></button><div class="faq-a">WebP in nearly all cases, with JPEG as the fallback for photographs and PNG for graphics that need transparency in older software. The image format guide covers the reasoning and the cases where the rule does not hold.</div></div>
+  </div>
 </div>
 </main>
 
@@ -96,6 +106,20 @@ function toggleTheme(){const h=document.documentElement,b=document.getElementByI
 function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
 (function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
 document.addEventListener('DOMContentLoaded',()=>{const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.nextElementSibling, open=btn.classList.contains('open');
+      document.querySelectorAll('.faq-q').forEach(function(b){
+        b.classList.remove('open');
+        if(b.nextElementSibling) b.nextElementSibling.classList.remove('open');
+      });
+      if(!open){ btn.classList.add('open'); if(a) a.classList.add('open'); }
+    });
+  });
+});
 </script>
 <script src="/js/consent.js"></script>
 </body>
