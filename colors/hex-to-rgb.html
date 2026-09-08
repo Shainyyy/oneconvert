@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HEX to RGB Converter – And Back, Plus HSL | OneConvert</title>
+  <meta name="description" content="Convert a colour between HEX, RGB and HSL in any direction. Paste any of the three formats and get the other two instantly."/>
+  <link rel="canonical" href="https://oneconvert.net/colors/hex-to-rgb.html"/>
+  <meta property="og:title" content="HEX to RGB Converter – And Back, Plus HSL | OneConvert"/>
+  <meta property="og:description" content="Convert a colour between HEX, RGB and HSL in any direction. Paste any of the three formats and get the other two instantly."/>
+  <meta property="og:url" content="https://oneconvert.net/colors/hex-to-rgb.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="HEX to RGB Converter – And Back, Plus HSL | OneConvert"/>
+  <meta name="twitter:description" content="Convert a colour between HEX, RGB and HSL in any direction. Paste any of the three formats and get the other two instantly."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"HEX to RGB Converter","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert a colour between HEX, RGB and HSL in any direction. Paste any of the three formats and get the other two instantly."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Colors Tools","item":"https://oneconvert.net/colors/"},{"@type":"ListItem","position":3,"name":"HEX to RGB","item":"https://oneconvert.net/colors/hex-to-rgb.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert HEX to RGB by hand?","acceptedAnswer":{"@type":"Answer","text":"Split the six digits into three pairs and read each as a hexadecimal number. 25 is 37, 63 is 99, eb is 235, so #2563eb is rgb(37, 99, 235)."}},{"@type":"Question","name":"What is the difference between RGB and HSL?","acceptedAnswer":{"@type":"Answer","text":"They describe the same colours differently. RGB gives the amount of red, green and blue light; HSL gives hue, saturation and lightness, which is far easier to adjust deliberately."}},{"@type":"Question","name":"What does a three-digit hex code mean?","acceptedAnswer":{"@type":"Answer","text":"Each digit is doubled, so #fa0 is #ffaa00. The shorthand can only express colours whose channel pairs repeat, which is 4,096 of the 16.7 million possible."}},{"@type":"Question","name":"Can I convert a colour with transparency?","acceptedAnswer":{"@type":"Answer","text":"This tool works in opaque colours. For transparency, add an alpha channel: an eight-digit hex, or the slash syntax such as rgb(37 99 235 / 50%)."}},{"@type":"Question","name":"Why do two colours at the same HSL lightness look different?","acceptedAnswer":{"@type":"Answer","text":"Because HSL lightness is not perceptual. Yellow at 50% lightness is much brighter to the eye than blue at 50%. Check contrast rather than trusting the number."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/" class="active">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/colors/">Colors Tools</a><span>&rsaquo;</span><span>HEX to RGB</span></div>
+  <div class="tool-page-header">
+    <h1>HEX to RGB Converter</h1>
+    <p>HEX, RGB and HSL, converted in whichever direction you need.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">The three notations describe the same colours and suit different jobs: HEX is compact and belongs in stylesheets, RGB matches how a screen actually mixes light, and HSL is the only one you can adjust by hand and predict the result. Paste any of the three below and the other two appear, along with a swatch so you can see what you are actually looking at.</p>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1rem;align-items:end;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="cv-picker">Pick a colour</label><input type="color" id="cv-picker" value="#2563eb" oninput="fromPicker()" style="width:100%;height:46px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;cursor:pointer;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="cv-input">Or type any format</label><input type="text" id="cv-input" value="#2563eb" placeholder="#2563eb, rgb(37,99,235) or hsl(221,83%,53%)" oninput="fromText()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;font-family:monospace;"/></div>
+    </div>
+    <div id="cv-swatch" style="height:70px;border-radius:12px;margin:1.25rem 0;border:1px solid var(--border);background:#2563eb;"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.6rem 0.85rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;"><span style="font-size:0.78rem;color:var(--muted);font-weight:600;min-width:3.5em;">HEX</span><code id="out-hex" style="flex:1;font-size:0.95rem;word-break:break-all;">&mdash;</code><button class="btn btn-sm btn-outline" onclick="copyField('out-hex')" style="padding:0.3rem 0.7rem;font-size:0.78rem;width:auto;">Copy</button></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.6rem 0.85rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;"><span style="font-size:0.78rem;color:var(--muted);font-weight:600;min-width:3.5em;">RGB</span><code id="out-rgb" style="flex:1;font-size:0.95rem;word-break:break-all;">&mdash;</code><button class="btn btn-sm btn-outline" onclick="copyField('out-rgb')" style="padding:0.3rem 0.7rem;font-size:0.78rem;width:auto;">Copy</button></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.6rem 0.85rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;"><span style="font-size:0.78rem;color:var(--muted);font-weight:600;min-width:3.5em;">HSL</span><code id="out-hsl" style="flex:1;font-size:0.95rem;word-break:break-all;">&mdash;</code><button class="btn btn-sm btn-outline" onclick="copyField('out-hsl')" style="padding:0.3rem 0.7rem;font-size:0.78rem;width:auto;">Copy</button></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.6rem 0.85rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;margin-bottom:0.5rem;"><span style="font-size:0.78rem;color:var(--muted);font-weight:600;min-width:3.5em;">CSS</span><code id="out-css" style="flex:1;font-size:0.95rem;word-break:break-all;">&mdash;</code><button class="btn btn-sm btn-outline" onclick="copyField('out-css')" style="padding:0.3rem 0.7rem;font-size:0.78rem;width:auto;">Copy</button></div>
+    <div class="status" id="status-cv"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Pick or paste a colour</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The text field accepts HEX, RGB or HSL in any common spelling.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Read all three formats</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Each row copies to the clipboard with one click.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Take the CSS custom property</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The last row is ready to paste into a variable declaration.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/colors/contrast-checker.html"><span class="icon">&#9889;</span><div class="info"><h3>Contrast Checker</h3><p>WCAG AA and AAA, with a live preview</p></div></a>
+      <a class="related-card" href="/colors/palette-generator.html"><span class="icon">&#127912;</span><div class="info"><h3>Palette Generator</h3><p>Harmonies from one base colour</p></div></a>
+      <a class="related-card" href="/colors/gradient-generator.html"><span class="icon">&#127752;</span><div class="info"><h3>Gradient Generator</h3><p>Linear, radial and conic CSS</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Why HSL is the one worth learning</h2>
+    <p>HEX and RGB describe the same thing in two alphabets: three channels of red, green and blue, written as hexadecimal pairs or decimal numbers. <code>#2563eb</code> and <code>rgb(37, 99, 235)</code> are identical instructions to the screen, which is why converting between them is arithmetic with no judgement in it.</p>
+    <p>HSL rearranges the same colour into hue, saturation and lightness — an angle on the colour wheel, how vivid it is, and how light. That matters because it maps onto the changes designers actually want. A hover state that is 10% lighter is one number in HSL and three unrelated numbers in RGB, which is why a palette built in HSL stays coherent while one built by nudging hex values drifts.</p>
+    <p>The catch is that HSL lightness is not perceptual. <code>hsl(60, 100%, 50%)</code> is yellow and <code>hsl(240, 100%, 50%)</code> is blue, both at "50% lightness", and the yellow is far brighter to the eye. This is why two colours that look balanced in an HSL picker can fail a contrast check, and why newer CSS colour spaces such as OKLCH exist.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Where the three-digit shorthand and the alpha channel fit</h2>
+    <p>A three-character hex code is shorthand: each digit is doubled, so <code>#fa0</code> means <code>#ffaa00</code>. It can only express 4,096 of the 16.7 million available colours — every channel has to be a repeated pair — so it is handy for round numbers like <code>#fff</code> and useless for a brand colour.</p>
+    <p>Transparency comes as a fourth channel. CSS accepts eight-digit hex, where the last pair is alpha from <code>00</code> to <code>ff</code>, and the functional forms <code>rgb(37 99 235 / 50%)</code> and <code>hsl(224 83% 53% / 50%)</code> using the modern space-separated syntax. This converter works in opaque colours; add the alpha in whichever notation your stylesheet uses.</p>
+    <p>One practical warning about transparency: a semi-transparent colour has no fixed contrast ratio, because the result depends on whatever is behind it. Accessibility checks have to be run against the composited colour that ends up on screen, not against the value written in the stylesheet.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">How do I convert HEX to RGB by hand?<span class="arrow">&#9660;</span></button><div class="faq-a">Split the six digits into three pairs and read each as a hexadecimal number. 25 is 37, 63 is 99, eb is 235, so #2563eb is rgb(37, 99, 235).</div></div>
+    <div class="faq-item"><button class="faq-q">What is the difference between RGB and HSL?<span class="arrow">&#9660;</span></button><div class="faq-a">They describe the same colours differently. RGB gives the amount of red, green and blue light; HSL gives hue, saturation and lightness, which is far easier to adjust deliberately.</div></div>
+    <div class="faq-item"><button class="faq-q">What does a three-digit hex code mean?<span class="arrow">&#9660;</span></button><div class="faq-a">Each digit is doubled, so #fa0 is #ffaa00. The shorthand can only express colours whose channel pairs repeat, which is 4,096 of the 16.7 million possible.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I convert a colour with transparency?<span class="arrow">&#9660;</span></button><div class="faq-a">This tool works in opaque colours. For transparency, add an alpha channel: an eight-digit hex, or the slash syntax such as rgb(37 99 235 / 50%).</div></div>
+    <div class="faq-item"><button class="faq-q">Why do two colours at the same HSL lightness look different?<span class="arrow">&#9660;</span></button><div class="faq-a">Because HSL lightness is not perceptual. Yellow at 50% lightness is much brighter to the eye than blue at 50%. Check contrast rather than trusting the number.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function hexToRgb(hex){
+  hex = hex.replace('#','');
+  if(hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+  return {r: parseInt(hex.slice(0,2),16), g: parseInt(hex.slice(2,4),16), b: parseInt(hex.slice(4,6),16)};
+}
+function rgbToHex(r,g,b){
+  return '#' + [r,g,b].map(function(v){ return Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,'0'); }).join('');
+}
+function rgbToHsl(r,g,b){
+  r/=255; g/=255; b/=255;
+  var max = Math.max(r,g,b), min = Math.min(r,g,b), h, s, l = (max+min)/2;
+  if(max === min){ h = s = 0; }
+  else {
+    var d = max-min;
+    s = l > 0.5 ? d/(2-max-min) : d/(max+min);
+    if(max === r) h = ((g-b)/d + (g<b?6:0))/6;
+    else if(max === g) h = ((b-r)/d + 2)/6;
+    else h = ((r-g)/d + 4)/6;
+  }
+  return {h: Math.round(h*360), s: Math.round(s*100), l: Math.round(l*100)};
+}
+function hslToHex(h,s,l){
+  s/=100; l/=100;
+  var a = s*Math.min(l,1-l);
+  var f = function(n){
+    var k = (n + h/30) % 12;
+    return Math.round(255*(l - a*Math.max(Math.min(k-3, 9-k, 1), -1))).toString(16).padStart(2,'0');
+  };
+  return '#'+f(0)+f(8)+f(4);
+}
+// Relative luminance, per the WCAG 2 definition.
+function luminance(hex){
+  var c = hexToRgb(hex);
+  var v = [c.r,c.g,c.b].map(function(x){
+    x /= 255;
+    return x <= 0.03928 ? x/12.92 : Math.pow((x+0.055)/1.055, 2.4);
+  });
+  return 0.2126*v[0] + 0.7152*v[1] + 0.0722*v[2];
+}
+function contrastRatio(a,b){
+  var l1 = luminance(a), l2 = luminance(b);
+  return (Math.max(l1,l2) + 0.05) / (Math.min(l1,l2) + 0.05);
+}
+function normHex(v){
+  v = String(v).trim().replace(/^#/,'');
+  if(/^[0-9a-fA-F]{3}$/.test(v)) v = v[0]+v[0]+v[1]+v[1]+v[2]+v[2];
+  return /^[0-9a-fA-F]{6}$/.test(v) ? '#'+v.toLowerCase() : null;
+}
+
+function show(hex){
+  var c = hexToRgb(hex), h = rgbToHsl(c.r, c.g, c.b);
+  document.getElementById('out-hex').textContent = hex.toUpperCase();
+  document.getElementById('out-rgb').textContent = 'rgb(' + c.r + ', ' + c.g + ', ' + c.b + ')';
+  document.getElementById('out-hsl').textContent = 'hsl(' + h.h + ', ' + h.s + '%, ' + h.l + '%)';
+  document.getElementById('out-css').textContent = '--brand: ' + hex.toLowerCase() + ';';
+  document.getElementById('cv-swatch').style.background = hex;
+  document.getElementById('cv-picker').value = hex;
+  document.getElementById('status-cv').className = 'status';
+}
+function parseAny(v){
+  v = String(v).trim();
+  var hex = normHex(v);
+  if(hex) return hex;
+  var m = v.match(/rgba?\s*\(\s*(\d+)[\s,]+(\d+)[\s,]+(\d+)/i);
+  if(m) return rgbToHex(+m[1], +m[2], +m[3]);
+  m = v.match(/hsla?\s*\(\s*(-?\d+(?:\.\d+)?)\s*(?:deg)?[\s,]+(\d+(?:\.\d+)?)%[\s,]+(\d+(?:\.\d+)?)%/i);
+  if(m) return hslToHex(((+m[1]) % 360 + 360) % 360, +m[2], +m[3]);
+  return null;
+}
+function fromPicker(){
+  var v = document.getElementById('cv-picker').value;
+  document.getElementById('cv-input').value = v;
+  show(v);
+}
+function fromText(){
+  var hex = parseAny(document.getElementById('cv-input').value);
+  if(hex) show(hex);
+  else showStatus('status-cv','error','Not a colour I recognise. Try #2563eb, rgb(37,99,235) or hsl(221,83%,53%).');
+}
+function copyField(id){
+  var t = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(t).then(function(){ showStatus('status-cv','success','Copied ' + t); });
+}
+document.addEventListener('DOMContentLoaded', function(){ show('#2563eb'); });
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

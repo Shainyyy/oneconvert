@@ -6,8 +6,11 @@
   <url><loc>https://oneconvert.net/calc/</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://oneconvert.net/calc/percentage-calculator.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/calc/random-number-generator.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oneconvert.net/colors/contrast-checker.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/colors/gradient-generator.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oneconvert.net/colors/hex-to-rgb.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/colors/</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oneconvert.net/colors/palette-generator.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/guides/</loc><lastmod>2026-09-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://oneconvert.net/guides/jpg-png-or-webp.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://oneconvert.net/guides/what-is-heic.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -42,7 +45,11 @@
   <url><loc>https://oneconvert.net/pdf/split.html</loc><lastmod>2026-09-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/pdf/watermark.html</loc><lastmod>2026-09-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/privacy.html</loc><lastmod>2026-09-02</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://oneconvert.net/qr/email-qr-code.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/qr/</loc><lastmod>2026-09-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://oneconvert.net/qr/qr-code-reader.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oneconvert.net/qr/vcard-qr-code.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://oneconvert.net/qr/wifi-qr-code.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/terms.html</loc><lastmod>2026-09-02</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://oneconvert.net/text/base64.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://oneconvert.net/text/case-converter.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

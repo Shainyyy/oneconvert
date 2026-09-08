@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vCard QR Code Generator – Contact Card to Scan | OneConvert</title>
+  <meta name="description" content="Turn your contact details into a vCard QR code people can scan straight into their phone. Free, no account, downloads as PNG or vector SVG."/>
+  <link rel="canonical" href="https://oneconvert.net/qr/vcard-qr-code.html"/>
+  <meta property="og:title" content="vCard QR Code Generator – Contact Card to Scan | OneConvert"/>
+  <meta property="og:description" content="Turn your contact details into a vCard QR code people can scan straight into their phone. Free, no account, downloads as PNG or vector SVG."/>
+  <meta property="og:url" content="https://oneconvert.net/qr/vcard-qr-code.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="vCard QR Code Generator – Contact Card to Scan | OneConvert"/>
+  <meta name="twitter:description" content="Turn your contact details into a vCard QR code people can scan straight into their phone. Free, no account, downloads as PNG or vector SVG."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"vCard QR Code Generator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Turn your contact details into a vCard QR code people can scan straight into their phone. Free, no account, downloads as PNG or vector SVG."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"QR Code Tools","item":"https://oneconvert.net/qr/"},{"@type":"ListItem","position":3,"name":"vCard QR Code","item":"https://oneconvert.net/qr/vcard-qr-code.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a vCard?","acceptedAnswer":{"@type":"Answer","text":"A standard text format for a contact record, defined in RFC 6350 and read by essentially every phone and mail client. The QR code simply carries that text."}},{"@type":"Question","name":"Which vCard version does this use?","acceptedAnswer":{"@type":"Answer","text":"Version 3.0, which has the widest support. Version 4.0 is newer but some Android contact apps and older Outlook versions still import it unreliably."}},{"@type":"Question","name":"Do I have to fill in every field?","acceptedAnswer":{"@type":"Answer","text":"No. Only the fields you complete are encoded, and fewer fields make a sparser code that scans more easily. A name plus one way to reach you is often enough."}},{"@type":"Question","name":"Why does the code get denser as I type?","acceptedAnswer":{"@type":"Answer","text":"Because more text needs more modules. If it becomes too fine to print, drop the error correction to Low or leave out fields already printed in readable text on the card."}},{"@type":"Question","name":"Are my contact details uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. The vCard text and the code are both built in your browser. Nothing you type leaves the page."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/" class="active">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/qr/">QR Code Tools</a><span>&rsaquo;</span><span>vCard QR Code</span></div>
+  <div class="tool-page-header">
+    <h1>vCard QR Code Generator</h1>
+    <p>Your contact details as a code someone can scan into their address book.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">A vCard QR code carries a whole contact record — name, company, phone, email, website — in a form a phone camera turns into a "add to contacts" prompt. It is what makes a business card useful after the meeting, and unlike a printed card it cannot be mistyped. Everything below is encoded in the page; none of it is uploaded.</p>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1rem;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-first">First name</label><input type="text" id="vc-first" placeholder="Ada" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-last">Last name</label><input type="text" id="vc-last" placeholder="Lovelace" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-org">Organisation</label><input type="text" id="vc-org" placeholder="Analytical Engines Ltd" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-title">Job title</label><input type="text" id="vc-title" placeholder="Mathematician" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-phone">Phone</label><input type="text" id="vc-phone" placeholder="+41 44 123 45 67" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-email">Email</label><input type="text" id="vc-email" placeholder="ada@example.com" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-url">Website</label><input type="text" id="vc-url" placeholder="https://example.com" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+    </div>
+    <div style="margin-top:1rem;"><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="vc-note">Address or note (optional)</label><input type="text" id="vc-note" placeholder="Bahnhofstrasse 1, 8001 Zurich" oninput="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+    <div style="border-top:1px solid var(--border);margin-top:1.25rem;padding-top:1.25rem;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,130px),1fr));gap:0.75rem;">
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="qr-fg">Code colour</label><input type="color" id="qr-fg" value="#07090f" onchange="drawVCARD()" style="width:100%;height:38px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;cursor:pointer;"/></div>
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="qr-bg">Background</label><input type="color" id="qr-bg" value="#ffffff" onchange="drawVCARD()" style="width:100%;height:38px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;cursor:pointer;"/></div>
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="qr-size">Size (px)</label><input type="number" id="qr-size" value="320" min="120" max="1200" step="40" onchange="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"/></div>
+        <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="qr-ecl">Error correction</label><select id="qr-ecl" onchange="drawVCARD()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-size:0.95rem;"><option value="L">Low &mdash; 7%</option><option value="M" selected>Medium &mdash; 15%</option><option value="Q">Quartile &mdash; 25%</option><option value="H">High &mdash; 30%</option></select></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1.25rem;">
+      <div id="qr-box" style="display:inline-block;padding:12px;border-radius:12px;background:#fff;"></div>
+      <p id="qr-empty" style="color:var(--muted);font-size:0.88rem;padding:2rem 0;">Fill in the fields above and the code appears here.</p>
+      <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;">
+        <button class="btn btn-sm" id="dl-png" onclick="downloadQR('png')" disabled>Download PNG</button>
+        <button class="btn btn-sm btn-outline" id="dl-svg" onclick="downloadQR('svg')" disabled>Download SVG (vector)</button>
+      </div>
+      <div class="status" id="status-qr"></div>
+    </div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Fill in what you want shared</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Only the fields you complete are encoded. Leave the rest blank.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Watch the code rebuild</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">It regenerates as you type, so you can see the density grow with each field.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download and print</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Vector SVG for a card or a poster, PNG for an email signature or a screen.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/qr/"><span class="icon">&#128241;</span><div class="info"><h3>QR Code Generator</h3><p>URL, text, WiFi, email and phone</p></div></a>
+      <a class="related-card" href="/qr/wifi-qr-code.html"><span class="icon">&#128246;</span><div class="info"><h3>WiFi QR Code</h3><p>Guests join without typing a password</p></div></a>
+      <a class="related-card" href="/qr/email-qr-code.html"><span class="icon">&#9993;</span><div class="info"><h3>Email QR Code</h3><p>Opens a pre-addressed message</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>vCard is a file format, not a QR feature</h2>
+    <p>What the code contains is a small text file in the vCard format, defined in RFC 6350 and understood by every phone, mail client and address book made in the last twenty years. It begins with <code>BEGIN:VCARD</code>, lists one property per line, and ends with <code>END:VCARD</code>. The QR code is only a way of writing that text so a camera can read it.</p>
+    <p>This tool writes version 3.0, which is the version with the broadest support. Version 4.0 is newer and tidier, but some Android contact apps and older Outlook versions still parse it poorly, and a contact card that half your recipients cannot import defeats the purpose. The difference matters for structured addresses and little else.</p>
+    <p>Certain characters have to be escaped, and getting this wrong is the usual cause of a card that imports with a mangled name. Commas and semicolons are field separators in the format, so a company called "Smith, Jones & Co" has to have that comma escaped or the parser reads it as two fields. That escaping is handled here; it is worth knowing about if you ever hand-edit the output.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Keeping the code scannable as you add fields</h2>
+    <p>Every field you fill in makes the code denser. A name and a phone number produce a sparse, forgiving pattern; a name, company, title, two phone numbers, an email, a website and a postal address can push it to a grid of 60-odd modules a side, where each module printed on a business card is a fraction of a millimetre.</p>
+    <p>Two things buy you room. Dropping the error correction level from Medium to Low frees roughly a fifth of the capacity, at the cost of the code tolerating less damage — a reasonable trade for something printed once on clean card stock. And leaving out fields that are already printed on the card in readable text, such as a long postal address, often halves the density for no real loss.</p>
+    <p>The practical test is the one that matters: print it at the size you intend, at the printer you intend, and scan it with the oldest phone you can find. A code that reads instantly on a new phone from a screen can fail on a five-year-old device from matte card, and that is the case you are actually designing for.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What is a vCard?<span class="arrow">&#9660;</span></button><div class="faq-a">A standard text format for a contact record, defined in RFC 6350 and read by essentially every phone and mail client. The QR code simply carries that text.</div></div>
+    <div class="faq-item"><button class="faq-q">Which vCard version does this use?<span class="arrow">&#9660;</span></button><div class="faq-a">Version 3.0, which has the widest support. Version 4.0 is newer but some Android contact apps and older Outlook versions still import it unreliably.</div></div>
+    <div class="faq-item"><button class="faq-q">Do I have to fill in every field?<span class="arrow">&#9660;</span></button><div class="faq-a">No. Only the fields you complete are encoded, and fewer fields make a sparser code that scans more easily. A name plus one way to reach you is often enough.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does the code get denser as I type?<span class="arrow">&#9660;</span></button><div class="faq-a">Because more text needs more modules. If it becomes too fine to print, drop the error correction to Low or leave out fields already printed in readable text on the card.</div></div>
+    <div class="faq-item"><button class="faq-q">Are my contact details uploaded?<span class="arrow">&#9660;</span></button><div class="faq-a">No. The vCard text and the code are both built in your browser. Nothing you type leaves the page.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function vcEscape(s){
+  // vCard 3.0 escapes backslash, comma, semicolon and newline in text values.
+  return String(s).trim().replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1').replace(/\n/g, '\\n');
+}
+function val(id){ return document.getElementById(id).value.trim(); }
+function vcardPayload(){
+  var first = val('vc-first'), last = val('vc-last'), org = val('vc-org');
+  if(!first && !last && !org) return '';
+  var lines = ['BEGIN:VCARD', 'VERSION:3.0'];
+  lines.push('N:' + vcEscape(last) + ';' + vcEscape(first) + ';;;');
+  var fn = (first + ' ' + last).trim() || org;
+  lines.push('FN:' + vcEscape(fn));
+  if(org) lines.push('ORG:' + vcEscape(org));
+  if(val('vc-title')) lines.push('TITLE:' + vcEscape(val('vc-title')));
+  if(val('vc-phone')) lines.push('TEL;TYPE=CELL:' + vcEscape(val('vc-phone')));
+  if(val('vc-email')) lines.push('EMAIL;TYPE=INTERNET:' + vcEscape(val('vc-email')));
+  if(val('vc-url')) lines.push('URL:' + vcEscape(val('vc-url')));
+  if(val('vc-note')) lines.push('ADR;TYPE=WORK:;;' + vcEscape(val('vc-note')) + ';;;;');
+  lines.push('END:VCARD');
+  return lines.join('\n');
+}
+
+var qrModel = null;
+function qrOpts(){
+  return {
+    size: Math.min(1200, Math.max(120, parseInt(document.getElementById('qr-size').value, 10) || 320)),
+    fg: document.getElementById('qr-fg').value,
+    bg: document.getElementById('qr-bg').value,
+    ecl: document.getElementById('qr-ecl').value
+  };
+}
+function drawVCARD(){
+  var text = vcardPayload();
+  var box = document.getElementById('qr-box'), empty = document.getElementById('qr-empty');
+  var png = document.getElementById('dl-png'), svg = document.getElementById('dl-svg');
+  box.innerHTML = '';
+  qrModel = null;
+  if(!text){
+    box.style.display = 'none'; empty.style.display = 'block';
+    png.disabled = true; svg.disabled = true;
+    return;
+  }
+  var o = qrOpts();
+  try {
+    var q = new QRCode(box, {text: text, width: o.size, height: o.size,
+      colorDark: o.fg, colorLight: o.bg,
+      correctLevel: QRCode.CorrectLevel[o.ecl] || QRCode.CorrectLevel.M});
+    qrModel = q._oQRCode;
+    box.style.background = o.bg;
+    box.style.display = 'inline-block'; empty.style.display = 'none';
+    png.disabled = false; svg.disabled = false;
+    document.getElementById('status-qr').className = 'status';
+  } catch(e){
+    box.style.display = 'none'; empty.style.display = 'block';
+    showStatus('status-qr','error','That content is too long for a QR code. Shorten it, or lower the error correction level.');
+  }
+}
+// A true vector: one path built from the module matrix, not a PNG in an SVG wrapper.
+function qrToSvg(){
+  if(!qrModel) return null;
+  var o = qrOpts(), n = qrModel.getModuleCount(), quiet = 4, total = n + quiet * 2, d = '';
+  for(var r = 0; r < n; r++)
+    for(var c = 0; c < n; c++)
+      if(qrModel.isDark(r, c)) d += 'M' + (c + quiet) + ' ' + (r + quiet) + 'h1v1h-1z';
+  return '<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" ' +
+    'width="' + o.size + '" height="' + o.size + '" viewBox="0 0 ' + total + ' ' + total + '" ' +
+    'shape-rendering="crispEdges"><rect width="' + total + '" height="' + total + '" fill="' + o.bg + '"/>' +
+    '<path fill="' + o.fg + '" d="' + d + '"/></svg>';
+}
+function downloadQR(fmt){
+  if(!qrModel){ showStatus('status-qr','error','Fill in the fields first.'); return; }
+  var o = qrOpts();
+  if(fmt === 'svg'){
+    directDownload(new Blob([qrToSvg()], {type:'image/svg+xml;charset=utf-8'}), 'vcard.svg');
+    showStatus('status-qr','success','Vector SVG downloaded \u2014 it stays sharp at any print size.');
+    return;
+  }
+  var src = document.getElementById('qr-box').querySelector('canvas');
+  if(!src){ showStatus('status-qr','error','Nothing to download yet.'); return; }
+  // Redraw with a four-module quiet zone; scanners need that margin.
+  var n = qrModel.getModuleCount(), pad = Math.round(src.width / n * 4);
+  var out = document.createElement('canvas');
+  out.width = src.width + pad * 2; out.height = src.height + pad * 2;
+  var ctx = out.getContext('2d');
+  ctx.fillStyle = o.bg; ctx.fillRect(0, 0, out.width, out.height);
+  ctx.drawImage(src, pad, pad);
+  out.toBlob(function(b){
+    directDownload(b, 'vcard.png', 'image/png');
+    showStatus('status-qr','success','PNG downloaded at ' + out.width + '\u00d7' + out.height + ' pixels.');
+  }, 'image/png');
+}
+
+document.addEventListener('DOMContentLoaded', drawVCARD);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

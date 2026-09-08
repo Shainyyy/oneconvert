@@ -68,7 +68,7 @@
     <div class="dropzone" id="drop-zone">
       <div class="dropzone-icon">🖼️</div>
       <p><strong>Click to select</strong> or drag & drop your image here</p>
-      <small>JPG, PNG, WebP supported · No file size limit</small>
+      <small>JPG, PNG and WebP in · JPEG out · no file size limit</small>
     </div>
     <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" style="display:none;" aria-label="Choose a file">
 
@@ -219,7 +219,9 @@
       canvas.getContext('2d').drawImage(img, 0, 0);
       URL.revokeObjectURL(url);
       canvas.toBlob(async blob => {
-        const ext = currentType === 'image/png' ? 'jpg' : currentFile.name.split('.').pop();
+        // The encoder below is always JPEG, so the extension must be too. The old check
+        // against 'image/png' could never match: currentType is set to image/jpeg on load.
+        const ext = 'jpg';
         const outName = currentFile.name.replace(/\.[^.]+$/, '') + '_compressed.' + ext;
         downloadResult(await blob.arrayBuffer(), outName, 'image/jpeg');
         showStatus('status', 'success', 'Compressed! Download starting…');

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colour Palette Generator – Harmonies from One Colour | OneConvert</title>
+  <meta name="description" content="Build a ten-colour palette from any base colour: shades, complementary, analogous, triadic or split complementary. Copy as hex or CSS variables."/>
+  <link rel="canonical" href="https://oneconvert.net/colors/palette-generator.html"/>
+  <meta property="og:title" content="Colour Palette Generator – Harmonies from One Colour | OneConvert"/>
+  <meta property="og:description" content="Build a ten-colour palette from any base colour: shades, complementary, analogous, triadic or split complementary. Copy as hex or CSS variables."/>
+  <meta property="og:url" content="https://oneconvert.net/colors/palette-generator.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Colour Palette Generator – Harmonies from One Colour | OneConvert"/>
+  <meta name="twitter:description" content="Build a ten-colour palette from any base colour: shades, complementary, analogous, triadic or split complementary. Copy as hex or CSS variables."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Colour Palette Generator","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Build a ten-colour palette from any base colour: shades, complementary, analogous, triadic or split complementary. Copy as hex or CSS variables."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Colors Tools","item":"https://oneconvert.net/colors/"},{"@type":"ListItem","position":3,"name":"Palette Generator","item":"https://oneconvert.net/colors/palette-generator.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a complementary colour?","acceptedAnswer":{"@type":"Answer","text":"The hue directly opposite on the colour wheel, 180 degrees away. It gives the strongest contrast between two hues, which makes it good for accents and tiring in large amounts."}},{"@type":"Question","name":"Which harmony should I choose for a website?","acceptedAnswer":{"@type":"Answer","text":"Shades, in most cases. A single-hue ramp plus a neutral covers nearly all interface work, and it is far harder to make look wrong than a multi-hue scheme."}},{"@type":"Question","name":"Can I copy the palette as CSS?","acceptedAnswer":{"@type":"Answer","text":"Yes. \"Copy as CSS variables\" gives a :root block with the colours numbered 100 to 1000, ready to paste into a stylesheet."}},{"@type":"Question","name":"Do the generated colours pass contrast checks?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. The lightness steps are HSL values rather than perceptual ones, so check any pair you plan to use for text with the contrast checker."}},{"@type":"Question","name":"Why does a grey base produce ten greys?","acceptedAnswer":{"@type":"Answer","text":"Because every harmony rotates hue, and grey has no meaningful hue to rotate. A minimum saturation is applied to keep the result usable, but a colourful base gives far better results."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/" class="active">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/colors/">Colors Tools</a><span>&rsaquo;</span><span>Palette Generator</span></div>
+  <div class="tool-page-header">
+    <h1>Colour Palette Generator</h1>
+    <p>Ten colours from one, arranged by the harmony you choose.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Picking a second colour that works with the first is the hard part of choosing a palette, and it is largely a geometry problem: harmonies are defined by the angle between hues on the colour wheel. This generator takes one colour, applies the relationship you choose, and returns ten values ready to paste — as a plain list or as CSS custom properties.</p>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1rem;align-items:end;">
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="pl-base">Base colour</label><input type="color" id="pl-base" value="#2563eb" oninput="syncBase()" style="width:100%;height:46px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;cursor:pointer;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="pl-hex">Or a hex value</label><input type="text" id="pl-hex" value="#2563eb" oninput="baseText()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;font-family:monospace;"/></div>
+      <div><label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="pl-mode">Harmony</label>
+        <select id="pl-mode" onchange="makePalette()" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.6rem 0.7rem;">
+          <option value="shades">Shades &mdash; one hue, light to dark</option>
+          <option value="complementary">Complementary &mdash; opposite hues</option>
+          <option value="analogous">Analogous &mdash; neighbouring hues</option>
+          <option value="triadic">Triadic &mdash; three evenly spaced</option>
+          <option value="split">Split complementary</option>
+        </select>
+      </div>
+    </div>
+    <div id="pl-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,100px),1fr));gap:0.6rem;margin-top:1.25rem;"></div>
+    <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1rem;">
+      <button class="btn btn-sm" onclick="copyPalette('hex')">Copy hex list</button>
+      <button class="btn btn-sm btn-outline" onclick="copyPalette('css')">Copy as CSS variables</button>
+    </div>
+    <div class="status" id="status-pl"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Start from one colour</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">A brand colour, or anything you already know has to be in the palette.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Choose a relationship</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">From a single-hue ramp to three evenly spaced hues.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Copy what you need</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">One swatch at a time, the whole list, or a block of CSS variables.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/colors/hex-to-rgb.html"><span class="icon">&#128260;</span><div class="info"><h3>HEX to RGB Converter</h3><p>HEX, RGB and HSL in both directions</p></div></a>
+      <a class="related-card" href="/colors/contrast-checker.html"><span class="icon">&#9889;</span><div class="info"><h3>Contrast Checker</h3><p>WCAG AA and AAA, with a live preview</p></div></a>
+      <a class="related-card" href="/colors/gradient-generator.html"><span class="icon">&#127752;</span><div class="info"><h3>Gradient Generator</h3><p>Linear, radial and conic CSS</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What the harmonies actually do</h2>
+    <p>Each option is a rule about hue angles. <strong>Shades</strong> keeps one hue and walks the lightness from near-white to near-black, which is how a design system builds the 50-to-900 ramp behind a single brand colour. It is the safest choice and the one most interface work needs.</p>
+    <p><strong>Complementary</strong> takes the hue 180° opposite, the strongest contrast two hues can have — excellent for a call-to-action against a dominant colour, exhausting if used in equal amounts. <strong>Analogous</strong> stays within 40° either side, producing the calm, closely-related sets that suit backgrounds and illustration. <strong>Triadic</strong> spaces three hues 120° apart for a lively palette that needs one clear leader, and <strong>split complementary</strong> replaces the direct opposite with the two hues beside it, keeping most of the contrast and losing the vibration.</p>
+    <p>The generator holds saturation roughly constant and varies lightness, which is what keeps the set looking like one family. A minimum saturation is enforced, because running these rules on a near-grey base produces ten near-identical greys — mathematically correct and useless.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Turning a generated palette into a usable one</h2>
+    <p>A harmony gives you colours that sit together; it does not give you a design. The proportions matter more than the selection, and the old rule of thumb still holds: roughly 60% a dominant neutral, 30% a secondary, 10% an accent. Using three generated colours in equal thirds is the fastest way to make a page look like a swatch chart.</p>
+    <p>Check contrast before committing. The lightness steps here are HSL values, not perceptual ones, so two swatches that look evenly spaced can be far apart in measured luminance — and a mid-tone that looks perfectly readable can land under 4.5:1 against white. Run any pair you intend to use for text through a <a href="/colors/contrast-checker.html">contrast check</a> rather than trusting the ramp.</p>
+    <p>And leave room for the colours no harmony produces. Interfaces need a success green, a warning amber and an error red that people recognise instantly, and those meanings are conventional rather than aesthetic. Derive them separately, match their saturation and lightness to the palette so they do not look pasted in, and keep them out of the decorative set.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What is a complementary colour?<span class="arrow">&#9660;</span></button><div class="faq-a">The hue directly opposite on the colour wheel, 180 degrees away. It gives the strongest contrast between two hues, which makes it good for accents and tiring in large amounts.</div></div>
+    <div class="faq-item"><button class="faq-q">Which harmony should I choose for a website?<span class="arrow">&#9660;</span></button><div class="faq-a">Shades, in most cases. A single-hue ramp plus a neutral covers nearly all interface work, and it is far harder to make look wrong than a multi-hue scheme.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I copy the palette as CSS?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. "Copy as CSS variables" gives a :root block with the colours numbered 100 to 1000, ready to paste into a stylesheet.</div></div>
+    <div class="faq-item"><button class="faq-q">Do the generated colours pass contrast checks?<span class="arrow">&#9660;</span></button><div class="faq-a">Not automatically. The lightness steps are HSL values rather than perceptual ones, so check any pair you plan to use for text with the contrast checker.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does a grey base produce ten greys?<span class="arrow">&#9660;</span></button><div class="faq-a">Because every harmony rotates hue, and grey has no meaningful hue to rotate. A minimum saturation is applied to keep the result usable, but a colourful base gives far better results.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function hexToRgb(hex){
+  hex = hex.replace('#','');
+  if(hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+  return {r: parseInt(hex.slice(0,2),16), g: parseInt(hex.slice(2,4),16), b: parseInt(hex.slice(4,6),16)};
+}
+function rgbToHex(r,g,b){
+  return '#' + [r,g,b].map(function(v){ return Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,'0'); }).join('');
+}
+function rgbToHsl(r,g,b){
+  r/=255; g/=255; b/=255;
+  var max = Math.max(r,g,b), min = Math.min(r,g,b), h, s, l = (max+min)/2;
+  if(max === min){ h = s = 0; }
+  else {
+    var d = max-min;
+    s = l > 0.5 ? d/(2-max-min) : d/(max+min);
+    if(max === r) h = ((g-b)/d + (g<b?6:0))/6;
+    else if(max === g) h = ((b-r)/d + 2)/6;
+    else h = ((r-g)/d + 4)/6;
+  }
+  return {h: Math.round(h*360), s: Math.round(s*100), l: Math.round(l*100)};
+}
+function hslToHex(h,s,l){
+  s/=100; l/=100;
+  var a = s*Math.min(l,1-l);
+  var f = function(n){
+    var k = (n + h/30) % 12;
+    return Math.round(255*(l - a*Math.max(Math.min(k-3, 9-k, 1), -1))).toString(16).padStart(2,'0');
+  };
+  return '#'+f(0)+f(8)+f(4);
+}
+// Relative luminance, per the WCAG 2 definition.
+function luminance(hex){
+  var c = hexToRgb(hex);
+  var v = [c.r,c.g,c.b].map(function(x){
+    x /= 255;
+    return x <= 0.03928 ? x/12.92 : Math.pow((x+0.055)/1.055, 2.4);
+  });
+  return 0.2126*v[0] + 0.7152*v[1] + 0.0722*v[2];
+}
+function contrastRatio(a,b){
+  var l1 = luminance(a), l2 = luminance(b);
+  return (Math.max(l1,l2) + 0.05) / (Math.min(l1,l2) + 0.05);
+}
+function normHex(v){
+  v = String(v).trim().replace(/^#/,'');
+  if(/^[0-9a-fA-F]{3}$/.test(v)) v = v[0]+v[0]+v[1]+v[1]+v[2]+v[2];
+  return /^[0-9a-fA-F]{6}$/.test(v) ? '#'+v.toLowerCase() : null;
+}
+
+var palette = [];
+function makePalette(){
+  var hex = normHex(document.getElementById('pl-hex').value) || document.getElementById('pl-base').value;
+  var c = hexToRgb(hex), base = rgbToHsl(c.r, c.g, c.b);
+  var mode = document.getElementById('pl-mode').value;
+  var h = base.h, s = Math.max(15, base.s), out = [];
+  function ramp(hue, levels){ levels.forEach(function(l){ out.push(hslToHex(hue, s, l)); }); }
+  if(mode === 'shades'){
+    ramp(h, [95, 85, 72, 60, 50, 42, 34, 26, 18, 10]);
+  } else if(mode === 'complementary'){
+    ramp(h, [85, 65, 50, 35, 20]);
+    ramp((h + 180) % 360, [85, 65, 50, 35, 20]);
+  } else if(mode === 'analogous'){
+    [-40, -20, 0, 20, 40].forEach(function(d){ ramp((h + d + 360) % 360, [65, 40]); });
+  } else if(mode === 'triadic'){
+    [0, 120, 240].forEach(function(d){ ramp((h + d) % 360, [75, 55, 35]); });
+    out.push(hslToHex(h, Math.round(s / 4), 92));
+  } else {
+    ramp(h, [80, 60, 40, 22]);
+    ramp((h + 150) % 360, [70, 50, 30]);
+    ramp((h + 210) % 360, [70, 50, 30]);
+  }
+  palette = out.slice(0, 10);
+  document.getElementById('pl-grid').innerHTML = palette.map(function(col){
+    var textColor = contrastRatio(col, '#000000') >= contrastRatio(col, '#ffffff') ? '#000' : '#fff';
+    return '<button type="button" onclick="copyOne(\'' + col + '\')" ' +
+      'aria-label="Copy ' + col + '" title="Copy ' + col + '" ' +
+      'style="height:88px;border-radius:10px;border:1px solid var(--border);background:' + col + ';' +
+      'cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-start;padding:0.4rem;">' +
+      '<span style="font-size:0.7rem;font-weight:700;font-family:monospace;color:' + textColor + ';">' + col + '</span></button>';
+  }).join('');
+  document.getElementById('status-pl').className = 'status';
+}
+function syncBase(){ document.getElementById('pl-hex').value = document.getElementById('pl-base').value; makePalette(); }
+function baseText(){ var h = normHex(document.getElementById('pl-hex').value); if(h){ document.getElementById('pl-base').value = h; makePalette(); } }
+function copyOne(col){
+  navigator.clipboard.writeText(col).then(function(){ showStatus('status-pl','success','Copied ' + col); });
+}
+function copyPalette(kind){
+  if(!palette.length){ return; }
+  var text = kind === 'css'
+    ? ':root {\n' + palette.map(function(c, i){ return '  --colour-' + ((i + 1) * 100) + ': ' + c + ';'; }).join('\n') + '\n}'
+    : palette.join('\n');
+  navigator.clipboard.writeText(text).then(function(){
+    showStatus('status-pl','success', kind === 'css' ? 'CSS custom properties copied.' : 'All ' + palette.length + ' hex values copied.');
+  });
+}
+document.addEventListener('DOMContentLoaded', makePalette);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

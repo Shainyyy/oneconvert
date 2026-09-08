@@ -163,7 +163,7 @@ function convert(from,val){
   converting=true;
   const errEl=document.getElementById('conv-error');
   errEl.style.display='none';
-  val=val.trim().toUpperCase().replace(/^0X/,'');
+  val=String(val==null?'':val).trim().toUpperCase().replace(/^0X/,'');
   if(!val){['dec','bin','hex','oct'].forEach(id=>document.getElementById(id).value='');document.getElementById('bit-display').innerHTML='';converting=false;return;}
   try{
     let dec;

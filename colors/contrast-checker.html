@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colour Contrast Checker – WCAG AA and AAA | OneConvert</title>
+  <meta name="description" content="Check whether a text and background colour pair meets WCAG AA and AAA contrast, with a live preview at both text sizes."/>
+  <link rel="canonical" href="https://oneconvert.net/colors/contrast-checker.html"/>
+  <meta property="og:title" content="Colour Contrast Checker – WCAG AA and AAA | OneConvert"/>
+  <meta property="og:description" content="Check whether a text and background colour pair meets WCAG AA and AAA contrast, with a live preview at both text sizes."/>
+  <meta property="og:url" content="https://oneconvert.net/colors/contrast-checker.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Colour Contrast Checker – WCAG AA and AAA | OneConvert"/>
+  <meta name="twitter:description" content="Check whether a text and background colour pair meets WCAG AA and AAA contrast, with a live preview at both text sizes."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Colour Contrast Checker","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Check whether a text and background colour pair meets WCAG AA and AAA contrast, with a live preview at both text sizes."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"Colors Tools","item":"https://oneconvert.net/colors/"},{"@type":"ListItem","position":3,"name":"Contrast Checker","item":"https://oneconvert.net/colors/contrast-checker.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What contrast ratio do I need?","acceptedAnswer":{"@type":"Answer","text":"4.5:1 for normal body text to meet WCAG AA, or 7:1 for AAA. Large text needs only 3:1 at AA. Interface borders and meaningful icons also need 3:1."}},{"@type":"Question","name":"What counts as large text?","acceptedAnswer":{"@type":"Answer","text":"At least 18pt, or 14pt when bold — roughly 24px and 18.66px in CSS. A 20px heading does not qualify and must meet the normal-text threshold."}},{"@type":"Question","name":"Does the rule apply to placeholder text?","acceptedAnswer":{"@type":"Answer","text":"Yes. Placeholder text is text and must meet the same ratio. The browser default grey almost always fails, which is one of the most common accessibility defects on forms."}},{"@type":"Question","name":"Why does my dark theme feel harsh despite passing?","acceptedAnswer":{"@type":"Answer","text":"The WCAG 2 formula is known to overrate light-on-dark combinations. A pass is the legal minimum; trust your eyes and test on a real screen in real light."}},{"@type":"Question","name":"Is contrast a legal requirement?","acceptedAnswer":{"@type":"Answer","text":"In many places, yes. WCAG 2.1 level AA is referenced by the European Accessibility Act, EN 301 549 and public-sector rules in numerous countries."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/" class="active">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/colors/">Colors Tools</a><span>&rsaquo;</span><span>Contrast Checker</span></div>
+  <div class="tool-page-header">
+    <h1>Colour Contrast Checker</h1>
+    <p>The ratio, the pass or fail at each level, and a preview of what it looks like.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">Contrast is the accessibility requirement that is easiest to check and most often missed, usually because grey-on-white looks elegant on a designer’s calibrated screen and disappears on a phone in daylight. This tool gives the ratio, the verdict at each WCAG threshold, and a live preview at both the sizes the rules distinguish.</p>
+
+  <div class="tool-box">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1rem;">
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="ct-fg">Text colour</label>
+        <input type="color" id="ct-fg" value="#6b7280" oninput="syncFg()" style="width:100%;height:46px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;cursor:pointer;"/>
+        <input type="text" id="ct-fg-hex" aria-label="Text colour as a hex value" value="#6b7280" oninput="fgText()"  style="margin-top:0.5rem;width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.7rem;font-family:monospace;"/>
+      </div>
+      <div>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="ct-bg">Background colour</label>
+        <input type="color" id="ct-bg" value="#ffffff" oninput="syncBg()" style="width:100%;height:46px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:2px;cursor:pointer;"/>
+        <input type="text" id="ct-bg-hex" aria-label="Background colour as a hex value" value="#ffffff" oninput="bgText()"  style="margin-top:0.5rem;width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem 0.7rem;font-family:monospace;"/>
+      </div>
+    </div>
+    <button class="btn btn-sm btn-outline" onclick="swapColors()" style="margin-top:0.75rem;width:auto;">Swap the two</button>
+    <div id="ct-preview" style="margin-top:1.25rem;border-radius:12px;border:1px solid var(--border);padding:1.5rem;background:#fff;">
+      <p id="ct-large" style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem;line-height:1.3;">Large heading text</p>
+      <p id="ct-small" style="font-size:0.95rem;line-height:1.6;margin:0;">Body copy at a normal reading size. This is the size most of a page is set in, and the size the stricter threshold applies to.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,120px),1fr));gap:0.6rem;margin-top:1.25rem;">
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.8rem 0.6rem;text-align:center;"><div id="ct-ratio" style="font-family:Syne,sans-serif;font-size:1.05rem;font-weight:800;">&mdash;</div><div style="font-size:0.7rem;color:var(--muted);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.03em;">Ratio</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.8rem 0.6rem;text-align:center;"><div id="ct-aa" style="font-family:Syne,sans-serif;font-size:1.05rem;font-weight:800;">&mdash;</div><div style="font-size:0.7rem;color:var(--muted);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.03em;">AA normal 4.5:1</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.8rem 0.6rem;text-align:center;"><div id="ct-aaa" style="font-family:Syne,sans-serif;font-size:1.05rem;font-weight:800;">&mdash;</div><div style="font-size:0.7rem;color:var(--muted);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.03em;">AAA normal 7:1</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:0.8rem 0.6rem;text-align:center;"><div id="ct-aa-lg" style="font-family:Syne,sans-serif;font-size:1.05rem;font-weight:800;">&mdash;</div><div style="font-size:0.7rem;color:var(--muted);margin-top:0.2rem;text-transform:uppercase;letter-spacing:0.03em;">AA large 3:1</div></div>
+    </div>
+    <div id="ct-advice" style="font-size:0.88rem;color:var(--muted);margin-top:0.9rem;"></div>
+    <div class="status" id="status-ct"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Set the two colours</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Use the pickers, or paste hex values into the fields underneath.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Read the ratio</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">From 1:1 for identical colours to 21:1 for black on white.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Check against the thresholds</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Body text needs 4.5:1 for AA; large text is allowed 3:1.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/colors/hex-to-rgb.html"><span class="icon">&#128260;</span><div class="info"><h3>HEX to RGB Converter</h3><p>HEX, RGB and HSL in both directions</p></div></a>
+      <a class="related-card" href="/colors/palette-generator.html"><span class="icon">&#127912;</span><div class="info"><h3>Palette Generator</h3><p>Harmonies from one base colour</p></div></a>
+      <a class="related-card" href="/colors/gradient-generator.html"><span class="icon">&#127752;</span><div class="info"><h3>Gradient Generator</h3><p>Linear, radial and conic CSS</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>What the ratio measures, and what "large text" means</h2>
+    <p>The figure compares the relative luminance of the two colours — how much light each reflects, weighted for the eye’s much greater sensitivity to green than to blue. It runs from 1:1, meaning two identical colours, to 21:1 for pure black on pure white. Because it uses luminance rather than hue, two very different colours at similar brightness can score badly despite looking distinct.</p>
+    <p>WCAG sets 4.5:1 for normal text at level AA and 7:1 at AAA. Large text gets a lower bar, 3:1 at AA and 4.5:1 at AAA, because thicker strokes stay legible at lower contrast. "Large" has a specific definition: at least 18pt, or 14pt if bold — roughly 24px and 18.66px in CSS at default settings. A 20px heading is not large text by this rule.</p>
+    <p>Since WCAG 2.1 the same 3:1 minimum applies to interface components and meaningful graphics: input borders, focus rings, icons that carry information, the boundary of a toggle. A form whose fields are outlined in a pale grey that fails this test is inaccessible even when its labels pass comfortably.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Where the rules stop and judgement starts</h2>
+    <p>The threshold is a floor, not a target. Text at exactly 4.5:1 passes and is still uncomfortable to read for a long stretch, particularly for anyone over about forty or on a screen in sunlight. Body copy is worth pushing toward 7:1 where the design allows it, and the cost is usually a slightly darker grey.</p>
+    <p>Two cases the number does not cover. Placeholder text inside form fields is real text and must meet the same ratio — the browser default grey almost never does. And disabled controls are exempt from the requirement, which is a legal exemption rather than a usability one: a disabled button nobody can read is still a button nobody can read.</p>
+    <p>The algorithm itself is known to be imperfect. It systematically overrates dark backgrounds with light text, which is why a dark theme that passes on paper can feel harsher in use, and it takes no account of font weight or size beyond the single large-text cutoff. The successor being developed for WCAG 3, APCA, addresses both. Until it lands, the 2.x ratio remains what is tested and what is legally referenced — treat a pass as necessary rather than sufficient.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What contrast ratio do I need?<span class="arrow">&#9660;</span></button><div class="faq-a">4.5:1 for normal body text to meet WCAG AA, or 7:1 for AAA. Large text needs only 3:1 at AA. Interface borders and meaningful icons also need 3:1.</div></div>
+    <div class="faq-item"><button class="faq-q">What counts as large text?<span class="arrow">&#9660;</span></button><div class="faq-a">At least 18pt, or 14pt when bold — roughly 24px and 18.66px in CSS. A 20px heading does not qualify and must meet the normal-text threshold.</div></div>
+    <div class="faq-item"><button class="faq-q">Does the rule apply to placeholder text?<span class="arrow">&#9660;</span></button><div class="faq-a">Yes. Placeholder text is text and must meet the same ratio. The browser default grey almost always fails, which is one of the most common accessibility defects on forms.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does my dark theme feel harsh despite passing?<span class="arrow">&#9660;</span></button><div class="faq-a">The WCAG 2 formula is known to overrate light-on-dark combinations. A pass is the legal minimum; trust your eyes and test on a real screen in real light.</div></div>
+    <div class="faq-item"><button class="faq-q">Is contrast a legal requirement?<span class="arrow">&#9660;</span></button><div class="faq-a">In many places, yes. WCAG 2.1 level AA is referenced by the European Accessibility Act, EN 301 549 and public-sector rules in numerous countries.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+function hexToRgb(hex){
+  hex = hex.replace('#','');
+  if(hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+  return {r: parseInt(hex.slice(0,2),16), g: parseInt(hex.slice(2,4),16), b: parseInt(hex.slice(4,6),16)};
+}
+function rgbToHex(r,g,b){
+  return '#' + [r,g,b].map(function(v){ return Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,'0'); }).join('');
+}
+function rgbToHsl(r,g,b){
+  r/=255; g/=255; b/=255;
+  var max = Math.max(r,g,b), min = Math.min(r,g,b), h, s, l = (max+min)/2;
+  if(max === min){ h = s = 0; }
+  else {
+    var d = max-min;
+    s = l > 0.5 ? d/(2-max-min) : d/(max+min);
+    if(max === r) h = ((g-b)/d + (g<b?6:0))/6;
+    else if(max === g) h = ((b-r)/d + 2)/6;
+    else h = ((r-g)/d + 4)/6;
+  }
+  return {h: Math.round(h*360), s: Math.round(s*100), l: Math.round(l*100)};
+}
+function hslToHex(h,s,l){
+  s/=100; l/=100;
+  var a = s*Math.min(l,1-l);
+  var f = function(n){
+    var k = (n + h/30) % 12;
+    return Math.round(255*(l - a*Math.max(Math.min(k-3, 9-k, 1), -1))).toString(16).padStart(2,'0');
+  };
+  return '#'+f(0)+f(8)+f(4);
+}
+// Relative luminance, per the WCAG 2 definition.
+function luminance(hex){
+  var c = hexToRgb(hex);
+  var v = [c.r,c.g,c.b].map(function(x){
+    x /= 255;
+    return x <= 0.03928 ? x/12.92 : Math.pow((x+0.055)/1.055, 2.4);
+  });
+  return 0.2126*v[0] + 0.7152*v[1] + 0.0722*v[2];
+}
+function contrastRatio(a,b){
+  var l1 = luminance(a), l2 = luminance(b);
+  return (Math.max(l1,l2) + 0.05) / (Math.min(l1,l2) + 0.05);
+}
+function normHex(v){
+  v = String(v).trim().replace(/^#/,'');
+  if(/^[0-9a-fA-F]{3}$/.test(v)) v = v[0]+v[0]+v[1]+v[1]+v[2]+v[2];
+  return /^[0-9a-fA-F]{6}$/.test(v) ? '#'+v.toLowerCase() : null;
+}
+
+function mark(el, pass){
+  el.textContent = pass ? 'Pass' : 'Fail';
+  el.style.color = pass ? 'var(--success)' : '#f87171';
+}
+function check(){
+  var fg = normHex(document.getElementById('ct-fg-hex').value) || document.getElementById('ct-fg').value;
+  var bg = normHex(document.getElementById('ct-bg-hex').value) || document.getElementById('ct-bg').value;
+  var r = contrastRatio(fg, bg);
+  document.getElementById('ct-preview').style.background = bg;
+  document.getElementById('ct-large').style.color = fg;
+  document.getElementById('ct-small').style.color = fg;
+  document.getElementById('ct-ratio').textContent = r.toFixed(2) + ':1';
+  document.getElementById('ct-ratio').style.color = 'var(--accent2)';
+  mark(document.getElementById('ct-aa'), r >= 4.5);
+  mark(document.getElementById('ct-aaa'), r >= 7);
+  mark(document.getElementById('ct-aa-lg'), r >= 3);
+  var advice;
+  if(r >= 7) advice = 'Comfortable at any size, and meets the strictest level for body text.';
+  else if(r >= 4.5) advice = 'Fine for body text at AA. For AAA you would need ' + (7).toFixed(0) + ':1 \u2014 darken the text or lighten the background.';
+  else if(r >= 3) advice = 'Only usable for large text: 18pt and above, or 14pt bold. Too low for body copy.';
+  else advice = 'Below every threshold. This combination is hard to read for many people and fails WCAG at any text size.';
+  document.getElementById('ct-advice').textContent = advice;
+}
+function syncFg(){ document.getElementById('ct-fg-hex').value = document.getElementById('ct-fg').value; check(); }
+function syncBg(){ document.getElementById('ct-bg-hex').value = document.getElementById('ct-bg').value; check(); }
+function fgText(){ var h = normHex(document.getElementById('ct-fg-hex').value); if(h){ document.getElementById('ct-fg').value = h; check(); } }
+function bgText(){ var h = normHex(document.getElementById('ct-bg-hex').value); if(h){ document.getElementById('ct-bg').value = h; check(); } }
+function swapColors(){
+  var a = document.getElementById('ct-fg').value, b = document.getElementById('ct-bg').value;
+  document.getElementById('ct-fg').value = b; document.getElementById('ct-fg-hex').value = b;
+  document.getElementById('ct-bg').value = a; document.getElementById('ct-bg-hex').value = a;
+  check();
+}
+document.addEventListener('DOMContentLoaded', check);
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>

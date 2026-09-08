@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Reader – Decode a QR from an Image | OneConvert</title>
+  <meta name="description" content="Read a QR code from a screenshot or photo and see exactly what it contains before you act on it. Free and entirely in your browser."/>
+  <link rel="canonical" href="https://oneconvert.net/qr/qr-code-reader.html"/>
+  <meta property="og:title" content="QR Code Reader – Decode a QR from an Image | OneConvert"/>
+  <meta property="og:description" content="Read a QR code from a screenshot or photo and see exactly what it contains before you act on it. Free and entirely in your browser."/>
+  <meta property="og:url" content="https://oneconvert.net/qr/qr-code-reader.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://oneconvert.net/og-image.png"/>
+  <meta property="og:site_name" content="OneConvert"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="QR Code Reader – Decode a QR from an Image | OneConvert"/>
+  <meta name="twitter:description" content="Read a QR code from a screenshot or photo and see exactly what it contains before you act on it. Free and entirely in your browser."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#07090f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-04J9SE5NK0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04J9SE5NK0');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2108686124406108" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QR Code Reader","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Read a QR code from a screenshot or photo and see exactly what it contains before you act on it. Free and entirely in your browser."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://oneconvert.net/"},{"@type":"ListItem","position":2,"name":"QR Code Tools","item":"https://oneconvert.net/qr/"},{"@type":"ListItem","position":3,"name":"QR Code Reader","item":"https://oneconvert.net/qr/qr-code-reader.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I scan a QR code with my camera here?","acceptedAnswer":{"@type":"Answer","text":"No, this reads an image file rather than a live camera feed. Take a photo or screenshot first, then drop it in — or paste it directly with Ctrl+V."}},{"@type":"Question","name":"Is my image uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. The decoding runs in your browser, so the image never leaves your device. That is what makes it safe to use on a code containing a WiFi password."}},{"@type":"Question","name":"What types of code can it read?","acceptedAnswer":{"@type":"Answer","text":"Any standard QR code. Web links, WiFi credentials, vCard contacts, email and phone codes are additionally broken out field by field so you can read them without parsing the raw text."}},{"@type":"Question","name":"Why does it say no code was found?","acceptedAnswer":{"@type":"Answer","text":"Usually the code is too small, too blurred or too angled in the image. Crop closer to the code and try again; a sharp dim photo decodes better than a bright blurred one."}},{"@type":"Question","name":"Is it safe to open a link from a scanned code?","acceptedAnswer":{"@type":"Answer","text":"Check the domain first, especially the part just before the first single slash. Codes on public surfaces are a known phishing route, and reading the text before acting is the point of this tool."}}]}</script>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">One<span class="accent">Convert</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/pdf/">PDF</a>
+    <a href="/image/">Image</a>
+    <a href="/qr/" class="active">QR Code</a>
+    <a href="/units/">Units</a>
+    <a href="/text/">Text</a>
+    <a href="/colors/">Colors</a>
+    <a href="/calc/">Calculators</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">&#127769;</button>
+  <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<div class="tool-page" style="max-width:1000px;">
+  <div class="breadcrumb"><a href="/">Home</a><span>&rsaquo;</span><a href="/qr/">QR Code Tools</a><span>&rsaquo;</span><span>QR Code Reader</span></div>
+  <div class="tool-page-header">
+    <h1>QR Code Reader</h1>
+    <p>Decode a code from an image, and see what it says before you follow it.</p>
+  </div>
+
+  <p class="tool-intro" style="color:var(--muted);font-size:0.92rem;line-height:1.75;max-width:700px;margin:0 auto 1.25rem;text-align:center;">A phone camera scans a QR code and immediately offers to act on it — open the link, join the network, add the contact. This does the opposite: it shows you the content as text first. Useful when you have a screenshot rather than a physical code, when you want to check a link before opening it, or when you need to recover the details from a code someone sent you.</p>
+
+  <div class="tool-box">
+    <div class="dropzone" id="drop-zone" role="button" tabindex="0" aria-label="Choose an image containing a QR code, or drop one here"><div class="dropzone-icon">&#128269;</div><p><strong>Click to select</strong> or drag &amp; drop an image</p><small>PNG, JPG, WebP or GIF &middot; a screenshot works &middot; nothing uploaded</small></div>
+    <input type="file" id="file-input" accept="image/*" style="display:none;" aria-label="Choose an image containing a QR code"/>
+    <div id="qr-reader-host" style="display:none;"></div>
+    <div id="read-result" style="display:none;margin-top:1.25rem;">
+      <div style="display:flex;gap:1.25rem;flex-wrap:wrap;align-items:flex-start;">
+        <img id="read-preview" src="" alt="The image you selected" style="max-width:180px;max-height:180px;border-radius:10px;border:1px solid var(--border);"/>
+        <div style="flex:1;min-width:220px;">
+          <div id="read-kind" style="font-size:0.78rem;color:var(--accent2);font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.4rem;"></div>
+          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="read-text">Decoded content</label>
+          <textarea id="read-text" readonly style="width:100%;min-height:110px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.7rem;font-family:monospace;font-size:0.88rem;resize:vertical;"></textarea>
+          <div id="read-fields" style="margin-top:0.75rem;"></div>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.75rem;">
+            <button class="btn btn-sm" onclick="copyDecoded()">Copy content</button>
+            <a id="read-open" class="btn btn-sm btn-outline" style="display:none;text-decoration:none;text-align:center;" target="_blank" rel="noopener nofollow">Open link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="status" id="status-read"></div>
+  </div>
+
+  <h2 style="font-family:Syne,sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;">How it works</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Add the image</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Click, drag it in, or simply paste a screenshot with Ctrl+V.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">The code is decoded locally</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Nothing is uploaded — the image is read in the page.</p>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
+      <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Read before you act</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">WiFi, contact and email codes are broken out field by field.</p>
+    </div>
+  </div>
+
+  <div class="related-tools">
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/qr/"><span class="icon">&#128241;</span><div class="info"><h3>QR Code Generator</h3><p>Create codes for URLs, WiFi and more</p></div></a>
+      <a class="related-card" href="/qr/wifi-qr-code.html"><span class="icon">&#128246;</span><div class="info"><h3>WiFi QR Code</h3><p>Guests join without typing a password</p></div></a>
+      <a class="related-card" href="/qr/vcard-qr-code.html"><span class="icon">&#128100;</span><div class="info"><h3>vCard QR Code</h3><p>A contact card people can scan</p></div></a>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h2>Reading the code before it reads you</h2>
+    <p>A QR code is unreadable to a human, which is exactly what makes it useful for sticking a long URL on a poster and exactly what makes it a phishing tool. A sticker placed over a legitimate code on a parking meter or a restaurant table sends people to a payment page they had no way of inspecting. Decoding to text first removes the guesswork.</p>
+    <p>What to look at once you can see it: the domain, and specifically the part immediately before the first single slash. <code>paypal.com.secure-billing.net</code> is not PayPal — the real domain is <code>secure-billing.net</code>. Shorteners hide this entirely, so a shortened link in a code on a physical surface deserves more suspicion than one in an email.</p>
+    <p>The same applies to the codes you did not choose to scan. Codes in unsolicited post, on flyers under a windscreen wiper, or stuck to public equipment are the ones worth checking here rather than with a camera that offers to open the link the moment it recognises it.</p>
+  </div>
+
+  <div class="info-section">
+    <h2>Why a code sometimes will not decode</h2>
+    <p>The decoder needs the code to occupy a reasonable share of the image and to be roughly square-on. A photograph of a poster taken from across a room, where the code is 40 pixels wide, has no detail left to read. Cropping to the code before uploading fixes most failures.</p>
+    <p>Angle and curvature are the next cause. Codes have three large finder squares in the corners precisely so software can correct for perspective, but there are limits — a code on a curved bottle or photographed at a sharp angle distorts past what the correction handles. Blur is unrecoverable in a way that darkness is not, so a dim but sharp photo usually beats a bright blurry one.</p>
+    <p>Damage is the case error correction was designed for. Depending on the level chosen when the code was made, between 7 and 30 per cent of it can be missing and still decode, which is how codes survive a logo in the middle or a crease through a corner. Beyond that threshold there is nothing to recover, and no reader will do better than another.</p>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">Can I scan a QR code with my camera here?<span class="arrow">&#9660;</span></button><div class="faq-a">No, this reads an image file rather than a live camera feed. Take a photo or screenshot first, then drop it in — or paste it directly with Ctrl+V.</div></div>
+    <div class="faq-item"><button class="faq-q">Is my image uploaded to a server?<span class="arrow">&#9660;</span></button><div class="faq-a">No. The decoding runs in your browser, so the image never leaves your device. That is what makes it safe to use on a code containing a WiFi password.</div></div>
+    <div class="faq-item"><button class="faq-q">What types of code can it read?<span class="arrow">&#9660;</span></button><div class="faq-a">Any standard QR code. Web links, WiFi credentials, vCard contacts, email and phone codes are additionally broken out field by field so you can read them without parsing the raw text.</div></div>
+    <div class="faq-item"><button class="faq-q">Why does it say no code was found?<span class="arrow">&#9660;</span></button><div class="faq-a">Usually the code is too small, too blurred or too angled in the image. Crop closer to the code and try again; a sharp dim photo decodes better than a bright blurred one.</div></div>
+    <div class="faq-item"><button class="faq-q">Is it safe to open a link from a scanned code?<span class="arrow">&#9660;</span></button><div class="faq-a">Check the domain first, especially the part just before the first single slash. Codes on public surfaces are a known phishing route, and reading the text before acting is the point of this tool.</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 OneConvert. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/guides/">Guides</a><a href="/pdf/">PDF Tools</a><a href="/image/">Image Tools</a>
+    <a href="/qr/">QR Code</a><a href="/units/">Units</a>
+    <a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+    <a href="https://github.com/Shainyyy/oneconvert" target="_blank" rel="noopener">GitHub &#8599;</a>
+  </div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement,b=document.getElementById('theme-toggle');if(h.getAttribute('data-theme')==='light'){h.removeAttribute('data-theme');localStorage.setItem('oc-theme','dark');if(b)b.textContent='\u{1F319}';}else{h.setAttribute('data-theme','light');localStorage.setItem('oc-theme','light');if(b)b.textContent='\u2600\uFE0F';}}
+function toggleNav(){const l=document.getElementById('nav-links'),b=document.getElementById('nav-hamburger');if(!l||!b)return;const o=l.classList.contains('open');l.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',String(!o));}
+(function(){if(localStorage.getItem('oc-theme')==='light')document.documentElement.setAttribute('data-theme','light');})();
+function showStatus(id,type,msg){const el=document.getElementById(id);if(el){el.className='status '+type;el.textContent=msg;}}
+function formatBytes(b){if(b<1024)return b+' B';if(b<1048576)return(b/1024).toFixed(1)+' KB';return(b/1048576).toFixed(2)+' MB';}
+function directDownload(bytes,filename,mime){const blob=(bytes instanceof Blob)?bytes:new Blob([bytes],{type:mime||'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function setupDropzone(zoneId,inputId,onFiles){const z=document.getElementById(zoneId),i=document.getElementById(inputId);if(!z||!i)return;z.addEventListener('click',()=>i.click());z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click();}});i.addEventListener('change',()=>{if(i.files.length)onFiles(i.files);i.value='';});z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('drag-over');});z.addEventListener('dragleave',()=>z.classList.remove('drag-over'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)onFiles(e.dataTransfer.files);});}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a=btn.nextElementSibling;const open=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(b=>{b.classList.remove('open');if(b.nextElementSibling)b.nextElementSibling.classList.remove('open');});if(!open){btn.classList.add('open');a.classList.add('open');}});});
+  const tb=document.getElementById('theme-toggle');if(tb&&localStorage.getItem('oc-theme')==='light')tb.textContent='\u2600\uFE0F';
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('nav-links')?.classList.remove('open');document.getElementById('nav-hamburger')?.classList.remove('open');}));
+});
+</script>
+<script>
+var decoded = '';
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function row(k, v){
+  return '<div style="display:flex;gap:0.6rem;padding:0.3rem 0;border-bottom:1px solid var(--border);font-size:0.86rem;">' +
+    '<span style="color:var(--muted);min-width:6.5em;">' + esc(k) + '</span><span style="word-break:break-all;">' + esc(v) + '</span></div>';
+}
+function describe(text){
+  var kind = 'Plain text', fields = '', link = '';
+  if(/^WIFI:/i.test(text)){
+    kind = 'WiFi network';
+    // Split on unescaped semicolons.
+    var parts = text.slice(5).split(/(?<!\\);/);
+    var map = {};
+    parts.forEach(function(p){
+      var i = p.indexOf(':');
+      if(i > 0) map[p.slice(0, i).toUpperCase()] = p.slice(i + 1).replace(/\\(.)/g, '$1');
+    });
+    fields = row('Network', map.S || '') + row('Security', map.T || 'unspecified') +
+             row('Password', map.P || '(none)') + (map.H === 'true' ? row('Hidden', 'yes') : '');
+  } else if(/^BEGIN:VCARD/i.test(text)){
+    kind = 'Contact card (vCard)';
+    var want = {FN:'Name', ORG:'Organisation', TITLE:'Title', TEL:'Phone', EMAIL:'Email', URL:'Website'};
+    text.split(/\r?\n/).forEach(function(line){
+      var key = line.split(/[;:]/)[0].toUpperCase();
+      if(want[key]) fields += row(want[key], line.slice(line.indexOf(':') + 1).replace(/\\(.)/g, '$1'));
+    });
+  } else if(/^mailto:/i.test(text)){
+    kind = 'Email';
+    try {
+      var u = new URL(text);
+      fields = row('To', decodeURIComponent(u.pathname));
+      if(u.searchParams.get('subject')) fields += row('Subject', u.searchParams.get('subject'));
+      if(u.searchParams.get('body')) fields += row('Body', u.searchParams.get('body'));
+    } catch(e){ fields = ''; }
+  } else if(/^tel:/i.test(text)){
+    kind = 'Phone number';
+    fields = row('Number', text.slice(4));
+  } else if(/^https?:\/\//i.test(text)){
+    kind = 'Web link';
+    try { var w = new URL(text); fields = row('Host', w.hostname) + row('Path', w.pathname + w.search); link = text; } catch(e){}
+  } else if(/^(geo|smsto?|bitcoin|matmsg):/i.test(text)){
+    kind = text.split(':')[0].toUpperCase() + ' code';
+  }
+  return {kind: kind, fields: fields, link: link};
+}
+async function readFile(file){
+  if(!file || !/^image\//.test(file.type)){
+    showStatus('status-read','error','That is not an image. Select a PNG, JPG, WebP or GIF.');
+    return;
+  }
+  if(typeof Html5Qrcode === 'undefined'){
+    showStatus('status-read','error','The decoder is still loading. Try again in a moment.');
+    return;
+  }
+  showStatus('status-read','info','Reading\u2026');
+  document.getElementById('read-preview').src = URL.createObjectURL(file);
+  try {
+    var scanner = new Html5Qrcode('qr-reader-host', {verbose: false});
+    // false = do not show the image in the library's own UI; we render our own preview.
+    decoded = await scanner.scanFile(file, false);
+  } catch(e){
+    document.getElementById('read-result').style.display = 'none';
+    showStatus('status-read','error','No QR code found in that image. Crop closer to the code, or try a sharper photo.');
+    return;
+  }
+  var info = describe(decoded);
+  document.getElementById('read-text').value = decoded;
+  document.getElementById('read-kind').textContent = info.kind;
+  document.getElementById('read-fields').innerHTML = info.fields;
+  var open = document.getElementById('read-open');
+  if(info.link){ open.href = info.link; open.style.display = 'inline-block'; }
+  else { open.style.display = 'none'; open.removeAttribute('href'); }
+  document.getElementById('read-result').style.display = 'block';
+  showStatus('status-read','success','Decoded \u2014 ' + info.kind.toLowerCase() + ', ' + decoded.length + ' characters.');
+}
+function copyDecoded(){
+  if(!decoded){ showStatus('status-read','error','Nothing decoded yet.'); return; }
+  navigator.clipboard.writeText(decoded).then(function(){ showStatus('status-read','success','Content copied to clipboard.'); });
+}
+document.addEventListener('DOMContentLoaded', function(){
+  setupDropzone('drop-zone', 'file-input', function(list){ readFile(list[0]); });
+  // Pasting a screenshot straight from the clipboard is the fastest path.
+  document.addEventListener('paste', function(e){
+    var items = (e.clipboardData || {}).items || [];
+    for(var i = 0; i < items.length; i++){
+      if(items[i].type.indexOf('image') === 0){ readFile(items[i].getAsFile()); break; }
+    }
+  });
+});
+</script>
+<script src="/js/consent.js"></script>
+</body>
+</html>
