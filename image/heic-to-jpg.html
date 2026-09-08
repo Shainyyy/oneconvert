@@ -106,18 +106,18 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
       <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
-      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select image</h3>
-      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Click or drag & drop your image. Your file never leaves your device.</p>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Add your HEIC photos</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The format iPhones use by default, which most software cannot open.</p>
     </div>
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
       <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
-      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Convert instantly</h3>
-      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your browser converts the image locally using the Canvas API — no upload needed.</p>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Decoded in the browser</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">heic2any unpacks the HEIF container without sending the photo anywhere.</p>
     </div>
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
       <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
-      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download result</h3>
-      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your converted image downloads immediately. Free, instant, no account.</p>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download as JPG</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">A file every device, browser and application can open.</p>
     </div>
   </div>
   <!-- Related Tools -->
@@ -200,9 +200,9 @@
         blobs.push({ blob, name: file.name.replace(/\.(heic|heif)$/i, '.jpg') });
       }
       if (blobs.length === 1) {
-        showAdAndDownload(await blobs[0].blob.arrayBuffer(), blobs[0].name, 'image/jpeg');
+        downloadResult(await blobs[0].blob.arrayBuffer(), blobs[0].name, 'image/jpeg');
       } else {
-        showAdAndDownloadBlobs(blobs);
+        downloadAll(blobs);
       }
       showStatus('status', 'success', `Converted ${blobs.length} file(s)! Download starting…`);
       showNextStep("/image/compress.html","Compress the converted photo","📦");

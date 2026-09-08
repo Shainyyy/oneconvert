@@ -71,7 +71,7 @@
         <p id="b64-info" style="color:var(--muted);font-size:0.82rem;margin-top:0.5rem;"></p>
       </div>
       <div class="input-row" style="margin-top:1rem;flex-wrap:wrap;gap:0.5rem;">
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" style="margin:0;" for="b64-format">Output</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin:0;" for="b64-format">Output</label>
         <select id="b64-format" onchange="renderB64()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
           <option value="uri">Data URI</option>
           <option value="img">HTML &lt;img&gt; tag</option>
@@ -80,7 +80,7 @@
         </select>
         <button class="btn btn-outline" onclick="copyB64()" style="width:auto;">Copy</button>
       </div>
-      <textarea id="b64-out" style="width:100%;min-height:130px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.82rem;font-family:monospace;resize:vertical;word-break:break-all;" readonly aria-label="Base64 output" style="margin-top:0.75rem;"></textarea>
+      <textarea id="b64-out" style="width:100%;min-height:130px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.82rem;font-family:monospace;resize:vertical;word-break:break-all;margin-top:0.75rem;" readonly aria-label="Base64 output"></textarea>
     </div>
     <div class="status" id="status-b64"></div>
   </div>

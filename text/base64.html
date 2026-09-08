@@ -65,10 +65,10 @@
     </div>
     <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="b64-input" id="b64-label">Text to encode</label>
     <textarea id="b64-input" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" placeholder="Type or paste text here&hellip;" oninput="runB64()"></textarea>
-    <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;" style="margin-top:0.85rem;">
+    <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;margin-top:0.85rem;">
       <input type="checkbox" id="b64-urlsafe" onchange="runB64()" style="width:auto;"/> URL-safe alphabet (- and _ instead of + and /, no padding)
     </label>
-    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="b64-output" style="margin-top:0.85rem;">Result</label>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin-top:0.85rem;" for="b64-output">Result</label>
     <textarea id="b64-output" style="width:100%;min-height:130px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" readonly></textarea>
     <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.75rem;align-items:center;">
       <button class="btn btn-sm" onclick="copyB64()">Copy result</button>

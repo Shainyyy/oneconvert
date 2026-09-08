@@ -34,12 +34,12 @@ function setupDropzone(zoneId, inputId, onFiles) {
   zone.addEventListener('drop', e => { e.preventDefault(); e.stopPropagation(); zone.classList.remove('drag-over'); if (e.dataTransfer.files.length) onFiles(e.dataTransfer.files); });
 }
 
-// ── Direct Download (AdSense-compliant — no overlay) ──
-function showAdAndDownload(bytes, filename, mime) {
+// ── Downloads: nothing is gated, the file is handed over immediately ──
+function downloadResult(bytes, filename, mime) {
   directDownload(bytes, filename, mime || 'application/pdf');
 }
 
-function showAdAndDownloadBlobs(blobs) {
+function downloadAll(blobs) {
   if (!blobs) return;
   blobs.forEach(({ blob, name }, i) => {
     setTimeout(() => {
@@ -50,7 +50,7 @@ function showAdAndDownloadBlobs(blobs) {
   });
 }
 
-// ── Direct download (no ad, single page) ──
+// ── Single file straight to the browser ──
 function directDownload(bytes, filename, mime) {
   const blob = new Blob([bytes], { type: mime || 'application/octet-stream' });
   const url = URL.createObjectURL(blob);

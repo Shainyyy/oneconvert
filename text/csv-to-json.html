@@ -62,7 +62,7 @@
     <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="csv-in">CSV input</label>
     <textarea id="csv-in" style="width:100%;min-height:140px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.85rem;font-family:monospace;resize:vertical;" placeholder="name,city,notes&#10;Ada,London,&quot;Mathematician, writer&quot;&#10;Alan,Cambridge,Cryptanalyst"></textarea>
     <div class="input-row" style="margin-top:0.75rem;flex-wrap:wrap;gap:0.5rem;align-items:center;">
-      <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" style="margin:0;" for="csv-delim">Delimiter</label>
+      <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin:0;" for="csv-delim">Delimiter</label>
       <select id="csv-delim" onchange="doCsv()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
         <option value="auto">Detect</option><option value=",">Comma</option><option value=";">Semicolon</option><option value="\t">Tab</option><option value="|">Pipe</option>
       </select>
@@ -72,7 +72,7 @@
       <button class="btn btn-outline" onclick="copyCsv()" style="width:auto;">Copy</button>
     </div>
     <div class="status" id="status-csv"></div>
-    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="csv-out" style="margin-top:1rem;">JSON output</label>
+    <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin-top:1rem;" for="csv-out">JSON output</label>
     <textarea id="csv-out" style="width:100%;min-height:140px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.85rem;font-family:monospace;resize:vertical;" readonly aria-label="JSON output"></textarea>
   </div>
 

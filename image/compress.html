@@ -105,18 +105,18 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1.5rem;margin-bottom:1.5rem;">
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
       <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">1</div>
-      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Select image</h3>
-      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Click or drag & drop your image. Your file never leaves your device.</p>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Add your images</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">One or many, in any format your browser can read.</p>
     </div>
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
       <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">2</div>
-      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Convert instantly</h3>
-      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your browser converts the image locally using the Canvas API — no upload needed.</p>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Set the quality</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">A live preview shows the trade-off before you commit to it.</p>
     </div>
     <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;text-align:center;">
       <div style="width:44px;height:44px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Syne,sans-serif;font-weight:800;color:var(--accent2);font-size:1.1rem;margin:0 auto 0.75rem;">3</div>
-      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download result</h3>
-      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">Your converted image downloads immediately. Free, instant, no account.</p>
+      <h3 style="font-family:Syne,sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.35rem;">Download the smaller files</h3>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.5;">The saving per file is shown next to the original size.</p>
     </div>
   </div>
   <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:1.25rem;">
@@ -221,7 +221,7 @@
       canvas.toBlob(async blob => {
         const ext = currentType === 'image/png' ? 'jpg' : currentFile.name.split('.').pop();
         const outName = currentFile.name.replace(/\.[^.]+$/, '') + '_compressed.' + ext;
-        showAdAndDownload(await blob.arrayBuffer(), outName, 'image/jpeg');
+        downloadResult(await blob.arrayBuffer(), outName, 'image/jpeg');
         showStatus('status', 'success', 'Compressed! Download starting…');
       showNextStep("/image/jpg-to-png.html","Need lossless? Convert to PNG","🔄");
       }, 'image/jpeg', parseInt(slider.value) / 100);

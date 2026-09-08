@@ -68,7 +68,7 @@
     <div id="fav-area" style="display:none;margin-top:1rem;">
       <div id="fav-previews" style="display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-end;justify-content:center;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1rem;"></div>
       <div class="input-row" style="margin-top:1rem;flex-wrap:wrap;gap:0.5rem;">
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" style="margin:0;" for="fav-bg">Background</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin:0;" for="fav-bg">Background</label>
         <select id="fav-bg" onchange="renderFavicons()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
           <option value="transparent">Keep transparent</option>
           <option value="#ffffff">White</option>
@@ -76,7 +76,7 @@
         </select>
         <button class="btn" onclick="downloadFavicons()" style="width:auto;">&#11015;&#65039; Download all</button>
       </div>
-      <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="fav-html" style="margin-top:1rem;">HTML to paste in your &lt;head&gt;</label>
+      <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin-top:1rem;" for="fav-html">HTML to paste in your &lt;head&gt;</label>
       <textarea id="fav-html" style="width:100%;min-height:130px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.82rem;font-family:monospace;resize:vertical;word-break:break-all;" readonly aria-label="Favicon HTML markup"></textarea>
       <button class="btn btn-outline" onclick="copyFavHtml()" style="margin-top:0.5rem;">Copy HTML</button>
     </div>

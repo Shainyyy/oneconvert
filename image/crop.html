@@ -78,7 +78,7 @@
       </div>
 
       <div class="input-row" style="margin-top:1rem;flex-wrap:wrap;gap:0.5rem;align-items:center;">
-        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" style="margin:0;" for="crop-ratio">Aspect ratio</label>
+        <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin:0;" for="crop-ratio">Aspect ratio</label>
         <select id="crop-ratio" onchange="applyRatio()" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.5rem;">
           <option value="free">Free</option><option value="1:1">1:1 square</option>
           <option value="4:3">4:3</option><option value="3:2">3:2</option>
@@ -191,7 +191,7 @@ function loadCrop(file){
     cImg=img;
     const el=document.getElementById('crop-img');
     document.getElementById('crop-area').style.display='block';
-    // the visible <img> only has a width once it is loaded and laid out
+    // the visible <img alt="Preview of the image being cropped"> only has a width once it is loaded and laid out
     const start=()=>{
       if(!el.clientWidth){ requestAnimationFrame(start); return; }
       selectAll();
