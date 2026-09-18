@@ -62,11 +62,11 @@
     <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;" for="dd-input">Your list</label>
     <textarea id="dd-input" style="width:100%;min-height:150px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:0.75rem;font-size:0.92rem;line-height:1.6;resize:vertical;" placeholder="One entry per line&hellip;"></textarea>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:0.5rem 1.25rem;margin-top:0.9rem;">
-      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" id="dd-trim" checked style="width:auto;"/> Ignore leading and trailing spaces</label>
-      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" id="dd-case" style="width:auto;"/> Ignore upper and lower case</label>
-      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" id="dd-blank" checked style="width:auto;"/> Drop blank lines</label>
-      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" id="dd-sort" style="width:auto;"/> Sort the result A&ndash;Z</label>
-      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;white-space:nowrap;"><input type="checkbox" id="dd-invert" style="width:auto;"/> Show only the duplicated entries</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="dd-trim" checked style="width:auto;"/> Ignore leading and trailing spaces</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="dd-case" style="width:auto;"/> Ignore upper and lower case</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="dd-blank" checked style="width:auto;"/> Drop blank lines</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="dd-sort" style="width:auto;"/> Sort the result A&ndash;Z</label>
+      <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;color:var(--muted);cursor:pointer;"><input type="checkbox" id="dd-invert" style="width:auto;"/> Show only the duplicated entries</label>
     </div>
     <button class="btn" onclick="dedupe()" style="margin-top:1rem;">Remove duplicates</button>
     <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:0.35rem;font-weight:600;margin-top:1rem;" for="dd-output">Result</label>
